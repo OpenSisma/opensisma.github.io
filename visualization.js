@@ -69,30 +69,75 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
                 
                  myJSON.forEach(function(arrayItem) {
                                             if (arrayItem["Comune"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
-                                                    $('#welcome').remove();
-                                                    $('#information').html('');
-                                                    $('#information').html('<div class="card alert-success mb-3"> <h3 class="card-header">Zona '
-                                                        + arrayItem.Comune +'</h3> <div class="card-body text-right pb-0"> <ul style="list-style-type:none"> <li><h6> punteggioscuole: '+ arrayItem.PUNTEGGIOSCUOLA1516);
-                                                    $('#chartContainer').append('<canvas id="redditiChart" width="100" height="100"><canvas>');
-                                                    var grafobase = document.getElementById('redditiChart').getContext('2d');
-                                                    new Chart(grafobase, {
-                                                        type: 'bar',
-                                                        options: {scales: {yAxes: [{ticks: {suggestedMin: 0, suggestedMax: 100 }}]}},
-                                                        data:{
-                                                        labels: ['Value 1', 'Value2'],
-                                                        datasets: [{
-                                                            label: 'Test',
-                                                            data: [arrayItem['Value 1'], arrayItem['Value 2']],
-                                                            backgroundColor: 'rgb(255, 99, 132)',
-                                                             borderWidth: 1
+                                                    $('.lead').html('');
+                                                    $('.lead').html('Comune di ' + arrayItem.Comune);
+                                                    $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>');
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Dettaglio</label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Grafico3</label></form></div>')
+                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
+                                                    
 
-    }]
-  }
-})
+                                                    var datiedu = {
+                                                            "labels": ['Lavori non terminati', 'Lavori in corso', 'Lavori terminati'],
+                                                            "datasets": [{
+                                                            label: 'Numero',
+                                                            data: [arrayItem['Value 1'], arrayItem['Value 2'], arrayItem['Value 3']],
+                                                            backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
+                                                             borderWidth: 1}]
+                                                        };
+
+                                                        var datiedu2 = {
+                                                            "labels": ['Lavori non terminati', 'Lavori in corso'],
+                                                            "datasets": [{
+                                                            label: 'Numero',
+                                                            data: [arrayItem['Value 1'] + arrayItem['Value 2']],
+                                                            backgroundColor: 'rgb(255, 99, 132)',
+                                                             borderWidth: 1}]
+                                                        };
+
+
+
+
+
+                                                    
+                                   function grafo(dati, opzioni) {
+                                                            var grafobase = document.getElementById('Chartedu').getContext('2d');
+                                                            new Chart(grafobase, {
+                                                                type: 'doughnut',
+                                                                data: dati,
+                                                                options: opzioni
+
+                                                            });
+                                                        };
+
+                                    grafo(datiedu);
+
+                                    
+
+                                    $('input[type=radio][name=radiored]').change(function() {
+                                                            switch ($(this).val()) {
+                                                                case 'generale':
+                                                                    $('#Chartedu').remove();
+                                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
+                                                                    grafo(datiedu);
+                                                                    break
+                                                                case 'dettaglio':
+                                                                    $('#Chartedu').remove();
+                                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
+                                                                    grafo(datiedu2)
+                                                                    break
+                                                            }
+                                                        });
+
+
+
+
+
 
    
                                                 }
                                             })
+
+                 //
 
                     // chiudi click function
                 }
