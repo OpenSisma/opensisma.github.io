@@ -56,13 +56,28 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
             }
         }
 
+        const xData= myJSON.map(itm=>(itm['Value 1']+itm['Value 2'])/itm['DANNO']);
+        xData.sort(function(a, b){return a-b})
+        ////xData.splice(-1)
+const yData = myJSON.map(itm=>itm['PUNTEGGIOSCUOLA1516']);
+yData.sort(function(a, b){return a-b})
+//yData.splice(-1)
+
+const datoa = xData.map((x, i) => {
+  return {
+    x: x,
+    y: yData[i]
+  };
+});
+//delete datoa['11.833333333333334']; 
 
             var datiedu3 = {"labels": ['BONDENO', 'CAVEZZO', 'CENTO', 'CONCORDIA SULLA SECCHIA', 'CREVALCORE', 'FINALE EMILIA', 'MIRANDOLA', 'NOVI DI MODENA', 'PIEVE DI CENTO', 'POGGIO RENATICO', 'REGGIOLO', 'SAN FELICE SUL PANARO', 'SAN PROSPERO', 'VIGARANO MAINARDA', 'MEDOLLA', 'MIRABELLO', 'SAN POSSIDONIO','CAMPOSANTO', "SANT'AGOSTINO", 'TERRE DEL RENO'],
               "datasets": [{label: 'EEE',
-                            data: myJSON.map(itm=>itm['Value 1']+itm['Value 2']/itm.DANNO),
+                            data: datoa ,
                             //y: myJSON.map(itm=>itm['PUNTEGGIOSCUOLA1516']),
                             backgroundColor: 'rgb(255, 99, 132)',
-                            borderWidth: 1}] 
+                            borderWidth: 1,
+                            showLine: false}] 
                };
 function grafo2(dati, opzioni) {
   var grafoline = document.getElementById('Chartline').getContext('2d');
