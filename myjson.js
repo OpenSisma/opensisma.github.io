@@ -419,6 +419,38 @@ var myJSON = [
     "PUNTEGGIO_SCUOLE_PARITARIE_1516": "",
     "PUNTEGGIO_SCUOLE_PARITARIE_1617": ""
   }
-]
+];
+
+
+
+
+ //indice 
+
+
+
+
+var datiedu3 = {"labels": ['Somma lavori incompiuti', 'OO'],
+              "datasets": [{label: 'EEE',
+                            data: myJSON.map(itm=>itm['Value 1']+itm['Value 2']/itm.DANNO),
+                            data: myJSON.map(itm=>itm['Value 1']+itm['Value 2']/itm.DANNO),
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderWidth: 1}] 
+               };
+function grafo2(dati, opzioni) {
+  var grafoline = document.getElementById('Chartline').getContext('2d');
+  new Chart(grafoline, {type: 'line',data: dati,options: opzioni});
+};
+// display the data used in dataset[0]:
+console.log(datiedu3.datasets[0].data)
+grafo2(datiedu3)
+
+
+
+
+
+
+
+                               
+
 
 

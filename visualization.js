@@ -10,6 +10,8 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
             );
             L.control.scale().addTo(map_ae26379126cd4ce79aea9d0f395ec09f);
 
+
+
             
 
         
@@ -28,6 +30,7 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
             var choropleth_51a0ab0b553946e88cc89d15a5d0e903 = L.featureGroup(
                 {}
             ).addTo(map_ae26379126cd4ce79aea9d0f395ec09f);
+
         
     
         function geo_json_dc64d985f99647e7b35676bc82a64cc7_styler(feature) {
@@ -54,7 +57,30 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
         }
 
 
+            var datiedu3 = {"labels": ['BONDENO', 'CAVEZZO', 'CENTO', 'CONCORDIA SULLA SECCHIA', 'CREVALCORE', 'FINALE EMILIA', 'MIRANDOLA', 'NOVI DI MODENA', 'PIEVE DI CENTO', 'POGGIO RENATICO', 'REGGIOLO', 'SAN FELICE SUL PANARO', 'SAN PROSPERO', 'VIGARANO MAINARDA', 'MEDOLLA', 'MIRABELLO', 'SAN POSSIDONIO','CAMPOSANTO', "SANT'AGOSTINO", 'TERRE DEL RENO'],
+              "datasets": [{label: 'EEE',
+                            data: myJSON.map(itm=>itm['Value 1']+itm['Value 2']/itm.DANNO),
+                            //y: myJSON.map(itm=>itm['PUNTEGGIOSCUOLA1516']),
+                            backgroundColor: 'rgb(255, 99, 132)',
+                            borderWidth: 1}] 
+               };
+function grafo2(dati, opzioni) {
+  var grafoline = document.getElementById('Chartline').getContext('2d');
+  new Chart(grafoline, {type: 'scatter',data: dati, options: opzioni});
+};
+// display the data used in dataset[0]:
+console.log(datiedu3.datasets[0].data)
+grafo2(datiedu3)
+
+
+
+
+        
+
+
         function geo_json_dc64d985f99647e7b35676bc82a64cc7_onEachFeature(feature, layer) {
+
+
 
             
             layer.on({
@@ -66,34 +92,44 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
                 },
                 click: function(e) {
                     map_ae26379126cd4ce79aea9d0f395ec09f.fitBounds(e.target.getBounds());
+
+                    
                 
                  myJSON.forEach(function(arrayItem) {
                                             if (arrayItem["Comune"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
+
                                                     $('.lead').html('');
                                                     $('.lead').html('Comune di ' + arrayItem.Comune);
-                                                    $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>');
+                                                    $('#pulsante').html('');
+                                                    $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Dettaglio</label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Grafico3</label></form></div>')
-                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
-                                                    
+                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
+
+
+
+
 
                                                     var datiedu = {
                                                             "labels": ['Lavori non terminati', 'Lavori in corso', 'Lavori terminati'],
                                                             "datasets": [{
-                                                            label: 'Numero',
+                                                            label: 'Numero totale dei lavori',
                                                             data: [arrayItem['Value 1'], arrayItem['Value 2'], arrayItem['Value 3']],
                                                             backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
                                                              borderWidth: 1}]
                                                         };
 
+
+
                                                         var datiedu2 = {
-                                                            "labels": ['Lavori non terminati', 'Lavori in corso'],
+
+
+                                                            "labels": ['Numero di scuole totali', 'Certificati di agibilità e abilità mancanti', 'Documenti valutazione rischio mancanti', 'Piano emergenza mancante', 'Vincoli paesaggio', 'Edificio vetusto', 'Progettazione antisismica mancante', 'Vincoli idrogeologici'],
                                                             "datasets": [{
                                                             label: 'Numero',
-                                                            data: [arrayItem['Value 1'] + arrayItem['Value 2']],
+                                                            data: [arrayItem['numero_di_scuole'], arrayItem['CERTIFICATOAGIBILITAABITABILITA'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO'], arrayItem['PIANOEMERGENZA'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA'], arrayItem['VINCOLIIDROGEOLOGICI']],
                                                             backgroundColor: 'rgb(255, 99, 132)',
                                                              borderWidth: 1}]
                                                         };
-
 
 
 
@@ -113,6 +149,8 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
 
                                     
 
+                                    
+
                                     $('input[type=radio][name=radiored]').change(function() {
                                                             switch ($(this).val()) {
                                                                 case 'generale':
@@ -125,9 +163,17 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
                                                                     $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
                                                                     grafo(datiedu2)
                                                                     break
+                                                                    
                                                             }
                                                         });
 
+//
+
+
+
+
+                                    
+//
 
 
 
@@ -137,12 +183,20 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
                                                 }
                                             })
 
-                 //
+
+
+
 
                     // chiudi click function
                 }
             });
         };
+
+        //////
+
+
+
+        //////
 
           
         
