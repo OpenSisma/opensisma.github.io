@@ -56,36 +56,87 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
             }
         }
 
-        const xData= myJSON.map(itm=>(itm['Value 1']+itm['Value 2'])/itm['numero_di_scuole']);
-        xData.sort(function(a, b){return a-b})
-        ////xData.splice(-1)
-const yData = myJSON.map(itm=>itm['PUNTEGGIOSCUOLA1516']);
-yData.sort(function(a, b){return a-b})
-//yData.splice(-1)
+        
+const datoa = myJSON
+    .map(itm => ({
+        x: (itm['Value 1'] + itm['Value 2']) / itm['numero_di_scuole'],
+        y: itm['PUNTEGGIOSCUOLA1516']
+    }))
+    .sort((a, b) => (a.x === b.x) ? a.y - b.y : a.x - b.x);
 
-const datoa = xData.map((x, i) => {
-  return {
-    x: x,
-    y: yData[i]
-  };
-});
+    const clean_data = datoa
+    .filter(({ x, y }) => {
+      return (
+        typeof x === typeof y &&  // filter out one string & one number
+        !isNaN(x) &&              // filter out `NaN`
+        !isNaN(y) &&
+        Math.abs(x) !== Infinity && 
+        Math.abs(y) !== Infinity
+      );
+    })
+    .map(({ x, y }) => {
+      return [x, y];             // we need a list of [[x1, y1], [x2, y2], ...]
+    });
+
+    const my_regression = regression.linear(
+  clean_data
+);
+
+    const useful_points = my_regression.points.map(([x, y]) => {
+    return {x, y};
+    //y;    
+    //{x, y}
+    // or x&y for a 'scatterplot'
+})
+
 //delete datoa['11.833333333333334']; 
 
-            var datiedu3 = {"labels": ['BONDENO', 'CAVEZZO', 'CENTO', 'CONCORDIA SULLA SECCHIA', 'CREVALCORE', 'FINALE EMILIA', 'MIRANDOLA', 'NOVI DI MODENA', 'PIEVE DI CENTO', 'POGGIO RENATICO', 'REGGIOLO', 'SAN FELICE SUL PANARO', 'SAN PROSPERO', 'VIGARANO MAINARDA', 'MEDOLLA', 'MIRABELLO', 'SAN POSSIDONIO','CAMPOSANTO', "SANT'AGOSTINO", 'TERRE DEL RENO'],
-              "datasets": [{label: 'EEE',
-                            data: datoa ,
+            //var datiedu3 = {"labels": ['BONDENO', 'CAVEZZO', 'CENTO', 'CONCORDIA SULLA SECCHIA', 'CREVALCORE', 'FINALE EMILIA', 'MIRANDOLA', 'NOVI DI MODENA', 'PIEVE DI CENTO', 'POGGIO RENATICO', 'REGGIOLO', 'SAN FELICE SUL PANARO', 'SAN PROSPERO', 'VIGARANO MAINARDA', 'MEDOLLA', 'MIRABELLO', 'SAN POSSIDONIO','CAMPOSANTO', "SANT'AGOSTINO", 'TERRE DEL RENO'],
+              //"datasets": [{label: 'EEE',
+                         //   data: datoa ,
                             //y: myJSON.map(itm=>itm['PUNTEGGIOSCUOLA1516']),
-                            backgroundColor: 'rgb(255, 99, 132)',
-                            borderWidth: 1,
-                            showLine: false}] 
-               };
-function grafo2(dati, opzioni) {
-  var grafoline = document.getElementById('Chartline').getContext('2d');
-  new Chart(grafoline, {type: 'scatter',data: dati, options: opzioni});
-};
+                          //  backgroundColor: 'rgb(255, 99, 132)',
+                           // borderWidth: 1,
+                            //showLine: false}] 
+          //     };
+//function grafo2(dati, opzioni) {
+ // var grafoline = document.getElementById('Chartline').getContext('2d');
+//};
 // display the data used in dataset[0]:
-console.log(datiedu3.datasets[0].data)
-grafo2(datiedu3)
+//console.log(datiedu3.datasets[0].data)
+//grafo2(datiedu3)
+var ctx = document.getElementById('Chartline');
+var mixedChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['ok'],
+    datasets: [{
+      type: 'line',
+      label: 'Predicted',
+      data: useful_points,
+      fill: false,
+      backgroundColor: "rgba(218,83,79, .7)",
+      borderColor: "rgba(218,83,79, .7)",
+      pointRadius: 0
+    }, {
+      type: 'bubble',
+      label: 'Real',
+      data: datoa,
+      backgroundColor: "rgba(76,78,80, .7)",
+      borderColor: "transparent"
+    }]
+  },
+  options: {
+    scales: {
+      xAxes: [{
+        type: 'linear',
+      
+        
+      }],
+    }
+  }
+});
+
 
 $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 
