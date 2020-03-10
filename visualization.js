@@ -87,7 +87,7 @@ function grafo2(dati, opzioni) {
 console.log(datiedu3.datasets[0].data)
 grafo2(datiedu3)
 
-
+$('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 
 
         
@@ -108,6 +108,7 @@ grafo2(datiedu3)
                 click: function(e) {
                     map_ae26379126cd4ce79aea9d0f395ec09f.fitBounds(e.target.getBounds());
 
+
                     
                 
                  myJSON.forEach(function(arrayItem) {
@@ -115,10 +116,11 @@ grafo2(datiedu3)
 
                                                     $('.lead').html('');
                                                     $('.lead').html('Comune di ' + arrayItem.Comune);
-                                                    $('#pulsante').html('');
+                                                    $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Dettaglio</label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Grafico3</label></form></div>')
-                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
+
+                                                    
 
 
 
@@ -181,15 +183,6 @@ grafo2(datiedu3)
                                                                     
                                                             }
                                                         });
-
-//
-
-
-
-
-                                    
-//
-
 
 
 
