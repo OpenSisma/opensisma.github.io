@@ -56,7 +56,7 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
             }
         }
 
-        const xData= myJSON.map(itm=>(itm['Value 1']+itm['Value 2'])/itm['DANNO']);
+        const xData= myJSON.map(itm=>(itm['Value 1']+itm['Value 2'])/itm['numero_di_scuole']);
         xData.sort(function(a, b){return a-b})
         ////xData.splice(-1)
 const yData = myJSON.map(itm=>itm['PUNTEGGIOSCUOLA1516']);
@@ -90,11 +90,7 @@ grafo2(datiedu3)
 $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 
 
-        
-
-
         function geo_json_dc64d985f99647e7b35676bc82a64cc7_onEachFeature(feature, layer) {
-
 
 
             
@@ -108,7 +104,6 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                 click: function(e) {
                     map_ae26379126cd4ce79aea9d0f395ec09f.fitBounds(e.target.getBounds());
 
-
                     
                 
                  myJSON.forEach(function(arrayItem) {
@@ -119,10 +114,6 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Dettaglio</label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Grafico3</label></form></div>')
-
-                                                    
-
-
 
 
 
