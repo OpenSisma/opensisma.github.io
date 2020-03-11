@@ -252,10 +252,10 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                     grafo(datiedu);
                                               
                                   function grafoconfr(dati, opzioni) {
-                                        var grafobase = document.getElementById('Chartedu').getContext('2d');
-                                        new Chart(grafobase, {
+                                        var grafobase3 = document.getElementById('Chartedu').getContext('2d');
+                                        new Chart(grafobase3, {
                                             type: 'bar',
-                                            data: barChartData,
+                                            data: daticonfr,
                                             options: {
                                                 responsive: true,
                                                 legend: {
