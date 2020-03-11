@@ -60,7 +60,7 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
 const datoa = myJSON
     .map(itm => ({
         x: (itm['Value 1'] + itm['Value 2']) / itm['numero_di_scuole'],
-        y: itm['PUNTEGGIOSCUOLA1516']
+        y: itm['PUNTEGGIOSCUOLA1617']
     }))
     .sort((a, b) => (a.x === b.x) ? a.y - b.y : a.x - b.x);
 
@@ -193,7 +193,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                     $('.lead').html('Comune di ' + arrayItem.Comune);
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
-                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-8"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Dettaglio</label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Grafico3</label></form></div>')
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label></form></div>')
 
 
 
@@ -202,7 +202,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                             "datasets": [{
                                                             label: 'Numero totale dei lavori',
                                                             data: [arrayItem['Value 1'], arrayItem['Value 2'], arrayItem['Value 3']],
-                                                            backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
+                                                            backgroundColor: ['#D9534F', '#B83536', '#97111F'],
                                                              borderWidth: 1}]
                                                         };
 
@@ -215,7 +215,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                             "datasets": [{
                                                             label: 'Numero',
                                                             data: [arrayItem['numero_di_scuole'], arrayItem['CERTIFICATOAGIBILITAABITABILITA'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO'], arrayItem['PIANOEMERGENZA'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA'], arrayItem['VINCOLIIDROGEOLOGICI']],
-                                                            backgroundColor: 'rgb(255, 99, 132)',
+                                                            backgroundColor: ['#D9534F', '#B83536', '#97111F', '#770007', '#590000', '#FFB9AD', '#D45B14', '#BC827C'],
                                                              borderWidth: 1}]
                                                         };
 
@@ -224,7 +224,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                             "datasets": [{
                                                             label: ['Numero'],
                                                             data: [arrayItem['Somma valori'], arrayItem['DANNO']],
-                                                            backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
+                                                            backgroundColor: ['#D9534F', '#B83536', '#97111F'],
                                                              borderWidth: 1}]
                                                         };
 
