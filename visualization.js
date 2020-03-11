@@ -251,25 +251,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 
                                     grafo(datiedu);
                                               
-                                  function grafoconfr(dati, opzioni) {
-                                        var grafobase3 = document.getElementById('Chartedu').getContext('2d');
-                                        new Chart(grafobase3, {
-                                            type: 'bar',
-                                            data: daticonfr,
-                                            options: {
-                                                responsive: true,
-                                                legend: {
-                                                    position: 'top',
-                                                },
-                                                title: {
-                                                    display: true,
-                                                    text: 'Chart.js Bar Chart'
-                                                    }
-                                             }
-                                            });
-                                        };
-
-                                    grafoconfr(daticonfr);
+                                  
                                     
 
                                     $('input[type=radio][name=radiored]').change(function() {
@@ -292,7 +274,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                                 case 'punteggi':
                                                                     $('#Chartedu').remove();
                                                                     $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
-                                                                    grafoconfr(daticonfr);
+                                                                    grafo2(daticonfr);
                                                                     break
 
                                                                     
@@ -317,6 +299,7 @@ function grafo2(dati2, opzioni) {
                                                         };
 
                                     grafo2(datigenerici);
+
 
 
 
