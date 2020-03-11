@@ -64,6 +64,10 @@ const datoa = myJSON
     }))
     .sort((a, b) => (a.x === b.x) ? a.y - b.y : a.x - b.x);
 
+    datoa.splice(-1,1)
+
+
+
     const clean_data = datoa
     .filter(({ x, y }) => {
       return (
@@ -77,10 +81,14 @@ const datoa = myJSON
     .map(({ x, y }) => {
       return [x, y];             // we need a list of [[x1, y1], [x2, y2], ...]
     });
+    clean_data.pop()
+
+
 
     const my_regression = regression.linear(
   clean_data
 );
+
 
     const useful_points = my_regression.points.map(([x, y]) => {
     return {x, y};
@@ -109,7 +117,7 @@ var ctx = document.getElementById('Chartline');
 var mixedChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['ok'],
+    labels: 'ok',
     datasets: [{
       type: 'line',
       label: 'Predicted',
@@ -130,9 +138,29 @@ var mixedChart = new Chart(ctx, {
     scales: {
       xAxes: [{
         type: 'linear',
+         
+        //position: 'bottom',
+        //ticks: {
+            //min: 0,
+          //autoSkip: true,
+          beginAtZero: true
+        //}
       
         
       }],
+      yAxes: [{
+        //type: 'linear',
+        //position: 'bottom',
+        ticks: {
+
+            beginAtZero: true
+          //autoSkip: true,
+          //beginAtZero: true
+        }
+      
+        
+      }],
+
     }
   }
 });
@@ -159,7 +187,8 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                 
                  myJSON.forEach(function(arrayItem) {
                                             if (arrayItem["Comune"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
-
+                                                    //$('#lineChartcontainer').remove()
+                                                    //$('#Chartline').remove()
                                                     $('.lead').html('');
                                                     $('.lead').html('Comune di ' + arrayItem.Comune);
                                                     $('#pulsante').html('')

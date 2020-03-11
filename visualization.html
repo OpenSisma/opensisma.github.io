@@ -185,6 +185,18 @@
   background-color: #c0392b;
 }
 
+.nav-pills > li > a.nav-link {
+    background-color: #d9534f;
+    color: white;
+    border:3px;
+    border-color:white;
+   }
+
+    .nav-pills > li > a.nav-link.active {
+    background-color: #B83536;
+    color: white;
+    
+}
 
   
        
@@ -280,19 +292,27 @@
 
                     
  <ul class="nav nav-pills">
+ 	<li class="nav-item">
+    <a class="nav-link active" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Generale</a>
+  </li>
   <li class="nav-item">
-    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Grafici educazione</a>
+    <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Grafici educazione</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Grafici processi</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Generale</a>
-  </li>
+  
 
 </ul>
 <div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">qui grafico
+	<div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">generaleOOO
+<div id="linechartContainer">
+	
+	<canvas id="Chartline">
+
+		</canvas>
+</div></div>
+  <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">qui grafico
 
 <div id="chartContainer">
 
@@ -302,13 +322,7 @@
   </div>
   	
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">grafico processi</div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">generaleOOO
-<div id="linechartContainer">
-	
-	<canvas id="Chartline">
-
-		<canvas>
-</div>
+  
 
   </div>
  
