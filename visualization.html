@@ -34,15 +34,16 @@
                 #map_ae26379126cd4ce79aea9d0f395ec09f {
                     position: relative;
                     width: 50.0%;
-                    height: 100.0%;
+                    height: 90.0%;
                     left: 0.0%;
                     top:0px;
                     bottom:10px;
+                    margin: 5px;
                     float:left;
                     }
                 #welcome {
-                    width:48%;
-                    top: 10px;
+                    width:49%;
+                    top: 15px;
                     float:right;
                 }
                 #information {
@@ -198,6 +199,10 @@
     
 }
 
+#descrizione {
+	margin-top: 10px;
+}
+
   
        
             </style>
@@ -216,7 +221,7 @@
 <body>    
 	<!--Navbar-->
 <nav class="navbar navbar-expand-md navbar-light bg-faded">
-  <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+  <a class="navbar-brand" href="javascript:void(0)">OpenSisma</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -266,34 +271,20 @@
             <div class="folium-map" id="map_ae26379126cd4ce79aea9d0f395ec09f" ></div>
 
   <div class="container" id="welcome">
-    <h1 class="display-4">Titolo</h1>
+    <h1 class="display-4">OpenSisma</h1>
     <p class="lead">Questa è una descrizione.</p>
 
-     <!--- QUESTO  NON VA...
 
-    <ul class="nav nav-pills">
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#pills-home">Grafico1</a>
-    </div>
-  </li>
-</ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"> Grafico1 <div id="chartContainer"></div>
- 
-  	
-  </div>
-  </div></div>
 
-</div>
-  --->
 
 
                     
  <ul class="nav nav-pills">
  	<li class="nav-item">
-    <a class="nav-link active" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Generale</a>
+    <a class="nav-link active" id="pills-messages-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-messages" aria-selected="false">Descrizione</a>
+  </li>
+ 	<li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Grafici generali</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Grafici educazione</a>
@@ -305,14 +296,25 @@
 
 </ul>
 <div class="tab-content" id="pills-tabContent">
-	<div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">generaleOOO
+	<div class="tab-pane fade show active" id="pills-messages" role="tabpanel" aria-labelledby="pills-messages-tab">
+		<div id="descrizione">
+		<h2>Descrizione</h2>
+		<p>magari questa può essere una descrizione del nostro lavoro</p>
+	</div>
+
+</div>
+	<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+		<div id="descrizione"><p>Questo grafico rappresenta...</p></div>
 <div id="linechartContainer">
 	
 	<canvas id="Chartline">
 
 		</canvas>
 </div></div>
-  <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">qui grafico
+  <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+  	<div id="descrizione">
+  		<p>Clicca su un'area della mappa per vedere i grafici relativi a quel comune!</p>
+  	</div>
 
 <div id="chartContainer">
 

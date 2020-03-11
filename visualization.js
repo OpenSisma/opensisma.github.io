@@ -1,9 +1,9 @@
 var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
                 "map_ae26379126cd4ce79aea9d0f395ec09f",
                 {
-                    center: [44.75, 11.0],
+                    center: [44.75, 11.2],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 10.25,
                     zoomControl: true,
                     preferCanvas: true,
                 }
