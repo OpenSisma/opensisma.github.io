@@ -187,13 +187,13 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                 
                  myJSON.forEach(function(arrayItem) {
                                             if (arrayItem["Comune"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
-                                                    //$('#lineChartcontainer').remove()
-                                                    //$('#Chartline').remove()
+                                                    
                                                     $('.lead').html('');
+                                                    $('#togliere').remove()
                                                     $('.lead').html('Comune di ' + arrayItem.Comune);
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
-                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-6"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Dettaglio</label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Grafico3</label></form></div>')
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-8"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Generale</label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Dettaglio</label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Grafico3</label></form></div>')
 
 
 
@@ -219,6 +219,15 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                              borderWidth: 1}]
                                                         };
 
+                                                        var datigenerici = {
+                                                            "labels": ['Somma lavori previsti', 'Entità del danno'],
+                                                            "datasets": [{
+                                                            label: ['Numero'],
+                                                            data: [arrayItem['Somma valori'], arrayItem['DANNO']],
+                                                            backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
+                                                             borderWidth: 1}]
+                                                        };
+
 
 
 
@@ -236,6 +245,9 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                     grafo(datiedu);
 
                                     
+                                    
+
+                                    
 
                                     
 
@@ -251,6 +263,12 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                                     $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
                                                                     grafo(datiedu2)
                                                                     break
+                                                                case 'grafico3':
+                                                                    $('#Chartedu').remove();
+                                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
+                                                                    grafo2(datigenerici)
+                                                                    break
+
                                                                     
                                                             }
                                                         });
@@ -261,6 +279,19 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
    
                                                 }
                                             })
+
+function grafo2(dati2, opzioni) {
+                                                            var grafobase2 = document.getElementById('Chartedu').getContext('2d');
+                                                            new Chart(grafobase2, {
+                                                                type: 'bar',
+                                                                data: dati2,
+                                                                options: opzioni
+
+                                                            });
+                                                        };
+
+                                    grafo2(datigenerici);
+
 
 
 
