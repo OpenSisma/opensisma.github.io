@@ -229,9 +229,9 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                         };
                                                         
                                                         var daticonfr= {
-                                                        "labels": ['PUNTEGGIO SCUOLE PUBBLICHE 2015-2016', 'PUNTEGGIO SCUOLE PARITARIE 2015-2016', 'PUNTEGGIO SCUOLE PARITARIE 2016-2017'],
+                                                        "labels": ['SCUOLE PUBBLICHE 2015-2016', 'SCUOLE PARITARIE 2015-2016', 'SCUOLE PARITARIE 2016-2017'],
                                                         "datasets": [{
-                                                        label: 'Numero',
+                                                        label: 'Punteggio',
                                                         data: [arrayItem['PUNTEGGIOSCUOLA1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1617']],
                                                         backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
                                                         borderWidth: 1}]
@@ -287,6 +287,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
    
                                                 }
                                             })
+                
 
 function grafo2(dati2, opzioni) {
                                                             var grafobase2 = document.getElementById('Chartedu').getContext('2d');
@@ -304,7 +305,26 @@ function grafo2(dati2, opzioni) {
 
 
 
+                 ProcessiJSON.forEach(function(arrayItem) {
+                                            if (arrayItem[""] == e.target.feature.properties.NOME_COM.toUpperCase()) {
+                                                    
+                                                    $('.lead').html('');
+                                                    $('#togliere').remove()
+                                                    $('.lead').html('Comune di ' + arrayItem.Comune);
+                                                    $('#pulsante').html('')
+                                                    $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="years" value="years" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off" > Punteggio scuole Statali/Paritarie </label></form></div>')
 
+
+
+                                                    var datiprocessi = {
+                                                        "labels": ['Lavori non terminati', 'Lavori in corso', 'Lavori terminati'],
+                                                        "datasets": [{
+                                                        label: 'Numero totale dei lavori',
+                                                        data: [arrayItem['Value 1'], arrayItem['Value 2'], arrayItem['Value 3']],
+                                                        backgroundColor: ['#D9534F', '#B83536', '#97111F'],
+                                                         borderWidth: 1}]
+                                                    };
 
                     // chiudi click function
                 }
