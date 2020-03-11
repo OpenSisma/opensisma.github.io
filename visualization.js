@@ -193,7 +193,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                     $('.lead').html('Comune di ' + arrayItem.Comune);
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
-                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label></form></div>')
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off" checked> Punteggio scuole Statali/Paritarie </label></form></div>')
 
 
 
@@ -227,8 +227,15 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                             backgroundColor: ['#D9534F', '#B83536', '#97111F'],
                                                              borderWidth: 1}]
                                                         };
-
-
+                                                        
+                                                        var daticonfr= {
+                                                        "labels": ['PUNTEGGIO SCUOLE PUBBLICHE 2015-2016', 'PUNTEGGIO SCUOLE PARITARIE 2015-2016', 'PUNTEGGIO SCUOLE PARITARIE 2016-2017'],
+                                                        "datasets": [{
+                                                        label: 'Numero',
+                                                        data: [arrayItem['PUNTEGGIOSCUOLA1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1617']],
+                                                        backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
+                                                        borderWidth: 1}]
+                                                        };
 
 
                                                     
@@ -243,12 +250,26 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                         };
 
                                     grafo(datiedu);
+                                              
+                                  function grafoconfr(dati, opzioni) {
+                                        var grafobase = document.getElementById('Chartedu').getContext('2d');
+                                        new Chart(grafobase, {
+                                            type: 'bar',
+                                            data: barChartData,
+                                            options: {
+                                                responsive: true,
+                                                legend: {
+                                                    position: 'top',
+                                                },
+                                                title: {
+                                                    display: true,
+                                                    text: 'Chart.js Bar Chart'
+                                                    }
+                                             }
+                                            });
+                                        };
 
-                                    
-                                    
-
-                                    
-
+                                    grafoconfr(daticonfr);
                                     
 
                                     $('input[type=radio][name=radiored]').change(function() {
@@ -267,6 +288,11 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                                     $('#Chartedu').remove();
                                                                     $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
                                                                     grafo2(datigenerici)
+                                                                    break
+                                                                case 'punteggi':
+                                                                    $('#Chartedu').remove();
+                                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
+                                                                    grafoconfr(daticonfr);
                                                                     break
 
                                                                     
