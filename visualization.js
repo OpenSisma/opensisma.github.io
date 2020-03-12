@@ -305,32 +305,13 @@ function grafo2(dati2, opzioni) {
 
 
 
-                 ProcessiJSON.forEach(function(arrayItem) {
-                                            if (arrayItem[""] == e.target.feature.properties.NOME_COM.toUpperCase()) {
-                                                    
-                                                    $('.lead').html('');
-                                                    $('#togliere').remove()
-                                                    $('.lead').html('Comune di ' + arrayItem.Comune);
-                                                    $('#pulsante').html('')
-                                                    $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
-                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="years" value="years" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off" > Punteggio scuole Statali/Paritarie </label></form></div>')
-
-
-
-                                                    var datiprocessi = {
-                                                        "labels": ['Lavori non terminati', 'Lavori in corso', 'Lavori terminati'],
-                                                        "datasets": [{
-                                                        label: 'Numero totale dei lavori',
-                                                        data: [arrayItem['Value 1'], arrayItem['Value 2'], arrayItem['Value 3']],
-                                                        backgroundColor: ['#D9534F', '#B83536', '#97111F'],
-                                                         borderWidth: 1}]
-                                                    };
+              
 
                     // chiudi click function
                 }
             });
-        };
-
+    
+        })
         //////
 
 
