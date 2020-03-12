@@ -284,7 +284,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 
 
 
-   
+
                                                 }
                                             })
                 
