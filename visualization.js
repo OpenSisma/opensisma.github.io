@@ -184,35 +184,37 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                 click: function(e) {
                     map_ae26379126cd4ce79aea9d0f395ec09f.fitBounds(e.target.getBounds());
 
-                    /// PROCESSI
+                    ///////// GRAFICO PROCESSI ///////////////
 
-
+// qua filtra i valori che ci servono //
 const findValues = (key) => {
   key = key.toUpperCase();
   return Object.keys(ProcessiJSON[9]).filter(item => item.indexOf(key) !=-1)
   //return Object.keys(ProcessiJSON[1]).filter(item => item.indexOf(key) !=-1)
 }  
 
+//creo un array vuoto
 var arr = []
 
+//creo una variabile con i nomi delle aree 
 let clicked = e.target.feature.properties.NOME_COM.toUpperCase();
+//questa invece trova i valori che combaciano
 let match = findValues(clicked)
+// per ogni match inseriamo la object property nell'array vuoto ( quindi ora sono solo numeri)
 match.forEach(key =>arr.push(ProcessiJSON[9][key]))
-
-var new_arr = arr.filter(function(x) {
+// filtro array così da avere solo numeri minori di 100 e togliere la popolazione
+var array2010 = arr.filter(function(x) {
     return x < 100;
 });
+//variabile grafico
 var ctx2 = document.getElementById('Chartprocessi');
 
 
-
+// se chartprocessi è vuoto
 if($.trim($("#Chartprocessi").html())==''){
-
-    $("#scrivoqua").append(new_arr)
-
-    //match.forEach(key => $("#processichartContainer").append('<canvas id="Chartprocessi"></canvas>') )
-    //match.forEach(key =>$("#scrivoqua").append('ok' +  ProcessiJSON[0][key] + '</br>' ))
-   /// match.forEach(key =>$("#scrivoqua").append(provo))
+// inserisco nel paragrafo con id "scrivo qua" l'array (così controlliamo)
+    $("#scrivoqua").append(array2010)
+// faccio partire il grafico
 var grafoprocessi = new Chart(ctx2, {
     // The type of chart we want to create
     type: 'bar',
@@ -224,16 +226,17 @@ var grafoprocessi = new Chart(ctx2, {
             label: 'My First dataset',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: new_arr
+            data: array2010
         }]
     },
 
     // Configuration options go here
     options: {}
 });
-
+// altrimenti
 
 } else {
+    // svuoto chartprocessi e lo ripopolo
     $("#Chartprocessi").html('')
     var grafoprocessi = new Chart(ctx2, {
     // The type of chart we want to create
@@ -246,30 +249,21 @@ var grafoprocessi = new Chart(ctx2, {
             label: 'My First dataset',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: new_arr
+            data: array2010
         }]
     },
 
     // Configuration options go here
     options: {}
 });
-    
-
-    //match.forEach(key => // 
-    //$("#processichartContainer").append('<canvas id="Chartprocessi"></canvas>')
-   /// match.forEach(key =>$("#scrivoqua").append(provo))
-    //match.forEach(key =>$("#scrivoqua").append('ok' +  ProcessiJSON[1][key] + '</br>' ))
-     $("#scrivoqua").append(new_arr)
-        
-
+// questo sempre per check 
+$("#scrivoqua").append(array2010)
 
 }
 
 
-
-
-
-                    /// PROCESSI
+                    /// FINEPROCESSI
+                    /// INIZIO EDU
                    
                     
                 
