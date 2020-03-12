@@ -169,6 +169,7 @@ var mixedChart = new Chart(ctx, {
 $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 
 
+
         function geo_json_dc64d985f99647e7b35676bc82a64cc7_onEachFeature(feature, layer) {
 
 
@@ -183,6 +184,93 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                 click: function(e) {
                     map_ae26379126cd4ce79aea9d0f395ec09f.fitBounds(e.target.getBounds());
 
+                    /// PROCESSI
+
+
+const findValues = (key) => {
+  key = key.toUpperCase();
+  return Object.keys(ProcessiJSON[9]).filter(item => item.indexOf(key) !=-1)
+  //return Object.keys(ProcessiJSON[1]).filter(item => item.indexOf(key) !=-1)
+}  
+
+var arr = []
+
+let clicked = e.target.feature.properties.NOME_COM.toUpperCase();
+let match = findValues(clicked)
+match.forEach(key =>arr.push(ProcessiJSON[9][key]))
+
+var new_arr = arr.filter(function(x) {
+    return x < 100;
+});
+var ctx2 = document.getElementById('Chartprocessi');
+
+
+
+if($.trim($("#Chartprocessi").html())==''){
+
+    $("#scrivoqua").append(new_arr)
+
+    //match.forEach(key => $("#processichartContainer").append('<canvas id="Chartprocessi"></canvas>') )
+    //match.forEach(key =>$("#scrivoqua").append('ok' +  ProcessiJSON[0][key] + '</br>' ))
+   /// match.forEach(key =>$("#scrivoqua").append(provo))
+var grafoprocessi = new Chart(ctx2, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['o','1','2','3'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: new_arr
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+
+} else {
+    $("#Chartprocessi").html('')
+    var grafoprocessi = new Chart(ctx2, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['o'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: new_arr
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+    
+
+    //match.forEach(key => // 
+    //$("#processichartContainer").append('<canvas id="Chartprocessi"></canvas>')
+   /// match.forEach(key =>$("#scrivoqua").append(provo))
+    //match.forEach(key =>$("#scrivoqua").append('ok' +  ProcessiJSON[1][key] + '</br>' ))
+     $("#scrivoqua").append(new_arr)
+        
+
+
+}
+
+
+
+
+
+                    /// PROCESSI
+                   
                     
                 
                  myJSON.forEach(function(arrayItem) {
@@ -190,7 +278,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                     
                                                     $('.lead').html('');
                                                     $('#togliere').remove()
-                                                    $('.lead').html('Comune di ' + arrayItem.Comune);
+                                                    $('.lead').html('Comune di ' + arrayItem.Comune + '<br> Entità del danno: ' + arrayItem.DANNO  +  ' <br>Numero di lavori totali: '  + arrayItem['Somma valori'] );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
@@ -300,23 +388,28 @@ function grafo2(dati2, opzioni) {
                                                         };
 
                                     grafo2(datigenerici);
-
-
+/// processi
 
 
 
                     // chiudi click function
                 }
+
+
             });
+
+
         };
 
-        //////
-
-
 
         //////
 
-          
+
+
+        //////
+
+
+ 
         
                              
         var geo_json_dc64d985f99647e7b35676bc82a64cc7 = L.geoJson(null, {
