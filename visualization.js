@@ -169,6 +169,7 @@ var mixedChart = new Chart(ctx, {
 $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 
 
+
         function geo_json_dc64d985f99647e7b35676bc82a64cc7_onEachFeature(feature, layer) {
 
 
@@ -183,6 +184,276 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                 click: function(e) {
                     map_ae26379126cd4ce79aea9d0f395ec09f.fitBounds(e.target.getBounds());
 
+                    ///////// GRAFICO PROCESSI ///////////////
+
+// qua filtra i valori che ci servono //
+const findValues = (key) => {
+  key = key.toUpperCase();
+  return Object.keys(ProcessiJSON[9]).filter(item => item.indexOf(key) !=-1)
+  //return Object.keys(ProcessiJSON[1]).filter(item => item.indexOf(key) !=-1)
+}  
+
+//creo un array vuoto
+var arr = []
+var arr2 = []
+var arr3 = []
+var arr4 = []
+var arr5 = []
+var arr6 = []
+var ar11 = []
+var arr7 = []
+var arr8 = []
+var arr9 = []
+var arr10 = []
+
+//creo una variabile con i nomi delle aree 
+let clicked = e.target.feature.properties.NOME_COM.toUpperCase();
+//questa invece trova i valori che combaciano
+let match = findValues(clicked)
+// per ogni match inseriamo la object property nell'array vuoto ( quindi ora sono solo numeri)
+match.forEach(key => arr.push(ProcessiJSON[0][key]))
+match.forEach(key => arr2.push(ProcessiJSON[1][key]))
+match.forEach(key => arr3.push(ProcessiJSON[2][key]))
+match.forEach(key => arr4.push(ProcessiJSON[3][key]))
+match.forEach(key => arr5.push(ProcessiJSON[4][key]))
+match.forEach(key => arr6.push(ProcessiJSON[5][key]))
+match.forEach(key => arr7.push(ProcessiJSON[6][key]))
+match.forEach(key => arr11.push(ProcessiJSON[10][key]))
+match.forEach(key => arr8.push(ProcessiJSON[7][key]))
+match.forEach(key => arr9.push(ProcessiJSON[8][key]))
+match.forEach(key => arr10.push(ProcessiJSON[9][key]))
+
+//
+var array_pop_2010 = arr.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2011 = arr2.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2012 = arr3.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2013 = arr4.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2014 = arr5.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2015 = arr6.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2016 = arr7.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2017 = arr11.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2018 = arr8.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2019 = arr9.filter(function(x) {
+    return x > 100;
+});
+var array_pop_2020 = arr10.filter(function(x) {
+    return x > 100;
+});
+// filtro array così da avere solo numeri minori di 100 e togliere la popolazione
+var array2010 = arr.filter(function(x) {
+    return x < 100;
+});
+
+var array2011 = arr2.filter(function(x) {
+    return x < 100;
+});
+var array2012 = arr3.filter(function(x) {
+    return x < 100;
+});
+var array2013 = arr4.filter(function(x) {
+    return x < 100;
+});
+var array2014 = arr5.filter(function(x) {
+    return x < 100;
+});
+var array2015 = arr6.filter(function(x) {
+    return x < 100;
+});
+var array2016 = arr7.filter(function(x) {
+    return x < 100;
+});
+var array2017 = arr11.filter(function(x) {
+    return x < 100;
+});
+var array2018 = arr3.filter(function(x) {
+    return x < 100;
+});
+var array2019 = arr9.filter(function(x) {
+    return x < 100;
+});
+var array2020 = arr10.filter(function(x) {
+    return x < 100;
+});
+//variabile grafico
+var ctx2 = document.getElementById('Chartprocessi');
+
+
+// se chartprocessi è vuoto
+if($.trim($("#Chartprocessi").html())==''){
+// inserisco nel paragrafo con id "scrivo qua" l'array (così controlliamo)
+   // $("#scrivoqua").append(array2010, array2011)
+   $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop_2013, array_pop_2014, array_pop_2015, array_pop_2016, array_pop_2017, array_pop_2018, array_pop_2019, array_pop_2020)
+
+// faccio partire il grafico
+var grafoprocessi = new Chart(ctx2, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['Processi', 'Startup', 'OpenCoesione'],
+        datasets: [{
+            label: '2010',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2010
+        },
+        {label:'2011',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2011
+        },
+        {label:'2012',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2012
+        },
+        {label:'2013',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2013
+        },
+        {label:'2014',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2014
+        },
+        {label:'2015',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2015
+        },
+        {label:'2016',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2016
+        },
+        {label:'2017',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2017
+        },
+        {label:'2018',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2018
+        },
+        {label:'2019',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2019
+        },
+        {label:'2020',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2020
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+// altrimenti
+
+} else {
+    // svuoto chartprocessi e lo ripopolo
+    $("#Chartprocessi").html('')
+    var grafoprocessi = new Chart(ctx2, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['Processi', 'Startup', 'OpenCoesione'],
+        datasets: [{
+            label: '2010',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2010
+        },
+        {label:'2011',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2011
+        },
+        {label:'2012',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2012
+        },
+        {label:'2013',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2013
+        },
+        {label:'2014',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2014
+        },
+        {label:'2015',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2015
+        },
+        {label:'2016',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2016
+        },
+        {label:'2017',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2017
+        },
+        {label:'2018',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2018
+        },
+        {label:'2019',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2019
+        },
+        {label:'2020',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2020
+        }]
+    },
+
+
+    // Configuration options go here
+    options: {}
+});
+// questo sempre per check 
+//$("#scrivoqua").append(array2010, array2011)
+$("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop_2013, array_pop_2014, array_pop_2015, array_pop_2016, array_pop_2017, array_pop_2018, array_pop_2019, array_pop_2020)
+}
+
+
+                    /// FINEPROCESSI
+                    /// INIZIO EDU
+                   
                     
                 
                  myJSON.forEach(function(arrayItem) {
@@ -190,7 +461,7 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
                                                     
                                                     $('.lead').html('');
                                                     $('#togliere').remove()
-                                                    $('.lead').html('Comune di ' + arrayItem.Comune);
+                                                    $('.lead').html('Comune di ' + arrayItem.Comune + '<br> Entità del danno: ' + arrayItem.DANNO  +  ' <br>Numero di lavori totali: '  + arrayItem['Somma valori'] );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
@@ -300,23 +571,28 @@ function grafo2(dati2, opzioni) {
                                                         };
 
                                     grafo2(datigenerici);
-
-
+/// processi
 
 
 
                     // chiudi click function
                 }
+
+
             });
-    
-        })
+
+
+        };
+
+
         //////
 
 
 
         //////
 
-          
+
+ 
         
                              
         var geo_json_dc64d985f99647e7b35676bc82a64cc7 = L.geoJson(null, {
