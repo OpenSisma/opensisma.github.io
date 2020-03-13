@@ -195,15 +195,33 @@ const findValues = (key) => {
 
 //creo un array vuoto
 var arr = []
-
+var arr2 = []
+var arr3 = []
+var arr_pop = []
 //creo una variabile con i nomi delle aree 
 let clicked = e.target.feature.properties.NOME_COM.toUpperCase();
 //questa invece trova i valori che combaciano
 let match = findValues(clicked)
 // per ogni match inseriamo la object property nell'array vuoto ( quindi ora sono solo numeri)
-match.forEach(key =>arr.push(ProcessiJSON[9][key]))
+match.forEach(key => arr.push(ProcessiJSON[0][key]))
+match.forEach(key => arr2.push(ProcessiJSON[1][key]))
+match.forEach(key => arr3.push(ProcessiJSON[2][key]))
+
+//
+var array_pop_2010 = arr.filter(function(x) {
+    return x > 100;
+});
+
+
 // filtro array così da avere solo numeri minori di 100 e togliere la popolazione
 var array2010 = arr.filter(function(x) {
+    return x < 100;
+});
+
+var array2011 = arr2.filter(function(x) {
+    return x < 100;
+});
+var array2012 = arr3.filter(function(x) {
     return x < 100;
 });
 //variabile grafico
@@ -213,7 +231,8 @@ var ctx2 = document.getElementById('Chartprocessi');
 // se chartprocessi è vuoto
 if($.trim($("#Chartprocessi").html())==''){
 // inserisco nel paragrafo con id "scrivo qua" l'array (così controlliamo)
-    $("#scrivoqua").append(array2010)
+   // $("#scrivoqua").append(array2010, array2011)
+   $("#scrivoqua").append(array_pop_2010)
 // faccio partire il grafico
 var grafoprocessi = new Chart(ctx2, {
     // The type of chart we want to create
@@ -221,12 +240,22 @@ var grafoprocessi = new Chart(ctx2, {
 
     // The data for our dataset
     data: {
-        labels: ['o','1','2','3'],
+        labels: ['Processi', 'Startup', 'OpenCoesione'],
         datasets: [{
-            label: 'My First dataset',
+            label: '2010',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: array2010
+        },
+        {label:'2011',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2011
+        },
+        {label:'2012',
+        backgroundColor: 'rgb(255, 99, 100)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2012
         }]
     },
 
@@ -243,13 +272,20 @@ var grafoprocessi = new Chart(ctx2, {
     type: 'bar',
 
     // The data for our dataset
-    data: {
-        labels: ['o'],
+       data: {
+        labels: ['o','1','2','3'],
         datasets: [{
             label: 'My First dataset',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: array2010
+        },
+        {label:'',
+        backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: array2011
+
+
         }]
     },
 
@@ -257,8 +293,8 @@ var grafoprocessi = new Chart(ctx2, {
     options: {}
 });
 // questo sempre per check 
-$("#scrivoqua").append(array2010)
-
+//$("#scrivoqua").append(array2010, array2011)
+$("#scrivoqua").append(array_pop_2010)
 }
 
 
