@@ -189,7 +189,8 @@ $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 // qua filtra i valori che ci servono //
 const findValues = (key) => {
   key = key.toUpperCase();
-  return Object.keys(ProcessiJSON[9]).filter(item => item.indexOf(key) !=-1)
+  return Object.keys(ProcessiJSON[0]).filter(item => item.indexOf(key) !=-1)
+
   //return Object.keys(ProcessiJSON[1]).filter(item => item.indexOf(key) !=-1)
 }  
 
@@ -200,11 +201,12 @@ var arr3 = []
 var arr4 = []
 var arr5 = []
 var arr6 = []
-var ar11 = []
 var arr7 = []
 var arr8 = []
 var arr9 = []
 var arr10 = []
+var arr11 = []
+
 
 //creo una variabile con i nomi delle aree 
 let clicked = e.target.feature.properties.NOME_COM.toUpperCase();
@@ -218,10 +220,11 @@ match.forEach(key => arr4.push(ProcessiJSON[3][key]))
 match.forEach(key => arr5.push(ProcessiJSON[4][key]))
 match.forEach(key => arr6.push(ProcessiJSON[5][key]))
 match.forEach(key => arr7.push(ProcessiJSON[6][key]))
-match.forEach(key => arr11.push(ProcessiJSON[10][key]))
 match.forEach(key => arr8.push(ProcessiJSON[7][key]))
 match.forEach(key => arr9.push(ProcessiJSON[8][key]))
 match.forEach(key => arr10.push(ProcessiJSON[9][key]))
+match.forEach(key => arr11.push(ProcessiJSON[10][key]))
+
 
 //
 var array_pop_2010 = arr.filter(function(x) {
@@ -245,16 +248,16 @@ var array_pop_2015 = arr6.filter(function(x) {
 var array_pop_2016 = arr7.filter(function(x) {
     return x > 100;
 });
-var array_pop_2017 = arr11.filter(function(x) {
+var array_pop_2017 = arr8.filter(function(x) {
     return x > 100;
 });
-var array_pop_2018 = arr8.filter(function(x) {
+var array_pop_2018 = arr9.filter(function(x) {
     return x > 100;
 });
-var array_pop_2019 = arr9.filter(function(x) {
+var array_pop_2019 = arr10.filter(function(x) {
     return x > 100;
 });
-var array_pop_2020 = arr10.filter(function(x) {
+var array_pop_2020 = arr11.filter(function(x) {
     return x > 100;
 });
 // filtro array così da avere solo numeri minori di 100 e togliere la popolazione
@@ -280,16 +283,16 @@ var array2015 = arr6.filter(function(x) {
 var array2016 = arr7.filter(function(x) {
     return x < 100;
 });
-var array2017 = arr11.filter(function(x) {
+var array2017 = arr8.filter(function(x) {
     return x < 100;
 });
-var array2018 = arr3.filter(function(x) {
+var array2018 = arr9.filter(function(x) {
     return x < 100;
 });
-var array2019 = arr9.filter(function(x) {
+var array2019 = arr10.filter(function(x) {
     return x < 100;
 });
-var array2020 = arr10.filter(function(x) {
+var array2020 = arr11.filter(function(x) {
     return x < 100;
 });
 //variabile grafico
@@ -365,6 +368,7 @@ var grafoprocessi = new Chart(ctx2, {
         backgroundColor: 'rgb(255, 99, 100)',
             borderColor: 'rgb(255, 99, 132)',
             data: array2020
+
         }]
     },
 
