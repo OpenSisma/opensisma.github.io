@@ -300,10 +300,13 @@ var ctx2 = document.getElementById('Chartprocessi');
 
 
 // se chartprocessi è vuoto
-if($.trim($("#Chartprocessi").html())==''){
+if($.trim($("#Chartprocessi").html())=='') {
+    $("#scrivoqua").html('')
 // inserisco nel paragrafo con id "scrivo qua" l'array (così controlliamo)
    // $("#scrivoqua").append(array2010, array2011)
-   $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop_2013, array_pop_2014, array_pop_2015, array_pop_2016, array_pop_2017, array_pop_2018, array_pop_2019, array_pop_2020)
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti OpenCoesione 2010: ' + '</p>' + array_pop_2010 +
+    '<p>' + 'Popolazione impattata progetti OpenCoesione 2011: ' + '</p>' + array_pop_2011 + 
+    '<p>' + 'Popolazione impattata progetti OpenCoesione 2012: ' + '</p>' + array_pop_2012 +'<p>' + 'Popolazione impattata progetti OpenCoesione 2013: ' + '</p>' + array_pop_2013 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2014: ' + '</p>'+ array_pop_2014 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2015: ' + '</p>' + array_pop_2015 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2016: ' + '</p>' + array_pop_2016 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2017: ' + '</p>'+ array_pop_2017 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2018: ' + '</p>' + array_pop_2018 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2019: ' + '</p>' +array_pop_2019 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2020: ' + '</p>'+ array_pop_2020)
 
 // faccio partire il grafico
 var grafoprocessi = new Chart(ctx2, {
@@ -315,60 +318,59 @@ var grafoprocessi = new Chart(ctx2, {
         labels: ['Processi', 'Startup', 'OpenCoesione'],
         datasets: [{
             label: '2010',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(255, 230, 230)',
+            borderColor: 'rgb(255, 230, 230)',
             data: array2010
         },
         {label:'2011',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 204, 204)',
+            borderColor: 'rgb(255, 204, 204)',
             data: array2011
         },
         {label:'2012',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 179, 179)',
+            borderColor: 'rgb(255, 179, 179)',
             data: array2012
         },
         {label:'2013',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 102, 102)',
+            borderColor: 'rgb(255, 102, 102)',
             data: array2013
         },
         {label:'2014',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 26, 26)',
+            borderColor: 'rgb(255, 26, 26)',
             data: array2014
         },
         {label:'2015',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(204, 0, 0)',
+            borderColor: 'rgb(204, 0, 0)',
             data: array2015
         },
         {label:'2016',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(153, 0, 0)',
+            borderColor: 'rgb(153, 0, 0)',
             data: array2016
         },
         {label:'2017',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(153, 0, 51)',
+            borderColor: 'rgb(153, 0, 51)',
             data: array2017
         },
         {label:'2018',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(230, 0, 76)',
+            borderColor: 'rgb(230, 0, 76)',
             data: array2018
         },
         {label:'2019',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 26, 102)',
+            borderColor: 'rgb(255, 26, 102)',
             data: array2019
         },
         {label:'2020',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 128, 170)',
+            borderColor: 'rgb(255, 128, 170)',
             data: array2020
-
         }]
     },
 
@@ -379,6 +381,7 @@ var grafoprocessi = new Chart(ctx2, {
 
 } else {
     // svuoto chartprocessi e lo ripopolo
+    $('#scrivoqua').html('')
     $("#Chartprocessi").html('')
     var grafoprocessi = new Chart(ctx2, {
     // The type of chart we want to create
@@ -389,58 +392,58 @@ var grafoprocessi = new Chart(ctx2, {
         labels: ['Processi', 'Startup', 'OpenCoesione'],
         datasets: [{
             label: '2010',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(255, 230, 230)',
+            borderColor: 'rgb(255, 230, 230)',
             data: array2010
         },
         {label:'2011',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 204, 204)',
+            borderColor: 'rgb(255, 204, 204)',
             data: array2011
         },
         {label:'2012',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 179, 179)',
+            borderColor: 'rgb(255, 179, 179)',
             data: array2012
         },
         {label:'2013',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 102, 102)',
+            borderColor: 'rgb(255, 102, 102)',
             data: array2013
         },
         {label:'2014',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 26, 26)',
+            borderColor: 'rgb(255, 26, 26)',
             data: array2014
         },
         {label:'2015',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(204, 0, 0)',
+            borderColor: 'rgb(204, 0, 0)',
             data: array2015
         },
         {label:'2016',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(153, 0, 0)',
+            borderColor: 'rgb(153, 0, 0)',
             data: array2016
         },
         {label:'2017',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(153, 0, 51)',
+            borderColor: 'rgb(153, 0, 51)',
             data: array2017
         },
         {label:'2018',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(230, 0, 76)',
+            borderColor: 'rgb(230, 0, 76)',
             data: array2018
         },
         {label:'2019',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 26, 102)',
+            borderColor: 'rgb(255, 26, 102)',
             data: array2019
         },
         {label:'2020',
-        backgroundColor: 'rgb(255, 99, 100)',
-            borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 128, 170)',
+            borderColor: 'rgb(255, 128, 170)',
             data: array2020
         }]
     },
