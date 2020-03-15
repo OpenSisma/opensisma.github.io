@@ -134,8 +134,16 @@ const datoa2 = myJSON
     // or x&y for a 'scatterplot'
 })
 
+$("a[href='#pills-contact']").on('shown.bs.tab', function(e) {
+    $("#pulsante2").append('<div id="pulsante2"> <div class="row" id="pulsantino"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale2" value="generale2" name="radiored2" autocomplete="off" checked> Anno 1516 </label> <label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio2" value="dettaglio2" name="radiored2" autocomplete="off"> Anno 1617 </label></form></div>')
+      
+
 
 var ctx = document.getElementById('Chartline');
+$('input[type=radio][name=radiored2]').change(function() {
+                                                            switch ($(this).val()) {
+                                                                case 'generale2':
+
 var mixedChart = new Chart(ctx, {
   type: 'line',
   data: {
@@ -187,65 +195,9 @@ var mixedChart = new Chart(ctx, {
   }
 });
 
-
-$('input[type=radio][name=radiored2]').change(function() {
-                                                            switch ($(this).val()) {
-                                                                case 'generale2':
-                                                                    
-                                                                    var mixedChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: 'ok',
-    datasets: [{
-      type: 'line',
-      label: 'Predicted',
-      data: useful_points,
-      fill: false,
-      backgroundColor: "rgba(218,83,79, .7)",
-      borderColor: "rgba(218,83,79, .7)",
-      pointRadius: 0
-    }, {
-      type: 'bubble',
-      label: 'Real',
-      data: datoa,
-      backgroundColor: "rgba(76,78,80, .7)",
-      borderColor: "transparent"
-    }]
-  },
-  options: {
-    scales: {
-      xAxes: [{
-        type: 'linear',
-         
-        //position: 'bottom',
-        //ticks: {
-            //min: 0,
-          //autoSkip: true,
-          beginAtZero: true
-        //}
-      
-        
-      }],
-      yAxes: [{
-        //type: 'linear',
-        //position: 'bottom',
-        ticks: {
-
-            beginAtZero: true
-          //autoSkip: true,
-          //beginAtZero: true
-        }
-      
-        
-      }],
-
-    }
-  }
-});
                                                                     break
                                                                 case 'dettaglio2':
-                                                                   
-                                                                   var mixedChart2 = new Chart(ctx, {
+var mixedChart2 = new Chart(ctx, {
   type: 'line',
   data: {
     labels: 'ok',
@@ -295,13 +247,13 @@ $('input[type=radio][name=radiored2]').change(function() {
     }
   }
 });
-                                                                    break
+break
                                                                 
 
                                                                     
                                                             }
                                                         });
-
+});
 
 $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
 $('#descrizione').append('<p>' + 'ok'+ my_regression.r2 + '</p>')
