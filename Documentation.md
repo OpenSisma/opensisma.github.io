@@ -64,55 +64,54 @@ column “comitato di pilotaggio” has arbitrary values for the absence: null, 
 
 ## Technical analysis
 
-### Format, metadata, URI
+### Formats, metadata, provenance URI
+
+Formats, metadata, provenance and URI of our datasets can be resumed as follows:
+
 **D1** </br>
 *Format:*  XML, XML Schema, JSON, CSV, Excel CSV </br>
-*Metadata* </br>
+*Metadata:* Availability of human-readable metadata </br>
+*Provenance:* </br>
 *URI*</br>
-**D2**</br>
+**D2, D3, D5, D6, D11, D12 (MIUR)**</br>
 *Format:* CSV, JSON, RDF, XML
-*Metadata* </br>
-*URI*</br>
-**D3**</br>
-*Format:* CSV, JSON, RDF, XML</br> 
-*Metadata* </br>
+*Metadata:* Although there is available metadata in XML/RDF for the datasets, namespaces are declared even if they are not used. </br>
+*Provenance:* </br>
 *URI*</br>
 **D4**</br>
-*Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+</br>
-*Metadata* </br>
-*URI*</br>
-**D5**</br>
-*Format:* CSV, JSON, RDF, XML</br>
-*Metadata* </br>
-*URI*</br>
-**D6**</br>
-*Format:* CSV, JSON, RDF, XML</br>
-*Metadata* </br>
+*Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+. The last three aren't open formats, even though xx says xy.</br>
+*Metadata:* No metadata. </br>
+*Provenance:* </br>
 *URI*</br>
 **D7**</br>
 *Format:* CSV</br>
-*Metadata* </br>
+*Metadata:* Availability of human-readable metadata. </br>
+*Provenance:* </br>
 *URI*</br>
 **D8**</br>
-*Format:* XSLT</br>
-*Metadata* </br>
+*Format:* XSLT, which is not an open format.</br>
+*Metadata:* No metadata. </br>
+*Provenance:* </br>
 *URI*</br>
 **D9**</br>
 *Format:* ZIP/CSV</br>
-*Metadata* </br>
+*Metadata:* Availability of metadata in XSD format.</br>
+*Provenance:* </br>
 *URI*</br>
 **D10**</br>
-*Format:* CSV, PDF, Excel</br>
-*Metadata* </br>
-*URI*</br>
-**D11**</br>
-*Format:* CSV, JSON, RDF, XML</br>
-*Metadata* </br>
-*URI*</br>
-**D12**</br>
-*Format:* CSV, JSON, RDF, XML</br>
-*Metadata* </br>
-*URI*</br>
+*Format:* CSV, PDF, Excel. The last two distributions aren't considered as open formats, even though legge xx and legge yy specify that they have to be. </br>
+*Metadata:* No metadata. </br>
+*Provenance:* </br>
+*URI*</br> 
+
++ NOSTRI
+
+None of the platforms containing the open datasets specified their encoding, even though in xx it is specified they ought to.
+
+
+
+
+
 
 ### Preprocessing issues 
 The mashing-up of our datasets required some necessary preprocessing steps. Some of these are connected to some of the issues discussed in (capitolo). The first main issue consists in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
@@ -175,6 +174,9 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 | File distribution not in an open format     | Distribution of the mash-up in an open format | 
 | Arbitrary use of the decimal mark for numbers | Choice to use the decimal dot, as stated | 
 | Year format unclear  | Clear year format | 
+| Absence of metadatablabla  |Metadatablabla | 
+|No open formats  | Open formats | 
+|No encoding | Encoding | 
 
 
 
@@ -183,5 +185,7 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 ## Visualization
 
 ## RDF assertion of the data
+
+For what concerns the metadatation, decided to follow the documentation of [DCAT-AP v. 2.0](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe). For the provenance of our mashed-up datasets, we used the ontology [PROV-O](https://www.w3.org/TR/prov-o/) as suggested in the aforementioned documentation.
 
 ## Final remarks
