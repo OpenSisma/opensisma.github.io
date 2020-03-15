@@ -135,7 +135,9 @@ const datoa2 = myJSON
 })
 
 $("a[href='#pills-contact']").on('shown.bs.tab', function(e) {
-    $("#pulsante2").append('<div id="pulsante2"> <div class="row" id="pulsantino"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale2" value="generale2" name="radiored2" autocomplete="off" checked> Anno 1516 </label> <label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio2" value="dettaglio2" name="radiored2" autocomplete="off"> Anno 1617 </label></form></div>')
+    if($.trim($("#pulsante2").html())=='') {
+    $("#pulsante2").append('<div id="pulsante2"> <div class="row" id="pulsantino"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale2" value="generale2" name="radiored2" autocomplete="off" checked> Anno 1516 </label> <label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio2" value="dettaglio2" name="radiored2" autocomplete="off"> Anno 1617 </label></form></div>')}
+
       
 
 
@@ -165,6 +167,7 @@ var mixedChart = new Chart(ctx, {
     }]
   },
   options: {
+
     scales: {
       xAxes: [{
         type: 'linear',
@@ -352,6 +355,8 @@ var array_pop_2019 = arr10.filter(function(x) {
 var array_pop_2020 = arr11.filter(function(x) {
     return x > 100;
 });
+
+var yearArrays = [array_pop_2010, array_pop_2011, array_pop_2012, array_pop_2013, array_pop_2014, array_pop_2015, array_pop_2016, array_pop_2017, array_pop_2018, array_pop_2019, array_pop_2020]
 // filtro array così da avere solo numeri minori di 100 e togliere la popolazione
 var array2010 = arr.filter(function(x) {
     return x < 100;
@@ -467,7 +472,10 @@ var grafoprocessi = new Chart(ctx2, {
     },
 
     // Configuration options go here
-    options: {}
+    options: { title: {
+            display: true,
+            text: 'Custom Chart Title'
+        }}
 });
 // altrimenti
 
@@ -542,7 +550,10 @@ var grafoprocessi = new Chart(ctx2, {
 
 
     // Configuration options go here
-    options: {}
+    options: { title: {
+            display: true,
+            text: 'Custom Chart Title'
+        }}
 });
 // questo sempre per check 
 //$("#scrivoqua").append(array2010, array2011)
@@ -754,7 +765,7 @@ function grafo2(dati2, opzioni) {
     color_map_b452def91dc04900ba6300213954b24a.g.call(color_map_b452def91dc04900ba6300213954b24a.xAxis).append("text")
         .attr("class", "caption")
         .attr("y", 21)
-        .text('gravità danno registrato');
+        .text('Entità del danno');
     
             var marker_cluster_a65134eec0554dd28eae036f46ce6199 = L.markerClusterGroup(
                 {}
