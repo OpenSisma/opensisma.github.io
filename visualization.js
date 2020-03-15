@@ -145,6 +145,11 @@ var ctx = document.getElementById('Chartline');
 $('input[type=radio][name=radiored2]').change(function() {
                                                             switch ($(this).val()) {
                                                                 case 'generale2':
+                                                             if (window.mixedChart != undefined)
+{
+    window.mixedChart.destroy();
+}
+window.mixedChart = new Chart(ctx);
 
 var mixedChart = new Chart(ctx, {
   type: 'line',
@@ -200,6 +205,8 @@ var mixedChart = new Chart(ctx, {
 
                                                                     break
                                                                 case 'dettaglio2':
+                                                                
+
 var mixedChart2 = new Chart(ctx, {
   type: 'line',
   data: {
@@ -571,7 +578,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                     
                                                     $('.lead').html('');
                                                     $('#togliere').remove()
-                                                    $('.lead').html('Comune di ' + arrayItem.COMUNE + '<br> Entità del danno: ' + arrayItem.MCS_DANNO  +  ' <br>Numero di lavori totali: '  + arrayItem['LAVORI_TOTALI'] );
+                                                    $('.lead').html('Comune of ' + arrayItem.COMUNE + '<br> Damage entity: ' + arrayItem.MCS_DANNO  +  ' <br>Total number of works: '  + arrayItem['LAVORI_TOTALI'] );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
@@ -594,16 +601,16 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
 
                                                             "labels": ['Numero di scuole totali', 'Certificati di agibilità e abilità mancanti', 'Documenti valutazione rischio mancanti', 'Piano emergenza mancante', 'Vincoli paesaggio', 'Edificio vetusto', 'Progettazione antisismica mancante', 'Vincoli idrogeologici'],
                                                             "datasets": [{
-                                                            label: 'Numero',
+                                                            label: 'Total',
                                                             data: [arrayItem['SCUOLE_TOTALI'], arrayItem['CERTIFICATOAGIBILITAABITABILITA_ASSENTE'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO_ASSENTE'], arrayItem['PIANOEMERGENZA_ASSENTE'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA_ASSENTE'], arrayItem['VINCOLIIDROGEOLOGICI']],
                                                             backgroundColor: ['#D9534F', '#B83536', '#97111F', '#770007', '#590000', '#FFB9AD', '#D45B14', '#BC827C'],
                                                              borderWidth: 1}]
                                                         };
 
                                                         var datigenerici = {
-                                                            "labels": ['Somma lavori previsti', 'Entità del danno'],
+                                                            "labels": ['Total works', 'Damage entity'],
                                                             "datasets": [{
-                                                            label: ['Numero'],
+                                                            label: ['Total'],
                                                             data: [arrayItem['LAVORI_TOTALI'], arrayItem['MCS_DANNO']],
                                                             backgroundColor: ['#D9534F', '#B83536', '#97111F'],
                                                              borderWidth: 1}]
@@ -612,7 +619,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                         var daticonfr= {
                                                         "labels": ['SCUOLE PUBBLICHE 2015-2016', 'SCUOLE PARITARIE 2015-2016', 'SCUOLE PUBBLICHE 2016-2017', 'SCUOLE PARITARIE 2016-2017'],
                                                         "datasets": [{
-                                                        label: 'Punteggio',
+                                                        label: 'Score',
                                                         data: [arrayItem['PUNTEGGIO_SCUOLE_STATALI_1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1516'], arrayItem['PUNTEGGIO_SCUOLE_STATALI_1617'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1617']],
                                                         backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
                                                         borderWidth: 1}]
