@@ -23,10 +23,41 @@ In order to carry out our analysis, we chose to used datasets that differed in s
 | D11  | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR     | Autovalutazione della scuola sezione Esiti. Scuola paritaria (anno scolastico 2015-2016)    |
 | D12    | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR     | Autovalutazione della scuola sezione Esiti. Scuola paritaria (anno scolastico 2016-2017)      |
 
+### Mashed-up datasets
 
+The datasets were then grouped and processed into two mashed-up datasets:
+
+| Primary datasets | Mashed-up dataset | URI | 
+| :---         |     :---:      |          ---: |
+| D2, D3, D4, D5, D6, D7, D8, D11, D12   | Education dataset     | git status    |
+| D1, D9, D10   | Entrepreneurship dataset      | git diff      |
+
+Our mashed-up datasets are grouped in this page (pagina del catalogo).
 
 
 ## Informative quality analysis
+
+| Dataset | Completeness | Accuracy |Coherence|Promptness|
+| :---         |     :---      |          :--- |:--- | :--- |
+| D1   | Not satisfied: -values of column “obiettivi” and “modalità di inclusione” have different degrees of specificity, if any; <br>AND missing values in many columns | Not satisfied: semantic ambiguity (columns “Si registra la presenza femminile” and “Riscontro per la prevalenza di genere tra i partecipanti”) <br>
+AND some columns have the same name (“Utente creazione”, “comune”, “regioni”, “utente modifica”, “certificati”;
+AND values of column “obiettivi” and “modalità di inclusione” have different degrees of specificity, if any    | Not satisfied:
+arbitrary use of uppercase and lowercase
+arbitrary use of the accent (sì vs si)
+values “osservatorio partecipazione” and “redazione osservatorio partecipazione” in column “segnalato da persona” are not distinguishable;
+column “utente creazione” has sometimes a nickname, others a number as values
+arbitrary representation of thousands (“k”, dot or nothing)
+column “comitato di pilotaggio” has arbitrary values for the absence: null, no or “non è previsto”
+ | cosa |
+| D2, D3, D11, D12    | git diff       | git diff      | cosa | cosa |
+| D4 | Center-aligned | Right-aligned |Coherence|Promptness|
+| D5         |     :---      |          :--- |:--- | :--- |
+| D6   | git status     | git status    | cosa | cosa |
+| D7     | git diff       | git diff      | cosa | cosa |
+| D8 | Center-aligned | Right-aligned |Coherence|Promptness|
+| D9        |     :---      |          :--- |:--- | :--- |
+| D10   | git status     | git status    | cosa | cosa |
+
 
 ## Legal analysis
 
