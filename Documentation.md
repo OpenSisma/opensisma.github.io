@@ -1,0 +1,191 @@
+
+## Introduction
+
+## Scenario
+
+## Original datasets and mashed-up datasets
+In order to carry out our analysis, we chose to used datasets that differed in sources, size and theme. 
+
+### Datasets used
+| ID | Link | Name |
+| :---         |     :---     |          :--- |
+| D1   | http://www.osservatoriopartecipazione.it/opendata     | Open data dell'Osservatorio Partecipazione per anno di avvio    |
+| D2     | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA       | Autovalutazione della scuola sezione Esiti. Scuola statale (anno scolastico 2015-2016)      |
+| D3 |https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA | Autovalutazione della scuola sezione Esiti. Scuola statale (anno scolastico 2016-2017) |
+| D4        |     https://sed.istruzioneer.it/scumgnt/scu-istituzione      |         Anagrafe scuole dell'Emilia Romagna |
+| D5   | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA     | Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE)    |
+| D6     | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA       | Presenza di vincoli (idrogeologici, sismici)      |
+| D7 | https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv | Open Ricostruzione - Interventi di ricostruzione pubblica |
+| D8       |    http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx      |          Rilievi macrosismici 2012-05-29 |
+| D9  | https://opencoesione.gov.it/it/territori/emilia-romagna-regione/     | Progetti di OpenCoesione con tracciato esteso (Emilia-Romagna)    |
+| D10    | http://startup.registroimprese.it/        | Elenco di startup and PMI innovative      |
+| D11  | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR     | Autovalutazione della scuola sezione Esiti. Scuola paritaria (anno scolastico 2015-2016)    |
+| D12    | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR     | Autovalutazione della scuola sezione Esiti. Scuola paritaria (anno scolastico 2016-2017)      |
+
+### Mashed-up datasets
+
+The datasets were then grouped and processed into two mashed-up datasets:
+
+| Primary datasets | Mashed-up dataset | URI | 
+| :---         |     :---:      |          ---: |
+| D2, D3, D4, D5, D6, D7, D8, D11, D12   | Education dataset     | git status    |
+| D1, D9, D10   | Entrepreneurship dataset      | git diff      |
+
+Our mashed-up datasets are grouped in this page (pagina del catalogo).
+
+
+## Informative quality analysis
+
+| Dataset | Completeness | Accuracy |Coherence|Promptness|
+| :---         |     :---      |          :--- |:--- | :--- |
+| D1   | Not satisfied: -values of column “obiettivi” and “modalità di inclusione” have different degrees of specificity, if any; <br>AND missing values in many columns | Not satisfied: semantic ambiguity (columns “Si registra la presenza femminile” and “Riscontro per la prevalenza di genere tra i partecipanti”) <br>
+AND some columns have the same name (“Utente creazione”, “comune”, “regioni”, “utente modifica”, “certificati”;
+AND values of column “obiettivi” and “modalità di inclusione” have different degrees of specificity, if any    | Not satisfied:
+arbitrary use of uppercase and lowercase
+arbitrary use of the accent (sì vs si)
+values “osservatorio partecipazione” and “redazione osservatorio partecipazione” in column “segnalato da persona” are not distinguishable;
+column “utente creazione” has sometimes a nickname, others a number as values
+arbitrary representation of thousands (“k”, dot or nothing)
+column “comitato di pilotaggio” has arbitrary values for the absence: null, no or “non è previsto”
+ | cosa |
+| D2, D3, D11, D12    | git diff       | git diff      | cosa | cosa |
+| D4 | Center-aligned | Right-aligned |Coherence|Promptness|
+| D5         |     :---      |          :--- |:--- | :--- |
+| D6   | git status     | git status    | cosa | cosa |
+| D7     | git diff       | git diff      | cosa | cosa |
+| D8 | Center-aligned | Right-aligned |Coherence|Promptness|
+| D9        |     :---      |          :--- |:--- | :--- |
+| D10   | git status     | git status    | cosa | cosa |
+
+
+## Legal analysis
+
+## Ethical analysis
+
+## Technical analysis
+
+### Formats, metadata, provenance URI
+
+Formats, metadata, provenance and URI of our datasets can be resumed as follows:
+
+**D1** </br>
+*Format:*  XML, XML Schema, JSON, CSV, Excel CSV </br>
+*Metadata:* Availability of human-readable metadata </br>
+*Provenance:* </br>
+*URI*</br>
+**D2, D3, D5, D6, D11, D12 (MIUR)**</br>
+*Format:* CSV, JSON, RDF, XML
+*Metadata:* Although there is available metadata in XML/RDF for the datasets, namespaces are declared even if they are not used. </br>
+*Provenance:* </br>
+*URI*</br>
+**D4**</br>
+*Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+. The last three aren't open formats, even though xx says xy.</br>
+*Metadata:* No metadata. </br>
+*Provenance:* </br>
+*URI*</br>
+**D7**</br>
+*Format:* CSV</br>
+*Metadata:* Availability of human-readable metadata. </br>
+*Provenance:* </br>
+*URI*</br>
+**D8**</br>
+*Format:* XSLT, which is not an open format.</br>
+*Metadata:* No metadata. </br>
+*Provenance:* </br>
+*URI*</br>
+**D9**</br>
+*Format:* ZIP/CSV</br>
+*Metadata:* Availability of metadata in XSD format.</br>
+*Provenance:* </br>
+*URI*</br>
+**D10**</br>
+*Format:* CSV, PDF, Excel. The last two distributions aren't considered as open formats, even though legge xx and legge yy specify that they have to be. </br>
+*Metadata:* No metadata. </br>
+*Provenance:* </br>
+*URI*</br> 
+
++ NOSTRI
+
+None of the platforms containing the open datasets specified their encoding, even though in xx it is specified they ought to.
+
+
+
+
+
+
+### Preprocessing issues 
+The mashing-up of our datasets required some necessary preprocessing steps. Some of these are connected to some of the issues discussed in (capitolo). The first main issue consists in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
+
+#### Education mashed-up dataset
+
+The first issue with the mashing up of datasets D2, etc. is connected to the lack of rules regarding what the CSV delimiter should be. In each case, we had to find out what the delimiter was and specify it for the file to be properly read. 
+
+| Dataset         | Delimiter                   | 
+| ------------- | ----------------------- | 
+| D2, D3, D4, D5, D6, D8      | , | 
+| D7       | ; | 
+
+The mashing-up of the dataset is also not favoured by the different types of python objects the values of the dataframes belong to, which make it impossible to merge together two columns of different object types even if they have the same content. An example has been found when trying to join CODICESCUOLA, a string, of sicurezza scuole with the corresponding column of D4, an object, (anagrafe scuole bologna). Secondly, open data datasets that contain the same informative data (codice fiscale of schools, for instance) name it arbitrarily, making it difficult to automatize the mash-up process.
+
+| Dataset         | Name of Codice Fiscale Scolastico                   | 
+| ------------- | ----------------------- | 
+| D2, D3, D11, D12     | CODICEISTITUTO | 
+| D4     | Codice | 
+| D5, D6     | CODICESCUOLA | 
+
+The same has been noticed with the nomenclature of “comune”.
+
+| Dataset         | Nomenclature for comune                   | 
+| ------------- | ----------------------- | 
+| D4     | Comune | 
+| D7 | COMUNE | 
+| D8  | Comune | 
+
+We chose to adopt the “COMUNE” nomenclature.
+Also, D2, D3, D11, D12 have a problem with dates (i.e. “201516”), that have been arbitrarily formatted without taking into account CSV norms (ISO_8601). In this way, dates are not computationally understandable unless manually processed.
+For what concerns D8, it wasn’t released in an open format: Excel. We used the pandas read_excel method.
+The final issue with the datasets is that D2, D3, D11, D12 contain whitespace in the column headers that needs to be stripped in order for the document to be merged with other datasets. This is an important problem that proves how the publication of an open dataset does not only require an open format (CSV, in this case), but also a structure that makes it easy to be read and manipulated.
+
+#### Entrepreneurship mashed-up dataset
+
+The first issue that came up when preprocessing our datasets before cleaning them was, again, the delimiter:
+
+| Dataset         | Delimiter                   | 
+| ------------- | ----------------------- | 
+| D1     | "," | 
+| D9    | \| | 
+| D10   | ; | 
+
+D1 was more troublesome than the other datasets, since it included quotes for each field to fill in, even though sometimes such quotes weren’t even closed. This also created a problem with numbers, since they were encoded as strings and not as integers. As a result, it was necessary to skip a few lines that weren’t correctly formatted and use a workaround to correctly parse the document. 
+Another issue arised when dealing with dates, which weren’t coded in the correct datetime format, especially in D and D. 
+
+#### Preprocessing issues related to visualization
+
+As for what concerns visualization, every decimal comma in every number had to be converted in the decimal dot in order to be processed by the Folium library; the same goes for the columns of latitude and longitude in the dataset xx, which moreover had to follow the ISO 6709 Standard representation of geographic point location by coordinates. However, it is necessary to specify for the first case that both commas and dots are currently recognized as a decimal marker, even though in the xx field, che rientra nel nostro caso, dots are preferred ... fonte ...  In ISO 20022's payment messages the choice is uniform. Only dot (.) is accepted as a decimal delimiter. https://wiki.xmldation.com/General_Information/ISO_20022/Decimal_mark
+
+#### Final remarks
+The structure of both mashed-up datasets aimed to solve some issues we faced when analyzing the quality of our datasets:
+
+| Issue         | Solution                   | 
+| ------------- | ----------------------- | 
+| No shared nomenclature for the CSV delimiter | Comma delimiter as stated in xx | 
+| Arbitrary use of uppercase and lowercase | Use of uppercase only | 
+| No coherence of internal nomenclature  | Renaming of the columns | 
+| File distribution not in an open format     | Distribution of the mash-up in an open format | 
+| Arbitrary use of the decimal mark for numbers | Choice to use the decimal dot, as stated | 
+| Year format unclear  | Clear year format | 
+| Absence of metadatablabla  |Metadatablabla | 
+|No open formats  | Open formats | 
+|No encoding | Encoding | 
+
+
+
+## Sustainability of the update of the datasets over time
+
+## Visualization
+
+## RDF assertion of the data
+
+For what concerns the metadatation, decided to follow the documentation of [DCAT-AP v. 2.0](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe). For the provenance of our mashed-up datasets, we used the ontology [PROV-O](https://www.w3.org/TR/prov-o/) as suggested in the aforementioned documentation.
+
+## Final remarks
