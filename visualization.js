@@ -56,11 +56,22 @@ var map_ae26379126cd4ce79aea9d0f395ec09f = L.map(
             }
         }
 
+////////// GRAFICO GENERALE /////////////////////////////
+
         
 const datoa = myJSON
     .map(itm => ({
-        x: (itm['Value 1'] + itm['Value 2']) / itm['numero_di_scuole'],
-        y: itm['PUNTEGGIOSCUOLA1617']
+        x: (itm['LAVORI_NON_INIZIATI'] + itm['LAVORI_IN_CORSO']) / itm['SCUOLE_TOTALI'],
+        y: itm['PUNTEGGIO_SCUOLE_STATALI_1516']
+    }))
+    .sort((a, b) => (a.x === b.x) ? a.y - b.y : a.x - b.x);
+
+    datoa.splice(-1,1)
+
+const datoa2 = myJSON
+    .map(itm => ({
+        x: (itm['LAVORI_NON_INIZIATI'] + itm['LAVORI_IN_CORSO']) / itm['SCUOLE_TOTALI'],
+        y: itm['PUNTEGGIO_SCUOLE_STATALI_1617']
     }))
     .sort((a, b) => (a.x === b.x) ? a.y - b.y : a.x - b.x);
 
@@ -83,10 +94,29 @@ const datoa = myJSON
     });
     clean_data.pop()
 
+        const clean_data2 = datoa2
+    .filter(({ x, y }) => {
+      return (
+        typeof x === typeof y &&  // filter out one string & one number
+        !isNaN(x) &&              // filter out `NaN`
+        !isNaN(y) &&
+        Math.abs(x) !== Infinity && 
+        Math.abs(y) !== Infinity
+      );
+    })
+    .map(({ x, y }) => {
+      return [x, y];             // we need a list of [[x1, y1], [x2, y2], ...]
+    });
+    clean_data2.pop()
+
 
 
     const my_regression = regression.linear(
   clean_data
+);
+
+    const my_regression2 = regression.linear(
+  clean_data2
 );
 
 
@@ -97,22 +127,14 @@ const datoa = myJSON
     // or x&y for a 'scatterplot'
 })
 
-//delete datoa['11.833333333333334']; 
+        const useful_points2 = my_regression2.points.map(([x, y]) => {
+    return {x, y};
+    //y;    
+    //{x, y}
+    // or x&y for a 'scatterplot'
+})
 
-            //var datiedu3 = {"labels": ['BONDENO', 'CAVEZZO', 'CENTO', 'CONCORDIA SULLA SECCHIA', 'CREVALCORE', 'FINALE EMILIA', 'MIRANDOLA', 'NOVI DI MODENA', 'PIEVE DI CENTO', 'POGGIO RENATICO', 'REGGIOLO', 'SAN FELICE SUL PANARO', 'SAN PROSPERO', 'VIGARANO MAINARDA', 'MEDOLLA', 'MIRABELLO', 'SAN POSSIDONIO','CAMPOSANTO', "SANT'AGOSTINO", 'TERRE DEL RENO'],
-              //"datasets": [{label: 'EEE',
-                         //   data: datoa ,
-                            //y: myJSON.map(itm=>itm['PUNTEGGIOSCUOLA1516']),
-                          //  backgroundColor: 'rgb(255, 99, 132)',
-                           // borderWidth: 1,
-                            //showLine: false}] 
-          //     };
-//function grafo2(dati, opzioni) {
- // var grafoline = document.getElementById('Chartline').getContext('2d');
-//};
-// display the data used in dataset[0]:
-//console.log(datiedu3.datasets[0].data)
-//grafo2(datiedu3)
+
 var ctx = document.getElementById('Chartline');
 var mixedChart = new Chart(ctx, {
   type: 'line',
@@ -166,8 +188,126 @@ var mixedChart = new Chart(ctx, {
 });
 
 
-$('#chartContainer').append('<canvas id="Chartedu"><canvas>')
+$('input[type=radio][name=radiored2]').change(function() {
+                                                            switch ($(this).val()) {
+                                                                case 'generale2':
+                                                                    
+                                                                    var mixedChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: 'ok',
+    datasets: [{
+      type: 'line',
+      label: 'Predicted',
+      data: useful_points,
+      fill: false,
+      backgroundColor: "rgba(218,83,79, .7)",
+      borderColor: "rgba(218,83,79, .7)",
+      pointRadius: 0
+    }, {
+      type: 'bubble',
+      label: 'Real',
+      data: datoa,
+      backgroundColor: "rgba(76,78,80, .7)",
+      borderColor: "transparent"
+    }]
+  },
+  options: {
+    scales: {
+      xAxes: [{
+        type: 'linear',
+         
+        //position: 'bottom',
+        //ticks: {
+            //min: 0,
+          //autoSkip: true,
+          beginAtZero: true
+        //}
+      
+        
+      }],
+      yAxes: [{
+        //type: 'linear',
+        //position: 'bottom',
+        ticks: {
 
+            beginAtZero: true
+          //autoSkip: true,
+          //beginAtZero: true
+        }
+      
+        
+      }],
+
+    }
+  }
+});
+                                                                    break
+                                                                case 'dettaglio2':
+                                                                   
+                                                                   var mixedChart2 = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: 'ok',
+    datasets: [{
+      type: 'line',
+      label: 'Predicted',
+      data: useful_points2,
+      fill: false,
+      backgroundColor: "rgba(218,83,79, .7)",
+      borderColor: "rgba(218,83,79, .7)",
+      pointRadius: 0
+    }, {
+      type: 'bubble',
+      label: 'Real',
+      data: datoa2,
+      backgroundColor: "rgba(76,78,80, .7)",
+      borderColor: "transparent"
+    }]
+  },
+  options: {
+    scales: {
+      xAxes: [{
+        type: 'linear',
+         
+        //position: 'bottom',
+        //ticks: {
+            //min: 0,
+          //autoSkip: true,
+          beginAtZero: true
+        //}
+      
+        
+      }],
+      yAxes: [{
+        //type: 'linear',
+        //position: 'bottom',
+        ticks: {
+
+            beginAtZero: true
+          //autoSkip: true,
+          //beginAtZero: true
+        }
+      
+        
+      }],
+
+    }
+  }
+});
+                                                                    break
+                                                                
+
+                                                                    
+                                                            }
+                                                        });
+
+
+$('#chartContainer').append('<canvas id="Chartedu"><canvas>')
+$('#descrizione').append('<p>' + 'ok'+ my_regression.r2 + '</p>')
+$('#descrizione').append('<p>' + 'ok'+ my_regression.points + '</p>')
+
+//////////////// FINE GRAFICO GENERALE //////////////
 
 
         function geo_json_dc64d985f99647e7b35676bc82a64cc7_onEachFeature(feature, layer) {
@@ -464,11 +604,11 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                     
                 
                  myJSON.forEach(function(arrayItem) {
-                                            if (arrayItem["Comune"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
+                                            if (arrayItem["COMUNE"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
                                                     
                                                     $('.lead').html('');
                                                     $('#togliere').remove()
-                                                    $('.lead').html('Comune di ' + arrayItem.Comune + '<br> Entità del danno: ' + arrayItem.DANNO  +  ' <br>Numero di lavori totali: '  + arrayItem['Somma valori'] );
+                                                    $('.lead').html('Comune di ' + arrayItem.COMUNE + '<br> Entità del danno: ' + arrayItem.MCS_DANNO  +  ' <br>Numero di lavori totali: '  + arrayItem['LAVORI_TOTALI'] );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
@@ -479,7 +619,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                             "labels": ['Lavori non terminati', 'Lavori in corso', 'Lavori terminati'],
                                                             "datasets": [{
                                                             label: 'Numero totale dei lavori',
-                                                            data: [arrayItem['Value 1'], arrayItem['Value 2'], arrayItem['Value 3']],
+                                                            data: [arrayItem['LAVORI_NON_INIZIATI'], arrayItem['LAVORI_IN_CORSO'], arrayItem['LAVORI_TERMINATI']],
                                                             backgroundColor: ['#D9534F', '#B83536', '#97111F'],
                                                              borderWidth: 1}]
                                                         };
@@ -492,7 +632,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                             "labels": ['Numero di scuole totali', 'Certificati di agibilità e abilità mancanti', 'Documenti valutazione rischio mancanti', 'Piano emergenza mancante', 'Vincoli paesaggio', 'Edificio vetusto', 'Progettazione antisismica mancante', 'Vincoli idrogeologici'],
                                                             "datasets": [{
                                                             label: 'Numero',
-                                                            data: [arrayItem['numero_di_scuole'], arrayItem['CERTIFICATOAGIBILITAABITABILITA'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO'], arrayItem['PIANOEMERGENZA'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA'], arrayItem['VINCOLIIDROGEOLOGICI']],
+                                                            data: [arrayItem['SCUOLE_TOTALI'], arrayItem['CERTIFICATOAGIBILITAABITABILITA_ASSENTE'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO_ASSENTE'], arrayItem['PIANOEMERGENZA_ASSENTE'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA_ASSENTE'], arrayItem['VINCOLIIDROGEOLOGICI']],
                                                             backgroundColor: ['#D9534F', '#B83536', '#97111F', '#770007', '#590000', '#FFB9AD', '#D45B14', '#BC827C'],
                                                              borderWidth: 1}]
                                                         };
@@ -501,16 +641,16 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                             "labels": ['Somma lavori previsti', 'Entità del danno'],
                                                             "datasets": [{
                                                             label: ['Numero'],
-                                                            data: [arrayItem['Somma valori'], arrayItem['DANNO']],
+                                                            data: [arrayItem['LAVORI_TOTALI'], arrayItem['MCS_DANNO']],
                                                             backgroundColor: ['#D9534F', '#B83536', '#97111F'],
                                                              borderWidth: 1}]
                                                         };
                                                         
                                                         var daticonfr= {
-                                                        "labels": ['SCUOLE PUBBLICHE 2015-2016', 'SCUOLE PARITARIE 2015-2016', 'SCUOLE PARITARIE 2016-2017'],
+                                                        "labels": ['SCUOLE PUBBLICHE 2015-2016', 'SCUOLE PARITARIE 2015-2016', 'SCUOLE PUBBLICHE 2016-2017', 'SCUOLE PARITARIE 2016-2017'],
                                                         "datasets": [{
                                                         label: 'Punteggio',
-                                                        data: [arrayItem['PUNTEGGIOSCUOLA1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1617']],
+                                                        data: [arrayItem['PUNTEGGIO_SCUOLE_STATALI_1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1516'], arrayItem['PUNTEGGIO_SCUOLE_STATALI_1617'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1617']],
                                                         backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 51, 95)', 'rgb(255, 0, 55)'],
                                                         borderWidth: 1}]
                                                         };
