@@ -140,20 +140,18 @@ $("a[href='#pills-contact']").on('shown.bs.tab', function(e) {
     if($.trim($("#pulsante2").html())=='') {
     $("#pulsante2").append('<div id="pulsante2"> <div class="row" id="pulsantino"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale2" value="generale2" name="radiored2" autocomplete="off" checked> Anno 1516 </label> <label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio2" value="dettaglio2" name="radiored2" autocomplete="off"> Anno 1617 </label></form></div>')}
 
-      
+
 
 
 var ctx = document.getElementById('Chartline');
 $('input[type=radio][name=radiored2]').change(function() {
                                                             switch ($(this).val()) {
                                                                 case 'generale2':
-                                                             if (window.mixedChart != undefined)
-{
-    window.mixedChart.destroy();
-}
-window.mixedChart = new Chart(ctx);
+                                                             if(window.mixedChart2 && window.mixedChart2 !== null){
+        window.mixedChart2.destroy();
+    }
 
-var mixedChart = new Chart(ctx, {
+window.mixedChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: 'ok',
@@ -207,9 +205,12 @@ var mixedChart = new Chart(ctx, {
 
                                                                     break
                                                                 case 'dettaglio2':
+                                                                if(window.mixedChart && window.mixedChart !== null){
+        window.mixedChart.destroy();
+    }
                                                                 
 
-var mixedChart2 = new Chart(ctx, {
+window.mixedChart2 = new Chart(ctx, {
   type: 'line',
   data: {
     labels: 'ok',
@@ -397,6 +398,11 @@ var array2020 = arr11.filter(function(x) {
 //variabile grafico
 var ctx2 = document.getElementById('Chartprocessi');
 
+if(window.grafoprocessi && window.grafoprocessi !== null){
+        window.grafoprocessi.destroy();
+    }
+
+
 
 // se chartprocessi è vuoto
 if($.trim($("#Chartprocessi").html())=='') {
@@ -408,13 +414,13 @@ if($.trim($("#Chartprocessi").html())=='') {
     '<p>' + 'Popolazione impattata progetti OpenCoesione 2012: ' + '</p>' + array_pop_2012 +'<p>' + 'Popolazione impattata progetti OpenCoesione 2013: ' + '</p>' + array_pop_2013 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2014: ' + '</p>'+ array_pop_2014 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2015: ' + '</p>' + array_pop_2015 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2016: ' + '</p>' + array_pop_2016 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2017: ' + '</p>'+ array_pop_2017 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2018: ' + '</p>' + array_pop_2018 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2019: ' + '</p>' +array_pop_2019 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2020: ' + '</p>'+ array_pop_2020)
 
 // faccio partire il grafico
-var grafoprocessi = new Chart(ctx2, {
+window.grafoprocessi = new Chart(ctx2, {
     // The type of chart we want to create
     type: 'bar',
 
     // The data for our dataset
     data: {
-        labels: ['Processi', 'Startup', 'OpenCoesione'],
+        labels: ['Progetti Osservatorio Partecipazione', 'Startup', 'Progetti OpenCoesione'],
         datasets: [{
             label: '2010',
             backgroundColor: 'rgb(255, 230, 230)',
@@ -485,13 +491,16 @@ var grafoprocessi = new Chart(ctx2, {
     // svuoto chartprocessi e lo ripopolo
     $('#scrivoqua').html('')
     $("#Chartprocessi").html('')
-    var grafoprocessi = new Chart(ctx2, {
+    if(window.grafoprocessi && window.grafoprocessi !== null){
+        window.grafoprocessi.destroy();
+    }
+    window.grafoprocessi = new Chart(ctx2, {
     // The type of chart we want to create
     type: 'bar',
 
     // The data for our dataset
     data: {
-        labels: ['Processi', 'Startup', 'OpenCoesione'],
+        labels: ['Progetti Osservatorio Partecipazione', 'Startup', 'Progetti OpenCoesione'],
         datasets: [{
             label: '2010',
             backgroundColor: 'rgb(255, 230, 230)',
@@ -624,7 +633,10 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                     
                                    function grafo(dati, opzioni) {
                                                             var grafobase = document.getElementById('Chartedu').getContext('2d');
-                                                            new Chart(grafobase, {
+                                                            if(window.grafobase && window.grafobase !== null){
+        window.grafobase.destroy();
+    }
+                                                            window.grafobase = new Chart(grafobase, {
                                                                 type: 'doughnut',
                                                                 data: dati,
                                                                 options: opzioni
@@ -674,7 +686,10 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
 
 function grafo2(dati2, opzioni) {
                                                             var grafobase2 = document.getElementById('Chartedu').getContext('2d');
-                                                            new Chart(grafobase2, {
+                                                            if(window.grafobase2 && window.grafobase2 !== null){
+        window.grafobase2.destroy();
+    }
+                                                            window.grafobase2 = new Chart(grafobase2, {
                                                                 type: 'bar',
                                                                 data: dati2,
                                                                 options: opzioni
