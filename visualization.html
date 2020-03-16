@@ -54,6 +54,11 @@
                     width: 100%;
                     float:left;
                 }
+                #pills-settings{
+                  width:500px;
+                  height:500px;
+                }
+
                 #pills-home{
                 	width:500px;
                 	height:500px;
@@ -229,6 +234,7 @@ footer{
 
     <script src="jsonaggiornato.js"></script> 
     <script src="ProcessiJSON.js"></script>
+    <script src="lavori.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/regression@2.0.1/dist/regression.min.js"></script>
 </head>
 <body>    
@@ -280,6 +286,10 @@ footer{
  	<li class="nav-item">
     <a class="nav-link active" id="pills-messages-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-messages" aria-selected="false">Description</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-settings-tab" data-toggle="pill" href="#pills-settings" role="tab" aria-controls="pills-settings" aria-selected="false">Works</a>
+
+  </li>
  	<li class="nav-item">
     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">General graphs</a>
 
@@ -301,6 +311,14 @@ footer{
 		<p>mini descrizione + legenda dei marker della mappa + mini spiega dei nostri grafici</p>
 	</div>
 
+</div>
+  <!--- LAVORI --->
+
+  <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">
+   <div id="workschartcontainer"></div>
+
+
+    
 </div>
   <!--- GENERALE --->
 

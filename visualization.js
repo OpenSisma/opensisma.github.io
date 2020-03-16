@@ -58,6 +58,8 @@
 
 
 
+
+
         ////////// GRAFICO GENERALE /////////////////////////////
 
         
@@ -282,6 +284,37 @@ $('#descrizione').append('<p>' + 'ok'+ my_regression.points + '</p>')
                 },
                 click: function(e) {
                     map_3a208fe2faed43e2b31a34c0d6b1dc93.fitBounds(e.target.getBounds());
+miavariabile.forEach(function(arrayItem) {
+
+            if (arrayItem["COMUNE"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
+                $('#workschartcontainer').append(('<canvas id="Chartworks"><canvas>'))
+if(window.chart && window.chart !== null){
+        window.chart.destroy();
+    }
+
+                var ctx = document.getElementById('Chartworks').getContext('2d');
+window.chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'doughnut',
+
+    // The data for our dataset
+    data: {
+        labels: ['Works never started', 'Works in progress', 'Finished works'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: ['#D9534F', '#B83536', '#97111F'],
+            borderColor: 'rgb(255, 99, 132)',
+            data: [arrayItem['LAVORI_NON_INIZIATI'], arrayItem['LAVORI_IN_CORSO'], arrayItem['LAVORI_TERMINATI']]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+        
+
+    }
+})
                     ///////// GRAFICO PROCESSI ///////////////
 
 // qua filtra i valori che ci servono //
@@ -573,6 +606,16 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
 
 
                     /// FINEPROCESSI
+                    //
+//$("a[href='#pills-settings']").on('shown.bs.tab', function(e) {
+    
+    //$('#workschartcontainer').append('<canvas id="Chartworks"><canvas>')
+    
+
+
+    //})
+
+                    //
                     /// INIZIO EDU
                    
                     
@@ -585,18 +628,12 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                     $('.lead').html('Comune of ' + arrayItem.COMUNE + '<br> Damage entity: ' + arrayItem.MCS_DANNO  +  ' <br>Total number of works: '  + arrayItem['LAVORI_TOTALI'] );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
-                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale" value="generale" name="radiored" autocomplete="off" checked> Lavori per tipo </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off"> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off" checked> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
+                                                    
+                                                    
+                                                  
 
 
-
-                                                    var datiedu = {
-                                                            "labels": ['Lavori non terminati', 'Lavori in corso', 'Lavori terminati'],
-                                                            "datasets": [{
-                                                            label: 'Numero totale dei lavori',
-                                                            data: [arrayItem['LAVORI_NON_INIZIATI'], arrayItem['LAVORI_IN_CORSO'], arrayItem['LAVORI_TERMINATI']],
-                                                            backgroundColor: ['#D9534F', '#B83536', '#97111F'],
-                                                             borderWidth: 1}]
-                                                        };
 
 
 
@@ -643,19 +680,13 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
 
                                                             });
                                                         };
-
-                                    grafo(datiedu);
+grafo(datiedu2)
                                               
                                   
                                     
 
                                     $('input[type=radio][name=radiored]').change(function() {
                                                             switch ($(this).val()) {
-                                                                case 'generale':
-                                                                    $('#Chartedu').remove();
-                                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
-                                                                    grafo(datiedu);
-                                                                    break
                                                                 case 'dettaglio':
                                                                     $('#Chartedu').remove();
                                                                     $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
