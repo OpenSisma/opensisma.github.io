@@ -54,13 +54,22 @@
                     width: 100%;
                     float:left;
                 }
+                #processichartcontainer {
+                    width: 100%;
+                    float:left;
+                }
+
+                #workschartcontainer {
+                    width: 100%;
+                    float:left;
+                }
                 #pills-settings{
-                  width:500px;
+                  width:700px;
                   height:500px;
                 }
 
                 #pills-home{
-                	width:500px;
+                	width:650px;
                 	height:500px;
                 }
 
@@ -219,6 +228,25 @@
   float:right;
   margin-right:50px;
 }
+#roho2 {
+  background-color: #e74c3c !important;
+  border-color: white;
+  float:right;
+  margin-right:50px;
+  z-index:9000;
+}
+#roho3 {
+  background-color: #e74c3c !important;
+  border-color: white;
+  float:right;
+  margin-right:50px;
+}
+#roho4 {
+  background-color: #e74c3c !important;
+  border-color: white;
+  float:right;
+  margin-right:50px;
+}
 footer{
 	margin- bottom:6px;
 }
@@ -315,7 +343,38 @@ footer{
   <!--- LAVORI --->
 
   <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">
+    <button type="button" id ="roho" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span class="fa fa-info-circle" aria-hidden="true"></span>
+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Works chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       For each clicked area, it is possible to find a count of work progress.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <div id="descrizione">
+      <p id="togliere">Click on a map area to see the related charts!</p>
+    </div>
+    <!-- Button trigger modal -->
+
    <div id="workschartcontainer"></div>
+   <div id="pulsantee"></div>
 
 
     
@@ -325,7 +384,42 @@ footer{
 	<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 		<!---<div id="descrizione"><p>Questo grafico rappresenta...</p></div> --->
     <!-- Button trigger modal -->
-<button type="button" id ="roho" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span class="fa fa-info-circle" aria-hidden="true"></span>
+<button type="button" id ="roho2" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2"><span class="fa fa-info-circle" aria-hidden="true"></span>
+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">General graphs</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        In this section, it is possible to see two main types of graphs. The first one represents, on the X axis the "damage index", that is to say, for each Comune, the sum of the number of works that have never started and the number of works in progress, divided by the number of schools. Thus, for each school there is a number of incomplete works: an index of incompleteness. On the Y axis, instead, there is the school score, for each year respectively. </br>The other type of graph represents the trend of the total number of works related to damage.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+<div id="linechartContainer">
+	<canvas id="Chartline">
+		</canvas>
+    <div id='pulsante2'></div>
+  </div>
+    
+</div>
+  <!--- EDU --->
+
+  <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <button type="button" id ="roho3" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3"><span class="fa fa-info-circle" aria-hidden="true"></span>
 
 </button>
 
@@ -350,16 +444,6 @@ footer{
   </div>
 </div>
 <!-- end Modal -->
-<div id="linechartContainer">
-	<canvas id="Chartline">
-		</canvas>
-    <div id='pulsante2'></div>
-  </div>
-    
-</div>
-  <!--- EDU --->
-
-  <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
   	<div id="descrizione">
   		<p id="togliere">Click on a map area to see the related charts!</p>
   	</div>
@@ -373,6 +457,32 @@ footer{
   	  <!--- PROCESSI --->
 
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <button type="button" id ="roho4" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4"><span class="fa fa-info-circle" aria-hidden="true"></span>
+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+
 
   <div id="processichartContainer"></div>
   <canvas id="Chartprocessi"></canvas>

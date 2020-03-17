@@ -62,6 +62,8 @@
 
         ////////// GRAFICO GENERALE /////////////////////////////
 
+
+
         
 const datoa = myJSON
     .map(itm => ({
@@ -79,7 +81,20 @@ const datoa2 = myJSON
     }))
     .sort((a, b) => (a.x === b.x) ? a.y - b.y : a.x - b.x);
 
-    datoa.splice(-1,1)
+    //datoa2.splice(-1,1)
+
+    const datoa23 = miavariabile
+    .map(itm => ({
+        x: itm['LAVORI_NON_INIZIATI'] + itm['LAVORI_IN_CORSO'] + itm['LAVORI_TERMINATI'],
+        y: itm['MCS_DANNO']
+    }))
+    .sort((a, b) => (a.x === b.x) ? a.y - b.y : a.x - b.x);
+
+
+
+
+
+  
 
 
 
@@ -138,9 +153,67 @@ const datoa2 = myJSON
     // or x&y for a 'scatterplot'
 })
 
+
 $("a[href='#pills-contact']").on('shown.bs.tab', function(e) {
     if($.trim($("#pulsante2").html())=='') {
-    $("#pulsante2").append('<div id="pulsante2"> <div class="row" id="pulsantino"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale2" value="generale2" name="radiored2" autocomplete="off" checked> Anno 1516 </label> <label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio2" value="dettaglio2" name="radiored2" autocomplete="off"> Anno 1617 </label></form></div>')}
+    $("#pulsante2").append('<div id="pulsante2"> <div class="row" id="pulsantino"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="generale2" value="generale2" name="radiored2" autocomplete="off" checked> Trend school score- damage index (2015-2016) </label> <label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio2" value="dettaglio2" name="radiored2" autocomplete="off"> Trend school score-damage index (2016-2017) </label><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio3" value="dettaglio3" name="radiored2" autocomplete="off"> Trend total works-damage entity </label></form></div>')}
+    var ctx = document.getElementById('Chartline');
+
+                                                             if(window.mixedChart2 && window.mixedChart2 !== null){
+        window.mixedChart2.destroy();
+    }
+
+window.mixedChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: 'ok',
+    datasets: [{
+      type: 'line',
+      label: 'Predicted',
+      data: useful_points,
+      fill: false,
+      backgroundColor: "rgba(218,83,79, .7)",
+      borderColor: "rgba(218,83,79, .7)",
+      pointRadius: 0
+    }, {
+      type: 'bubble',
+      label: 'Real',
+      data: datoa,
+      backgroundColor: "rgba(76,78,80, .7)",
+      borderColor: "transparent"
+    }]
+  },
+  options: {
+
+    scales: {
+      xAxes: [{
+        type: 'linear',
+         
+        //position: 'bottom',
+        //ticks: {
+            //min: 0,
+          //autoSkip: true,
+          beginAtZero: true
+        //}
+      
+        
+      }],
+      yAxes: [{
+        //type: 'linear',
+        //position: 'bottom',
+        ticks: {
+
+            beginAtZero: true
+          //autoSkip: true,
+          //beginAtZero: true
+        }
+      
+        
+      }],
+
+    }
+  }
+});
 
 
 
@@ -148,6 +221,7 @@ $("a[href='#pills-contact']").on('shown.bs.tab', function(e) {
 $('input[type=radio][name=radiored2]').change(function() {
                                                             switch ($(this).val()) {
                                                                 case 'generale2':
+                                                                $('#Chartline').html('')
                                                                 var ctx = document.getElementById('Chartline');
 
                                                              if(window.mixedChart2 && window.mixedChart2 !== null){
@@ -265,6 +339,36 @@ window.mixedChart2 = new Chart(ctx, {
   }
 });
 break
+case 'dettaglio3':
+ var ctx = document.getElementById('Chartline');
+
+                                                                if(window.chart && window.chart !== null){
+        window.chart.destroy();
+    }
+window.chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: datoa23,
+        datasets: [{
+            label: 'ok',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: datoa23
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+      title: {
+            display: true,
+            text: 'Trend total works-damage entity'
+        }
+      }
+});
+
                                                                 
 
                                                                     
@@ -273,8 +377,7 @@ break
 });
 
 $('#chartContainer').append('<canvas id="Chartedu"><canvas>')
-$('#descrizione').append('<p>' + 'ok'+ my_regression.r2 + '</p>')
-$('#descrizione').append('<p>' + 'ok'+ my_regression.points + '</p>')
+
 
         function geo_json_7d80ebe586364b3595e9d7798aba6329_onEachFeature(feature, layer) {
             layer.on({
@@ -290,6 +393,13 @@ miavariabile.forEach(function(arrayItem) {
 
             if (arrayItem["COMUNE"] == e.target.feature.properties.NOME_COM.toUpperCase()) {
                 $('#workschartcontainer').append(('<canvas id="Chartworks"><canvas>'))
+                $('#pulsantee').html('')
+                $('#togliere').remove()
+                
+                
+
+
+
 if(window.chart && window.chart !== null){
         window.chart.destroy();
     }
@@ -310,13 +420,16 @@ window.chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
-});
+    options: {title: {
+            display: true,
+            text: 'Number and type of work progress'
+        }}
+}); // fine chart
         
 
     }
-})
-                    ///////// GRAFICO PROCESSI ///////////////
+})// fine foreachfunction
+///////////////////                    ///////// GRAFICO PROCESSI ///////////////
 
 // qua filtra i valori che ci servono //
 const findValues = (key) => {
@@ -629,7 +742,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                     $('.lead').html('Comune of ' + arrayItem.COMUNE + '<br> Damage entity: ' + arrayItem.MCS_DANNO  +  ' <br>Total number of works: '  + arrayItem['LAVORI_TOTALI'] );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
-                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off" checked> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off" checked> Certificates </label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Comparison between state schools scores and private ones </label></form></div>')
                                                     
                                                     
                                                   
