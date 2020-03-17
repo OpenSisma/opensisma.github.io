@@ -145,10 +145,11 @@ $("a[href='#pills-contact']").on('shown.bs.tab', function(e) {
 
 
 
-var ctx = document.getElementById('Chartline');
 $('input[type=radio][name=radiored2]').change(function() {
                                                             switch ($(this).val()) {
                                                                 case 'generale2':
+                                                                var ctx = document.getElementById('Chartline');
+
                                                              if(window.mixedChart2 && window.mixedChart2 !== null){
         window.mixedChart2.destroy();
     }
@@ -204,9 +205,10 @@ window.mixedChart = new Chart(ctx, {
     }
   }
 });
-
                                                                     break
                                                                 case 'dettaglio2':
+                                                                var ctx = document.getElementById('Chartline');
+
                                                                 if(window.mixedChart && window.mixedChart !== null){
         window.mixedChart.destroy();
     }
@@ -299,11 +301,10 @@ window.chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: ['Works never started', 'Works in progress', 'Finished works'],
+        labels: ['Works not started', 'Works in progress', 'Finished works'],
         datasets: [{
             label: 'My First dataset',
             backgroundColor: ['#D9534F', '#B83536', '#97111F'],
-            borderColor: 'rgb(255, 99, 132)',
             data: [arrayItem['LAVORI_NON_INIZIATI'], arrayItem['LAVORI_IN_CORSO'], arrayItem['LAVORI_TERMINATI']]
         }]
     },
@@ -628,7 +629,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                     $('.lead').html('Comune of ' + arrayItem.COMUNE + '<br> Damage entity: ' + arrayItem.MCS_DANNO  +  ' <br>Total number of works: '  + arrayItem['LAVORI_TOTALI'] );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
-                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off" checked> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="grafico3" value="grafico3" name="radiored" autocomplete="off"> Numero lavori e danno</label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
+                                                    $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off" checked> Certificati </label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Punteggio scuole Statali/Paritarie </label></form></div>')
                                                     
                                                     
                                                   
@@ -692,11 +693,7 @@ grafo(datiedu2)
                                                                     $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
                                                                     grafo(datiedu2)
                                                                     break
-                                                                case 'grafico3':
-                                                                    $('#Chartedu').remove();
-                                                                    $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
-                                                                    grafo2(datigenerici)
-                                                                    break
+                                                               
                                                                 case 'punteggi':
                                                                     $('#Chartedu').remove();
                                                                     $('#chartContainer').append('<canvas id="Chartedu"><canvas>');
