@@ -226,7 +226,8 @@
   background-color: #e74c3c !important;
   border-color: white;
   float:right;
-  margin-right:50px;
+  position:relative;
+  margin-right:5px;
 }
 #roho2 {
   background-color: #e74c3c !important;
@@ -260,9 +261,9 @@ footer{
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
     <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
 
-    <script src="jsonaggiornato.js"></script> 
-    <script src="ProcessiJSON.js"></script>
-    <script src="lavori.js"></script>
+    <script src="js/jsonaggiornato.js"></script> 
+    <script src="js/ProcessiJSON.js"></script>
+    <script src="js/lavori.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/regression@2.0.1/dist/regression.min.js"></script>
 </head>
 <body>    
@@ -280,6 +281,7 @@ footer{
         <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalogue</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="javascript:void(0)">Catalogue</a>
+          <a class="dropdown-item" href="javascript:void(0)">Works</a>
           <a class="dropdown-item" href="javascript:void(0)">Education</a>
           <a class="dropdown-item" href="javascript:void(0)">Entrepreneurship</a>
           <div class="dropdown-divider"></div>
@@ -315,13 +317,14 @@ footer{
     <a class="nav-link active" id="pills-messages-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-messages" aria-selected="false">Description</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-settings-tab" data-toggle="pill" href="#pills-settings" role="tab" aria-controls="pills-settings" aria-selected="false">Works</a>
-
-  </li>
- 	<li class="nav-item">
     <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">General graphs</a>
 
   </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-settings-tab" data-toggle="pill" href="#pills-settings" role="tab" aria-controls="pills-settings" aria-selected="false">Works</a>
+
+  </li>
+ 	
   <li class="nav-item">
     <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Education charts</a>
   </li>
@@ -342,43 +345,7 @@ footer{
 </div>
   <!--- LAVORI --->
 
-  <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">
-    <button type="button" id ="roho" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span class="fa fa-info-circle" aria-hidden="true"></span>
-
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Works chart</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       For each clicked area, it is possible to find a count of work progress.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end Modal -->
-    <div id="descrizione">
-      <p id="togliere">Click on a map area to see the related charts!</p>
-    </div>
-    <!-- Button trigger modal -->
-
-   <div id="workschartcontainer"></div>
-   <div id="pulsantee"></div>
-
-
-    
-</div>
+  
   <!--- GENERALE --->
 
 	<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
@@ -416,10 +383,8 @@ footer{
   </div>
     
 </div>
-  <!--- EDU --->
-
-  <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-    <button type="button" id ="roho3" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3"><span class="fa fa-info-circle" aria-hidden="true"></span>
+<div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">
+    <button type="button" id ="roho" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span class="fa fa-info-circle" aria-hidden="true"></span>
 
 </button>
 
@@ -428,7 +393,46 @@ footer{
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Works chart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       For each clicked area, it is possible to find a count of work progress.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <div id="descrizione">
+      <p id="togliere">Click on a map area to see the related charts!</p>
+    </div>
+    <!-- Button trigger modal -->
+
+   <div id="workschartcontainer"></div>
+   <div id="pulsantee"></div>
+
+
+    
+</div>
+  <!--- EDU --->
+
+  <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <button type="button" id ="roho3" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3"><span class="fa fa-info-circle" aria-hidden="true"></span>
+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel3">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -496,7 +500,7 @@ footer{
 
             
 
-            <div> <script src="visualization.js"></script>   </div>
+            <div> <script src="js/visualization.js"></script>   </div>
 </div></div>
 
 <!--- FOOTER --->
