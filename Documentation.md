@@ -4,7 +4,7 @@
 ## Scenario
 
 ## Original datasets and mashed-up datasets
-In order to carry out our analysis, we chose to used datasets that differed in sources, size and theme. 
+In order to carry out our analysis, we chose to used datasets that differed in provenance, size and content. 
 
 ### Datasets used
 | ID | Link | Name |
@@ -28,7 +28,8 @@ The datasets were then grouped and processed into two mashed-up datasets:
 
 | Primary datasets | Mashed-up dataset | URI | 
 | :---         |     :---:      |          ---: |
-| D2, D3, D4, D5, D6, D7, D8, D11, D12   | Education dataset     | git status    |
+| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | git status    |
+| D7, D8   | Works dataset      | git diff      |
 | D1, D9, D10   | Entrepreneurship dataset      | git diff      |
 
 Our mashed-up datasets are grouped in this page (pagina del catalogo).
@@ -36,7 +37,7 @@ Our mashed-up datasets are grouped in this page (pagina del catalogo).
 
 ## Informative quality analysis
 
-Our informative quality analysis follows the guidelines reported in xx.  As for what concerns completeness, our notes about empty values refer, as does the aforementioned document, only to those fields that are necessary to be filled in the dataset. Because we noticed empty fields were at times filled with dashes or dots, we decided to calculate the percentage of overall completeness with an algorithm (link dell'alg). The results can be seen below.
+Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be filled in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we decided to calculate the percentage of overall completeness with an algorithm (link dell'alg). The results can be seen below.
 
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
@@ -89,7 +90,7 @@ Formats, metadata, provenance and URI of our datasets can be resumed as follows:
 *URI*</br>
 **D2, D3, D5, D6, D11, D12 (MIUR)**</br>
 *Format:* CSV, JSON, RDF, XML
-*Metadata:* Although there is available metadata in XML/RDF for the datasets, namespaces are declared even if they are not used. </br>
+*Metadata:* Although there is available metadata in XML/RDF for the datasets, some namespaces have been declared even if they are not used. </br>
 *Provenance:* </br>
 *URI*</br>
 **D4**</br>
@@ -113,15 +114,14 @@ Formats, metadata, provenance and URI of our datasets can be resumed as follows:
 *Provenance:* </br>
 *URI*</br>
 **D10**</br>
-*Format:* CSV, PDF, Excel. The last two distributions aren't considered as open formats, even though legge xx and legge yy specify that they have to be. </br>
+*Format:* CSV, PDF, Excel. The last two distributions clash with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet). </br>
 *Metadata:* No metadata. </br>
 *Provenance:* </br>
 *URI*</br> 
 
 + NOSTRI
 
-None of the platforms containing the open datasets specified their encoding, even though in xx it is specified they ought to.
-
+None of the platforms containing the open datasets specified their encoding, even though in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" published by AGID"](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/riepilogoazioni.html) it is specified they ought to, preferably UTF-8.
 
 
 
@@ -130,16 +130,30 @@ None of the platforms containing the open datasets specified their encoding, eve
 ### Preprocessing issues 
 The mashing-up of our datasets required some necessary preprocessing steps. Some of these are connected to some of the issues discussed in (capitolo). The first main issue consists in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
 
-#### Education mashed-up dataset
+Another common problem was the lack of encoding statements, that led us to guess which encoding was use. For this reason, in the case of D1(?), it was necessary to skip some badly-encoded lines in order to process the dataset.
 
-The first issue with the mashing up of datasets D2, etc. is connected to the lack of rules regarding what the CSV delimiter should be. In each case, we had to find out what the delimiter was and specify it for the file to be properly read. 
+#### Works mashed-up dataset
+The first issue with the mashing up of datasets D7 and D8, etc. is connected to the lack of rules regarding what the CSV delimiter should be. In each case, we had to find out what the delimiter was and specify it for the file to be properly read. 
 
 | Dataset         | Delimiter                   | 
 | ------------- | ----------------------- | 
-| D2, D3, D4, D5, D6, D8      | , | 
-| D7       | ; | 
+| D7     | ; | 
+| D8       | , | 
 
-The mashing-up of the dataset is also not favoured by the different types of python objects the values of the dataframes belong to, which make it impossible to merge together two columns of different object types even if they have the same content. An example has been found when trying to join CODICESCUOLA, a string, of sicurezza scuole with the corresponding column of D4, an object, (anagrafe scuole bologna). Secondly, open data datasets that contain the same informative data (codice fiscale of schools, for instance) name it arbitrarily, making it difficult to automatize the mash-up process.
+For what concerns D8, it wasn’t released in an open format: Excel. We thus had to use the pandas read_excel method.
+
+Finally, there is a different nomenclature of "comune" we had to make a decision about in order to guarantee our mash-ups could be working together:
+
+| Dataset         | Nomenclature for comune                   | 
+| ------------- | ----------------------- | 
+| D7 | COMUNE | 
+| D8  | Comune | 
+
+To this regard, we chose to adopt the uppercase one.
+
+#### Education mashed-up dataset
+
+The mashing-up of the Education mashed-up dataset is  not favoured by the different types of python objects the values of the dataframes belong to, which make it impossible to merge together two columns of different object types even if they have the same content. An example has been found when trying to join CODICESCUOLA, a string, of sicurezza scuole with the corresponding column of D4, an object, (anagrafe scuole bologna). Secondly, open data datasets that contain the same informative data (codice fiscale of schools, for instance) name it arbitrarily, making it difficult to automatize the mash-up process.
 
 | Dataset         | Name of Codice Fiscale Scolastico                   | 
 | ------------- | ----------------------- | 
@@ -147,17 +161,9 @@ The mashing-up of the dataset is also not favoured by the different types of pyt
 | D4     | Codice | 
 | D5, D6     | CODICESCUOLA | 
 
-The same has been noticed with the nomenclature of “comune”.
+The same has been noticed with the nomenclature of “comune” of D4, which was lowercase and therefore had to be uniformed with the other two mash-ups.
 
-| Dataset         | Nomenclature for comune                   | 
-| ------------- | ----------------------- | 
-| D4     | Comune | 
-| D7 | COMUNE | 
-| D8  | Comune | 
-
-We chose to adopt the “COMUNE” nomenclature.
 Also, D2, D3, D11, D12 have a problem with dates (i.e. “201516”), that have been arbitrarily formatted without taking into account CSV norms (ISO_8601). In this way, dates are not computationally understandable unless manually processed.
-For what concerns D8, it wasn’t released in an open format: Excel. We used the pandas read_excel method.
 The final issue with the datasets is that D2, D3, D11, D12 contain whitespace in the column headers that needs to be stripped in order for the document to be merged with other datasets. This is an important problem that proves how the publication of an open dataset does not only require an open format (CSV, in this case), but also a structure that makes it easy to be read and manipulated.
 
 #### Entrepreneurship mashed-up dataset
@@ -171,11 +177,11 @@ The first issue that came up when preprocessing our datasets before cleaning the
 | D10   | ; | 
 
 D1 was more troublesome than the other datasets, since it included quotes for each field to fill in, even though sometimes such quotes weren’t even closed. This also created a problem with numbers, since they were encoded as strings and not as integers. As a result, it was necessary to skip a few lines that weren’t correctly formatted and use a workaround to correctly parse the document. 
-Another issue arised when dealing with dates, which weren’t coded in the correct datetime format, especially in D and D. 
+Another issue arised when dealing with dates, which weren’t coded in the correct datetime format, especially in D1 and D10. 
 
 #### Preprocessing issues related to visualization
 
-As for what concerns visualization, every decimal comma in every number had to be converted in the decimal dot in order to be processed by the Folium library; the same goes for the columns of latitude and longitude in the dataset xx, which moreover had to follow the ISO 6709 Standard representation of geographic point location by coordinates. However, it is necessary to specify for the first case that both commas and dots are currently recognized as a decimal marker, even though in the xx field, che rientra nel nostro caso, dots are preferred ... fonte ...  In ISO 20022's payment messages the choice is uniform. Only dot (.) is accepted as a decimal delimiter. https://wiki.xmldation.com/General_Information/ISO_20022/Decimal_mark
+As for what concerns visualization, every decimal comma in every number had to be converted in the decimal dot in order to be processed by the Folium library; the same goes for the columns of latitude and longitude in D7, which moreover had to follow the ISO 6709 Standard representation of geographic point location by coordinates. However, it is necessary to specify for the first case that both commas and dots are currently recognized as a decimal marker, even though in the xx field, che rientra nel nostro caso, dots are preferred ... fonte ...  In ISO 20022's payment messages the choice is uniform. Only dot (.) is accepted as a decimal delimiter. https://wiki.xmldation.com/General_Information/ISO_20022/Decimal_mark
 
 #### Final remarks
 The structure of both mashed-up datasets aimed to solve some issues we faced when analyzing the quality of our datasets:
