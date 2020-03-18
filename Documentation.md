@@ -4,7 +4,7 @@
 ## Scenario
 
 ## Original datasets and mashed-up datasets
-In order to carry out our analysis, we chose to used datasets that differed in provenance, size and content. 
+In order to carry out our analysis, we chose to used datasets that differed in provenance, size and content.  
 
 ### Datasets used
 | ID | Link | Name |
@@ -128,7 +128,7 @@ None of the platforms containing the open datasets specified their encoding, eve
 
 
 ### Preprocessing issues 
-The mashing-up of our datasets required some necessary preprocessing steps. Some of these are connected to some of the issues discussed in (capitolo). The first main issue consists in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
+The mashing-up of our datasets required some necessary preprocessing steps. Some of the issues we encountered were connected to what we discussed in discussed in (capitolo qualità). Initially, we had to choose which areas to include in our analysis. We therefore chose the 19 most affected comuni of Emilia-Romagna. The first main issue connected to this choice consists in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
 
 Another common problem was the lack of encoding statements, that led us to guess which encoding was use. For this reason, in the case of D1(?), it was necessary to skip some badly-encoded lines in order to process the dataset.
 
@@ -165,6 +165,10 @@ The same has been noticed with the nomenclature of “comune” of D4, which was
 
 Also, D2, D3, D11, D12 have a problem with dates (i.e. “201516”), that have been arbitrarily formatted without taking into account CSV norms (ISO_8601). In this way, dates are not computationally understandable unless manually processed.
 The final issue with the datasets is that D2, D3, D11, D12 contain whitespace in the column headers that needs to be stripped in order for the document to be merged with other datasets. This is an important problem that proves how the publication of an open dataset does not only require an open format (CSV, in this case), but also a structure that makes it easy to be read and manipulated.
+
+Some columns of the original datasets have been dropped or modified. More specifically:
+-dropped
+- we modified the school score according to the number of schools, so our final school score is an average.
 
 #### Entrepreneurship mashed-up dataset
 
@@ -203,6 +207,52 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 ## Sustainability of the update of the datasets over time
 
 ## Visualization
+
+The visualization of the data was carried out through two main steps:
+
+1) The creation of the map
+For the creation of the map, we used the Folium library, which is connected to Leaflet. To draw the GEOJSON polygons of the areas we were interested in, we used a [Generatore di mappe comunali italiane](https://observablehq.com/@jenkin/generatore-di-mappe-comunali-italiane) - controlla licenzeee. Leaflet displays the map through OpenStreetMaps.
+
+For usability purposes, the map can be navigated thrugh a layer control according to which one can hide or see:
+1) A choropleth layer map created accordingly to the Scala microsismica Mercalli-Cancani-Sieberg;
+2) Feature groups with three types of work progress:
+  - Red markers for works that were never started
+  - Orange markers for works in progress
+  - Green markers for finished works.
+  
+ Additionally, clicking on each marker will provide information about the specific place and the financial aid assigned and paid for it.
+
+2) Website and charts
+To build the website, we used Bootstrap 4, while to build the charts we used the Javascript library Charts.js.
+
+We chose to divide our chart in four main thematic groups: a generic one and one for each mashed-up dataset we created.
+
+1) The "general graphs" tab
+Clicking on the generic tab will return two main types of graphs. The first one represents, on the X axis the "damage index", that is to say, for each Comune, the sum of the number of works that have never started and the number of works in progress, divided by the number of schools. Thus, for each school there is a number of incomplete works: an index of incompleteness. On the Y axis, instead, there is the school score, for each year respectively.
+
+Here is the formula:
+X axis: For each area, 
+(Never started works + works in progress)/ total number of schools
+This provides us an index of how many works to be finished there are for each school.
+Y axis: For each area,
+School score (A.Y. 2015-2016 or 2016-2017). Note that in our datasets the school score is an average.
+
+The type of graph is a mixed one, as the scatterplot's coordinates are given by the axes, while the line data is given by a regression equation calculated through a JS regression library. In this way, not only we can see how much the real data fits the model, but also what is the type of model that has emerged. We can conclude, in fact, that the descendent line more visible for the year 2016-2017 represents an inverse proportion for damage index and school scores- the lower the damage index, the higher the average school score is.
+Our line deliberately didn't take into account the outlier, which corresponds to the area of Bondeno, whose coordinates would damage the model. 
+
+The other type of graph represents the trend of the total number of works related to damage.
+
+2) The works tab
+In this tab, clicking on an area of the map will return data about the types of work progress for that specific area.
+
+3) Education charts tab
+This tab has two charts:
+One related to the total number of schools and the absence of certificates or presence of environmental issues for each clicked area on the chart; another related to the comparison of the average school score between statal schools and paritary ones.
+
+4) Entrepreneurship charts
+
+
+Finally, in each tab it is possible to find an "info" button in order to understand the displayed data better.
 
 ## RDF assertion of the data
 
