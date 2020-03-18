@@ -556,9 +556,9 @@ if($.trim($("#Chartprocessi").html())=='') {
     $("#scrivoqua").html('')
 // inserisco nel paragrafo con id "scrivo qua" l'array (così controlliamo)
    // $("#scrivoqua").append(array2010, array2011)
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti OpenCoesione 2010: ' + '</p>' + array_pop_2010 +
-    '<p>' + 'Popolazione impattata progetti OpenCoesione 2011: ' + '</p>' + array_pop_2011 + 
-    '<p>' + 'Popolazione impattata progetti OpenCoesione 2012: ' + '</p>' + array_pop_2012 +'<p>' + 'Popolazione impattata progetti OpenCoesione 2013: ' + '</p>' + array_pop_2013 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2014: ' + '</p>'+ array_pop_2014 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2015: ' + '</p>' + array_pop_2015 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2016: ' + '</p>' + array_pop_2016 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2017: ' + '</p>'+ array_pop_2017 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2018: ' + '</p>' + array_pop_2018 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2019: ' + '</p>' +array_pop_2019 + '<p>' + 'Popolazione impattata progetti OpenCoesione 2020: ' + '</p>'+ array_pop_2020)
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2010: ' + '</p>' + array_pop_2010 +
+    '<p>' + 'Popolazione impattata progetti Osservatorio 2011: ' + '</p>' + array_pop_2011 + 
+    '<p>' + 'Popolazione impattata progetti Osservatorio 2012: ' + '</p>' + array_pop_2012 +'<p>' + 'Popolazione impattata progetti Osservatorio 2013: ' + '</p>' + array_pop_2013 + '<p>' + 'Popolazione impattata progetti Osservatorio 2014: ' + '</p>'+ array_pop_2014 + '<p>' + 'Popolazione impattata progetti Osservatorio 2015: ' + '</p>' + array_pop_2015 + '<p>' + 'Popolazione impattata progetti Osservatorio 2016: ' + '</p>' + array_pop_2016 + '<p>' + 'Popolazione impattata progetti Osservatorio 2017: ' + '</p>'+ array_pop_2017 + '<p>' + 'Popolazione impattata progetti Osservatorio 2018: ' + '</p>' + array_pop_2018 + '<p>' + 'Popolazione impattata progetti Osservatorio 2019: ' + '</p>' +array_pop_2019 + '<p>' + 'Popolazione impattata progetti Osservatorio 2020: ' + '</p>'+ array_pop_2020)
 
 // faccio partire il grafico
 window.grafoprocessi = new Chart(ctx2, {
