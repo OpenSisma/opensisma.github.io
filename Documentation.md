@@ -1,6 +1,16 @@
 
 ## Introduction
 
+The project OpenSisma has been created for the exam Open Access and Digital Ethics as a Digital Humanities and Digital Knowlegde course at the University of Bologna. The two contributors of OpenSisma are:
+-Milena Corbellini
+-Anna Sofia Lippolis
+
+In the context of the eartquake that happened xx xx 2012 in Emilia-Romagna, OpenSisma aims to study and show the effects of the natural disaster in terms of progress of works, level of education for primary, secondary and high schools, availability of safety certificates and/or environmental constraints and entrepreneurship drive on a user-friendly website. Although the aim was to make a comparison with today's information, creating an "Emilia Romagna earthquake: 8 years later" study, we had to include less recent data sources for the education part, while the others are updated in real time. 
+
+With this perspective, we hypotesized a correlation between total works and damage entity, the amount of work that still has to be done and schools score, a connection between disaster effects and rise in an entrepreneurship mindset. We then wondered whether schools had the safety certificates they needed in the case such tragic event happened again, a necessity that could grow in relevance if environmental constraints were also registered.
+
+The analysis is based on a collection of open datasets, with a study on their legal and technical aspects, and their processing to create mashed-up datasets that complied to the Linked Open Data principles, with an RDF model created accordingly to the DCAT-AP ontology. In this way, we were able to produce (5 stars?) Linked Open Data datasets and to show them through an interactive website that can be exploited by everyone.
+
 ## Scenario
 
 ## Original datasets and mashed-up datasets
@@ -81,49 +91,75 @@ Here are the results of our completeness algorithm. Our null values include 0s, 
 
 ### Formats, metadata, provenance URI
 
-Formats, metadata, provenance and URI of our datasets can be resumed as follows:
+#### Original datasets
+
+Formats, metadata, provenance and URI of our original datasets can be resumed as follows:
 
 **D1** </br>
 *Format:*  XML, XML Schema, JSON, CSV, Excel CSV </br>
 *Metadata:* Availability of human-readable metadata </br>
-*Provenance:* </br>
-*URI*</br>
+
+
 **D2, D3, D5, D6, D11, D12 (MIUR)**</br>
 *Format:* CSV, JSON, RDF, XML
 *Metadata:* Although there is available metadata in XML/RDF for the datasets, some namespaces have been declared even if they are not used. </br>
-*Provenance:* </br>
-*URI*</br>
 **D4**</br>
 *Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+. The last three aren't open formats, even though xx says xy.</br>
 *Metadata:* No metadata. </br>
-*Provenance:* </br>
-*URI*</br>
+*Provenance:*https://sed.istruzioneer.it/scumgnt/scu-istituzione </br>
 **D7**</br>
 *Format:* CSV</br>
 *Metadata:* Availability of human-readable metadata. </br>
-*Provenance:* </br>
-*URI*</br>
 **D8**</br>
 *Format:* XSLT, which is not an open format.</br>
 *Metadata:* No metadata. </br>
-*Provenance:* </br>
-*URI*</br>
 **D9**</br>
 *Format:* ZIP/CSV</br>
 *Metadata:* Availability of metadata in XSD format.</br>
-*Provenance:* </br>
-*URI*</br>
+*Provenance:*http://www.rgs.mef.gov.it/VERSIONE-I/home.html </br>
 **D10**</br>
 *Format:* CSV, PDF, Excel. The last two distributions clash with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet). </br>
 *Metadata:* No metadata. </br>
-*Provenance:* </br>
-*URI*</br> 
+*Provenance:* NON SO SE METTERLA</br>
 
-+ NOSTRI
+
+### URI
+
+The analysis of the URIs has to be carried out separately. Their formulation, in fact, clashes with the fact URIs have to be xx, xx, xy.
+
+| Dataset 	| URI                                                                                                                                         	| Fixed URI                                                                                           	|
+|---------	|---------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------	|
+| D1      	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv 	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData/dati_per_anno_di_avvio          	|
+| D2      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv                                      	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_STA20152016            	|
+| D3      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv                                	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_STA20162017            	|
+| D4      	| https://sed.istruzioneer.it/scumgnt/scu-istituzione                                                                                         	| https://sed.istruzioneer.it/scumgnt/scu-istituzione/anagrafe_scuole_bologna                         	|
+| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv                                   	| https://dati.istruzione.it/opendata/catalogo_scuola/edilizia/SICUREZZA20172018                      	|
+| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv                                        	| https://dati.istruzione.it/opendata/catalogo_scuola/edilizia/VINCOLI20172018                        	|
+| D7      	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv                                     	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica 	|
+| D8      	| http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx                                                         	| http://www.ingv.it/quest/dataset/rilievimacrosismici/INGV_QUEST_RILIEVI_EMILIA_ROMAGNA_2012-05-29   	|
+| D9      	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip                                                                     	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR                                 	|
+| D10     	| No URI                                                                                                                                      	|                                                                                                     	|
+| D11     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv                                       	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_PAR20152016            	|
+| D12     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv                                       	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_PAR20162017            	|
+
 
 None of the platforms containing the open datasets specified their encoding, even though in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" published by AGID"](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/riepilogoazioni.html) it is specified they ought to, preferably UTF-8.
 
+#### Mashed-up datasets
 
+##### Format: 
+We chose to distribute our mashed-up datasets in CSV.
+
+##### Provenance:
+Works mashed-up dataset
+Education mashed-up dataset
+Entrepreneurship mashed-up dataset
+
+##### Metadata and URI
+The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. 
+Each of our datasets has been assigned a URI:
+table
+Moreover, they are accessible, interoperable and reusable. Thus, 
 
 
 
