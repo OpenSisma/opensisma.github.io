@@ -92,6 +92,11 @@ Here are the results of our completeness algorithm. Our null values include 0s, 
 
 ## Ethical analysis
 
+As we described in the previous points our mashed-up datasets are completely free of data that could be considered non-ethic: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
+
+In  the original data instead we have personal data but only in D2-3-11-12 we have bias cognitive: as you could see in 
+
+
 ## Technical analysis
 
 ### Formats, metadata, provenance URI
@@ -274,6 +279,32 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 
 
 ## Sustainability of the update of the datasets over time
+
+The Open Data's sustainability is defined by the regularity of the updating of the data in it, as the relevance, the updating and the accesibility are they key factors that define the utility of an Open Data.  The sustanibility has to be supported by:
+
+- the financing of the updating over time
+
+- an organisation already established in the Open Data Ecosystem
+
+- the reusing of the data by  the users interested in.
+
+In an ipothethic organisational system of our project we could base our sustanibility o the sequent elements:
+-Provenance and Tempestivity: Our mashed-up Datasets use data taken from different sources. Only if the original sources respect the upating time, the timeliness requirement would be assured.
+
+- the financial  support of established entities like the 'Agenzia per la Ricostruzione Emilia Romagna', or the entity 'Regione Emilia Romagna' itself, which could be interested in our analysis. However we considered a structure in which the cost and the maintenance of the datasets would be around 0, even sustaining the quality of the data and the updating.
+
+- we used the international license CC BY-SA 4.0: a copyleft based license that allows the users to share and modify the content with the conditicions of attribution and sharing under the same license.
+
+- we inserted our e-mail adresses in order to give the possiibility to the user of contacting , easily and tempestivly,to ask for clarification, to make requests and so on.
+
+- our goal would be to expand the project both in terms of geographical area, both in terms of data from other datasets that we could connect with ours and involve in the analysis.
+
+Until now we were able to implement the sustainability with the subsequent procedures:
+
+- the integration of the data with metadata based on the DCAT-AP rules described in the EU normative of 2019, integrated with some other ontologies (PROV-O, FOAF, etc...).
+
+- the integration of the original datasets's data with the same structure of metadata.
+
 
 ## Visualization
 
