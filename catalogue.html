@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<head>    
+   
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+                <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <!--- old<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <!--- old
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+     --->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+               .container {
+    font-family: sans-serif;
+    max-width: 968px;
+    margin: 0 auto;
+  }
+  .human-readable-example {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    color: #333;
+    width: 100%;
+  }
+  .human-readable-example td {
+    padding: 6px 3px 6px 3px;
+  }
+  .human-readable-example tr:first-child td:first-child {
+    width: 25%;
+  }
+  .human-readable-example tr:nth-child(even) {
+    background-color: #F7F7F7;
+  }
+  .human-readable-example tr:nth-child(odd) {
+    background-color: #FFFFFF;
+  }
+  div.example {
+    padding: 0.5em;
+    border-left: 0.5em solid #E0CB52;
+    border-color: #E0CB52;
+    background: none repeat scroll 0% 0% #FCFAEE;
+  }
+  a {
+    color: #00C;
+    text-decoration: none;
+  }
+  form#duv-feedback {
+    width: 48%;
+    display: block;
+  }
+  form#duv-feedback fieldset label {
+    margin-top: 16px;
+    width: 100%;
+    display: block;
+  }
+  form#duv-feedback fieldset label.radio-motivation {
+    display: inline;
+    margin-right: 10px;
+  }
+  form#duv-feedback fieldset textarea {
+    width: 100%;
+  }
+  pre#rdf-duv-feedback-turtle {
+    white-space: pre-wrap;
+  }
+  section:target, div:target, tbody:target, tr:target {
+    background: #F7F1D0;
+    border: 1px dashed red;
+    padding: 10px;
+    border-top-right-radius: 15px;
+  }
+  #td-version {
+    width: 16px;
+  }
+                #map_3a208fe2faed43e2b31a34c0d6b1dc93 {
+                    position: relative;
+                    width: 50.0%;
+                    height: 87.0%;
+                    left: 0.0%;
+                    top:0px;
+                    bottom:10px;
+                    margin: 5px;
+                    float:left;
+                    }
+                #welcome {
+                    width:49%;
+                    top: 15px;
+                    float:right;
+                }
+                #information {
+                    width:50%;
+                    float: right;
+                }
+                #chartContainer {
+                    width: 100%;
+                    float:left;
+                }
+                #processichartcontainer {
+                    width: 100%;
+                    float:left;
+                }
+
+                #workschartcontainer {
+                    width: 100%;
+                    float:left;
+                }
+                #pills-settings{
+                  width:700px;
+                  height:500px;
+                }
+
+                #pills-home{
+                	width:650px;
+                	height:500px;
+                }
+
+                .navbar {
+  background-color: #e74c3c;
+}
+.navbar .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #ffbbbc;
+}
+.navbar .navbar-text {
+  color: #ecf0f1;
+}
+.navbar .navbar-text a {
+  color: #ffbbbc;
+}
+.navbar .navbar-text a:hover,
+.navbar .navbar-text a:focus {
+  color: #ffbbbc; 
+}
+.navbar .navbar-nav .nav-link {
+  color: #ecf0f1;
+  border-radius: .25rem;
+  margin: 0 0.25em;
+}
+.navbar .navbar-nav .nav-link:not(.disabled):hover,
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+  color: #ffbbbc;
+}
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link:focus,
+.navbar .navbar-nav .nav-item.show .nav-link,
+.navbar .navbar-nav .nav-item.show .nav-link:hover,
+.navbar .navbar-nav .nav-item.show .nav-link:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+}
+.navbar .navbar-toggle {
+  border-color: #c0392b;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+  background-color: #c0392b;
+}
+.navbar .navbar-toggle .navbar-toggler-icon {
+  color: #ecf0f1;
+}
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar .navbar-link {
+  color: #ecf0f1;
+}
+.navbar .navbar-link:hover {
+  color: #ffbbbc;
+}
+
+@media (max-width: 575px) {
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ffbbbc;
+  }
+  .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ffbbbc;
+    background-color: #c0392b;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ffbbbc;
+  }
+  .navbar-expand-md .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ffbbbc;
+    background-color: #c0392b;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ffbbbc;
+  }
+  .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ffbbbc;
+    background-color: #c0392b;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item {
+    color: #ecf0f1;
+  }
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+    color: #ffbbbc;
+  }
+  .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item.active {
+    color: #ffbbbc;
+    background-color: #c0392b;
+  }
+}
+
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item {
+  color: #ecf0f1;
+}
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:hover,
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item:focus {
+  color: #ffbbbc;
+}
+.navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item.active {
+  color: #ffbbbc;
+  background-color: #c0392b;
+}
+
+.nav-pills > li > a.nav-link {
+    background-color: #d9534f;
+    color: white;
+    border:3px;
+    border-color:white;
+   }
+
+    .nav-pills > li > a.nav-link.active {
+    background-color: #B83536;
+    color: white;
+    
+}
+
+#descrizione {
+	margin-top: 10px;
+}
+
+  
+.text-muted {
+	font-size:10px;
+	
+}
+#roho {
+  background-color: #e74c3c !important;
+  border-color: white;
+  float:right;
+  position:relative;
+  margin-right:15px;
+}
+#roho2 {
+  background-color: #e74c3c !important;
+  border-color: white;
+  float:right;
+  margin-right:0px;
+  margin-bottom:5px;
+  z-index:9000;
+}
+#roho3 {
+  background-color: #e74c3c !important;
+  border-color: white;
+  float:right;
+  margin-right:50px;
+}
+#roho4 {
+  background-color: #e74c3c !important;
+  border-color: white;
+  float:right;
+  margin-right:50px;
+}
+#pulsante2{
+  float:left;
+}
+.lead {
+  font-size: 15px;
+}
+form {
+  float:left;
+}
+footer{
+	margin-bottom:6px;
+}
+            </style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+
+    <script src="js/jsonaggiornato.js"></script> 
+    <script src="js/ProcessiJSON.js"></script>
+    <script src="js/lavori.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/regression@2.0.1/dist/regression.min.js"></script>
+</head>
+<body>    
+	<!--Navbar-->
+<nav class="navbar navbar-expand-md navbar-light bg-faded">
+  <a class="navbar-brand" href="javascript:void(0)">OpenSisma</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalogue</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="catalogue.html">Catalogue</a>
+          <a class="dropdown-item" href="javascript:void(0)">Works</a>
+          <a class="dropdown-item" href="javascript:void(0)">Education</a>
+          <a class="dropdown-item" href="javascript:void(0)">Entrepreneurship</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+        </div>
+        <li class="nav-item">
+        <a class="nav-link" href="visualization.html">Visualization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="visualization.html">License</a>
+      </li>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<!--/.Navbar-->
+ <div class="container">
+<br>
+<br>    
+    <section resource="#timetable-001" typeof="dcat:Dataset" id="dataset-section">
+      <div id="dataset-description">
+        <h2>Catalogue</h2>
+        <table class="human-readable-example" summary="This table has the catalog description. The first column has the keywords and the seconde has the values.">
+          <tbody>
+            <tr>
+              <td>Title</td>
+              <td property="dct:title">Catalogue of the OpenSisma project</td>
+            </tr>
+            <tr>
+              <td>Descrizione</td>
+              <td property="dct:description"> The open data catalogue of the OpenSisma project</td>
+            </tr>
+            <tr>
+              <td>URI</td>
+              <td>https://opensisma.github.io/mashup/catalogue</td>
+            </tr>
+          </tbody>
+          <tbody id="provenance-info">
+            <tr>
+              <td id="publisher">Publisher</td>
+              <td property="dct:publisher" resource="#publisher" typeof="foaf:Organization prov:Agent"><span property="foaf:name">Milena Corbellini, Anna Sofia Lippolis</span></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr id="locale-parameters">
+              <td>Language</td>
+              <td>English</td>
+            </tr>
+          </tbody>
+          </div>
+          <tr id="locale-parameters">
+            <td>Modified</td>
+            <td><span property="dct:modified" content="2020-03-19" datatype="xsd:date">2020-03-19</span></td>
+          </tr>
+          <tr>
+            <td>Issued</td>
+            <td><span property="dct:issued" content="2020-03-19" datatype="xsd:date">2020-03-19</span></td>
+          </tr>
+          <tr>
+            <td>Date format</td>
+            <td>ISO 8601</td>
+          </tr>
+            <tr>
+              <td>Homepage</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> https://opensisma.github.io/catalogue.html </a></td>
+            </tr>
+            <tr>
+              <td>OpenSisma dataset reconstruction works</td>
+              <td> <a  href="https://opensisma.github.io/metadata_dataset_reconstruction_works.html"> https://opensisma.github.io/metadata_dataset_reconstruction_works.html </a></td>
+            </tr>
+            <tr>
+              <td>OpenSisma dataset education</td>
+              <td> <a href="https://opensisma.github.io/metadata_dataset_education.html"> https://opensisma.github.io/metadata_dataset_education.html</a></td>
+            </tr>
+            <tr>
+              <td>OpenSisma dataset entrepreneurial processes</td>
+              <td> <a href="https://opensisma.github.io/metadata_dataset_entrepreneurial_processes.html"> https://opensisma.github.io/metadata_dataset_entrepreneurial_processes.html</a></td>
+            </tr>
+        <tr>
+                      <td>Download URL</td>
+                         <td>File with all the mashed-up datasets and their metadata <a property="dcat:accessURL" id="cat" href="#">catalogue.zip (185 KB)</a>
+                         </td>
+                               </tr>
+            </tbody>
+            </table>
+    <br>
+    <br>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+    <div class="col-lg-2"></div>
+</div>     
+</div> <br>
+  
+
+
+
+
+    
+            
+            
+
+<!--- FOOTER --->
+<!-- Footer -->
+<footer id="bottom" class="row text-center fixed-bottom">
+<div class="container-fluid">
+      <span class="text-muted">
+        This website is licensed under under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0
+          </a>. Visit the <a href="license.html">License page</a> to
+        get information about the license of the data.
+        <a class="float-right" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"></a></span>
+    </div>
+</footer>
+<!-- Footer -->
+<script>
+
+                        $('#cat').on('click', function () {
+                            $.ajax({
+                                url: 'mashup/catalogue.zip',
+                                method: 'GET',
+                                xhrFields: {
+                                    responseType: 'blob'
+                                },
+                                success: function (data) {
+                                    var a = document.createElement('a');
+                                    var url = window.URL.createObjectURL(data);
+                                    a.href = url;
+                                    a.download = 'catalogue.zip';
+                                    a.click();
+                                    window.URL.revokeObjectURL(url);
+                                }
+                            });
+                        });
+
+                        </script>
+
+      
+</body>
+</html>
