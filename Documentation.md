@@ -2,14 +2,19 @@
 ## Introduction
 
 The project OpenSisma has been created for the exam Open Access and Digital Ethics as a Digital Humanities and Digital Knowlegde course at the University of Bologna. The two contributors of OpenSisma are:
--Milena Corbellini
--Anna Sofia Lippolis
+- Milena Corbellini
+- Anna Sofia Lippolis
 
-In the context of the eartquake that happened xx xx 2012 in Emilia-Romagna, OpenSisma aims to study and show the effects of the natural disaster in terms of progress of works, level of education for primary, secondary and high schools, availability of safety certificates and/or environmental constraints and entrepreneurship drive on a user-friendly website. Although the aim was to make a comparison with today's information, creating an "Emilia Romagna earthquake: 8 years later" study, we had to include less recent data sources for the education part, while the others are updated in real time. 
+In the context of the eartquake that happened the 20th of May, 2012, in Emilia-Romagna, OpenSisma aims to study and show the effects of such natural disaster in terms of progress of reconstruction works, level of education for primary, secondary and high schools, availability of safety certificates and/or environmental constraints and entrepreneurship drive. Although the aim was to make a comparison between 2012 and 2020 information, creating an "Emilia Romagna earthquake: 8 years later" study project, the unavailability of education data brought us to include less up-to-date data sources for that aspect, while the other thematic areas' data are updated in real time. 
 
-With this perspective, we hypotesized a correlation between total works and damage entity, the amount of work that still has to be done and schools score, a connection between disaster effects and rise in an entrepreneurship mindset. We then wondered whether schools had the safety certificates they needed in the case such tragic event happened again, a necessity that could grow in relevance if environmental constraints were also registered.
+With this perspective, we hypotesized a correlation between:
+- total works and damage entity;
+- amount of work that still has to be done and schools score;
+- disaster effects and rise in an entrepreneurial mindset. 
 
-The analysis is based on a collection of open datasets, with a study on their legal and technical aspects, and their processing to create mashed-up datasets that complied to the Linked Open Data principles, with an RDF model created accordingly to the DCAT-AP ontology. In this way, we were able to produce (5 stars?) Linked Open Data datasets and to show them through an interactive website that can be exploited by everyone.
+We then wondered whether schools had the safety certificates they needed in the case such tragic event happened again, a necessity that could grow in relevance if environmental constraints were also registered.
+
+The analysis is based on a collection of open datasets, which were studied from the legal and technical point of view and then processed in order to create mashed-up datasets that complied to the Linked Open Data principles, with an RDF model compliant to the DCAT-AP ontology. In this way, we were able to produce (5 stars?) Linked Open Data datasets and to show them through an interactive website that can be exploited by everyone. Our derived datasets and the code we created are distributed with an open license, so that our research results not only transparent, but also repeatable.
 
 ## Scenario
 
