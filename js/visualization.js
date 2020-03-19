@@ -556,9 +556,30 @@ if($.trim($("#Chartprocessi").html())=='') {
     $("#scrivoqua").html('')
 // inserisco nel paragrafo con id "scrivo qua" l'array (così controlliamo)
    // $("#scrivoqua").append(array2010, array2011)
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2010: ' + '</p>' + array_pop_2010 +
-    '<p>' + 'Popolazione impattata progetti Osservatorio 2011: ' + '</p>' + array_pop_2011 + 
-    '<p>' + 'Popolazione impattata progetti Osservatorio 2012: ' + '</p>' + array_pop_2012 +'<p>' + 'Popolazione impattata progetti Osservatorio 2013: ' + '</p>' + array_pop_2013 + '<p>' + 'Popolazione impattata progetti Osservatorio 2014: ' + '</p>'+ array_pop_2014 + '<p>' + 'Popolazione impattata progetti Osservatorio 2015: ' + '</p>' + array_pop_2015 + '<p>' + 'Popolazione impattata progetti Osservatorio 2016: ' + '</p>' + array_pop_2016 + '<p>' + 'Popolazione impattata progetti Osservatorio 2017: ' + '</p>'+ array_pop_2017 + '<p>' + 'Popolazione impattata progetti Osservatorio 2018: ' + '</p>' + array_pop_2018 + '<p>' + 'Popolazione impattata progetti Osservatorio 2019: ' + '</p>' +array_pop_2019 + '<p>' + 'Popolazione impattata progetti Osservatorio 2020: ' + '</p>'+ array_pop_2020)
+   if (typeof array_pop_2010 !== 'undefined' && array_pop_2010.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2010: '  + array_pop_2010 + '</p>')}
+    if (typeof array_pop_2011 !== 'undefined' && array_pop_2011.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2011: '  + array_pop_2011 + '</p>')}
+    if (typeof array_pop_2012 !== 'undefined' && array_pop_2012.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2012: '  + array_pop_2012 + '</p>')}
+    if (typeof array_pop_2013 !== 'undefined' && array_pop_2013.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2013: ' + array_pop_2013  + '</p>')}
+    if (typeof array_pop_2014 !== 'undefined' && array_pop_2014.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2014: '  + array_pop_2014 + '</p>')}
+    if (typeof array_pop_2015 !== 'undefined' && array_pop_2015.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2015: '  + array_pop_2015 + '</p>')}
+    if (typeof array_pop_2016 !== 'undefined' && array_pop_2016.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2016: '  + array_pop_2016 + '</p>')}
+    if (typeof array_pop_2017 !== 'undefined' && array_pop_2017.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2017: '  + array_pop_2017 + '</p>')}
+    if (typeof array_pop_2018 !== 'undefined' && array_pop_2018.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2018: ' + array_pop_2018  + '</p>')}
+    if (typeof array_pop_2019 !== 'undefined' && array_pop_2019.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2019: '  + array_pop_2019 + '</p>')}
+    if (typeof array_pop_2020 !== 'undefined' && array_pop_2020.length > 0) {
+   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2020: '  + array_pop_2020 + '</p>')}
+
+
 
 // faccio partire il grafico
 window.grafoprocessi = new Chart(ctx2, {
@@ -739,7 +760,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                     
                                                     $('.lead').html('');
                                                     $('#togliere').remove()
-                                                    $('.lead').html('Comune of ' + arrayItem.COMUNE + '<br> Damage entity: ' + arrayItem.MCS_DANNO  +  ' <br>Total number of works: '  + arrayItem['LAVORI_TOTALI'] );
+                                                    $('.lead').html('Comune of ' + arrayItem.COMUNE + '<br> Damage entity: ' + arrayItem.MCS_DANNO  );
                                                     $('#pulsante').html('')
                                                     $('#pulsante').append('<div id="emptyred"><span style="opacity:0;">FMVPAFSB</span></div>')
                                                     $('#pulsante').append('<div class="row" id="redditiButton"><div class="col-lg-12"><form><label class="radio-inline btn btn-danger"><input type="radio" id="dettaglio" value="dettaglio" name="radiored" autocomplete="off" checked> Safety certificates </label><label class="radio-inline btn btn-danger"><input type="radio" id="punteggi" value="punteggi" name="radiored" autocomplete="off"> Comparison between state schools scores and private ones </label></form></div>')
