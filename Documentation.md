@@ -230,79 +230,44 @@ Produced and publsihed by: DGCASIS
 ### Check List
 
 Argument |	Answer |	D1|	D2, D3, D11, D12 |	D4 |	D5 - D6	| D7 | D8 |	D9 |	D10 |
-Privacy issues	|1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?|YES  ci sono nomi di persona |	Partially |	YES |	YES |	YES |
-|--------| 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorize the PA to release them? Or any other legal basis? Identify the legal basis.|	YES	| NO motivi sebucci	| YES	| YES	| YES |
-|--------|1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorize the PA to release them ? |	YES |	NO  |	YES |	YES |	YES |
-|--------|1.4 Is the dataset free of any information that combined with common data available in the web, could identify the person? If so, is there a law that authorize the PA to release them?	yes	No (controllare)	yes	yes	yes
-|--------|1.5 Is the dataset free of any information related to human rights (e.g. refugees, witness protection, etc.)?	No?	No 	yes	yes	yes
-|--------|1.6 Do you use a tool for calculating the range of the risk of deanonymization? Do you anonymize the dataset? With which technique? Did you check the three mandatory parameters: singling out, linking out, inference out?	no	No + control	no	no	no
-|--------|1.7 Are you using geolocalization capabilities? Do you check that the geolocalization process can’t identify single individuals in some circumstances?	Non penso	Indirectly 	No, yes	No, yes	No, yes
-|--------|1.8 Did you check that the open data platform respect all the privacy regulations (registration of the end-user, profiling, cookies, analytics, etc.)?	Other risks of personal data breaches
-	yes	Not the platform per se encryptionon form e altre + there is no privacy on that website	yes	Yes, no controlla normativa
-|--------|1.9 Do you know who are in your open data platform the Controller and Processor of the privacy data of the system?	yes	yes	Yes ma nostra supposizione	yes	no
-|--------|1.10 Where the datasets are physically stored (country and jurisdiction)? Do you have a cloud computing platform? Do you have checked the privacy regulation of the country where the dataset are physically stored? (territoriality)	yes 	yes	presso la sede del Titolare e presso le sedi dei Responsabili ovunque siano localizzate (sempre all’interno della Unione Europea).	yes	No info about this
-|--------|1.11 Do you have non-personal data? Are you sure that are not “mixed data”? |	YES |	YES, there are |	YES |	YES |	YES |
-|IPR of the dataset	| 2.1 Do you have created and generated the dataset ? |	NO |	NO |	NO |	NO |	NO |
-	2.2 Are you the owner of the dataset? How is the owner?	No, ERVET SpA	No, MIUR	No, USR E-R	No, MIUR	No, Regione Emilia Romagna
-	2.3 Are you sure to not use third party data without the proper authorization and license ? Are the dataset free from third party licenses or patents?	Yes	Yes 	yes	yes	yes
-	2.4 Do you have checked if there are some limitations in your national legal system for releasing some kind of datasets with open license?	No	Yes 	yes	yes	yes
-Licences	3.1 Do you release the dataset with an open data license ? In case of the use of CC0 do you check that you have all the right necessary for this particular kind of license (e.g., jurisdiction)?	yes	yes	yes	yes	yes
-	3.2 Do you include the clause: "In any case the dataset can’t be used for re-identifying the person" ?	No, controllare	yes	yes	yes	no
-	3.3 Do you release the API (in case you have) with an open source license ?	Not applicable	N/A	Not applicable	Not applicable	Not applicable
-	3.4 Do you check that the open data/API platform license regime is compliance with your IPR policy ? Do you have all the licences related to the open data platform/API software?	Not applicable?	N/A?	Not applicable?	Not applicable?	Not applicable?
-Limitations on public access	4.1 Do you check that the dataset concerns your institutional competences, scope and finality? Do you check if the dataset concerns other public administration competences?	yes	yes	yes	yes	yes
-	4.2 Do you check the limitations for the publication stated by your national legislation or by the EU directives ?	yes	yes	yes	yes	yes
-	4.3 Do you check if there are some limitations connected to the international relations, public security or national defence ?	yes	Yes	yes	yes	yes
-	4.4 Do you check if there are some limitations concerning the public interest ?	yes	yes	yes	yes	yes
-	4.5 Do you check the international law limitations ?	yes	yes	yes	yes	yes
-	4.6 Do you check the INSPIRE law limitations for the spatial data?	Not applicable	N/A	Not applicable	Not applicable	Not applicable?
-Economical conditions	5.1 Do you check that the dataset could be released for free ?	yes	yes	yes	yes	yes
-	5.2 Do you check if there are some agreements with some other partners in order to release the dataset with a reasonable price ?	yes		N/A	N/A	N/A
-	5.3 Do you check if the open data platform terms of service include a clause of “non liability agreement” regarding the dataset and API provided ?	yes	yes	yes	yes	yes
-	5.4 In case you decide to release the dataset to a reasonable price do you check if the limitation imposed by the new directive 2019/1024/EU are respected ? Are you able to calculate the “marginal cost”? Are you able to justify the “reasonable return on investment” limited to cover the costs of collection, production, reproduction, dissemination, preservation and rights clearance? There is a national law that justify your public administration to apply the “reasonable return of investment”?	Not applicable	N/A	Not applicable	Not applicable	N/A
-	5.5 In case you decide to release the dataset to a reasonable price do you check the e-Commerce directive1 and regulation?	Not applicable	N/A	Not applicable	Not applicable	N/A
-Temporary aspects	6.1 Do you have a temporary policy for updating the dataset ?	Yes	Yes?	Yes?	Yes 	Yes
-	6.2 Do you have some mechanism for informing the end-user that the dataset is updated at a given time to avoid mis-usage and so potential risk of damage ?	Yes		Yes?	Yes	no
-	6.3 Did you check if the dataset for some reason can’t be indexed by the research engines (e.g. Google, Yahoo, etc.) ?	Yes		Yes?	Yes	Yes
-	6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?	yes		yes	yes	no
+|---|---|---|---|---|---|---||---|---|---|
+Privacy issues	|1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?|YES |  ci sono nomi di persona |	Partially |	 YES |	 YES |	 YES |	YES |	YES |	YES | YES |	YES |	YES |
+|--------| 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorize the PA to release them? Or any other legal basis? Identify the legal basis.|	YES |	| NO motivi sebucci	| YES | YES |  YES | YES |	YES |	YES |
+|--------|1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorize the PA to release them ? |	 YES |	NO  |	 YES |	YES |	 YES | YES |	YES |	YES |
+|--------|1.4 Is the dataset free of any information that combined with common data available in the web, could identify the person? If so, is there a law that authorize the PA to release them?	|  YES | NO (controllare)|	 YES |	YES |	YES |YES |	YES |	YES |
+|--------|1.5 Is the dataset free of any information related to human rights (e.g. refugees, witness protection, etc.)? |	No? |	NO |	 YES |  YES |  YES | YES |	YES |	YES |
+|--------|1.6 Do you use a tool for calculating the range of the risk of deanonymization? Do you anonymize the dataset? With which technique? Did you check the three mandatory parameters: singling out, linking out, inference out?| NO |	NO + control |	NO | NO | NO | NO |	NO |	NO |
+|--------|1.7 Are you using geolocalization capabilities? Do you check that the geolocalization process can’t identify single individuals in some circumstances? |	NO, YES |	NO, YES |	NO,  YES | NO, YES | NO,  YES | |	NO,  YES | NO, YES	| NO,  YES 
+|--------|1.8 Did you check that the open data platform respect all the privacy regulations (registration of the end-user, profiling, cookies, analytics, etc.)?|	Other risks of personal data breaches |
+	 YES |	Not the platform per se encryptionon form e altre + there is no privacy on that website | YES | YES |NO controlla normativa| NO | YES| NO | YES |	Non vedo banner, no SSL certificate (no encryption) in the contatti page, + Some resources are requested without encryption during the loading of pages. | It can lead to the modification of downloaded data and as a result, to the breach of personal data. (HTTPS) |
+|--------|1.9 Do you know who are in your open data platform the Controller and Processor of the privacy data of the system?|	YES |	YES |	YES ma nostra supposizione	YES |	NO | YES | YES | YES |
+|--------|1.10 Where the datasets are physically stored (country and jurisdiction)? Do you have a cloud computing platform? Do you have checked the privacy regulation of the country where the dataset are physically stored? (territoriality)|	ITALY (ITALIAN JURISDCTION), NO, YES | 	ITALY (ITALIAN JURISDCTION), NO, YES |ITALY (ITALIAN JURISDCTION), NO, YES |	ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES  | ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES |ITALY (ITALIAN JURISDCTION), NO, YES |
+|--------|1.11 Do you have non-personal data? Are you sure that are not “mixed data”? |	 YES |	YES |	 YES |	 YES |	 YES | YES | YES | YES |
+|IPR of the dataset	| 2.1 Do you have created and generated the dataset ? |	NO |	NO |	NO |	NO |	NO | NO |	NO |	NO |
+	|--------|2.2 Are you the owner of the dataset? How is the owner?| ERVET SpA | MIUR	| USR E-R	| MIUR | Regione Emilia Romagna | INGV | Dipartimento per le Politiche di Coesione | InfoCamere S.C.p.A we suppose |
+	|--------|2.3 Are you sure to not use third party data without the proper authorization and license ? Are the dataset free from third party licenses or patents?|	 YES |	 YES |	 YES |	YES |  YES | 	YES |	YES |	YES |
+	|--------|2.4 Do you have checked if there are some limitations in your national legal system for releasing some kind of datasets with open license?|	NO	|  YES |	YES |	YES |  YES |	YES |	YES |  YES |
+Licences	3.1 Do you release the dataset with an open data license ? In case of the use of CC0 do you check that you have all the right necessary for this particular kind of license (e.g., jurisdiction)?	YES |	YES |	YES |	YES |	YES | YES | YES | NO |
+	|--------|3.2 Do you include the clause: "In any case the dataset can’t be used for re-identifying the person" ?|	No, controllare|	YES |	YES |	YES |	NO | NO | NO | NO |
+	|--------|3.3 Do you release the API (in case you have) with an open source license ?	N/A |	N/A	| N/A |	N/A |	N/A | N/A	| YES |	N/A |
+	|--------|3.4 Do you check that the open data/API platform license regime is compliance with your IPR policy ? Do you have all the licences related to the open data platform/API software?	N/A |	N/A |	N/A|	N/A |	N/A| N/A |	YES |	N/A |
+Limitations on public access|	4.1 Do you check that the dataset concerns your institutional competences, scope and finality? Do you check if the dataset concerns other public administration competences?	YES |	YES |	YES |	YES |	YES | YES |	YES |	YES |
+|--------|4.2 Do you check the limitations for the publication stated by your national legislation or by the EU directives ?	YES |	YES |	YES |	YES |	YES |	YES |	YES |	YES |
+|--------|4.3 Do you check if there are some limitations connected to the international relations, public security or national defence ?	YES |	YES |	YES |	YES |	YES | YES |	YES |	YES |
+|--------|4.4 Do you check if there are some limitations concerning the public interest ?	YES |	YES |	YES |	YES |	YES |	YES |	YES |	YES |
+|--------|4.5 Do you check the international law limitations ?|	YES |	YES |	YES |	YES |	YES | YES | YES | YES |
+|--------|4.6 Do you check the INSPIRE law limitations for the spatial data?|	N/A |	N/A	| N/A |	N/A |	N/A |  N/A |	N/A |	N/A |
+Economical conditions	5.1 Do you check that the dataset could be released for free ? |	YES |	YES |	YES |	YES |	YES | YES | YES | YES |
+|--------|5.2 Do you check if there are some agreements with some other partners in order to release the dataset with a reasonable price ?|	YES |	N/A	 | N/A |	N/A | N/A |	N/A	| N/A |
+|--------|5.3 Do you check if the open data platform terms of service include a clause of “non liability agreement” regarding the dataset and API provided ? |	YES |	YES |	YES |	YES |	YES | N/A |	N/A	| N/A |
+|--------|5.4 In case you decide to release the dataset to a reasonable price do you check if the limitation imposed by the new directive 2019/1024/EU are respected ? Are you able to calculate the “marginal cost”? Are you able to justify the “reasonable return on investment” limited to cover the costs of collection, production, reproduction, dissemination, preservation and rights clearance? There is a national law that justify your public administration to apply the “reasonable return of investment”?	N/A | N/A	| N/A |	N/A |	N/A | N/A |	N/A	| N/A |
+|--------|5.5 In case you decide to release the dataset to a reasonable price do you check the e-Commerce directive1 and regulation?|	N/A |	N/A	| N/A |	N/A	| N/A |  N/A |	N/A	| N/A |
+Temporary aspects	6.1 Do you have a temporary policy for updating the dataset ? |	YES |	YES ?|	YES ?|	YES | 	YES | NO |	YES |	NO |
+|--------|6.2 Do you have some mechanism for informing the end-user that the dataset is updated at a given time to avoid mis-usage and so potential risk of damage ?	YES |	 YES |	YES	| NO | YES |	YES |	YES |
+|--------|6.3 Did you check if the dataset for some reason can’t be indexed by the research engines (e.g. Google, Yahoo, etc.) ? |	YES |	|	 YES |	YES | YES | YES |	YES |	YES |
+|--------|6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?|	YES |	 YES |	YES | NO | YES |	YES |	YES |
 
-PARTE 2
-Argomento	Domande	D8	D9	D10
-Privacy issues	1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?	yes	yes	yes
-	1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorize the PA to release them? Or any other legal basis? Identify the legal basis.	yes	yes	yes
-	1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorize the PA to release them ?	yes	yes	yes
-	1.4 Is the dataset free of any information that combined with common data available in the web, could identify the person? If so, is there a law that authorize the PA to release them?	yes	yes	yes
-	1.5 Is the dataset free of any information related to human rights (e.g. refugees, witness protection, etc.)?	yes	yes	yes
-	1.6 Do you use a tool for calculating the range of the risk of deanonymization? Do you anonymize the dataset? With which technique? Did you check the three mandatory parameters: singling out, linking out, inference out?	no	no	no
-	1.7 Are you using geolocalization capabilities ? Do you check that the geolocalization process can’t identify single individuals in some circumstances?	No?, yes	No, yes	No, yes
-	1.8 Did you check that the open data platform respect all the privacy regulations (registration of the end-user, profiling, cookies, analytics, etc.)?	Not really: non ci sono solo cookie tecnici, in quanto youtube può tracciare l’utente (GPS) + norme trattamento
-?	yes	Non vedo banner, no SSL certificate (no encryption) in the contatti page, + Some resources are requested without encryption during the loading of pages. It can lead to the modification of downloaded data and as a result, to the breach of personal data. (HTTPS)
-	1.9 Do you know who are in your open data platform the Controller and Processor of the privacy data of the system?	Yes, link broken	yes	yes
-	1.10 Where the datasets are physically stored (country and jurisdiction)? Do you have a cloud computing platform? Do you have checked the privacy regulation of the country where the dataset are physically stored? (territoriality)	it	Yes, Dipartimento per le Politiche di Coesione	Yes, Roma, Via G.B. Morgagni 13
-	1.11 Do you have non-personal data? Are you sure that are not “mixed data”?	yes	yes	yes
-IPR of the dataset	2.1 Do you have created and generated the dataset ?	no	no	no
-	2.2 Are you the owner of the dataset? How is the owner?	No, INGV	No, Dipartimento per le Politiche di Coesione	No, InfoCamere S.C.p.A
-	2.3 Are you sure to not use third party data without the proper authorization and license ? Are the dataset free from third party licenses or patents?	yes	yes	yes
-	2.4 Do you have checked if there are some limitations in your national legal system for releasing some kind of datasets with open license?	yes	yes	yes
-Licences	3.1 Do you release the dataset with an open data license ? In case of the use of CC0 do you check that you have all the right necessary for this particular kind of license (e.g., jurisdiction)?	yes	yes	yes
-	3.2 Do you include the clause: "In any case the dataset can’t be used for re-identifying the person" ?	N/A?	yes	no
-	3.3 Do you release the API (in case you have) with an open source license ?	Not applicable	yes	Not applicable
-	3.4 Do you check that the open data/API platform license regime is compliance with your IPR policy ? Do you have all the licences related to the open data platform/API software?	Not applicable?	Yes?	Yes?
-Limitations on public access	4.1 Do you check that the dataset concerns your institutional competences, scope and finality? Do you check if the dataset concerns other public administration competences?	yes	yes	yes
-	4.2 Do you check the limitations for the publication stated by your national legislation or by the EU directives ?	yes	yes	yes
-	4.3 Do you check if there are some limitations connected to the international relations, public security or national defence ?	yes	yes	yes
-	4.4 Do you check if there are some limitations concerning the public interest ?	yes	yes	yes
-	4.5 Do you check the international law limitations ?	yes	yes	yes
-	4.6 Do you check the INSPIRE law limitations for the spatial data?	Non so	N/A?	Not applicable
-Economical conditions	5.1 Do you check that the dataset could be released for free ?	yes	yes	yes
-	5.2 Do you check if there are some agreements with some other partners in order to release the dataset with a reasonable price ?	N/A	N/A	N/A
-	5.3 Do you check if the open data platform terms of service include a clause of “non liability agreement” regarding the dataset and API provided ?	yes	yes	yes
-	5.4 In case you decide to release the dataset to a reasonable price do you check if the limitation imposed by the new directive 2019/1024/EU are respected ? Are you able to calculate the “marginal cost”? Are you able to justify the “reasonable return on investment” limited to cover the costs of collection, production, reproduction, dissemination, preservation and rights clearance? There is a national law that justify your public administration to apply the “reasonable return of investment”?	Not applicable	N/A	Not applicable
-	5.5 In case you decide to release the dataset to a reasonable price do you check the e-Commerce directive1 and regulation?	Not applicable	N/A	Not applicable
-Temporary aspects	6.1 Do you have a temporary policy for updating the dataset ?	Yes	yes	Yes?
-	6.2 Do you have some mechanism for informing the end-user that the dataset is updated at a given time to avoid mis-usage and so potential risk of damage ?	Yes	Yes	Yes?
-	6.3 Did you check if the dataset for some reason can’t be indexed by the research engines (e.g. Google, Yahoo, etc.) ?	Yes	yes	Yes?
-	6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?	yes	yes	yes
+
 
 NOTE:
 D1: considerando  n4+ Il regime degli open data descritto nell’articolo di apertura del CAD, invece, è esteso a tutti i dati e documenti pubblicati indipendentemente dal fatto che siano soggetti ad un obbligo di pubblicazione ai sensi del “decreto trasparenza”. Su tale quadro è intervenuto il decreto n. 102/2015 che ha introdotto la lettera h) quater, nell’articolo 3, del decreto n. 36/2006. Sulla base di tale disposizione, infatti, non sono riutilizzabili “documenti, o parti di documenti, che contengono dati personali che non sono conoscibili da chiunque o la cui conoscibilità è  subordinata al rispetto di determinati limiti o modalità, in base alle leggi, ai regolamenti o alla normativa dell'Unione europea, nonché quelli che contengono dati personali il cui riuso e' incompatibile con gli scopi originari del trattamento ai sensi dell'articolo 11, comma 1, lettera b), del decreto legislativo 30 giugno 2003, n. 196, e delle altre disposizioni rilevanti in materia”. In tal senso risulta utile un’impostazione fornita da una parte della dottrina che fissa l’articolo 7 bis, comma 2, del decreto n. 33/2013 come canone interpretativo ai fini del riutilizzo dei dati personali. Sulla base della formulazione legislativa, la finalità della trasparenza, sottesa alla pubblicazione obbligatoria, rappresenta una finalità di rilevante interesse pubblico, compatibile con la disciplina sulla protezione dei dati personali. In questo modo è possibile affermare che i dati personali soggetti a pubblicazione obbligatoria sono gli unici a poter essere riutilizzati. Questa scelta sicuramente riduce di molto il numero dei dati personali pubblicati come dati aperti: essendo il regime open data non applicabile in automatico qualora la pubblicazione riguardi i dati personali. http://www.oggipa.it/index.php/component/k2/item/463-open-data-tra-trasparenza-e-privacy-sviluppi-e-tendenze-fino-al-decreto-attuativo-del-gdpr
