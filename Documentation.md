@@ -292,7 +292,7 @@ For usability purposes, the map can be navigated thrugh a layer control so that 
  Additionally, clicking on each marker will provide information about the specific place and the financial aid assigned and paid for it.
 
 2) Website and charts
-To build the website, we used Bootstrap 4, while to build the charts we used the Javascript library Charts.js.
+To build the website, we used Bootstrap 4, while to build the charts we used the Javascript library Charts.js. To include our datasets in our code, we added them as Javascript variables after converting them in JSON (see the "code" section).
 
 We chose to divide our chart in four main thematic groups: a generic one and one for each mashed-up dataset we created.
 
