@@ -43,9 +43,9 @@ The datasets were then grouped and processed into three mashed-up datasets:
 
 | Primary datasets | Mashed-up dataset | URI | 
 | :---         |     :---:      |          ---: |
-| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | git status    |
-| D7, D8   | Reconstruction works dataset      | git diff      |
-| D1, D9, D10   | Entrepreneurship dataset      | git diff      |
+| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | https://opensisma.github.io/metadata-dataset-education.html    |
+| D7, D8   | Reconstruction works dataset      | https://opensisma.github.io/metadata_dataset-reconstruction-works.html      |
+| D1, D9, D10   | Entrepreneurial processes dataset      | https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html      |
 
 Our mashed-up datasets are grouped in this page (pagina del catalogo).
 
