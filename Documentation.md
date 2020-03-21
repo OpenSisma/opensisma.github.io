@@ -1,7 +1,7 @@
 
 ## Introduction
 
-The project OpenSisma has been created for the exam Open Access and Digital Ethics as a Digital Humanities and Digital Knowlegde course at the University of Bologna. The two contributors of OpenSisma are:
+OpenSisma has been carried out for the exam Open Access and Digital Ethics as a Digital Humanities and Digital Knowlegde course at the University of Bologna. The two contributors of OpenSisma are:
 - Milena Corbellini
 - Anna Sofia Lippolis
 
@@ -43,16 +43,16 @@ The datasets were then grouped and processed into three mashed-up datasets:
 
 | Primary datasets | Mashed-up dataset | URI | 
 | :---         |     :---:      |          ---: |
-| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | git status    |
-| D7, D8   | Reconstruction works dataset      | git diff      |
-| D1, D9, D10   | Entrepreneurship dataset      | git diff      |
+| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | https://opensisma.github.io/metadata-dataset-education.html    |
+| D7, D8   | Reconstruction works dataset      | https://opensisma.github.io/metadata_dataset-reconstruction-works.html      |
+| D1, D9, D10   | Entrepreneurial processes dataset      | https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html      |
 
-Our mashed-up datasets are grouped in this page (pagina del catalogo).
+Our mashed-up datasets are grouped in this page: [Catalogue](https://opensisma.github.io/catalogue.html).
 
 
 ## Informative quality analysis
 
-Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm (link dell'alg). The results can be seen below.
+Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm ([see the "code" section](https://github.com/OpenSisma/opensisma.github.io/blob/master/code/completezza.py)). The results are reported below.
 
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
@@ -89,8 +89,183 @@ Here are the results of our completeness algorithm. Our null values include 0s, 
 | D12     	| 41082        	| 7           	| 99.98%       	|
 
 ## Legal analysis
+The original datasets used to cover the different themes of this project are:
+- D1 = Open data anno di avvio
+- D2 = Autovalutazione della scuola sezione Esiti. Scuola statale (1516)
+- D3 = Autovalutazione della scuola sezione Esiti. Scuola statale (1617)
+- d4 = Anagrafe scuole Emilia Romagna
+- D5 = Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE)
+- D6 = Presenza di vincoli (idrogeologici, sismici)
+- D7 = Interventi di ricostruzione pubblica
+- D8 = Rilievi Macrosismici
+- D9 = Progetti di OpenCoesione con tracciato esteso suddivisi per regione NOTA
+- D10 = Startup
+- D11 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1517)
+- D12 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1617)
 
-## Ethical analysis
+D1 - OPEN DATA ANNO DI AVVIO
+Distribution: XML, XML Schema, JSON, CSV, Excel CSV
+Link: http://www.osservatoriopartecipazione.it/opendata
+License: CC BY 2.0 IT https://creativecommons.org/licenses/by/2.0/it/
+Description: 
+Maintenance: Data are updated in real time. No information on last date of modification.
+
+D2/D3 - 1617: Autovalutazione della scuola sezione Esiti. Scuola statale (1617)
+Distribution: CSV, JSON, RDF, XML
+Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA
+License: Italian open data license, https://www.dati.gov.it/content/italian-open-data-license-v20
+Description:
+Maintenance:
+
+D4 - ANAGRAFE SCUOLE EMILIA-ROMAGNA
+Distribution: HMTL, CSV, Text, PDF; Excel 95+, Excel 2007+
+Link: https://sed.istruzioneer.it/scumgnt/scu-istituzione
+License: CC BY 3.0 IT, https://creativecommons.org/licenses/by/3.0/it/
+Description: Registry of state educational institutions and paritary schools in Emilia-Romagna.
+Date of publication: unknown
+Maintenance: annual basis
+Temporal and geo coverage: Emilia Romagna, school year
+Produced and published by Servizi Elaborazione Dati USR-ER
+
+D5 - Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE)
+
+Distribuzioni: CSV, JSON, RDF, XML
+Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA 
+License: Italian open data license, https://www.dati.gov.it/content/italian-open-data-license-v20
+Description: 
+Date of publication: 27/09/2018
+Maintenance: last updating
+Temporal and geo coverage: national w/o trento e bolzano, scolastic year
+Produced by DGEFID and published by DGCASIS
+
+
+D6 - PRESENZA DI VINCOLI (idrogeologici, sismici)
+
+Distribution: CSV, JSON, RDF, XML
+Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA
+License: Italian open data license, https://www.dati.gov.it/content/italian-open-data-license-v20
+Description:
+Date of publication: 27/09/2018
+Maintenance:  last updating
+Temporal and geo coverage: national w/o trento e bolzano, from 2017 there is Aosta, scolastic year
+Produced by DGEFID and published by DGCASIS
+
+
+D7 - INTERVENTI DI RICOSTRUZIONE PUBBLICA
+
+Distribution: CSV
+Link:  https://openricostruzione.regione.emilia-romagna.it/open-data
+License: CC BY 3.0 IT,  https://creativecommons.org/licenses/by/3.0/it/ 
+Description:
+Date of publication: 27/09/2018
+Maintenance: updated 31/12/2019
+Temporal and geo coverage: regional, unknown
+Produced by 
+
+
+D8 - QUEST- Rilievi Macrosismici
+
+Link: http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx da http://quest.ingv.it/
+
+D9 - PROGETTI DI OPENCOESIONE
+
+Distribution: ZIP/CSV
+Link: https://opencoesione.gov.it/it/territori/emilia-romagna-regione/ https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip
+License: CC BY-SA 3.0 IT,  http://www.creativecommons.org/licenses/by-sa/3.0/it/deed.it
+Description:
+Date of publication: unknown
+Maintenance: yearly
+Temporal and geo coverage: regional, yearly
+Produced by 
+
+D10 - STARTUP
+Distribution: CSV, PDF, Excel
+Link: http://startup.registroimprese.it/ 
+License: The data are available in an Open format, following terms and conditions stablished by law.
+Description:
+Date of publication: unknown
+Maintenance: unknowm
+Temporal and geo coverage: Trimestral, Italy
+Produced by
+
+D11/D12 - Autovalutazione della scuola sezione Esiti. Scuola paritaria
+
+Distribution: CSV, JSON, RDF, XML
+Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR
+License: Italian Open Data License, http://www.dati.gov.it/iodl/2.0/
+Description:The data flow contains the information regarding the school registry. Paritary school.
+Date of publication: 27/06/2019
+Maintenance: Yearly
+Temporal and geo coverage: school-year, Italy excluding Trento e Bolzano
+Produced and publsihed by: DGCASIS
+
+### Check List
+
+| Argument       | Answer                                                                                                                                                                                                                        | D1                                    | D2, D3, D11, D12        | D4                | D5 - D6 | D7       | D8  | D9       | D10     |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------------------|-------------------|---------|----------|-----|----------|---------|
+| ---            | ---                                                                                                                                                                                                                           | ---                                   | ---                     | ---               | ---     | ---      |     | ---      | ---     |
+| Privacy issues | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?                                                                                                                                      | YES                                   | ci sono nomi di persona | Partially         | YES     | YES      | YES | YES      | YES     |
+| --------       | 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorize the PA to release them? Or any other legal basis? Identify the legal basis. | YES                                   |                         | NO motivi sebucci | YES     | YES      | YES | YES      | YES     |
+| --------       | 1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorize the PA to release them ?                                                                                           | YES                                   | NO                      | YES               | YES     | YES      | YES | YES      | YES     |
+| --------       | 1.4 Is the dataset free of any information that combined with common data available in the web, could identify the person? If so, is there a law that authorize the PA to release them?                                       | YES                                   | NO (controllare)        | YES               | YES     | YES      | YES | YES      | YES     |
+| --------       | 1.5 Is the dataset free of any information related to human rights (e.g. refugees, witness protection, etc.)?                                                                                                                 | No?                                   | NO                      | YES               | YES     | YES      | YES | YES      | YES     |
+| --------       | 1.6 Do you use a tool for calculating the range of the risk of deanonymization? Do you anonymize the dataset? With which technique? Did you check the three mandatory parameters: singling out, linking out, inference out?   | NO                                    | NO + control            | NO                | NO      | NO       | NO  | NO       | NO      |
+| --------       | 1.7 Are you using geolocalization capabilities? Do you check that the geolocalization process can’t identify single individuals in some circumstances?                                                                        | NO, YES                               | NO, YES                 | NO,  YES          | NO, YES | NO,  YES |    NO, YES  | NO,  YES | NO, YES |
+| --------       | 1.8 Did you check that the open data platform respect all the privacy regulations (registration of the end-user, profiling, cookies, analytics, etc.)?                                                                        | Other risks of personal data breaches |   YES              |          	Not the platform per se encryptionon form e altre + there is no privacy on that website |  YES |	Non vedo banner, no SSL certificate (no encryption) in the contatti page, + Some resources are requested without encryption during the loading of pages. | It can lead to the modification of downloaded data and as a result, to the breach of personal data. (HTTPS) |    YES     |   YES      |    NO controlla normativa      |    NO  |     YES     |     NO      |
+| --------                                                                                                                                                                                                     | 1.9 Do you know who are in your open data platform the Controller and Processor of the privacy data of the system?                                                                                                                    | YES                                  | YES                                  | YES ma nostra supposizione	YES        | NO                                   | YES                                  | YES                                  | YES                                       |
+--------                                                                                                                                                                                                     | 1.10 Where the datasets are physically stored (country and jurisdiction)? Do you have a cloud computing platform? Do you have checked the privacy regulation of the country where the dataset are physically stored? (territoriality) | ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES | ITALY (ITALIAN JURISDCTION), NO, YES      |
+| --------                                                                                                                                                                                                     | 1.11 Do you have non-personal data? Are you sure that are not “mixed data”?                                                                                                                                                           | YES                                  | YES                                  | YES                                  | YES                                  | YES                                  | YES                                  | YES                                       |
+| IPR of the dataset                                                                                                                                                                                           | 2.1 Do you have created and generated the dataset ?                                                                                                                                                                                   | NO                                   | NO                                   | NO                                   | NO                                   | NO                                   | NO                                   | NO                                        |
+| --------                                                                                                                                                                                                     | 2.2 Are you the owner of the dataset? How is the owner?                                                                                                                                                                               | ERVET SpA                            | MIUR                                 | USR E-R                              | MIUR                                 | Regione Emilia Romagna               | INGV                                 | Dipartimento per le Politiche di Coesione |
+| --------                                                                                                                                                                                                     | 2.3 Are you sure to not use third party data without the proper authorization and license ? Are the dataset free from third party licenses or patents?                                                                                | YES                                  | YES                                  | YES                                  | YES                                  | YES                                  | YES                                  | YES                                       |
+| --------                                                                                                                                                                                                     | 2.4 Do you have checked if there are some limitations in your national legal system for releasing some kind of datasets with open license?                                                                                            | NO                                   | YES                                  | YES                                  | YES                                  | YES                                  | YES                                  | YES                                       |
+| Licences |	3.1 Do you release the dataset with an open data license ? In case of the use of CC0 do you check that you have all the right necessary for this particular kind of license (e.g., jurisdiction)?	YES | YES                                                                                                                                                                                                                                   | YES                                  | YES                                  | YES                                  | YES                                  | YES                                  | NO                                   |              
+| --------                     | 3.2 Do you include the clause: "In any case the dataset can’t be used for re-identifying the person" ?                                                                            | No, controllare | YES | YES | YES | NO  | NO  | NO  | NO  |
+| --------                     | 3.3 Do you release the API (in case you have) with an open source license ?                                                                                                       | N/A             | N/A | N/A | N/A | N/A | N/A | YES | N/A |
+| --------                     | 3.4 Do you check that the open data/API platform license regime is compliance with your IPR policy ? Do you have all the licences related to the open data platform/API software? | N/A             | N/A | N/A | N/A | N/A | N/A | YES | N/A |
+| Limitations on public access | 4.1 Do you check that the dataset concerns your institutional competences, scope and finality? Do you check if the dataset concerns other public administration competences?      | YES             | YES | YES | YES | YES | YES | YES | YES |
+| --------                     | 4.2 Do you check the limitations for the publication stated by your national legislation or by the EU directives ?                                                            | YES             | YES | YES | YES | YES | YES | YES |  YES |
+| --------              | 4.3 Do you check if there are some limitations connected to the international relations, public security or national defence ?   | YES | YES | YES | YES | YES | YES | YES | YES |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------|-----|-----|-----|-----|-----|-----|-----|-----|
+| --------              | 4.4 Do you check if there are some limitations concerning the public interest ?                                                  | YES | YES | YES | YES | YES | YES | YES | YES |
+| --------              | 4.5 Do you check the international law limitations ?                                                                             | YES | YES | YES | YES | YES | YES | YES | YES |
+| --------              | 4.6 Do you check the INSPIRE law limitations for the spatial data?                                                               | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Economical conditions | 5.1 Do you check that the dataset could be released for free ?                                                                   | YES | YES | YES | YES | YES | YES | YES | YES |
+| --------              | 5.2 Do you check if there are some agreements with some other partners in order to release the dataset with a reasonable price ? | YES | N/A | N/A | N/A | N/A | N/A | N/A |     |
+
+| --------          | 5.3 Do you check if the open data platform terms of service include a clause of “non liability agreement” regarding the dataset and API provided ?                                                                                                                                                                                                                                                                                                                                                              | YES | YES   | YES   | YES | YES | N/A | N/A | N/A |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|-------|-------|-----|-----|-----|-----|-----|
+| --------          | 5.4 In case you decide to release the dataset to a reasonable price do you check if the limitation imposed by the new directive 2019/1024/EU are respected ? Are you able to calculate the “marginal cost”? Are you able to justify the “reasonable return on investment” limited to cover the costs of collection, production, reproduction, dissemination, preservation and rights clearance? There is a national law that justify your public administration to apply the “reasonable return of investment”? | N/A | N/A   | N/A   | N/A | N/A | N/A | N/A | N/A |
+| --------          | 5.5 In case you decide to release the dataset to a reasonable price do you check the e-Commerce directive1 and regulation?                                                                                                                                                                                                                                                                                                                                                                                      | N/A | N/A   | N/A   | N/A | N/A | N/A | N/A | N/A |
+| Temporary aspects | 6.1 Do you have a temporary policy for updating the dataset ?                                                                                                                                                                                                                                                                                                                                                                                                                                                   | YES | YES ? | YES ? | YES | YES | NO  | YES | NO  |
+| --------          | 6.2 Do you have some mechanism for informing the end-user that the dataset is updated at a given time to avoid mis-usage and so potential risk of damage ?	                                                                                                                                                                                                                                                                                                                                                   | YES | YES   | YES    | YES | YES | NO |  YES   |  YES   |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|-----|-----|-----|-----|-----|-----|
+| -------- | 6.3 Did you check if the dataset for some reason can’t be indexed by the research engines (e.g. Google, Yahoo, etc.) ?                                     | YES |     | YES | YES | YES | YES | YES |
+| -------- | 6.4 In case of personal data, do you have a reasonable technical mechanism for collecting request of deletion (e.g. right to be forgotten)?                | YES | YES | YES | NO  | YES | YES | YES |
+
+
+
+
+
+NOTE:
+D1: considerando  n4+ Il regime degli open data descritto nell’articolo di apertura del CAD, invece, è esteso a tutti i dati e documenti pubblicati indipendentemente dal fatto che siano soggetti ad un obbligo di pubblicazione ai sensi del “decreto trasparenza”. Su tale quadro è intervenuto il decreto n. 102/2015 che ha introdotto la lettera h) quater, nell’articolo 3, del decreto n. 36/2006. Sulla base di tale disposizione, infatti, non sono riutilizzabili “documenti, o parti di documenti, che contengono dati personali che non sono conoscibili da chiunque o la cui conoscibilità è  subordinata al rispetto di determinati limiti o modalità, in base alle leggi, ai regolamenti o alla normativa dell'Unione europea, nonché quelli che contengono dati personali il cui riuso e' incompatibile con gli scopi originari del trattamento ai sensi dell'articolo 11, comma 1, lettera b), del decreto legislativo 30 giugno 2003, n. 196, e delle altre disposizioni rilevanti in materia”. In tal senso risulta utile un’impostazione fornita da una parte della dottrina che fissa l’articolo 7 bis, comma 2, del decreto n. 33/2013 come canone interpretativo ai fini del riutilizzo dei dati personali. Sulla base della formulazione legislativa, la finalità della trasparenza, sottesa alla pubblicazione obbligatoria, rappresenta una finalità di rilevante interesse pubblico, compatibile con la disciplina sulla protezione dei dati personali. In questo modo è possibile affermare che i dati personali soggetti a pubblicazione obbligatoria sono gli unici a poter essere riutilizzati. Questa scelta sicuramente riduce di molto il numero dei dati personali pubblicati come dati aperti: essendo il regime open data non applicabile in automatico qualora la pubblicazione riguardi i dati personali. http://www.oggipa.it/index.php/component/k2/item/463-open-data-tra-trasparenza-e-privacy-sviluppi-e-tendenze-fino-al-decreto-attuativo-del-gdpr
+D2, D3, D11, D12 : personal data issue
+-	Example of sentences that aren’t good
+D4 : privacy of the platform issues
+-	Problems of encryption of the platform that owns the page where you download the datasets
+D7 : the privacy page of that dataset doesn’t have any content. Even though there is a banner, there is no explicit anything. See https://web.archive.org/web/20190621170110/https://openricostruzione.regione.emilia-romagna.it/privacy
+D8 : youtube + broken link
+D10 :  Non vedo banner, no SSL certificate (no encryption) in the contatti page, + Some resources are requested without encryption during the loading of pages. It can lead to the modification of downloaded data and as a result, to the breach of personal data. (HTTPS)
+
+
+
+
+
+### Licenses
+
+
+
+### Ethical analysis
 
 As we described in the previous points our mashed-up datasets are completely free of data that could be considered non-ethic: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 
@@ -158,29 +333,39 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 ### URI
 
-The analysis of the URIs has to be carried out separately. Their formulation, in fact, clashes with the fact URIs have to be xx, xx, xy.
+The analysis of the URIs has to be carried out separately. Their formulation, in fact, clashes with the fact URIs have to uniquely and permanently represent an object while remaining human-readable as stated in the [W3C best practices for URI design](https://www.w3.org/2011/gld/wiki/223_Best_Practices_URI_Construction#Design_principles). In particular:
+- URI space should be limited as much as possible;
+- There should be no file extension specification (e.i. ".csv");
+- It is highly recommended not to use uppercase, as it can cause some issues;
+- It is highly recommended not to use the underscore, as text viewer applications can underline URIs to provide a cue that they are clickable, so that the character can result hidden by this underlining. 
+
+As a result, our fixed URIs proposals focused on complying to the aforementioned specific design principles.
+
+
+
 
 | Dataset 	| URI                                                                                                                                         	| Fixed URI                                                                                           	|
 |---------	|---------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------	|
-| D1      	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv 	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData/dati_per_anno_di_avvio          	|
-| D2      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv                                      	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_STA20152016            	|
-| D3      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv                                	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_STA20162017            	|
+| D1      	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv 	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData/dati-per-anno-di-avvio          	|
+| D2      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv                                      	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-sta-2015-2016            	|
+| D3      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv                                	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/valutazione-esiti-sta-2016-2017            	|
 | D4      	| https://sed.istruzioneer.it/scumgnt/scu-istituzione                                                                                         	| https://sed.istruzioneer.it/scumgnt/scu-istituzione/anagrafe_scuole_bologna                         	|
-| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv                                   	| https://dati.istruzione.it/opendata/catalogo_scuola/edilizia/SICUREZZA20172018                      	|
-| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv                                        	| https://dati.istruzione.it/opendata/catalogo_scuola/edilizia/VINCOLI20172018                        	|
-| D7      	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv                                     	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica 	|
-| D8      	| http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx                                                         	| http://www.ingv.it/quest/dataset/rilievimacrosismici/INGV_QUEST_RILIEVI_EMILIA_ROMAGNA_2012-05-29   	|
-| D9      	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip                                                                     	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR                                 	|
+| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv                                   	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/sicurezza-2017-2018                      	|
+| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv                                        	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/vincoli-2017-2018                        	|
+| D7      	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv                                     	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi-ricostruzionepubblica 	|
+| D8      	| http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx                                                         	| http://www.ingv.it/quest/dataset/rilievimacrosismici/ingv-quest-rilievi-emilia-romafgna-2012-05-29  	|
+| D9      	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip                                                                     	| https://opencoesione.gov.it/it/opendata/regioni/progetti-esteso-EMR                                 	|
 | D10     	| No URI                                                                                                                                      	|                                                                                                     	|
-| D11     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv                                       	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_PAR20152016            	|
-| D12     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv                                       	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_PAR20162017            	|
+| D11     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv                                       	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-par-2015-2016            	|
+| D12     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv                                       	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-par-2016-2017            	|
+
 
 
 
 
 #### Mashed-up datasets
 
-We specified the datasets' encoding in ??
+We specified the datasets' encoding in the download page of the datasets. 
 
 ##### Format: 
 We chose to distribute our mashed-up datasets in CSV.(link)
@@ -194,7 +379,9 @@ Entrepreneurship mashed-up dataset
 The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. 
 Each of our datasets has been assigned a URI:
 table
-Moreover, they are accessible, interoperable and reusable. 
+
+However, they still have the .html file extension, as our hosting is on github (guardare). 
+
 
 
 
