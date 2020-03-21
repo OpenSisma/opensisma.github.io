@@ -47,12 +47,12 @@ The datasets were then grouped and processed into three mashed-up datasets:
 | D7, D8   | Reconstruction works dataset      | https://opensisma.github.io/metadata_dataset-reconstruction-works.html      |
 | D1, D9, D10   | Entrepreneurial processes dataset      | https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html      |
 
-Our mashed-up datasets are grouped in this page (pagina del catalogo).
+Our mashed-up datasets are grouped in this page: [Catalogue](https://opensisma.github.io/catalogue.html).
 
 
 ## Informative quality analysis
 
-Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm (link dell'alg). The results can be seen below.
+Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm ([see the "code" section](https://github.com/OpenSisma/opensisma.github.io/blob/master/code/completezza.py)). The results are reported below.
 
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
@@ -339,7 +339,7 @@ The analysis of the URIs has to be carried out separately. Their formulation, in
 - It is highly recommended not to use uppercase, as it can cause some issues;
 - It is highly recommended not to use the underscore, as text viewer applications can underline URIs to provide a cue that they are clickable, so that the character can result hidden by this underlining. 
 
-As a result, we focused on fixing URIs according to the aforementioned specific design principles.
+As a result, our fixed URIs proposals focused on complying to the aforementioned specific design principles.
 
 
 
@@ -379,7 +379,9 @@ Entrepreneurship mashed-up dataset
 The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. 
 Each of our datasets has been assigned a URI:
 table
-Moreover, they are accessible, interoperable and reusable. 
+
+However, they still have the .html file extension, as our hosting is on github (guardare). 
+
 
 
 
