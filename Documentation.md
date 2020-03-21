@@ -229,7 +229,7 @@ Produced and publsihed by: DGCASIS
 | --------                     | 4.2 Do you check the limitations for the publication stated by your national legislation or by the EU directives ?                                                            | YES             | YES | YES | YES | YES | YES | YES |  YES |
 
 | --------              | 4.3 Do you check if there are some limitations connected to the international relations, public security or national defence ?   | YES | YES | YES | YES | YES | YES | YES | YES |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------|-----|-----|-----|-----|-----|-----|-----|-----|
+
 | --------              | 4.4 Do you check if there are some limitations concerning the public interest ?                                                  | YES | YES | YES | YES | YES | YES | YES | YES |
 | --------              | 4.5 Do you check the international law limitations ?                                                                             | YES | YES | YES | YES | YES | YES | YES | YES |
 | --------              | 4.6 Do you check the INSPIRE law limitations for the spatial data?                                                               | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
