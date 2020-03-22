@@ -20,7 +20,7 @@ The analysis is based on a collection of open datasets, which were studied from 
 
 We selected the 19 most damaged areas among those affected by the earthquakes of May 2012. Many of them are still in state of emergency. In this struggling scenario, our study can be useful to have a deeper look at the effects of eartquakes on the population, not only in terms of damage and reconstruction, but also in terms of the impact of some aspects of day to day life. More specifically we found it meaningful to analyze how the educational and entrepneurealship field have been affected over the years.
 </br>
-The OpenSisma project's purpose would be to involve citizens of sensitive areas to be aware of the changes and the effects determined by gomernment measures and the way in which those affected the life of citizens themselves. Our researc would not only be useful for this portion of population but also for the reaserchers and the scholars that are interested in this topic. 
+The OpenSisma project's purpose would be to involve citizens of sensitive areas to be aware of the changes and the effects determined by gomernment measures and the way in which those affected the life of citizens themselves. Our research would not only be useful for this portion of population but also for the researchers and the scholars that are interested in this topic. 
 
 ## Original datasets and mashed-up datasets
 In order to carry out our analysis, we chose to used datasets that differed in provenance, size and content.  
