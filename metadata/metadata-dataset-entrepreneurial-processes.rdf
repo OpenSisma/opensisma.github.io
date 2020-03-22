@@ -38,6 +38,9 @@
     <dct:description> A collection of data related to OpenCoesione projects, Startups and participative process of Emilia-Romagna gathered by Osservatorio Partecipazione.</dct:description>
     <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/REGI"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
     <dcat:keyword>Opensisma</dcat:keyword>
     <dcat:keyword>Emilia-Romagna</dcat:keyword>
     <dcat:keyword>Earthquakes</dcat:keyword>
@@ -72,7 +75,7 @@
       <dcat:Distribution>
         <dct:title>A distribution for this dataset in CSV format</dct:title>
         <dct:description>The dataset is available in csv format under the license CC BY-SA 4.0.</dct:description>
-        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">INSERIRE</dcat:accessURL>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html</dcat:accessURL>
         <dcat:mediaType>text/csv</dcat:mediaType>
         <dct:license>CC BY-SA 4.0</dct:license>
       </dcat:Distribution>

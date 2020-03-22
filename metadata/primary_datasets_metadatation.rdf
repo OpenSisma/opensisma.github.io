@@ -1,0 +1,507 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<rdf:RDF
+ xmlns:time="http://www.w3.org/2006/time#"
+ xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:dcat="http://www.w3.org/ns/dcat#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:prov-o="https://www.w3.org/TR/prov-o/"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+<foaf:Agent>
+ <foaf:name>Milena Corbellini</foaf:name>
+ <foaf:name>Anna Sofia Lippolis</foaf:name>
+</foaf:Agent>
+<!--  CATALOGUE 1-->
+<dcat:Catalog >
+  <dct:title>Osservatorio Partecipazione- Processi partecipativi emiliano-romagnoli</dct:title>
+  <dct:description xml:lang="it">I processi partecipativi emiliano-romagnoli, registrati dall'Osservatorio Partecipazione, disponibili in formato aperto. </dct:description>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-03</dct:modified>
+  <dct:spatial rdf:resource="http://www.geonames.org/3177401"/>
+  <dct:language>it</dct:language>
+  <foaf:homepage rdf:resource="http://www.osservatoriopartecipazione.it/opendata"/>
+  <dct:license>CC BY 2.0 IT</dct:license>
+  <dct:publisher>Regione Emilia-Romagna</dct:publisher>
+  <!--  DATASET 1-->
+  <dcat:dataset rdf:about="http://www.osservatoriopartecipazione.it/opendata">
+    <dct:title>Anno di Avvio</dct:title>
+    <dct:description>OpenData Progetti per Anno di Avvio.</dct:description>
+    <dcat:contactPoint rdf:resource="http://www.osservatoriopartecipazione.it/login"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3177401"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:keyword>Osservatorio Partecipazione</dcat:keyword>
+    <dcat:keyword>Emilia-Romagna</dcat:keyword>
+    <dct:language>it</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Regione Emilia-Romagna</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>Osservatorio Partecipazione</foaf:name>
+        <foaf:mbox>partecipazione@art-er.it</foaf:mbox>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>Progetti dell'Osservatorio Partecipazione per Anno di Avvio in CSV.</dct:title>
+        <dct:description>La distribuzione del dataset in CSV.</dct:description>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>CC BY 2.0 IT</dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+  </dcat:Catalog>
+  <!--  CATALOGO DATASET AMBITO SCUOLA -->
+<dcat:Catalog >
+  <dct:title>Catalogo dataset ambito scuola </dct:title>
+  <dct:description xml:lang="it">Il Catalogo dei Dataset per l'ambito scuola. </dct:description>
+  <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+  <dct:language>it</dct:language>
+  <foaf:homepage rdf:resource="https://dati.istruzione.it/opendata/opendata/catalogo/"/>
+  <dct:license>Italian Open Data License v2.0</dct:license>
+  <dct:publisher>MIUR</dct:publisher>
+    <!--  DATASET 2 -->
+  <dcat:dataset rdf:about="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv">
+    <dct:title>Autovalutazione della scuola sezione Esiti. Scuola statale. Anno scolastico 2015-2016.</dct:title>
+    <dct:description>Nel flusso di dati sono contenute le informazioni riguardanti l'autovalutazione in termini di: Risultati scolastici, Risultati nelle prove standardizzate nazionali, Competenze chiave e di cittadinanza, Risultati a distanza. Riferito alla scuola statale, anno scolastico 2015-2016.</dct:description>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/ANNUAL"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dcat:keyword>Legge 107</dcat:keyword>
+    <dcat:keyword>SNV</dcat:keyword>
+    <dcat:keyword>RAV</dcat:keyword>
+    <dcat:keyword>Rapporto autovalutazione</dcat:keyword>
+    <dcat:keyword>Autovalutazione scuola statale</dcat:keyword>
+    <dcat:keyword>Esiti</dcat:keyword>
+    <dcat:keyword>Risultati scolastici</dcat:keyword>
+    <dcat:keyword>Risultati nelle prove standardizzate nazionali</dcat:keyword>
+    <dcat:keyword>Competenze chiave e di cittadinanza</dcat:keyword>
+    <dcat:keyword>Risultati a distanza</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-31</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-13</dct:modified>
+    <dct:language>it</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>Autovalutazione della scuola sezione Esiti (Scuola statale) in CSV.</dct:title>
+        <dct:description>La distribuzione del dataset in CSV.</dct:description>
+        <dcat:accessURL rdf:datatype="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv"</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>Italian Open Data License v2.0</dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+    <!--  DATASET 3 -->
+  <dcat:dataset rdf:about="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv">
+    <dct:title>Autovalutazione della scuola sezione Esiti. Scuola statale. Anno scolastico 2016-2017.</dct:title>
+    <dct:description>Nel flusso di dati sono contenute le informazioni riguardanti l'autovalutazione in termini di: Risultati scolastici, Risultati nelle prove standardizzate nazionali, Competenze chiave e di cittadinanza, Risultati a distanza. Riferito alla scuola statale, anno scolastico 2016-2017.</dct:description>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/ANNUAL"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dcat:keyword>Legge 107</dcat:keyword>
+    <dcat:keyword>SNV</dcat:keyword>
+    <dcat:keyword>RAV</dcat:keyword>
+    <dcat:keyword>Rapporto autovalutazione</dcat:keyword>
+    <dcat:keyword>Autovalutazione scuola statale</dcat:keyword>
+    <dcat:keyword>Esiti</dcat:keyword>
+    <dcat:keyword>Risultati scolastici</dcat:keyword>
+    <dcat:keyword>Risultati nelle prove standardizzate nazionali</dcat:keyword>
+    <dcat:keyword>Competenze chiave e di cittadinanza</dcat:keyword>
+    <dcat:keyword>Risultati a distanza</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-31</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-13</dct:modified>
+    <dct:language>it</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+        <dct:creator>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>Autovalutazione della scuola sezione Esiti (Scuola statale) in CSV.</dct:title>
+        <dct:description>La distribuzione del dataset in CSV.</dct:description>
+        <dcat:accessURL rdf:datatype="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv"</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>Italian Open Data License v2.0</dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+  <!--  DATASET 5 -->
+  <dcat:dataset rdf:about="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv">
+    <dct:title>Certificazioni e documenti relativi alla sicurezza</dct:title>
+    <dct:description>Nel flusso di dati sono contenute le informazioni riguardanti la sicurezza degli edifici delle scuole Statali di ogni ordine e grado (I dati sono caricati dagli Enti locali proprietari o gestori degli edifici adibiti ad uso scolastico ai sensi della legge 11 gennaio 1996, n. 23)</dct:description>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UNKNOWN"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:keyword>Legge 107</dcat:keyword>
+    <dcat:keyword>Edilizia scolastica</dcat:keyword>
+    <dcat:keyword>Agibilità</dcat:keyword>
+    <dcat:keyword>Collaudo</dcat:keyword>
+    <dcat:keyword>Incendi</dcat:keyword>
+    <dcat:keyword>Rischio</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-25</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-05</dct:modified>
+    <dct:language>it</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>La distribuzione del dataset in CSV.</dct:title>
+        <dct:description>Certificazioni e documenti relativi alla sicurezza in CSV.</dct:description>
+        <dcat:accessURL rdf:datatype="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv"</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>Italian Open Data License v2.0</dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+  <!--  DATASET 6 -->
+  <dcat:dataset rdf:about="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv">
+    <dct:title>Presenza di vincoli (idrogeologici, sismici...)</dct:title>
+    <dct:description>Nel flusso di dati sono contenute le informazioni riguardanti la presenza o meno di vincoli relativamente alle scuole Statali di ogni ordine e grado (I dati sono caricati dagli Enti locali proprietari o gestori degli edifici adibiti ad uso scolastico ai sensi della legge 11 gennaio 1996, n. 23)</dct:description>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UNKNOWN"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dcat:keyword>Legge 107</dcat:keyword>
+    <dcat:keyword>Edilizia scolastica</dcat:keyword>
+    <dcat:keyword>Vincoli idrogeologici</dcat:keyword>
+    <dcat:keyword>Vincoli paesaggio</dcat:keyword>
+    <dcat:keyword>Vincoli zona sismica</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-25</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-27</dct:modified>
+    <dct:language>it</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>MIUR</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>Presenza di vincoli (idrogeologici, sismici...) in CSV.</dct:title>
+        <dct:description>La distribuzione del dataset in CSV.</dct:description>
+        <dcat:accessURL rdf:datatype="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv"</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>Italian Open Data License v2.0</dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+  <!--  DATASET 11-->
+
+  <dcat:dataset rdf:about="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv">
+    <dct:title>Informazioni anagrafiche scuole paritarie</dct:title>
+    <dct:description>Nel flusso di dati sono contenute le informazioni riguardanti l'anagrafe delle scuole paritarie per l'anno 2015-2016.</dct:description>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/ANNUAL"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:keyword>Legge 107 </dcat:keyword>
+    <dcat:keyword>Scuole paritarie</dcat:keyword>
+    <dcat:keyword>Indirizzo web</dcat:keyword>
+    <dcat:keyword>Scuola dell'infanzia</dcat:keyword>
+    <dcat:keyword>Scuola primaria</dcat:keyword>
+    <dcat:keyword>Scuola secondaria di primo grado</dcat:keyword>
+    <dcat:keyword>Scuola secondaria di secondo grado</dcat:keyword>
+    <dcat:keyword>Posta elettronica</dcat:keyword>
+    <dcat:keyword>Posta elettronica certificata</dcat:keyword>
+    <dct:language>It</dct:language>
+    <dcat:contactPoint rdf:resource="https://questionari.pubblica.istruzione.it/questionari-miur/index.php/653196/lang-it?pk_vid=f033088831e641b1158405025629b36b"></dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Ministero dell'Istruzione, dell'Università e della Ricerca</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>DGCASIS</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+       <description>Il dataset è disponibile in formato CSV, JSON , RDF e XML.</description>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv</dcat:downloadURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license> IODL 2.0 </dct:license>
+     </dcat:Distribution> 
+    </dcat:distribution> 
+  </dcat:dataset>
+  <!--  DATASET 12-->
+  
+  <dcat:dataset rdf:about="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv">
+    <dct:title>Informazioni anagrafiche scuole paritarie</dct:title>
+    <dct:description>Nel flusso di dati sono contenute le informazioni riguardanti l'anagrafe delle scuole paritarie per l'anno 2016-2017.</dct:description>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/ANNUAL"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:keyword>Legge 107 </dcat:keyword>
+    <dcat:keyword>Scuole paritarie</dcat:keyword>
+    <dcat:keyword>Indirizzo web</dcat:keyword>
+    <dcat:keyword>Scuola dell'infanzia</dcat:keyword>
+    <dcat:keyword>Scuola primaria</dcat:keyword>
+    <dcat:keyword>Scuola secondaria di primo grado</dcat:keyword>
+    <dcat:keyword>Scuola secondaria di secondo grado</dcat:keyword>
+    <dcat:keyword>Posta elettronica</dcat:keyword>
+    <dcat:keyword>Posta elettronica certificata</dcat:keyword>
+    <dct:language>it</dct:language>
+    <dcat:contactPoint rdf:resource="https://questionari.pubblica.istruzione.it/questionari-miur/index.php/653196/lang-it?pk_vid=f033088831e641b1158405025629b36b"></dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Ministero dell'Istruzione, dell'Università e della Ricerca</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>DGCASIS</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+       <dct:description>Il dataset è disponibile in csv, json , rdf e xml formats.</dct:description>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv</dcat:downloadURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license> IODL 2.0 </dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+  </dcat:Catalog>
+  <!--  NUOVO CATALOGO E DATASET 4-->
+<dcat:Catalog >
+  <dct:title>Open data ufficio scolastico</dct:title>
+  <dct:description xml:lang="it">Open data dell'ufficio scolastico regionale per l'Emilia-Romagna. </dct:description>
+  <dcat:contactPoint rdf:resource="http://istruzioneer.gov.it/contatti-urp/"/>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-03</dct:modified>
+  <dct:spatial rdf:resource="http://www.geonames.org/3177401"/>
+  <dct:language>it</dct:language>
+  <foaf:homepage rdf:resource="http://istruzioneer.gov.it/dati/open-data/"/>
+  <dct:license>CC BY 3.0 IT</dct:license>
+  <dct:publisher>Ufficio scolastico regionale per l'Emilia-Romagna</dct:publisher>
+  <dcat:dataset rdf:about="https://sed.istruzioneer.it/scumgnt/scu-istituzione">
+    <dct:title>Anagrafe scuole Emilia Romagna</dct:title>
+    <dct:description>Anagrafe delle istituzioni scolastiche statali e delle scuole paritarie dell’Emilia-Romagna.</dct:description>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/ANNUAL"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+    <dcat:keyword>Anagrafe scuole</dcat:keyword>
+    <dcat:keyword>Emilia-Romagna</dcat:keyword>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-20</dct:modified>
+    <dct:language>it</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Ufficio scolastico regionale per l'Emilia-Romagna</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>Ufficio scolastico regionale per l'Emilia-Romagna</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>Anagrafe scuole Emilia-Romagna in formato CSV.</dct:title>
+        <dct:description>La distribuzione del dataset in CSV.</dct:description>
+        <dcat:accessURL rdf:datatype="https://sed.istruzioneer.it/scumgnt/scu-istituzione?ScuIstituzioneSearch[asSelezionato]=2017#"</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>CC BY 3.0 IT</dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+  </dcat:Catalog>
+  <!--  DATASET 7-->
+<dcat:Catalog >
+  <dct:title>Open Ricostruzione- Ricostruzione pubblica</dct:title>
+  <dct:description xml:lang="it">I dati di tutti gli interventi di ricostruzione possono essere liberamente scaricati, elaborarli e riutilizzarli con Licenza CC BY 3.0 IT.
+Per ognuno dei quattro ambiti della ricostruzione, pubblica, delle abitazioni, delle attività produttive e altri interventi, è scaricabile un file csv contenente le informazioni su tutti gli interventi.
+Sono disponibili inoltre i dati relativi ai pagamenti (SAL) degli interventi oltre al file contenente le informazioni su imprese e progettisti.
+I tracciati record di tutti i file sono descritti con i metadati nel file "openricostruzione-metadati.xls". </dct:description>
+  <dct:spatial rdf:resource="http://www.geonames.org/3177401"/>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-31</dct:modified>
+  <dct:language>it</dct:language>
+  <foaf:homepage rdf:resource="https://openricostruzione.regione.emilia-romagna.it/open-data"/>
+  <dct:license>CC BY 3.0 IT</dct:license>
+  <dct:publisher>Agenzia regionale per la Ricostruzione</dct:publisher>
+  <dcat:dataset rdf:about="https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv">
+    <dct:title>Interventi di ricostruzione pubblica</dct:title>
+    <dct:description>Qui trovi gli interventi e le donazioni per la ricostruzione delle Opere pubbliche e dei beni culturali.</dct:description>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UNKNOWN"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3177401"/>
+    <dcat:keyword>Open Ricostruzione</dcat:keyword>
+    <dcat:keyword>Emilia-Romagna</dcat:keyword>
+    <dct:language>it</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Agenzia regionale per la Ricostruzione</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>Agenzia regionale per la Ricostruzione</foaf:name>
+        <foaf:mbox> agenziaricostruzione@Regione.Emilia-Romagna.it</foaf:mbox>
+      </foaf:Organization>
+    </dct:creator>
+   <dcat:distribution >
+    <dcat:Distribution>
+        <dct:description> I dati di tutti gli interventi di ricostruzione possono essere liberamente scaricati, elaborarli e riutilizzarli con Licenza CC BY 3.0 IT.
+Per ognuno dei quattro ambiti della ricostruzione, pubblica, delle abitazioni, delle attività produttive e altri interventi, è scaricabile un file csv contenente le informazioni su tutti gli interventi.
+Sono disponibili inoltre i dati relativi ai pagamenti (SAL) degli interventi oltre al file contenente le informazioni su imprese e progettisti.
+I tracciati record di tutti i file sono descritti con i metadati nel file "openricostruzione-metadati.xls".</dct:description>
+          <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv</dcat:downloadURL>
+          <dcat:mediaType>text/csv</dcat:mediaType>
+          <dct:license>CC BY 3.0 IT</dct:license>
+        </dcat:Distribution>
+    </dcat:distribution>  
+  </dcat:dataset>
+  </dcat:Catalog>
+  <!--  DATASET 8-->
+  <dcat:Catalog >
+  <dct:title> INGV Quest- Rilievi macrosismici </dct:title>
+  <description> Catalogo con i rilievi Macrosismici in Italia.</description>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-05-28</dct:modified>
+  <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+  <dct:language>it</dct:language>
+  <foaf:homepage rdf:resource="http://quest.ingv.it/"/>
+  <dct:license> CC BY 4.0 </dct:license>
+  <dct:publisher>Istituto Nazionale di Vulcanologia</dct:publisher>
+  <dcat:dataset rdf:about="http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx">
+    <dct:title>Rilievi macrosismici del Maggio 2012 in Emilia Romagna</dct:title>
+    <dct:description>Rilievi macrosismici del Maggio 2012 in Emilia Romagna</dct:description>
+   <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/INTR"/>
+   <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/NEVER"/>
+   <dct:spatial rdf:resource="http://www.geonames.org/3177401"/>
+    <dcat:keyword>Macrosismic take-over </dcat:keyword>
+    <dcat:keyword>Emilia-Romagna</dcat:keyword>
+    <dcat:keyword>terremoti</dcat:keyword>
+    <dcat:keyword>2012</dcat:keyword>
+    <dct:language>It</dct:language>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Istituto Nazionale di Vulcanologia</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>Istituto Nazionale di Vulcanologia</foaf:name>
+        <foaf:mbox> info@ingv.it</foaf:mbox>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+       <dcat:Distribution>
+       <dct:description> Rapporti macrosismici dei terremoti del 20 maggio 2012 e del 29 maggio 2012 in Pianura Padano-Emilia</dct:description>
+        <dcat:downloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx</dcat:downloadURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license> CC Attribution 4.0 </dct:license>
+       </dcat:Distribution>
+    </dcat:distribution>  
+  </dcat:dataset>
+  </dcat:Catalog>
+  <!--  DATASET 9-->
+  <dcat:Catalog >
+  <dct:title>Open Coesione- Progetti con tracciato esteso suddivisi per regione</dct:title>
+   <dct:description xml:lang="it">OpenCoesione è l'iniziativa di open government sulle politiche di coesione in Italia. Sul portale sono navigabili dati su risorse programmate e spese, localizzazioni, ambiti tematici, soggetti programmatori e attuatori, tempi di realizzazione e pagamenti dei singoli progetti. Tutti possono così valutare come le risorse vengono utilizzate rispetto ai bisogni dei territori.</dct:description>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01</dct:modified>
+  <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+  <dct:language>it</dct:language>
+  <dcat:contactPoint rdf:resource="https://opencoesione.gov.it/it/contatti/"></dcat:contactPoint>
+  <foaf:homepage rdf:resource="https://opencoesione.gov.it/it/opendata/#!progetti_regione_section"/>
+  <dct:license> CC BY-SA 3.0 </dct:license>
+  <dct:publisher>Dipartimento per le Politiche di Coesione della Presidenza del Consiglio dei Ministri</dct:publisher>
+  <dcat:dataset rdf:about="https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip">
+    <dct:title>Progetti Open Coesione Emilia Romagna Emilia Romagna</dct:title>
+    <dct:description>An open data with information connected to the coesion policy </dct:description>
+    <dcat:keyword>Open Coesione </dcat:keyword>
+    <dcat:keyword>Emilia Romagna</dcat:keyword>
+    <dct:language>It</dct:language>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/BIMONTHLY"/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3177401"/>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Dipartimento per le Politiche di Coesione della Presidenza del Consiglio dei Ministri</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>Dipartimento per le Politiche di Coesione della Presidenza del Consiglio dei Ministri</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:description>Tutti i dati sono rilasciati con licenza CC BY-SA 3.0 e in formato CSV compresso (leggibile da Excel), quando non altrimenti specificato.</dct:description>
+          <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip</dcat:downloadURL>
+          <dcat:mediaType>text/csv</dcat:mediaType>
+          <dct:license> CC BY-SA 3.0 </dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+  </dcat:Catalog>
+  <!--  DATASET 10-->
+  <dcat:Catalog >
+  <dct:title>Le imprese degli innovatori italiani - #ItalyFrontiers</dct:title>
+  <dct:description xml:lang="it">Pitch, settori e business model delle Startup e PMI innovative iscritte alla sezione speciale del Registro Imprese</dct:description>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01</dct:modified>
+  <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+  <dct:language>it</dct:language>
+  <foaf:homepage rdf:resource="http://startup.registroimprese.it/isin/home/">
+  <dct:license>?</dct:license>
+  <dct:publisher>Info Camere</dct:publisher>
+  <dcat:dataset rdf:about="http://startup.registroimprese.it/isin/static/startup/index.html?slideJump=32">
+  <dct:title> Startup innovativa </dct:title>
+  <dcat:theme rdf:resource=" http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <dct:description> Report Trimestrale Navigabile (Dashboard) delle Startup Italiane.</dct:description>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/QUARTERLY."/>
+    <dct:spatial rdf:resource="http://www.geonames.org/3175395"/>
+    <dcat:keyword>Regione </dcat:keyword>
+    <dcat:keyword>Numero società</dcat:keyword>
+    <dct:language>it</dct:language>
+    <dcat:contactPoint rdf:resource="http://startup.registroimprese.it/isin/contatti">
+    </dcat:contactPoint>
+    <dct:publisher>
+      <foaf:Organization>
+        <foaf:name>Info Camere</foaf:name>
+      </foaf:Organization>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Organization>
+        <foaf:name>Info Camere</foaf:name>
+      </foaf:Organization>
+    </dct:creator>
+    <dcat:distribution>
+      <dcat:Distribution>
+       <dct:description>Scarica il Report Trimestrale</dct:description>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://startup.registroimprese.it/isin/static/startup/index.html?slideJump=32</dcat:downloadURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license> Unknown </dct:license>
+      </dcat:Distribution>
+    </dcat:distribution> 
+  </dcat:dataset>
+  </dcat:Catalog>
+    <!--  CLOSING TAG-->
+
+  </rdf:RDF>

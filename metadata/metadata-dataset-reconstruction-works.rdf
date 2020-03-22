@@ -33,11 +33,13 @@
    </foaf:Person>
   </dct:publisher>
   <!--  MASHUP WORKS -->
-  <dcat:dataset rdf:about="https://github.com/openaccess2020/opensisma/blob/master/mashup/PROCESSI_E_STARTUP.csv">
+  <dcat:dataset rdf:about="https://opensisma.github.io/metadata-dataset-reconstruction-works.html">
     <dct:title>OpenSisma dataset reconstruction works</dct:title>
     <dct:description> Collection of data about MCS damage microseismic scale related to the 2012 Emilia-Romagna earthquake for selected areas of the region and their work progress.</dct:description>
     <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/REGI"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
     <dcat:keyword>OpenSisma</dcat:keyword>
     <dcat:keyword>Emilia-Romagna</dcat:keyword>
     <dcat:keyword>Earthquakes</dcat:keyword>
@@ -71,7 +73,7 @@
       <dcat:Distribution>
         <dct:title>A distribution for this dataset in CSV format</dct:title>
         <dct:description>The dataset is available in csv format under the license CC BY-SA 4.0.</dct:description>
-        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">INSERIRE</dcat:accessURL>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opensisma.github.io/metadata-dataset-reconstruction-works.html</dcat:accessURL>
         <dcat:mediaType>text/csv</dcat:mediaType>
         <dct:license>CC BY-SA 4.0</dct:license>
       </dcat:Distribution>

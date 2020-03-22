@@ -335,9 +335,9 @@ footer{
         <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalogue</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="catalogue.html">Catalogue</a>
-          <a class="dropdown-item" href="metadata-dataset-reconstruction-works.html">Reconstruction works</a>
-          <a class="dropdown-item" href="metadata-dataset-education.html">Education</a>
-          <a class="dropdown-item" href="metadata-dataset-entrepreneurial-processes.html">Entrepreneurial processes</a>
+          <a class="dropdown-item" href="javascript:void(0)">Works</a>
+          <a class="dropdown-item" href="javascript:void(0)">Education</a>
+          <a class="dropdown-item" href="javascript:void(0)">Entrepreneurship</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
         </div>
@@ -346,9 +346,6 @@ footer{
       </li>
       <li class="nav-item">
         <a class="nav-link" href="visualization.html">License</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="visualization.html">About</a>
       </li>
       </li>
     </ul>
@@ -362,22 +359,53 @@ footer{
 <br>    
     <section resource="#timetable-001" typeof="dcat:Dataset" id="dataset-section">
       <div id="dataset-description">
-        <h2>Catalogue</h2>
+        <h2>OpenSisma dataset education</h2>
         <table class="human-readable-example" summary="This table has the catalog description. The first column has the keywords and the seconde has the values.">
           <tbody>
             <tr>
               <td>Title</td>
-              <td property="dct:title">Catalogue of the OpenSisma project</td>
+              <td property="dct:title">OpenSisma dataset education</td>
             </tr>
             <tr>
               <td>Description</td>
-              <td property="dct:description"> The open data catalogue of the OpenSisma project</td>
+              <td property="dct:description"> The dataset contains data related to education for specific areas of Emilia-Romagna affected by the 2012 Earthquake.</td>
             </tr>
             <tr>
               <td>URI</td>
-              <td>https://opensisma.github.io/mashup/catalogue</td>
+              <td>https://opensisma.github.io/mashup/education_dataset</td>
             </tr>
           </tbody>
+          <tbody id="provenance-info">
+            <tr>
+              <td id="publisher">Accrual periodicity</td>
+              <td property="dct:publisher" resource="#publisher" typeof="foaf:Organization prov:Agent"><span property="foaf:name"><a href="http://publications.europa.eu/resource/authority/frequency/ANNUAL">Annual</a></span></td>
+            </tr>
+          </tbody>
+          <tbody id="provenance-info">
+            <tr>
+              <td id="publisher">Spatial coverage</td>
+              <td property="dct:publisher" resource="#publisher" typeof="foaf:Organization prov:Agent"><span property="foaf:name"><a href="http://www.geonames.org/3177401/">Emilia Romagna, Italy</a></span></td>
+            </tr>
+          </tbody>
+          <tbody id="provenance-info">
+            <tr>
+              <td id="publisher">Theme</td>
+              <td property="dct:publisher" resource="#publisher" typeof="foaf:Organization prov:Agent"><span property="foaf:name"><a href="http://publications.europa.eu/resource/authority/data-theme/EDUC">Education</a></span></td>
+            </tr>
+          </tbody>
+          <tbody id="provenance-info">
+            <tr>
+              <td id="publisher">Keywords</td>
+              <td property="dct:publisher" resource="#publisher" typeof="foaf:Organization prov:Agent"><span property="foaf:name">earthquake, open data, education</span></td>
+            </tr>
+          </tbody>
+          <tbody id="provenance-info">
+            <tr>
+              <td id="publisher">Creator</td>
+              <td property="dct:publisher" resource="#publisher" typeof="foaf:Organization prov:Agent"><span property="foaf:name">Milena Corbellini, Anna Sofia Lippolis</span></td>
+            </tr>
+          </tbody>
+          <tbody>
           <tbody id="provenance-info">
             <tr>
               <td id="publisher">Publisher</td>
@@ -404,30 +432,71 @@ footer{
             <td>ISO 8601</td>
           </tr>
             <tr>
-              <td>Homepage</td>
-              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> https://opensisma.github.io/catalogue.html </a></td>
+              <td>Derived from</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> <a href="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA">Valutazione esiti scuole statali (2015-2016), MIUR</a> </a></td>
             </tr>
             <tr>
-              <td>OpenSisma dataset reconstruction works</td>
-              <td> <a  href="https://opensisma.github.io/metadata-dataset-reconstruction-works.html"> https://opensisma.github.io/metadata-dataset-reconstruction-works.html </a></td>
+              <td>Derived from</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> <a href="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA">Valutazione esiti scuole statali (2016-2017), MIUR</a> </a></td>
             </tr>
             <tr>
-              <td>OpenSisma dataset education</td>
-              <td> <a href="https://opensisma.github.io/metadata-dataset-education.html"> https://opensisma.github.io/metadata-dataset-education.html</a></td>
+              <td>Derived from</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> <a href="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR">Valutazione esiti scuole paritarie (2015-2016), MIUR</a> </a></td>
             </tr>
             <tr>
-              <td>OpenSisma dataset entrepreneurial processes</td>
-              <td> <a href="https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html"> https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html</a></td>
+              <td>Derived from</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> <a href="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR">Valutazione esiti scuole paritarie (2016-2017), MIUR</a> </a></td>
             </tr>
+            <tr>
+              <td>Derived from</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> <a href="https://sed.istruzioneer.it/scumgnt/scu-istituzione">Anagrafe scuole Bologna, SCU</a> </a></td>
+            </tr>
+            <tr>
+              <td>Derived from</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> <a href="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA">Certificati di sicurezza, MIUR</a> </a></td>
+            </tr>
+            <tr>
+              <td>Derived from</td>
+              <td> <a property="foaf:homepage" href="https://opensisma.github.io/catalogue.html"> <a href="https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA">Vincoli, MIUR</a> </a></td>
+            </tr>
+
+              
+            <tr>
+              <td>License</td>
+              <td> <a  href="https://opensisma.github.io/metadata_dataset_reconstruction_works.html"> CC BY-SA 4.0 </a></td>
+            </tr>
+            
         <tr>
                       <td>Access URL</td>
-                         <td>File with all the mashed-up datasets and their metadata: <a property="dcat:downloadURL" id="cat" href="#">catalogue.zip (185 KB)</a>
+                         <td>Access the file in CSV format: <a property="dcat:downloadURL" id="cat" href="#">education_dataset.csv (1.08 KB)</a>
                          </td>
                                </tr>
             </tbody>
             </table>
     <br>
     <br>
+    <h3 property="dcat:distribution" resource="#timetable-001-RDF">Metadata RDF</h3>
+                    <table resource="#timetable-001-RDF" typeof="dcat:Distribution" class="human-readable-example"  summary="This table describes the RDF distribution of the dataset. The first column has the keywords and the seconde has the values." >
+                        <tbody>
+                            <tr>
+                              <td>Title</td>
+                              <td property="dct:title">Metadata RDF- OpenSisma dataset education</td>
+                            </tr>
+                            <tr>
+                              <td>Description</td>
+                              <td property="dct:description">Metadata RDF for the OpenSisma dataset education</td>
+                            </tr>
+                            <tr>
+                              <td>Format</td>
+                              <td property="dcat:format">RDF</td>
+                            </tr>
+                            <tr>
+                              <td>Access URL</td>
+                              <td><a property="dcat:accessURL" href="metadata/metadata-dataset-education.rdf">https://opensisma.github.io/metadata/metadata-dataset-education.rdf</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
 
 
 </div>
@@ -464,7 +533,7 @@ footer{
 
                         $('#cat').on('click', function () {
                             $.ajax({
-                                url: 'mashup/catalogue.zip',
+                                url: 'mashup/education_dataset.csv',
                                 method: 'GET',
                                 xhrFields: {
                                     responseType: 'blob'
@@ -473,7 +542,7 @@ footer{
                                     var a = document.createElement('a');
                                     var url = window.URL.createObjectURL(data);
                                     a.href = url;
-                                    a.download = 'catalogue.zip';
+                                    a.download = 'education_dataset.csv';
                                     a.click();
                                     window.URL.revokeObjectURL(url);
                                 }
