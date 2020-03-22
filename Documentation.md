@@ -113,8 +113,8 @@ The original datasets used to cover the different themes of this project, as we 
 | Topic       | Question                                                                                                                                                                                                                        | D1                                    | D2, D3, D11, D12        | D4                | D5 - D6 | D7       | D8  | D9       | D10     |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------------------|-------------------|---------|----------|-----|----------|---------|
 | ---            | ---                                                                                                                                                                                                                           | ---                                   | ---                     | ---               | ---     | ---      |     | ---      | ---     |
-| Privacy issues | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?                                                                                                                                      | THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION                                   |THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION | YES         | YES     | PROPER NAME ‘RIGOTTI MARIO’, but it appears to be in line with the article 6 of the Regulation      | YES | YES      | YES     |
-| --------       | 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorize the PA to release them? Or any other legal basis? Identify the legal basis. | NO, /, NO                                    |              NO THERE ARE SOME INFO             | NO THERE IS NOT, THEY DIDN’T PAY ATTENTION|   YES  |     NO,  article 6 of the Regulation | YES | YES      | YES     |
+| Privacy issues | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?                                                                                                                                      | THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION                                   |THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION | YES         | YES     | first NAME ‘RIGOTTI MARIO’, but it appears to be in line with the article 6 of the Regulation      | YES | YES      | YES     |
+| --------       | 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorize the PA to release them? Or any other legal basis? Identify the legal basis. | NO, /, NO                                    |              NO THERE ARE SOME INFO             | YES |   YES  |     NO,  article 6 of the Regulation | YES | YES      | YES     |
 | --------       | 1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorize the PA to release them ?                                                                                           | NO                                   | NO                      | YES               | YES     | NO,  article 6 of the Regulation      | YES | YES      | YES     |
 | --------       | 1.4 Is the dataset free of any information that combined with common data available in the web, could identify the person? If so, is there a law that authorize the PA to release them?                                       | NO                                   | NO       | YES               | YES     | NO,  article 6 of the Regulation      | YES | YES      | YES     |
 | --------       | 1.5 Is the dataset free of any information related to human rights (e.g. refugees, witness protection, etc.)?                                                                                                                 | YES                                   | NO                      | YES               | YES     | YES      | YES | YES      | YES     |
@@ -168,7 +168,7 @@ D7 : the privacy page of that dataset doesn’t have any content. Even though th
 D8 : youtube + broken link
 D10 :  Non vedo banner, no SSL certificate (no encryption) in the contatti page, + Some resources are requested without encryption during the loading of pages. It can lead to the modification of downloaded data and as a result, to the breach of personal data. (HTTPS)
 
-# MASHED-UP DATASET
+### Mashed-up Datasets
  We created three mashed-up datasets:
  - OpenSisma dataset Educaation </br>
   Link:
@@ -180,14 +180,13 @@ D10 :  Non vedo banner, no SSL certificate (no encryption) in the contatti page,
  Link:
  License: CC BY-SA 4.0
 
-We structured them following all the normatives and the EU directives, and we found it to be completly congruent to the contents of the legal check list, so we decided to not rewrite.
+We structured them following all the normatives and the EU directives, and we found it to be completly congruent to the contents of the legal check list, so we decided to not rewrite it.
 
 
 ### Licenses
-The licenses are an essential metadata in the descriptonn of a dataset. It must be always specified in -*human* readble form and in *-machine* readable form, specifing *name*, *version*, *link to description of the resource*.
-</br>
-All the original datasets respect these parameters, but D10 that has no license at all. This is a huge legal error.
-All the other datasets licenses are Creative Commons Licenses or Italian Open Data Licenses.
+The licenses are an essential metadata in the description of a dataset. It must be always specified in -*human* readble form and in *-machine* readable form, specifing *name*, *version*, *link to description of the resource*.
+</br>All the original datasets respect these parameters, but D10 that has no license at all. This is a huge legal error.
+All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses.
 </br>
 The Creative Commons' versions are:
 
@@ -216,7 +215,7 @@ No additional restrictions — You may not apply legal terms or technological me
 
 The Italian Open Data Licenses are all versions of IODL 2.0:</br>
 *
-You are free to:</br>
+"You are free to:</br>
 Reproduce, distribute to the public, lease, present and demonstrate in public, communicate to the public, including making available to the public, transmit and retransmit in any way, perform, act, represent, include in collective and / or published compositions, extract and reuse Information;</br>
 Create a Derivative Work and exercise the rights referred to in the previous point on the Derivative Work, for example by combining it with other information (mashup).</br>
 
@@ -224,21 +223,24 @@ Provided of:</br>
 Indicate the source of the Information and the name of the Licensor, including, if possible, a copy of this license or a link (link) to it.
 </br>
 Not to reuse the Information in a way that suggests that it is official or that the Licensor approves the use you make of the Information;</br>
-Take all reasonable measures so that the uses previously permitted do not mislead other subjects and the Information itself is not misrepresented.*
+Take all reasonable measures so that the uses previously permitted do not mislead other subjects and the Information itself is not misrepresented."*
 </br>
 In this sense the original Datasets are of pubblic domain through the waiver of some rights, in the terms we have desribed. In this scenario we have the efinition of *'copyleft'*.
 
 </br>
-For the mashed-up Datasets, the Coding and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike (CC BY-SA 3.0).
+For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike (CC BY-SA 4.0).</br>
+While the License for the Coding is
+
+And for the Libraries we used
 
 
 
 
 ### Ethical analysis
 
-As we described in the previous points our mashed-up datasets are completely free of data that could be considered non-ethic: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
+As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 
-In  the original data instead we have personal data but only in D2-3-11-12 we have bias cognitive: as you could see in 
+In  the original data instead we have personal data but only in D2-3-11-12 we have cognitive bias: as you could see in 
 
 
 ## Technical analysis
