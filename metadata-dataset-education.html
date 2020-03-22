@@ -468,7 +468,7 @@ footer{
             
         <tr>
                       <td>Access URL</td>
-                         <td>Access the file in CSV format: <a property="dcat:downloadURL" id="cat" href="#">education_dataset.csv (1.08 KB)</a>
+                         <td>Access the file in CSV format: <a property="dcat:downloadURL" id="cat" href="#">dataset-education.csv (1.08 KB)</a>
                          </td>
                                </tr>
             </tbody>
@@ -492,7 +492,7 @@ footer{
                             </tr>
                             <tr>
                               <td>Access URL</td>
-                              <td><a property="dcat:accessURL" href="metadata/metadata_dataset.rdf">https://opensisma.github.io/metadata/metadata_dataset.rdf</a>
+                              <td><a property="dcat:accessURL" href="metadata/metadata-dataset-education.rdf">https://opensisma.github.io/metadata/metadata-dataset-education.rdf</a>
                               </td>
                             </tr>
                           </tbody>
@@ -533,7 +533,7 @@ footer{
 
                         $('#cat').on('click', function () {
                             $.ajax({
-                                url: 'mashup/education_dataset.csv',
+                                url: 'mashup/dataset-education.csv',
                                 method: 'GET',
                                 xhrFields: {
                                     responseType: 'blob'
@@ -542,7 +542,7 @@ footer{
                                     var a = document.createElement('a');
                                     var url = window.URL.createObjectURL(data);
                                     a.href = url;
-                                    a.download = 'education_dataset.csv';
+                                    a.download = 'dataset-education.csv';
                                     a.click();
                                     window.URL.revokeObjectURL(url);
                                 }

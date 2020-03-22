@@ -1,0 +1,82 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<rdf:RDF
+ xmlns:time="http://www.w3.org/2006/time#"
+ xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:dcat="http://www.w3.org/ns/dcat#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:prov-o="https://www.w3.org/TR/prov-o/"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+<foaf:Agent>
+ <foaf:name>Milena Corbellini</foaf:name>
+ <foaf:name>Anna Sofia Lippolis</foaf:name>
+</foaf:Agent>
+
+<dcat:Catalog >
+  <dct:title>OpenSisma catalogue</dct:title>
+  <dct:description xml:lang="en">The catalogue of the OpenSisma datasets.</dct:description>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-14</dct:modified>
+  <dct:spatial rdf:resource="http://www.geonames.org/3177401/"/>
+  <dct:language>en</dct:language>
+  <foaf:homepage rdf:resource="https://opensisma.github.io/catalogue.html">
+  <dct:license>CC BY-SA 4.0</dct:license>
+<dct:publisher>
+   <foaf:Person>
+    <foaf:name>Milena Corbellini</foaf:name>
+    <foaf:mbox>milena.corbellini@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+   <foaf:Person>
+    <foaf:name>Anna Sofia Lippolis</foaf:name>
+    <foaf:mbox>annasofia.lippolis@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+  </dct:publisher>
+  <!--  MASHUP ENTREPRENEURIAL PROCESSES -->
+  <dcat:dataset rdf:about="https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html">
+    <dct:title>OpenSisma dataset Entrepreneurial processes</dct:title>
+    <dct:description> A collection of data related to OpenCoesione projects, Startups and participative process of Emilia-Romagna gathered by Osservatorio Partecipazione.</dct:description>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/REGI"/>
+    <dcat:keyword>Opensisma</dcat:keyword>
+    <dcat:keyword>Emilia-Romagna</dcat:keyword>
+    <dcat:keyword>Earthquakes</dcat:keyword>
+    <dcat:keyword>Startup</dcat:keyword>
+    <dcat:keyword>OpenCoesione<dcat:keyword>
+    <dct:language>en</dct:language>
+    <dct:publisher>
+      <foaf:Person>
+        <foaf:name>Anna Sofia Lippolis</foaf:name>
+        <foaf:mbox>annasofia.lippolis@studio.unibo.it</foaf:mbox>
+      </foaf:Person>
+      <foaf:Person>
+        <foaf:name>Milena Corbellini</foaf:name>
+        <foaf:mbox>milena.corbellini@studio.unibo.it</foaf:mbox>
+      </foaf:Person>
+    </dct:publisher>
+    <dct:creator>
+      <foaf:Person>
+        <foaf:name>Anna Sofia Lippolis</foaf:name>
+        <foaf:mbox>annasofia.lippolis@studio.unibo.it</foaf:mbox>
+      </foaf:Person>
+      <foaf:Person>
+        <foaf:name>Milena Corbellini</foaf:name>
+        <foaf:mbox>milena.corbellini@studio.unibo.it</foaf:mbox>
+      </foaf:Person>
+    </dct:creator>
+    <dct:provenance xml:lang="en">The mash-up derives from three datasets: Open Coesione projects, Startups and participative process of Emilia-Romagna. </dct:provenance>
+    <prov:wasDerivedFrom>https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip</prov:wasDerivedFrom>
+    <prov:wasDerivedFrom>http://startup.registroimprese.it/isin/static/startup/index.html?slideJump=32</prov:wasDerivedFrom>
+    <prov:wasDerivedFrom>https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv</prov:wasDerivedFrom>
+    <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>A distribution for this dataset in CSV format</dct:title>
+        <dct:description>The dataset is available in csv format under the license CC BY-SA 4.0.</dct:description>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">INSERIRE</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>CC BY-SA 4.0</dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:dataset>
+</dcat:Catalog>
+  </rdf:RDF>

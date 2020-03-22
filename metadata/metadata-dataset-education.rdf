@@ -1,0 +1,88 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<rdf:RDF
+ xmlns:time="http://www.w3.org/2006/time#"
+ xmlns:dct="http://purl.org/dc/terms/"
+ xmlns:dcat="http://www.w3.org/ns/dcat#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:prov-o="https://www.w3.org/TR/prov-o/"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ 
+<foaf:Agent>
+ <foaf:name>Milena Corbellini</foaf:name>
+ <foaf:name>Anna Sofia Lippolis</foaf:name>
+</foaf:Agent>
+
+<dcat:Catalog >
+  <dct:title>OpenSisma catalogue</dct:title>
+  <dct:description xml:lang="en">The catalogue of the OpenSisma datasets.</dct:description>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-14</dct:modified>
+  <dct:spatial rdf:resource="http://www.geonames.org/3177401/"/>
+  <dct:language>en</dct:language>
+  <foaf:homepage rdf:resource="https://opensisma.github.io/catalogue.html">
+  <dct:license>CC BY-SA 4.0</dct:license>
+<dct:publisher>
+   <foaf:Person>
+    <foaf:name>Milena Corbellini</foaf:name>
+    <foaf:mbox>milena.corbellini@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+   <foaf:Person>
+    <foaf:name>Anna Sofia Lippolis</foaf:name>
+    <foaf:mbox>annasofia.lippolis@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+  </dct:publisher>
+  <!--  MASHUP EDUCATION -->
+  <dcat:Dataset rdf:about="https://opensisma.github.io/metadata-dataset-education.html"> <!--our own dataset-->
+  <dct:title>OpenSisma dataset education</dct:title>
+  <dct:description>The dataset contains data related to education for specific areas of Emilia-Romagna affected by the 2012 Earthquake.</dct:description>
+  <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/ANNUAL"/>
+  <dct:spatial rdf:resource="http://www.geonames.org/3177401/"/>
+  <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+  <dcat:keyword>earthquake</dcat:keyword>
+  <dcat:keyword>open data</dcat:keyword>
+  <dcat:keyword>education</dcat:keyword>
+  <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-14</dct:issued>
+  <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-14</dct:modified>
+  <dct:provenance xml:lang="en">The dataset derives from a bundle of datasets from MIUR and Uffico Scolastico regionale per l'Emilia-Romagna.</dct:provenance>
+  <prov:wasDerivedFrom>https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA</prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA</prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>https://sed.istruzioneer.it/scumgnt/scu-istituzione</prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA</prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA</prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR/</prov:wasDerivedFrom>
+  <prov:wasDerivedFrom>https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR</prov:wasDerivedFrom>
+  <dct:language>en</dct:language>
+  <dct:license>CC-BY-SA 4.0</dct:license>
+  <dct:publisher>
+   <foaf:Person>
+    <foaf:name>Milena Corbellini</foaf:name>
+    <foaf:mbox>milena.corbellini@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+   <foaf:Person>
+    <foaf:name>Anna Sofia Lippolis</foaf:name>
+    <foaf:mbox>annasofia.lippolis@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+  </dct:publisher>
+  <dct:creator>
+   <foaf:Person>
+    <foaf:name>Milena Corbellini</foaf:name>
+    <foaf:mbox>milena.corbellini@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+   <foaf:Person>
+    <foaf:name>Anna Sofia Lippolis</foaf:name>
+    <foaf:mbox>annasofia.lippolis@studio.unibo.it</foaf:mbox>
+   </foaf:Person>
+  </dct:creator>
+  <dcat:distribution>
+      <dcat:Distribution>
+        <dct:title>A distribution for education mashed-up dataset in CSV format</dct:title>
+        <dct:description>The OpenSisma education dataset is available in CSV format with license CC BY-SA 4.0.</dct:description>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opensisma.github.io/metadata-dataset-education.html</dcat:accessURL>
+        <dcat:mediaType>text/csv</dcat:mediaType>
+        <dct:license>CC BY-SA 4.0 </dct:license>
+      </dcat:Distribution>
+    </dcat:distribution>
+</dcat:Dataset>
+</dcat:Catalog>
+  </rdf:RDF>
