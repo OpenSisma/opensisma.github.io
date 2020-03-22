@@ -104,6 +104,7 @@ The original datasets used to cover the different themes of this project are:
 - D12 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1617)
 
 *D1 - OPEN DATA ANNO DI AVVIO*
+</br>
 Distribution: XML, XML Schema, JSON, CSV, Excel CSV</br>
 Link: http://www.osservatoriopartecipazione.it/opendata</br>
 License: CC BY 2.0 IT https://creativecommons.org/licenses/by/2.0/it/</br>
@@ -111,6 +112,7 @@ Description: Data about partecipative processes in Emilia Romgna
 
 
 *D2/D3 - 1617: Autovalutazione della scuola sezione Esiti. Scuola statale (1617)*
+</br>
 Distribution: CSV, JSON, RDF, XML
 Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA</br>
 License: Italian open data license(IODL-2), https://www.dati.gov.it/content/italian-open-data-license-v20
@@ -125,7 +127,7 @@ Description: Registry of state educational institutions and paritary schools in 
 
 
 *D5 - Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE)*
-
+</br>
 Distribuzioni: CSV, JSON, RDF, XML</br>
 Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA </br>
 License: Italian open data license(IODL-2), https://www.dati.gov.it/content/italian-open-data-license-v20</br>
@@ -133,7 +135,7 @@ Description: Data about safety certificates and documents.
 
 
 *D6 - PRESENZA DI VINCOLI (idrogeologici, sismici)*
-
+</br>
 Distribution: CSV, JSON, RDF, XML</br>
 Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA</br>
 License: Italian open data license (IODL-2), https://www.dati.gov.it/content/italian-open-data-license-v20</br>
@@ -142,55 +144,41 @@ Description: Data about idrogeologic, sismic constraints.
 
 
 *D7 - INTERVENTI DI RICOSTRUZIONE PUBBLICA*
-
+</br>
 Distribution: CSV</br>
-
-Link:  https://openricostruzione.regione.emilia-romagna.it/open-data
-</br>
-License: CC BY 3.0 IT,  https://creativecommons.org/licenses/by/3.0/it/ 
-</br>
+Link:  https://openricostruzione.regione.emilia-romagna.it/open-data</br>
+License: CC BY 3.0 IT,  https://creativecommons.org/licenses/by/3.0/it/ </br>
 Description: Data about Public Reconstructon after the earthquakes in Emilia Romagna.
 
 
 
 
 *D8 - QUEST- Rilievi Macrosismici*
-
+</br>
 Distribution: csv, pdf</br>
 Link: http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx da http://quest.ingv.it/CC </br>
-
 License: CC BY 4.0,  https://creativecommons.org/licenses/by/4.0/deed.it</br>
-
 Description: Macrosismic Data of Italy.
 
 *D9 - PROGETTI DI OPENCOESIONE*
-
+</br>
 Distribution: ZIP/CSV</br>
-
 Link: https://opencoesione.gov.it/it/territori/emilia-romagna-regione/ https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip</br>
-
 License: CC BY-SA 3.0 IT,  http://www.creativecommons.org/licenses/by-sa/3.0/it/deed.it</br>
-
 Description:Data about OpenCoesione's processes.
 
 *D10 - STARTUP*
 </br>
 Distribution: CSV, PDF, Excel</br>
-
 Link: http://startup.registroimprese.it/ </br>
-
 License: The data are available in an Open format, following terms and conditions stablished by law.</br>
-
 Description: Data about the startups in Italy. </br>
 
 *D11/D12 - Autovalutazione della scuola sezione Esiti. Scuola paritaria*
 </br>
 Distribution: CSV, JSON, RDF, XML</br>
-
 Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR</br>
-
 License: Italian Open Data License, http://www.dati.gov.it/iodl/2.0/</br>
-
 Description:The data flow contains the information regarding the school registry. Paritary school.
 
 
