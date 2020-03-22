@@ -93,28 +93,27 @@ Here are the results of our completeness algorithm. Our null values include 0s, 
 | D12     	| 41082        	| 7           	| 99.98%       	|
 
 ## Legal analysis
-### ORIGINAL DATASETS
-The original datasets used to cover the different themes of this project, as we saidd, are:
-- D1 = Open data anno di avvio
-- D2 = Autovalutazione della scuola sezione Esiti. Scuola statale (1516)
-- D3 = Autovalutazione della scuola sezione Esiti. Scuola statale (1617)
-- d4 = Anagrafe scuole Emilia Romagna
-- D5 = Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE)
-- D6 = Presenza di vincoli (idrogeologici, sismici)
-- D7 = Interventi di ricostruzione pubblica
-- D8 = Rilievi Macrosismici
-- D9 = Progetti di OpenCoesione con tracciato esteso suddivisi per regione NOTA
-- D10 = Startup
-- D11 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1517)
-- D12 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1617)
+### Original Datasets
+The original datasets used to cover the different themes of this project, as we said, are:
+- D1 = Open data anno di avvio;
+- D2 = Autovalutazione della scuola sezione Esiti. Scuola statale (1516);
+- D3 = Autovalutazione della scuola sezione Esiti. Scuola statale (1617);
+- D4 = Anagrafe scuole Emilia Romagna;
+- D5 = Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE);
+- D6 = Presenza di vincoli (idrogeologici, sismici);
+- D7 = Interventi di ricostruzione pubblica;
+- D8 = Rilievi Macrosismici;
+- D9 = Progetti di OpenCoesione con tracciato esteso suddivisi per regione;
+- D10 = Startup;
+- D11 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1517);
+- D12 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1617);
 
 ### Check List
 
 | Content       | Question                                                                                                                                                                                                                        | D1                                    | D2, D3, D11, D12        | D4                | D5 - D6 | D7       | D8  | D9       | D10     |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------------------|-------------------|---------|----------|-----|----------|---------|
 | ---            | ---                                                                                                                                                                                                                           | ---                                   | ---                     | ---               | ---     | ---      |     | ---      | ---     |
-| Privacy issues | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?                                                                                                                                      | THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION                                   |THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION | YES         | YES     | 
-PROPER NAME ‘RIGOTTI MARIO’, but it appears to be in line with the article 6 of the Regulation      | YES | YES      | YES     |
+| Privacy issues | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?                                                                                                                                      | THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION                                   |THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION | YES         | YES     | PROPER NAME ‘RIGOTTI MARIO’, but it appears to be in line with the article 6 of the Regulation      | YES | YES      | YES     |
 | --------       | 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorize the PA to release them? Or any other legal basis? Identify the legal basis. | NO, /, NO                                    |              NO THERE ARE SOME INFO             |
 NO THERE IS NOT, THEY DIDN’T PAY ATTENTION|   YES  |     NO,  article 6 of the Regulation | YES | YES      | YES     |
 | --------       | 1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorize the PA to release them ?                                                                                           | NO                                   | NO                      | YES               | YES     | NO,  article 6 of the Regulation      | YES | YES      | YES     |
