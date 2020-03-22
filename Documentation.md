@@ -1,7 +1,7 @@
 
 ## Introduction
 
-The project OpenSisma has been created for the exam Open Access and Digital Ethics as a Digital Humanities and Digital Knowlegde course at the University of Bologna. The two contributors of OpenSisma are:
+OpenSisma has been carried out for the exam Open Access and Digital Ethics as a Digital Humanities and Digital Knowlegde course at the University of Bologna. The two contributors of OpenSisma are:
 - Milena Corbellini
 - Anna Sofia Lippolis
 
@@ -43,16 +43,16 @@ The datasets were then grouped and processed into three mashed-up datasets:
 
 | Primary datasets | Mashed-up dataset | URI | 
 | :---         |     :---:      |          ---: |
-| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | git status    |
-| D7, D8   | Reconstruction works dataset      | git diff      |
-| D1, D9, D10   | Entrepreneurship dataset      | git diff      |
+| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | https://opensisma.github.io/metadata-dataset-education.html    |
+| D7, D8   | Reconstruction works dataset      | https://opensisma.github.io/metadata_dataset-reconstruction-works.html      |
+| D1, D9, D10   | Entrepreneurial processes dataset      | https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html      |
 
-Our mashed-up datasets are grouped in this page (pagina del catalogo).
+Our mashed-up datasets are grouped in this page: [Catalogue](https://opensisma.github.io/catalogue.html).
 
 
 ## Informative quality analysis
 
-Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm (link dell'alg). The results can be seen below.
+Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm ([see the "code" section](https://github.com/OpenSisma/opensisma.github.io/blob/master/code/completezza.py)). The results are reported below.
 
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
@@ -328,29 +328,39 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 ### URI
 
-The analysis of the URIs has to be carried out separately. Their formulation, in fact, clashes with the fact URIs have to be xx, xx, xy.
+The analysis of the URIs has to be carried out separately. Their formulation, in fact, clashes with the fact URIs have to uniquely and permanently represent an object while remaining human-readable as stated in the [W3C best practices for URI design](https://www.w3.org/2011/gld/wiki/223_Best_Practices_URI_Construction#Design_principles). In particular:
+- URI space should be limited as much as possible;
+- There should be no file extension specification (e.i. ".csv");
+- It is highly recommended not to use uppercase, as it can cause some issues;
+- It is highly recommended not to use the underscore, as text viewer applications can underline URIs to provide a cue that they are clickable, so that the character can result hidden by this underlining. 
+
+As a result, our fixed URIs proposals focused on complying to the aforementioned specific design principles.
+
+
+
 
 | Dataset 	| URI                                                                                                                                         	| Fixed URI                                                                                           	|
 |---------	|---------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------	|
-| D1      	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv 	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData/dati_per_anno_di_avvio          	|
-| D2      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv                                      	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_STA20152016            	|
-| D3      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv                                	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_STA20162017            	|
+| D1      	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv 	| https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData/dati-per-anno-di-avvio          	|
+| D2      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv                                      	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-sta-2015-2016            	|
+| D3      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv                                	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/valutazione-esiti-sta-2016-2017            	|
 | D4      	| https://sed.istruzioneer.it/scumgnt/scu-istituzione                                                                                         	| https://sed.istruzioneer.it/scumgnt/scu-istituzione/anagrafe_scuole_bologna                         	|
-| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv                                   	| https://dati.istruzione.it/opendata/catalogo_scuola/edilizia/SICUREZZA20172018                      	|
-| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv                                        	| https://dati.istruzione.it/opendata/catalogo_scuola/edilizia/VINCOLI20172018                        	|
-| D7      	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv                                     	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica 	|
-| D8      	| http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx                                                         	| http://www.ingv.it/quest/dataset/rilievimacrosismici/INGV_QUEST_RILIEVI_EMILIA_ROMAGNA_2012-05-29   	|
-| D9      	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip                                                                     	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR                                 	|
+| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv                                   	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/sicurezza-2017-2018                      	|
+| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv                                        	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/vincoli-2017-2018                        	|
+| D7      	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv                                     	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi-ricostruzionepubblica 	|
+| D8      	| http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx                                                         	| http://www.ingv.it/quest/dataset/rilievimacrosismici/ingv-quest-rilievi-emilia-romafgna-2012-05-29  	|
+| D9      	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip                                                                     	| https://opencoesione.gov.it/it/opendata/regioni/progetti-esteso-EMR                                 	|
 | D10     	| No URI                                                                                                                                      	|                                                                                                     	|
-| D11     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv                                       	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_PAR20152016            	|
-| D12     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv                                       	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/VALUTAZIONE_ESITI_PAR20162017            	|
+| D11     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv                                       	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-par-2015-2016            	|
+| D12     	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv                                       	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-par-2016-2017            	|
+
 
 
 
 
 #### Mashed-up datasets
 
-We specified the datasets' encoding in ??
+We specified the datasets' encoding in the download page of the datasets. 
 
 ##### Format: 
 We chose to distribute our mashed-up datasets in CSV.(link)
@@ -364,7 +374,9 @@ Entrepreneurship mashed-up dataset
 The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. 
 Each of our datasets has been assigned a URI:
 table
-Moreover, they are accessible, interoperable and reusable. 
+
+However, they still have the .html file extension, as our hosting is on github (guardare). 
+
 
 
 
