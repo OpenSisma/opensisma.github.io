@@ -23,7 +23,7 @@ We selected the 19 most damaged areas among those affected by the earthquakes of
 The OpenSisma project's purpose would be to involve citizens of sensitive areas to be aware of the changes and the effects determined by gomernment measures and the way in which those affected the life of citizens themselves. Our research would not only be useful for this portion of population but also for the researchers and the scholars that are interested in this topic. 
 
 ## Original datasets and mashed-up datasets
-In order to carry out our analysis, we chose to used datasets that differed in provenance, size and content.  
+In order to carry out our analysis, we chose to use datasets that differed in provenance, size and content.  
 
 ### Datasets used
 | ID | Link | Name |
@@ -47,9 +47,9 @@ The datasets were then grouped and processed into three mashed-up datasets:
 
 | Primary datasets | Mashed-up dataset | URI | 
 | :---         |     :---:      |          ---: |
-| D2, D3, D4, D5, D6, D11, D12   | Education dataset     | https://opensisma.github.io/metadata-dataset-education.html    |
-| D7, D8   | Reconstruction works dataset      | https://opensisma.github.io/metadata-dataset-reconstruction-works.html      |
-| D1, D9, D10   | Entrepreneurial processes dataset      | https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html      |
+| D2, D3, D4, D5, D6, D11, D12   | OpenSisma dataset education     | https://opensisma.github.io/metadata-opnsisma-dataset-education.html    |
+| D7, D8   | OpenSisma dataset reconstruction      | https://opensisma.github.io/metadata-opensisa-dataset-reconstruction.html      |
+| D1, D9, D10   | OpenSisma dataset entrepreneurial processes       | https://opensisma.github.io/metadata-opensisma-dataset-entrepreneurial-processes.html      |
 
 Our mashed-up datasets are grouped in this page: [Catalogue](https://opensisma.github.io/catalogue.html).
 
@@ -93,8 +93,8 @@ Here are the results of our completeness algorithm. Our null values include 0s, 
 | D12     	| 41082        	| 7           	| 99.98%       	|
 
 ## Legal analysis
-# ORIGINAL DATASETS
-The original datasets used to cover the different themes of this project are:
+### ORIGINAL DATASETS
+The original datasets used to cover the different themes of this project, as we saidd, are:
 - D1 = Open data anno di avvio
 - D2 = Autovalutazione della scuola sezione Esiti. Scuola statale (1516)
 - D3 = Autovalutazione della scuola sezione Esiti. Scuola statale (1617)
@@ -107,85 +107,6 @@ The original datasets used to cover the different themes of this project are:
 - D10 = Startup
 - D11 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1517)
 - D12 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1617)
-
-*D1 - OPEN DATA ANNO DI AVVIO*
-</br>
-Distribution: XML, XML Schema, JSON, CSV, Excel CSV</br>
-Link: http://www.osservatoriopartecipazione.it/opendata</br>
-License: CC BY 2.0 IT https://creativecommons.org/licenses/by/2.0/it/</br>
-Description: Data about partecipative processes in Emilia Romgna
-
-
-*D2/D3 - 1617: Autovalutazione della scuola sezione Esiti. Scuola statale (1617)*
-</br>
-Distribution: CSV, JSON, RDF, XML
-Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA</br>
-License: Italian open data license(IODL-2), https://www.dati.gov.it/content/italian-open-data-license-v20
-Description: Data about pubblic schools 2015-16-17.
-
-*D4 - ANAGRAFE SCUOLE EMILIA-ROMAGNA*
-</br>
-Distribution: HMTL, CSV, Text, PDF; Excel 95+, Excel 2007+</br>
-Link: https://sed.istruzioneer.it/scumgnt/scu-istituzione</br>
-License: CC BY 3.0 IT, https://creativecommons.org/licenses/by/3.0/it/</br>
-Description: Registry of state educational institutions and paritary schools in Emilia-Romagna.
-
-
-*D5 - Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE)*
-</br>
-Distribuzioni: CSV, JSON, RDF, XML</br>
-Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA </br>
-License: Italian open data license(IODL-2), https://www.dati.gov.it/content/italian-open-data-license-v20</br>
-Description: Data about safety certificates and documents.
-
-
-*D6 - PRESENZA DI VINCOLI (idrogeologici, sismici)*
-</br>
-Distribution: CSV, JSON, RDF, XML</br>
-Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA</br>
-License: Italian open data license (IODL-2), https://www.dati.gov.it/content/italian-open-data-license-v20</br>
-Description: Data about idrogeologic, sismic constraints.
-
-
-
-*D7 - INTERVENTI DI RICOSTRUZIONE PUBBLICA*
-</br>
-Distribution: CSV</br>
-Link:  https://openricostruzione.regione.emilia-romagna.it/open-data</br>
-License: CC BY 3.0 IT,  https://creativecommons.org/licenses/by/3.0/it/ </br>
-Description: Data about Public Reconstructon after the earthquakes in Emilia Romagna.
-
-
-
-
-*D8 - QUEST- Rilievi Macrosismici*
-</br>
-Distribution: csv, pdf</br>
-Link: http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx da http://quest.ingv.it/CC </br>
-License: CC BY 4.0,  https://creativecommons.org/licenses/by/4.0/deed.it</br>
-Description: Macrosismic Data of Italy.
-
-*D9 - PROGETTI DI OPENCOESIONE*
-</br>
-Distribution: ZIP/CSV</br>
-Link: https://opencoesione.gov.it/it/territori/emilia-romagna-regione/ https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip</br>
-License: CC BY-SA 3.0 IT,  http://www.creativecommons.org/licenses/by-sa/3.0/it/deed.it</br>
-Description:Data about OpenCoesione's processes.
-
-*D10 - STARTUP*
-</br>
-Distribution: CSV, PDF, Excel</br>
-Link: http://startup.registroimprese.it/ </br>
-License: The data are available in an Open format, following terms and conditions stablished by law.</br>
-Description: Data about the startups in Italy. </br>
-
-*D11/D12 - Autovalutazione della scuola sezione Esiti. Scuola paritaria*
-</br>
-Distribution: CSV, JSON, RDF, XML</br>
-Link: https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR</br>
-License: Italian Open Data License, http://www.dati.gov.it/iodl/2.0/</br>
-Description:The data flow contains the information regarding the school registry. Paritary school.
-
 
 ### Check List
 
