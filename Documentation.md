@@ -89,6 +89,7 @@ Here are the results of our completeness algorithm. Our null values include 0s, 
 | D12     	| 41082        	| 7           	| 99.98%       	|
 
 ## Legal analysis
+# ORIGINAL DATASETS
 The original datasets used to cover the different themes of this project are:
 - D1 = Open data anno di avvio
 - D2 = Autovalutazione della scuola sezione Esiti. Scuola statale (1516)
@@ -184,7 +185,7 @@ Description:The data flow contains the information regarding the school registry
 
 ### Check List
 
-| Argument       | Answer                                                                                                                                                                                                                        | D1                                    | D2, D3, D11, D12        | D4                | D5 - D6 | D7       | D8  | D9       | D10     |
+| Content       | Question                                                                                                                                                                                                                        | D1                                    | D2, D3, D11, D12        | D4                | D5 - D6 | D7       | D8  | D9       | D10     |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-------------------------|-------------------|---------|----------|-----|----------|---------|
 | ---            | ---                                                                                                                                                                                                                           | ---                                   | ---                     | ---               | ---     | ---      |     | ---      | ---     |
 | Privacy issues | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679?                                                                                                                                      | THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION                                   |THERE ARE SOME DATA THAT ARE NOT 100% IN LINE WITH THE REGULATION | YES         | YES     | 
@@ -242,8 +243,19 @@ D7 : the privacy page of that dataset doesn’t have any content. Even though th
 D8 : youtube + broken link
 D10 :  Non vedo banner, no SSL certificate (no encryption) in the contatti page, + Some resources are requested without encryption during the loading of pages. It can lead to the modification of downloaded data and as a result, to the breach of personal data. (HTTPS)
 
+# MASHED-UP DATASET
+ We created three mashed-up datasets:
+ - OpenSisma dataset Educaation </br>
+  Link:
+ License: CC BY-SA 4.0
+ - OpenSisma dataset Reconstruction</br>
+  Link:
+ License: CC BY-SA 4.0
+ - OpenSisma dataset Entrepneuerial processes </br>
+ Link:
+ License: CC BY-SA 4.0
 
-
+We structured them following all the normatives and the EU directives, and we found it to be completly congruent to the contents of the legal check list, so we decided to not rewrite.
 
 
 ### Licenses
