@@ -44,7 +44,7 @@ The datasets were then grouped and processed into three mashed-up datasets:
 | Primary datasets | Mashed-up dataset | URI | 
 | :---         |     :---:      |          ---: |
 | D2, D3, D4, D5, D6, D11, D12   | Education dataset     | https://opensisma.github.io/metadata-dataset-education.html    |
-| D7, D8   | Reconstruction works dataset      | https://opensisma.github.io/metadata_dataset-reconstruction-works.html      |
+| D7, D8   | Reconstruction works dataset      | https://opensisma.github.io/metadata-dataset-reconstruction-works.html      |
 | D1, D9, D10   | Entrepreneurial processes dataset      | https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html      |
 
 Our mashed-up datasets are grouped in this page: [Catalogue](https://opensisma.github.io/catalogue.html).
@@ -57,7 +57,7 @@ Our informative quality analysis follows the guidelines reported in ["Linee guid
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
 | D1               	| Not satisfied: <br> - values of column “obiettivi” and “modalità di inclusione” contain different degrees of specificity, if any;<br> - 61,19% empty fields, as detected by the completeness algorithm.                                                                      	| Not satisfied: <br>-semantic ambiguity (columns “Si registra la presenza femminile”<br>  and “Riscontro per la prevalenza di genere tra i partecipanti”);<br>-some columns have the same name (“Utente creazione”, “comune”, “regioni”, “utente modifica”, “certificati”);<br>-values of column “obiettivi” and “modalità di inclusione” have different degrees of specificity, if any. 	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of the accent (e.i. sì vs si);<br>-values “osservatorio partecipazione” and “redazione osservatorio partecipazione” in column “segnalato da persona” have no clear distinguishable meaning;<br>-column “utente creazione” contains sometimes a nickname, others a number as values;<br>-arbitrary representation of thousands (“k”, dot and nothing are used at the same time);<br>-column “comitato di pilotaggio” contains arbitrary values for the representation of absence: null, no or “non è previsto”. 	| Satisfied: updated in real time.                                                                	|
-| D2, D3, D11, D12 	| Not satisfied:<br>-features fields filled with sporadic full stops, whose meaning remains unclear, in place of explanations of self-evaluation results.                                                                                 	| Not satisfied:<br>-lists school self-evaluation marks, but does not provide any information about the<br>meaning of such marks.                                                                                                                                                                                                                                                         	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of an indicator for the absence of information: dot, “motivazione non dichiarata” and “mancanza dati comparativi” are being used simultaneously.<br>-arbitrary use of substitutes of accents.                                                                                                                                                                                                                                                                                                                  	| Not satisfied: reported as annual, but it hasn't been updated since 13/02/2018.                                                                       	|
+| D2, D3, D11, D12 	| Not satisfied:<br>-features fields filled with sporadic full stops, whose meaning remains unclear, in place of explanations of self-evaluation results.                                                                                 	| Not satisfied:<br>-lists school self-evaluation marks, but does not provide any information about the<br>meaning of such marks.                                                                                                                                                                                                                                                         	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of an indicator for the absence of information: dot, “motivazione non dichiarata” and “mancanza dati comparativi” are being used simultaneously.<br>-arbitrary use of substitutes of accents.                                                                                                                                                                                                                                                                                                                  	| Not satisfied for D2 and D3: reported as annual, but it hasn't been updated since 13/02/2018; satisfied for D11 and D12.                                                                     	|
 | D4               	| Not satisfied:<br>-many fundamental columns contain empty fields (“codice fiscale”, “ente gestore”,<br>“numero di telefono”, “CAP”, “Località”, “DS cognome”, “DS Nome”, “DS Tipo”);<br>-occasional use of the dash to replace "null" values. 	| Not satisfied:<br>-occasional use of the dash to replace "null" values;<br>-presence of syntactic inaccuracy;<br>-nomenclature of the column “codice” is too general.                                                                                                                                                                                                                   	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of quotes when defining the names of the schools;<br>-arbitrary naming of addresses;<br>-arbitrary presence of telephone number prefix;<br>-update of the data is not coherent with the scholastic year of concern.                                                                                                                                                                                                                                                                                            	| Not<br>satisfied: some schools data is reported as not up to date.                              	|
 | D5, D6           	| Not satisfied: some fields are lacking values; "null" values are replaced by a dash.                                                                                                                                                          	| Not satisfied:<br>- semantic inaccuracy due to "null" values replaced by a dash.                                                                                                                                                                                                                                                                                                        	| Not satisfied:<br>- there is no standard of defining "null" values, empty fields remain empty or are<br>filled by a dash;<br>- arbitrary use of uppercase and lowercase.                                                                                                                                                                                                                                                                                                                                                                                                                      	| Satisfied.                                                                                      	|
 | D7               	| Not satisfied: there are many empty fields, especially in columns “latitudine”, “longitudine”, “stato cantiere”, “numero civico”.                                                                                                             	| Not satisfied, as at times column “Indirizzo” contains city names instead of addresses.                                                                                                                                                                                                                                                                                                 	| Not satisfied: <br>- there seems not to be any guideline about the filling of the fields, e.i. there<br>is no civic number in the “Numero civico” column, but we could find civic numbers in the “Indirizzo” column;<br>- arbitrary use of uppercase and lowercase.                                                                                                                                                                                                                                                                                                                           	| Not satisfied: There is no specification of date, and the last update dates back to 31/12/2019. 	|
@@ -400,25 +400,47 @@ As a result, our fixed URIs proposals focused on complying to the aforementioned
 We specified the datasets' encoding in the download page of the datasets. 
 
 ##### Format: 
-We chose to distribute our mashed-up datasets in CSV.(link)
+We chose to distribute our mashed-up datasets in CSV:
+
+[Page of the Reconstruction Works dataset](https://opensisma.github.io/metadata-dataset-reconstruction-works.html)
+
+[Page of the Education dataset](https://opensisma.github.io/metadata-dataset-education.html)
+
+[Page of the Entrepreneurial Processes dataset](https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html)
 
 ##### Provenance:
+
+As documented in the metadata through the ontology PROV-O, the provenance of our mashed-up datasets is respectively: 
+
 Works mashed-up dataset
+- [D8 - INGV dataset about damage microseismic scale](http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx)
+- [D7 - Open ricostruzione dataset](https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepubblica.csv)
+
+
 Education mashed-up dataset
+- MIUR datasets: [D2](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv), [D3](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv), [D5](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv), [D6](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv), [D11](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv), [D12](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv)
+- Ufficio scolastico regionale per l'Emilia-Romagna dataset: [D4]()
+
 Entrepreneurship mashed-up dataset
+- [D1- Osservatorio partecipazione projects](https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv)
+- [D9- OpenCoesione Emilia-Romagna projects](https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip)
+- [D10- Startups](http://startup.registroimprese.it/isin/static/startup/index.html?slideJump=32)
+
 
 ##### Metadata and URI
 The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. 
 Each of our datasets has been assigned a URI:
-table
+| Dataset                           	| URI                                                                         	|
+|-----------------------------------	|-----------------------------------------------------------------------------	|
+| Reconstruction Works dataset      	| https://opensisma.github.io/metadata-dataset-reconstruction-works.html      	|
+| Education dataset                 	| https://opensisma.github.io/metadata-dataset-education.html                 	|
+| Entrepreneurial processes dataset 	| https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html 	|
 
-However, they still have the .html file extension, as our hosting is on github (guardare). 
-
-
+However, they still have the .html file extension, as it would require a rewrite engine. For what concerns permanence, we believe the lifecycle of the domain we chose is 10 years.
 
 
 ### Preprocessing issues 
-The mashing-up of our datasets required some necessary preprocessing steps. Some of the issues we encountered were connected to what we discussed in discussed in (capitolo qualità). Initially, we had to choose which areas to include in our analysis. We therefore selected the 19 most affected areas of Emilia-Romagna. The first main issue connected to this choice consisted in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
+The mashing-up of our datasets required some necessary preprocessing steps. Some of the issues we encountered were connected to what we discussed in discussed in the chapter about the Quality Analysis of our datasets. Initially, we had to choose which areas to include in our research. We therefore selected the 19 most affected areas of Emilia-Romagna. The first main issue connected to this choice consisted in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
 
 Another common problem was the lack of encoding statements, that led us to guess which encoding was use. For this reason, in the case of D1(?), it was necessary to skip some badly-encoded lines in order to process the dataset.
 
@@ -486,6 +508,7 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 
 | Issue of the original datasets         | Solution in the mashed-up datasets                  | 
 | ------------- | ----------------------- | 
+|No encoding statement | Encoding statement in the download page of the datasets | 
 | No shared nomenclature for the CSV delimiter | Comma delimiter as stated in xx | 
 | Arbitrary use of uppercase and lowercase | Use of uppercase only | 
 | No coherence of internal nomenclature  | Renaming of the columns | 
@@ -493,8 +516,6 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 | Arbitrary use of the decimal mark for numbers | Choice to use the decimal dot only | 
 | Year format unclear  | Clear year format | 
 | Absence of machine-readable metadata  | Creation of machine-readable metadata | 
-|No encoding statement | Encoding statement | 
-
 
 
 ## Sustainability of the update of the datasets over time
