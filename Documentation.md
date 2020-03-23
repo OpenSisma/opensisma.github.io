@@ -244,8 +244,7 @@ For the Libraries we used in Javascript, Python and HTML the licenses are:
 </br>
 Other licenses:
 
-- The license of data distributed by  OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/).
-</br>
+- The license of data distributed by  OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/);
 - The license for the cartography in OpenStreetMaps is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
 
 ### Ethical analysis
