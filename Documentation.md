@@ -228,18 +228,18 @@ Take all reasonable measures so that the uses previously permitted do not mislea
 In this sense the original Datasets are of pubblic domain through the waiver of some rights, in the terms we have desribed. In this scenario we have the efinition of *'copyleft'*.
 
 </br>
-For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
+For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 </br>
-While the License for the Coding is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
+While the License for the Code is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
 </br>
 For the Libraries we used in Javascript, Python and HTML the licenses are:
 
 | Library   | License                                                                        |
 |-----------|--------------------------------------------------------------------------------|
-| pandas    | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
+| pandas    | [New license BSD](https://opensource.org/licenses/BSD-3-Clause) |
 | Jquery    | [MIT License](https://opensource.org/licenses/MIT)                             |
 | Bootstrap | [MIT License](https://opensource.org/licenses/MIT)                             |
-| Leaflet   | [Licenza FreeBSD (2 clausole)](https://opensource.org/licenses/BSD-2-Clause)   |
+| Leaflet   | [License FreeBSD ](https://opensource.org/licenses/BSD-2-Clause)   |
 | Chartjs   | [MIT License](https://opensource.org/licenses/MIT)                             |
 </br>
 Other licenses:
@@ -251,8 +251,8 @@ Other licenses:
 
 As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 </br>
-In  the original data instead we have personal data but only in D2-D3 we have cognitive bias: as you could see in D2 we found phrases like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this thnic group with possible references to cogniive bias and in D3 they are 84.
-This mentions is completely against the normatives of GDPR 2016-769 and, moreover, we think that this information in same cases could be used to identify a student in an indirective way.
+In  the original data instead we have personal data but only in D2-D3 we have cognitive bias: as you could see in D2 we found phrases like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this thnic group with possible references to cognitive bias and in D3 they are 84.
+This mentions is completely against the normatives of GDPR 2016/769 and, moreover, we think that this information in same cases could be used to identify a student in an indirect way.
 
 ## Technical analysis
 
