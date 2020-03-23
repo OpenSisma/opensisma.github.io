@@ -192,7 +192,7 @@ All the other datasets's licenses are Creative Commons Licenses or Italian Open 
 </br>
 The Creative Commons' versions are:
 
-- Creative Commons Attribution (CC BY 4.0 - CC BY 3.0 IT): </br>
+- Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)): </br>
 *"You are free to:</br>
 Share — copy and redistribute the material in any medium or format </br>
 Adapt — remix, transform, and build upon the material 
@@ -203,7 +203,7 @@ Under the following terms:</br>
 Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</br>
 No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."*
 
-- Creative Commons Attribution-ShareAlike (CC BY-SA 3.0): </br>
+- Creative Commons Attribution-ShareAlike, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/): </br>
  *"You are free to:</br>
 Share — copy and redistribute the material in any medium or format </br>
 Adapt — remix, transform, and build upon the material 
@@ -215,7 +215,7 @@ Attribution — You must give appropriate credit, provide a link to the license,
 ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</br>
 No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."*
 
-The Italian Open Data Licenses are all versions of IODL 2.0:</br>
+The Italian Open Data Licenses are all versions of [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20):</br>
 *
 "You are free to:</br>
 Reproduce, distribute to the public, lease, present and demonstrate in public, communicate to the public, including making available to the public, transmit and retransmit in any way, perform, act, represent, include in collective and / or published compositions, extract and reuse Information;</br>
