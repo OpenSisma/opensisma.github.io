@@ -471,7 +471,7 @@ I tracciati record di tutti i file sono descritti con i metadati nel file "openr
   <foaf:homepage rdf:resource="http://startup.registroimprese.it/isin/home/">
   <dct:license>?</dct:license>
   <dct:publisher>Info Camere</dct:publisher>
-  <dcat:dataset rdf:about="http://startup.registroimprese.it/isin/static/startup/index.html?slideJump=32">
+  <dcat:dataset rdf:about="">
   <dct:title> Startup innovativa </dct:title>
   <dcat:theme rdf:resource=" http://publications.europa.eu/resource/authority/data-theme/ECON"/>
     <dct:description> Report Trimestrale Navigabile (Dashboard) delle Startup Italiane.</dct:description>
@@ -495,7 +495,7 @@ I tracciati record di tutti i file sono descritti con i metadati nel file "openr
     <dcat:distribution>
       <dcat:Distribution>
        <dct:description>Scarica il Report Trimestrale</dct:description>
-        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://startup.registroimprese.it/isin/static/startup/index.html?slideJump=32</dcat:downloadURL>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">None</dcat:downloadURL>
         <dcat:mediaType>text/csv</dcat:mediaType>
         <dct:license> Unknown </dct:license>
       </dcat:Distribution>
