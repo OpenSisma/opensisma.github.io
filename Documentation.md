@@ -470,7 +470,7 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 
 ## Sustainability of the update of the datasets over time
 
-The Open Data's sustainability is defined by the regularity of the updating of the data in it, as the relevance, the updating and the accesibility are they key factors that define the utility of an Open Data.  The sustanibility has to be supported by:
+The Open Data's sustainability is defined by the updating regularity  of the data in it, as the relevance, the updating and the accesibility are they key factors that define the utility of an Open Data.  The sustanibility has to be supported by:
 
 - the financing of the updating over time
 
