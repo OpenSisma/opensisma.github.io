@@ -61,7 +61,7 @@ Our informative quality analysis follows the guidelines reported in ["Linee guid
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
 | D1               	| Not satisfied: <br> - values of column “obiettivi” and “modalità di inclusione” contain different degrees of specificity, if any;<br> - 61,19% empty fields, as detected by the completeness algorithm.                                                                      	| Not satisfied: <br>-semantic ambiguity (columns “Si registra la presenza femminile”<br>  and “Riscontro per la prevalenza di genere tra i partecipanti”);<br>-some columns have the same name (“Utente creazione”, “comune”, “regioni”, “utente modifica”, “certificati”);<br>-values of column “obiettivi” and “modalità di inclusione” have different degrees of specificity, if any. 	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of the accent (e.i. sì vs si);<br>-values “osservatorio partecipazione” and “redazione osservatorio partecipazione” in column “segnalato da persona” have no clear distinguishable meaning;<br>-column “utente creazione” contains sometimes a nickname, others a number as values;<br>-arbitrary representation of thousands (“k”, dot and nothing are used at the same time);<br>-column “comitato di pilotaggio” contains arbitrary values for the representation of absence: null, no or “non è previsto”. 	| Satisfied: updated in real time.                                                                	|
-| D2, D3, D11, D12 	| Not satisfied:<br>-features fields filled with sporadic full stops, whose meaning remains unclear, in place of explanations of self-evaluation results.                                                                                 	| Not satisfied:<br>-lists school self-evaluation marks, but does not provide any information about the<br>meaning of such marks.                                                                                                                                                                                                                                                         	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of an indicator for the absence of information: dot, “motivazione non dichiarata” and “mancanza dati comparativi” are being used simultaneously.<br>-arbitrary use of substitutes of accents.                                                                                                                                                                                                                                                                                                                  	| Not satisfied for D2 and D3: reported as annual, but it hasn't been updated since 13/02/2018; satisfied for D11 and D12.                                                                     	|
+| D2, D3, D11, D12 	| Not satisfied:<br>-features fields filled with sporadic full stops, whose meaning remains unclear, in place of explanations of self-evaluation results.                                                                                 	| Not satisfied:<br>-lists school self-evaluation marks, but does not provide any information about the<br>meaning of such marks.                                                                                                                                                                                                                                                         	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of an indicator for the absence of information: dot, “motivazione non dichiarata” and “mancanza dati comparativi” are being used simultaneously.<br>-arbitrary use of substitutes of accents.                                                                                                                                                                                                                                                                                                                  	| Not satisfied for D2 and D3: reported as annual, but it hasn't been updated since 13/02/2018 [see oage](http://web.archive.org/web/20200323082933/https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA); satisfied for D11 and D12.                                                                     	|
 | D4               	| Not satisfied:<br>-many fundamental columns contain empty fields (“codice fiscale”, “ente gestore”,<br>“numero di telefono”, “CAP”, “Località”, “DS cognome”, “DS Nome”, “DS Tipo”);<br>-occasional use of the dash to replace "null" values. 	| Not satisfied:<br>-occasional use of the dash to replace "null" values;<br>-presence of syntactic inaccuracy;<br>-nomenclature of the column “codice” is too general.                                                                                                                                                                                                                   	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of quotes when defining the names of the schools;<br>-arbitrary naming of addresses;<br>-arbitrary presence of telephone number prefix;<br>-update of the data is not coherent with the scholastic year of concern.                                                                                                                                                                                                                                                                                            	| Not<br>satisfied: some schools data is reported as not up to date.                              	|
 | D5, D6           	| Not satisfied: some fields are lacking values; "null" values are replaced by a dash.                                                                                                                                                          	| Not satisfied:<br>- semantic inaccuracy due to "null" values replaced by a dash.                                                                                                                                                                                                                                                                                                        	| Not satisfied:<br>- there is no standard of defining "null" values, empty fields remain empty or are<br>filled by a dash;<br>- arbitrary use of uppercase and lowercase.                                                                                                                                                                                                                                                                                                                                                                                                                      	| Satisfied.                                                                                      	|
 | D7               	| Not satisfied: there are many empty fields, especially in columns “latitudine”, “longitudine”, “stato cantiere”, “numero civico”.                                                                                                             	| Not satisfied, as at times column “Indirizzo” contains city names instead of addresses.                                                                                                                                                                                                                                                                                                 	| Not satisfied: <br>- there seems not to be any guideline about the filling of the fields, e.i. there<br>is no civic number in the “Numero civico” column, but we could find civic numbers in the “Indirizzo” column;<br>- arbitrary use of uppercase and lowercase.                                                                                                                                                                                                                                                                                                                           	| Not satisfied: There is no specification of date, and the last update dates back to 31/12/2019. 	|
@@ -228,32 +228,34 @@ Take all reasonable measures so that the uses previously permitted do not mislea
 In this sense the original Datasets are of pubblic domain through the waiver of some rights, in the terms we have desribed. In this scenario we have the efinition of *'copyleft'*.
 
 </br>
-For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
+For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 </br>
-While the License for the Coding is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
+While the License for the Code is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
 </br>
 For the Libraries we used in Javascript, Python and HTML the licenses are:
-</br>
-| Libreria | Licenza |
-| -------- | ------- |
-| pandas | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
-| Jquery | [MIT License](https://opensource.org/licenses/MIT) |
-| Bootstrap | [MIT License](https://opensource.org/licenses/MIT) |
-| Leaflet | [Licenza FreeBSD (2 clausole)](https://opensource.org/licenses/BSD-2-Clause) |
-| Chartjs | [MIT License](https://opensource.org/licenses/MIT) |
+
+| Library   | License                                                                        |
+|-----------|--------------------------------------------------------------------------------|
+| pandas    | [New license BSD](https://opensource.org/licenses/BSD-3-Clause) |
+| Jquery    | [MIT License](https://opensource.org/licenses/MIT)                             |
+| Bootstrap | [MIT License](https://opensource.org/licenses/MIT)                             |
+| Leaflet   | [License FreeBSD ](https://opensource.org/licenses/BSD-2-Clause)   |
+| Chartjs   | [MIT License](https://opensource.org/licenses/MIT)                             |
 </br>
 Other licenses:
 
-- The license of data distributed by  OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/).
-</br>
+- The license of data distributed by  OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/);
 - The license for the cartography in OpenStreetMaps is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
+### Purpose
+
 
 ### Ethical analysis
 
 As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 </br>
-In  the original data instead we have personal data but only in D2-D3 we have cognitive bias: as you could see in D2 we found phrases like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this thnic group with possible references to cogniive bias and in D3 they are 84.
-Probably the creators didnt pay any attention to this mentions but this is completely against the normatives of GDPR and, moreover, we think that this information in same cases could be used to identify a student in an indirective way.
+In  the original data instead we have personal data but only in D2-D3 we have cognitive bias: as you could see in D2 we found phrases like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this thnic group with possible references to cognitive bias and in D3 they are 84.
+This mentions is completely against the normatives of GDPR 2016/769 and, moreover, we think that this information in same cases could be used to identify a student in an indirect way.
 
 ## Technical analysis
 
@@ -311,7 +313,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 *Metadata:* No metadata. </br>
 
-*Provenance:* NON SO SE METTERLA</br>
+*Provenance:*http://www.registroimprese.it/infocamere</br>
 
 
 ### URI
@@ -471,7 +473,7 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 
 ## Sustainability of the update of the datasets over time
 
-The Open Data's sustainability is defined by the regularity of the updating of the data in it, as the relevance, the updating and the accesibility are they key factors that define the utility of an Open Data.  The sustanibility has to be supported by:
+The Open Data's sustainability is defined by the updating regularity  of the data in it, as it is one of the three key factors that define the utility of an Open Data: the *relevance*, the *updating* and the *accesibility*.  The sustanibility has to be supported by:
 
 - the financing of the updating over time
 
@@ -555,4 +557,16 @@ Finally, in each tab it is possible to find an "info" button in order to underst
 For what concerns the metadatation, it was decided to follow the documentation of [DCAT-AP v. 2.0](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe). For the provenance of our mashed-up datasets, we used the ontology [PROV-O](https://www.w3.org/TR/prov-o/) as suggested in the aforementioned documentation.
 
 ## Final remarks
+As we stated in our introduction, the aims of our analysis were: to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both public and paritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive.
+
+Those were reached in their completeness, so that from what emerged from the research we can conclude that:
+- there is a direct proportionality relationship between total works and damage entity;
+- there is a direct proportionality between amount of reconstruction works that still have to be done and low schools score, even though we don't have enough data to further study the model;
+- in the very few data we had for paritary schools (only for the area of Cento), we could detect an average higher school score with respect to the public ones of that area;
+- about the correlation between disaster effects and rise in an entrepreneurial processes, we could witness a positive attempt in that direction, but often it hasn't been cointinued over the next years;
+- about the safety certificates, we detected no correlation between damage entity and consequences in safety certificates and initiatives (e.i. antiseismic plan). This is a worrying phenomenon, because areas that have been more affected by the earthquakes should be more attentive to the safety measures, in the case this kind of situation would be repeated in the future.
+
+
+
+
 
