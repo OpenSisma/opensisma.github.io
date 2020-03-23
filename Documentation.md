@@ -251,7 +251,7 @@ Other licenses:
 ### Ethical analysis
 
 As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
-
+</br>
 In  the original data instead we have personal data but only in D2-3-11-12 we have cognitive bias: as you could see in 
 
 
