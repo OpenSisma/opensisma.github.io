@@ -234,13 +234,13 @@ While the License for the Coding is [GNU-GPL](https://www.gnu.org/licenses/gpl-3
 </br>
 For the Libraries we used in Javascript, Python and HTML the licenses are:
 </br>
-| Libreria | Licenza |
-| -------- | ------- |
-| pandas | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
-| Jquery | [MIT License](https://opensource.org/licenses/MIT) |
-| Bootstrap | [MIT License](https://opensource.org/licenses/MIT) |
-| Leaflet | [Licenza FreeBSD (2 clausole)](https://opensource.org/licenses/BSD-2-Clause) |
-| Chartjs | [MIT License](https://opensource.org/licenses/MIT) |
+| Library   | License                                                                        |
+|-----------|--------------------------------------------------------------------------------|
+| pandas    | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
+| Jquery    | [MIT License](https://opensource.org/licenses/MIT)                             |
+| Bootstrap | [MIT License](https://opensource.org/licenses/MIT)                             |
+| Leaflet   | [Licenza FreeBSD (2 clausole)](https://opensource.org/licenses/BSD-2-Clause)   |
+| Chartjs   | [MIT License](https://opensource.org/licenses/MIT)                             |
 </br>
 Other licenses:
 
@@ -253,7 +253,7 @@ Other licenses:
 As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 </br>
 In  the original data instead we have personal data but only in D2-D3 we have cognitive bias: as you could see in D2 we found phrases like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this thnic group with possible references to cogniive bias and in D3 they are 84.
-Probably the creators didnt pay any attention to this mentions but this is completely against the normatives of GDPR and, moreover, we think that this information in same cases could be used to identify a student in an indirective way.
+This mentions is completely against the normatives of GDPR 2016-769 and, moreover, we think that this information in same cases could be used to identify a student in an indirective way.
 
 ## Technical analysis
 
