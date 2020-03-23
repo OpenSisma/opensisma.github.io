@@ -247,6 +247,9 @@ Other licenses:
 - The license of data distributed by  OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/);
 - The license for the cartography in OpenStreetMaps is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
 
+### Purpose
+
+
 ### Ethical analysis
 
 As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data and in a way in which no discrimination, prejudice, cognitive bias could be suspected.
@@ -554,4 +557,16 @@ Finally, in each tab it is possible to find an "info" button in order to underst
 For what concerns the metadatation, it was decided to follow the documentation of [DCAT-AP v. 2.0](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe). For the provenance of our mashed-up datasets, we used the ontology [PROV-O](https://www.w3.org/TR/prov-o/) as suggested in the aforementioned documentation.
 
 ## Final remarks
+As we stated in our introduction, the aims of our analysis were: to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both public and paritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive.
+
+Those were reached in their completeness, so that from what emerged from the research we can conclude that:
+- there is a direct proportionality relationship between total works and damage entity;
+- there is a direct proportionality between amount of reconstruction works that still have to be done and low schools score, even though we don't have enough data to further study the model;
+- in the very few data we had for paritary schools (only for the area of Cento), we could detect an average higher school score with respect to the public ones of that area;
+- about the correlation between disaster effects and rise in an entrepreneurial processes, we could witness a positive attempt in that direction, but often it hasn't been cointinued over the next years;
+- about the safety certificates, we detected no correlation between damage entity and consequences in safety certificates and initiatives (e.i. antiseismic plan). This is a worrying phenomenon, because areas that have been more affected by the earthquakes should be more attentive to the safety measures, in the case this kind of situation would be repeated in the future.
+
+
+
+
 
