@@ -2,10 +2,11 @@
 ## Introduction
 
 OpenSisma has been carried out for the exam Open Access and Digital Ethics as a Digital Humanities and Digital Knowlegde course at the University of Bologna. The two contributors of OpenSisma are:
+
 - Milena Corbellini;
 - Anna Sofia Lippolis.
 
-In the context of the eartquakes that happened in May, 2012, in Emilia-Romagna, OpenSisma aims to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both pubblic and pritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive. Although the aim was to make a comparison between 2012 and 2020 information, creating an "Emilia Romagna earthquakes: 8 years later" study project, the unavailability of education data brought us to include less up-to-date data sources for that aspect, while the other thematic areas' data are updated in real time. 
+In the context of the eartquakes that happened in May, 2012, in Emilia-Romagna, OpenSisma aims to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both pubblic and paritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive. Although the aim was to make a comparison between 2012 and 2020 information, creating an "Emilia Romagna earthquakes: 8 years later" study project, the unavailability of data related to education brought us to include less up-to-date data sources for that aspect, while the other thematic areas' data are updated in real time. 
 
 With this perspective, we hypotesized a correlation between:
 - total works and damage entity;
@@ -14,13 +15,13 @@ With this perspective, we hypotesized a correlation between:
 
 We then wondered whether schools had the safety certificates they needed in the case such tragic event happened again, a necessity that could grow in relevance if environmental constraints were also registered.
 
-The analysis is based on a collection of open datasets, which were studied from the legal and technical point of view and then processed in order to create mashed-up datasets that met the priciples of the Linked Open Data, with an RDF model compliant to the DCAT-AP ontology. In this way, we were able to produce (5 stars?) Linked Open Data datasets and to show and to make them freely downloadable them, along with their metadata through an interactive website that can be exploited by everyone . Our derived datasets and the code we created are distributed with an open license, so that our research results not only transparent, but also repeatable.
+The analysis is based on a collection of open datasets, which were studied from the legal and technical point of view and then processed in order to create mashed-up datasets that met the priciples of the Linked Open Data, with an RDF model compliant to the DCAT-AP ontology. In this way, we were able to produce [5 stars Linked Open Data](https://www.w3.org/community/webize/2014/01/17/what-is-5-star-linked-data/) datasets and to show and to make them freely downloadable them, along with their metadata through an interactive website that can be exploited by everyone. Our derived datasets, this documentation and the code we created are distributed with an open license, so that our research results not only transparent, but also repeatable.
 
 ## Scenario
 
-We selected the 19 most damaged areas among those affected by the earthquakes of May 2012. Many of them are still in state of emergency. In this struggling scenario, our study can be useful to have a deeper look at the effects of eartquakes on the population, not only in terms of damage and reconstruction, but also in terms of the impact of some aspects of day to day life. More specifically we found it meaningful to analyze how the educational and entrepneurealship field have been affected over the years.
+We selected the 19 most damaged areas among those affected by the earthquakes of May 2012. Many of them are still in state of emergency. In this struggling scenario, our study can be useful to have a deeper look at the effects of eartquakes on the population, not only in terms of damage and reconstruction, but also in terms of the impact of some aspects of day to day life. More specifically, we found it meaningful to analyze how the educational and entrepreneurial field have been affected over the years.
 </br>
-The OpenSisma project's purpose would be to involve citizens of sensitive areas to be aware of the changes and the effects determined by gomernment measures and the way in which those affected the life of citizens themselves. Our research would not only be useful for this portion of population but also for the researchers and the scholars that are interested in this topic. 
+The OpenSisma project's purpose would be to involve citizens of sensitive areas to be aware of the changes and the effects determined by government measures and the way in which those affected the life of citizens themselves. Our research would not only be useful for this portion of population, but also for the researchers and the scholars that are interested in this topic. 
 
 ## Original datasets and mashed-up datasets
 In order to carry out our analysis, we chose to use datasets that differed in provenance, size and content.  
@@ -263,8 +264,6 @@ This mentions is completely against the normatives of GDPR 2016/769 and, moreove
 
 #### Original datasets
 
-None of the platforms containing the open datasets specified their encoding, even though in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" published by AGID"](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/riepilogoazioni.html) it is specified they ought to, preferably UTF-8.
-
 Formats, metadata, provenance and URI of our original datasets can be resumed as follows:
 
 **D1** </br>
@@ -281,7 +280,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D4**</br>
 
-*Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+. The last three aren't open formats and thus clash with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet).</br>
+*Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+. The last three aren't open formats and thus clash with the guidelines provided by Codice dell'amministrazione digitale, that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet).</br>
 
 *Metadata:* No metadata. </br>
 
@@ -295,7 +294,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D8**</br>
 
-*Format:* XSLT, which is not an open format.</br>
+*Format:* XSLT, which is not an open format, as defined by [Art.1 of Codice dell'amministrazione digitale](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).</br>
 
 *Metadata:* No metadata. </br>
 
@@ -346,16 +345,15 @@ As a result, our fixed URIs proposals focused on complying to the aforementioned
 
 
 
-
-
 #### Mashed-up datasets
 
-We specified the datasets' encoding in the download page of the datasets. 
+We specified the datasets' encoding in each download page of the datasets. 
 
 ##### Format: 
+
 We chose to distribute our mashed-up datasets in CSV:
 
-[Page of the Reconstruction Works dataset](https://opensisma.github.io/metadata-dataset-reconstruction-works.html)
+[Page of the Reconstruction dataset](https://opensisma.github.io/metadata-dataset-reconstruction.html)
 
 [Page of the Education dataset](https://opensisma.github.io/metadata-dataset-education.html)
 
@@ -372,7 +370,7 @@ Works mashed-up dataset
 
 Education mashed-up dataset
 - MIUR datasets: [D2](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv), [D3](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv), [D5](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv), [D6](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv), [D11](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv), [D12](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv)
-- Ufficio scolastico regionale per l'Emilia-Romagna dataset: [D4]()
+- Ufficio scolastico regionale per l'Emilia-Romagna dataset: [D4](https://sed.istruzioneer.it/scumgnt/scu-istituzione#)
 
 Entrepreneurship mashed-up dataset
 - [D1- Osservatorio partecipazione projects](https://www.osservatoriopartecipazione.it/prisma/dashboard/OpenData.aspx?function=export&filterid=06f74e5de3c94d7f922e23d4e7c7f35d&type=csv)
@@ -380,24 +378,32 @@ Entrepreneurship mashed-up dataset
 - [D10- Startups](http://startup.registroimprese.it/isin/static/startup/index.html?slideJump=32)
 
 
-##### Metadata and URI
+##### Metadata
+
 The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. 
-Each of our datasets has been assigned a URI:
+
+##### URI
+
+Each of our datasets has then been assigned a URI:
+
 | Dataset                           	| URI                                                                         	|
 |-----------------------------------	|-----------------------------------------------------------------------------	|
 | Reconstruction Works dataset      	| https://opensisma.github.io/metadata-dataset-reconstruction-works.html      	|
 | Education dataset                 	| https://opensisma.github.io/metadata-dataset-education.html                 	|
 | Entrepreneurial processes dataset 	| https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html 	|
 
-However, they still have the .html file extension, as it would require a rewrite engine. For what concerns permanence, we believe the lifecycle of the domain we chose is 10 years.
+However, they still have the .html file extension, as deleting it would require a rewrite engine.
 
 
 ### Preprocessing issues 
-The mashing-up of our datasets required some necessary preprocessing steps. Some of the issues we encountered were connected to what we discussed in discussed in the chapter about the Quality Analysis of our datasets. Initially, we had to choose which areas to include in our research. We therefore selected the 19 most affected areas of Emilia-Romagna. The first main issue connected to this choice consisted in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
 
-Another common problem was the lack of encoding statements, that led us to guess which encoding was use. For this reason, in the case of D1(?), it was necessary to skip some badly-encoded lines in order to process the dataset.
+The mashing-up of our datasets required some necessary preprocessing steps. Some of the issues we encountered were connected to what we discussed in the chapter about the Quality Analysis of our datasets. Initially, we had to choose which areas to include in our research. We therefore selected the 19 most affected areas of Emilia-Romagna. The first main issue connected to this choice consisted in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
 
-#### Works mashed-up dataset
+None of the platforms containing the open datasets specified their encoding, even though in ["Linee guida per la valorizzazione del patrimonio informativo pubblico" published by AGID"](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/riepilogoazioni.html) it is specified they ought to, preferably UTF-8. The lack of encoding statements led us to guess which formatting engine was use. For this reason, in the case of D1, it was necessary to skip some badly-encoded lines in order to process the dataset.
+
+All the mash-up datasets have been joined through the `pandas.merge` method.
+
+#### Reconstruction mashed-up dataset
 The first issue with the mashing up of datasets D7 and D8 is connected to the lack of rules regarding what the CSV delimiter should be. In each case, we had to find out what the delimiter was and specify it for the file to be properly read. 
 
 | Dataset         | Delimiter                   | 
@@ -405,7 +411,7 @@ The first issue with the mashing up of datasets D7 and D8 is connected to the la
 | D7     | ; | 
 | D8       | , | 
 
-For what concerns D8, it also wasn’t released in an open format: Excel. We thus had to use the pandas read_excel Python method.
+For what concerns D8, it also wasn’t released in an open format: Excel. We thus had to use the pandas `read_excel` Python method.
 
 Finally, there is a different nomenclature of "comune" we had to make a decision about in order to guarantee our mash-ups could be working together:
 
@@ -433,7 +439,7 @@ Also, D2, D3, D11, D12 have a problem with dates (i.e. “201516”), that have 
 The final issue with the datasets is that D2, D3, D11, D12 contain whitespace in the column headers that needs to be stripped in order for the document to be merged with other datasets. This is an important problem that proves how the publication of an open dataset does not only require an open format (CSV, in this case), but also a structure that complies to such format in order for it to be read and manipulated.
 
 Some columns of the original datasets have been dropped or modified according to our research purpose. More specifically:
-- We dropped the xxxx in D2, D3, D11, D12; for D4 we just kept the school code.
+- We dropped the columns "ANNOSCOLASTICO", SEZIONE", "CODICECRITERIO", "MOTIVAZIONEPUNTEGGIOSCUOLA" in D2, D3, D11, D12; for D4 we just kept the school code.
 - We added the number of schools that have emerged from our data, using a pandas pivot table function;
 - We modified the school score ("PUNTEGGIOSCUOLA" column) of D2, D3, D11, D12 according to the number of schools, so our final school score is an average;
 - We kept the count of missing safety certificates only.
@@ -450,11 +456,11 @@ The first issue that came up when preprocessing our datasets before cleaning the
 
 D1 was more troublesome than the other datasets, since it included quotes for each field to fill in, even though sometimes such quotes weren’t even closed. This also created a problem with numbers, since they were encoded as strings and not as integers. As a result of this problem, along with the lack of an encoding declaration, it was necessary to skip a few lines that weren’t correctly formatted and use a workaround to correctly parse the document. 
 
-Another issue arised when dealing with dates, which weren’t coded in the correct datetime format (metti ISO), especially in D1 and D10. 
+Another issue arised when dealing with dates, which weren’t coded in the correct datetime format (ISO_8601), especially in D1 and D10. 
 
 #### Preprocessing issues related to visualization
 
-As for what concerns visualization, every decimal comma in every number had to be converted in the decimal dot in order to be processed by the Folium library; the same goes for the columns of latitude and longitude in D7, which moreover had to follow the ISO 6709 Standard representation of geographic point location by coordinates. However, it is necessary to specify for the first case that both commas and dots are currently generally recognized as a decimal marker, even though in the payments field (the same as our case), as ISO_20022 states, only dot is accepted as a decimal marker. 
+As for what concerns visualization, every decimal comma in every number had to be converted in the decimal dot in order to be processed by the Folium library; the same goes for the columns of latitude and longitude in D7, which moreover had to follow the ISO_6709 Standard representation of geographic point location by coordinates. However, it is necessary to specify for the first case that both commas and dots are currently generally recognized as a decimal marker, even though in the payments field (the same as our case), as ISO_20022 states, only dot is accepted as a decimal marker. 
 
 #### Final remarks
 The structure of both mashed-up datasets aimed to solve some issues we faced when analyzing the quality of our datasets:
@@ -473,7 +479,7 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 
 ## Sustainability of the update of the datasets over time
 
-The Open Data's sustainability is defined by the updating regularity  of the data in it, as it is one of the three key factors that define the utility of an Open Data: the *relevance*, the *updating* and the *accesibility*.  The sustanibility has to be supported by:
+The Open Data's sustainability is defined by the updating regularity  of the data in it, as it is one of the three key factors that define the utility of an Open Data: the *relevance*, the *updating* and the *accessibility*.  The sustanibility has to be supported by:
 
 - the financing of the updating over time
 
@@ -504,9 +510,10 @@ Until now we were able to implement the sustainability with the subsequent proce
 The visualization of the data was carried out through two main steps:
 
 1) The creation of the map
-For the creation of the map, we used the Folium library, which is connected to Leaflet. To draw the GEOJSON polygons of the areas we were interested in, we used a [Generatore di mappe comunali italiane](https://observablehq.com/@jenkin/generatore-di-mappe-comunali-italiane) - controlla licenzeee. Leaflet displays the map through OpenStreetMaps.
+For the creation of the map, we used the Folium library, which is connected to Leaflet. To draw the GEOJSON polygons of the areas we were interested in, we used this [DataNinja Github repository](https://github.com/Dataninja/geo-shapes/tree/master/italy/regions). Leaflet displays the map through OpenStreetMaps.
 
 For usability purposes, the map can be navigated thrugh a layer control so that one can hide or see:
+
 1) A choropleth layer map created accordingly to the Scala microsismica Mercalli-Cancani-Sieberg;
 2) Feature groups with three types of reconstruction works progress:
   - Red markers for works that have never started;
@@ -559,7 +566,7 @@ For what concerns the metadatation, it was decided to follow the documentation o
 ## Final remarks
 As we stated in our introduction, the aims of our analysis were: to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both public and paritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive.
 
-Those were reached in their completeness, so that from what emerged from the research we can conclude that:
+Those have been reached in their completeness, so that from what emerged from the research we can conclude that:
 - there is a direct proportionality relationship between total works and damage entity;
 - there is a direct proportionality between amount of reconstruction works that still have to be done and low schools score, even though we don't have enough data to further study the model;
 - in the very few data we had for paritary schools (only for the area of Cento), we could detect an average higher school score with respect to the public ones of that area;
