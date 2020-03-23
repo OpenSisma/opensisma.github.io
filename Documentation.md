@@ -228,13 +228,25 @@ Take all reasonable measures so that the uses previously permitted do not mislea
 In this sense the original Datasets are of pubblic domain through the waiver of some rights, in the terms we have desribed. In this scenario we have the efinition of *'copyleft'*.
 
 </br>
-For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike (CC BY-SA 4.0).</br>
-While the License for the Coding is
+For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
+</br>
+While the License for the Coding is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
+</br>
+For the Libraries we used in Javascript, Python and HTML the licenses are:
+</br>
+| Libreria | Licenza |
+| -------- | ------- |
+| pandas | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
+| Jquery | [MIT License](https://opensource.org/licenses/MIT) |
+| Bootstrap | [MIT License](https://opensource.org/licenses/MIT) |
+| Leaflet | [Licenza FreeBSD (2 clausole)](https://opensource.org/licenses/BSD-2-Clause) |
+| Chartjs | [MIT License](https://opensource.org/licenses/MIT) |
+</br>
+Other licenses:
 
-And for the Libraries we used
-
-
-
+- The license of data distributed by  OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/).
+</br>
+- The license for the cartography in OpenStreetMaps is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
 
 ### Ethical analysis
 
