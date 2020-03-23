@@ -318,40 +318,80 @@ footer{
     
    
 </head>
-<body>    
+<body>
+<div class="modal" id="disclaimerModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">License</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>The purpose of this web site is to explore various types of typographic and layout
+                    style for text documents, as an end-of-course project for the "Information
+                    Modeling and Web technologies" course of the Master Degree in Digital
+                    Humanities and Digital Knowledge of the University of Bologna, under prof. Fabio
+                    Vitali.
+                </p>
+                <p>
+                    The documents contained in this web site have been selected for their length and
+                    complexity among the best picks of 2018 of www.longreads.com. Their
+                    publication here is not intended to be an alternative or replace their original
+                    locations:
+                <ol>
+                    <li> Pressler, Jessica. "Maybe She Had So Much Money She Just Lost Track of It". The Cut, 28th May 2018: <a href=" https://www.thecut.com/2018/05/how-anna-delvey-tricked-new-york.html" target="_blank"> https://www.thecut.com/2018/05/how-anna-delvey-tricked-new-york.html</a></li>
+                    <li> Perry, Imani. "As Goes the South, so Goes the Nation". Harpers, July 2018: <a href="https://harpers.org/archive/2018/07/as-goes-the-south-so-goes-the-nation/" target="_blank">https://harpers.org/archive/2018/07/as-goes-the-south-so-goes-the-nation/</a></li>
+                    <li> Miller, Carl. "God is in the machine". Times Literary Supplement: <a href="https://www.the-tls.co.uk/articles/ridiculously-complicated-algorithms/" target="_blank">https://www.the-tls.co.uk/articles/ridiculously-complicated-algorithms/</a></li>
+                    <li> Fukada, Shiho. "Japan's Prisons Are a Haven for Elderly Women". Bloomberg, 16th March 2018:<a href="https://www.bloomberg.com/news/features/2018-03-16/japan-s-prisons-are-a-haven-for-elderly-women" target="_blank">https://www.bloomberg.com/news/features/2018-03-16/japan-s-prisons-are-a-haven-for-elderly-women</a></li>
+                    <li> Fagone, Jason. "Jerry and Marge Go Large". The Huffington Post: <a href="https://highline.huffingtonpost.com/articles/en/lotto-winners/" target="_blank">https://highline.huffingtonpost.com/articles/en/lotto-winners/</a></li>
+                    <li> "L 125/75, DIRECTIVE 2009/41/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 6 May 2009 on the contained use of genetically modified micro-organisms": <a href=" https://eur-lex.europa.eu/legal-content/it/TXT/?uri=CELEX:32009L0041" target="_blank"> https://eur-lex.europa.eu/legal-content/it/TXT/?uri=CELEX:32009L0041</a></li>
+                </ol>
+                <p>
+                    All copyrights and related rights on the content remain with their original owners.
+                    All copyright on the typographic and layout choices are 2019 © XY
+                </p>
+            </div>
+        </div>
+    </div>
+</div>    
 	<!--Navbar-->
 <nav class="navbar navbar-expand-md navbar-light bg-faded">
-  <a class="navbar-brand" href="javascript:void(0)">OpenSisma</a>
+  <a class="navbar-brand" href="index.html">OpenSisma</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)">Home</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalogue</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="catalogue.html">Catalogue</a>
-          <a class="dropdown-item" href="javascript:void(0)">Works</a>
-          <a class="dropdown-item" href="javascript:void(0)">Education</a>
-          <a class="dropdown-item" href="javascript:void(0)">Entrepreneurship</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+          <a class="dropdown-item" href="metadata-dataset-reconstruction.html">Reconstruction</a>
+          <a class="dropdown-item" href="metadata-dataset-education.html">Education</a>
+          <a class="dropdown-item" href="metadata-dataset-entrepreneurial-processes.html">Entrepreneurial processes</a>
+     
         </div>
         <li class="nav-item">
         <a class="nav-link" href="visualization.html">Visualization</a>
       </li>
+       <li class="nav-item">
+        <!-- Button trigger modal -->
+                    <a class="nav-link" href="#" role="button" data-toggle="modal" data-target="#disclaimerModal">
+                        License
+                    </a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="visualization.html">License</a>
+        <a class="nav-link" href="about.html">About</a>
       </li>
       </li>
     </ul>
 
   </div>
 </nav>
+
 
 <!--/.Navbar-->
  <div class="container">
