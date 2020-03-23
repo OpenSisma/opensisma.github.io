@@ -233,7 +233,7 @@ For the mashed-up Datasets, the metadata, the Documentation and the site we deci
 While the License for the Coding is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
 </br>
 For the Libraries we used in Javascript, Python and HTML the licenses are:
-</br>
+
 | Library   | License                                                                        |
 |-----------|--------------------------------------------------------------------------------|
 | pandas    | [Nuova licenza BSD (3 clausole)](https://opensource.org/licenses/BSD-3-Clause) |
