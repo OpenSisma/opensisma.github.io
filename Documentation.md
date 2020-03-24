@@ -270,7 +270,7 @@ The dataset was created by the Dipartimento per le politiche di Open Coesione.
 The purpose of this dataset is to propose in Open Data format all the data and information about the entrepneuerial initiatives and startups in Italy, registered in Registro Imprese. THey are developed in trimestral reports divided for region.
 This dataset was created by Info Camere, in order to make available the numbers and the statistics regarding the entrepreneurial initiative and sartups. 
 
-####Mashed-up Datasets
+#### Mashed-up Datasets
 The purpose of the final datasets is to display the data relating to the earthquakes  themselves connecting them with data that are subsequent or indirectly influenced by them:
 
 *OPENSISMA EDUCATION DATASET*
