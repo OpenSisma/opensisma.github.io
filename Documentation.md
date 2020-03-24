@@ -9,7 +9,7 @@ OpenSisma has been carried out for the exam Open Access and Digital Ethics as a 
 In the context of the eartquakes that happened in May, 2012, in Emilia-Romagna, OpenSisma aims to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both pubblic and paritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive. Although the aim was to make a comparison between 2012 and 2020 information, creating an "Emilia Romagna earthquakes: 8 years later" study project, the unavailability of data related to education brought us to include less up-to-date data sources for that aspect, while the other thematic areas' data are updated in real time. 
 
 With this perspective in mind, we hypotesized, for each municipality analysed, a correlation between:
-- total number of reconstruction works and damage entity;
+- total number of reconstruction works and damage entity (detected by the Mercalli-Cancani-Sieberg, hereon MCS, microseismic scale);
 - amount of reconstruction works that still have to be done and low schools score; in this context we also analyzed the score of both pubblic and paritary schools, in order to study the differences between them;
 - disaster effects and rise in an entrepreneurial processes.
 
