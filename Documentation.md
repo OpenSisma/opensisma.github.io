@@ -110,9 +110,9 @@ The original datasets used to cover the different themes of this project, as we 
 - D11 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1517);
 - D12 = Autovalutazione della scuola sezione Esiti. Scuola paritaria (1617).
 
-### Legal Check List
 ### Legal checklist
 
+The fields with an asterisk have to be further explained in the nots below.
 
 | | To check | D1|  D2, D3, D11, D12 | D4 | D5, D6| D7 | D8 | D9 | D10 | 
 | ----------- | --------| ------|--------|-------|---------|---------|---------|---------|-----|
@@ -229,7 +229,7 @@ Take all reasonable measures so that the uses previously permitted do not mislea
 In this sense the original Datasets are of pubblic domain through the waiver of some rights, in the terms we have desribed. In this scenario we have the efinition of *'copyleft'*.
 
 </br>
-For the mashed-up Datasets, the metadata, the Documentation and the site we decided to use the same license: the Creative Commons Attribution-ShareAlike, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+For the mashed-up Datasets, the metadata, the Documentation and the website we decided to use the same license: the Creative Commons Attribution-ShareAlike, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 </br>
 While the License for the Code is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
 </br>
@@ -248,6 +248,7 @@ Other licenses:
 
 - The license of data distributed by OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/);
 - The license for the cartography in OpenStreetMaps is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+- The license of the DataNinja Github Repository is derived from that of ISTAT, CC BY 3.0.
 
 ### Purpose
 
