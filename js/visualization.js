@@ -351,9 +351,9 @@ window.chart = new Chart(ctx, {
 
     // The data for our dataset
     data: {
-        labels: datoa23,
+        labels: ["0","0","6","12","14","19","19","20","26","28","34","36","36","43","45","66","71","88","92"],
         datasets: [{
-            label: 'ok',
+            label: 'MCS microseismic scale',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: datoa23
@@ -588,7 +588,7 @@ window.grafoprocessi = new Chart(ctx2, {
 
     // The data for our dataset
     data: {
-        labels: ['Progetti Osservatorio Partecipazione', 'Startup', 'Progetti OpenCoesione'],
+        labels: ['Osservatorio Partecipazione projects', 'Startups', 'OpenCoesione projects'],
         datasets: [{
             label: '2010',
             backgroundColor: 'rgb(255, 230, 230)',
@@ -775,7 +775,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                         var datiedu2 = {
 
 
-                                                            "labels": ['Numero di scuole totali', 'Certificati di agibilità e abilità mancanti', 'Documenti valutazione rischio mancanti', 'Piano emergenza mancante', 'Vincoli paesaggio', 'Edificio vetusto', 'Progettazione antisismica mancante', 'Vincoli idrogeologici'],
+                                                            "labels": ['Total number of schools', 'Missing certificates agibility habitability', 'Missing risk evaluation documents', 'Missing emergency plan', 'Landscape constraints', 'Old building', 'Missing antiseismic plan', 'Hydrogeologic constraints'],
                                                             "datasets": [{
                                                             label: 'Total',
                                                             data: [arrayItem['SCUOLE_TOTALI'], arrayItem['CERTIFICATOAGIBILITAABITABILITA_ASSENTE'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO_ASSENTE'], arrayItem['PIANOEMERGENZA_ASSENTE'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA_ASSENTE'], arrayItem['VINCOLIIDROGEOLOGICI']],
@@ -793,7 +793,7 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                         };
                                                         
                                                         var daticonfr= {
-                                                        "labels": ['SCUOLE PUBBLICHE 2015-2016', 'SCUOLE PARITARIE 2015-2016', 'SCUOLE PUBBLICHE 2016-2017', 'SCUOLE PARITARIE 2016-2017'],
+                                                        "labels": ['State schools 2015-2016', 'Paritary schools 2015-2016', 'State schools 2016-2017', 'Paritary schools 2016-2017'],
                                                         "datasets": [{
                                                         label: 'Score',
                                                         data: [arrayItem['PUNTEGGIO_SCUOLE_STATALI_1516'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1516'], arrayItem['PUNTEGGIO_SCUOLE_STATALI_1617'], arrayItem['PUNTEGGIO_SCUOLE_PARITARIE_1617']],
