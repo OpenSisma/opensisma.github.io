@@ -254,20 +254,20 @@ Other licenses:
 
 
 *DATASET RILEVAMENTI MACROSISMICI*
+
 <br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the Macrosismic reports of the earthquakes of May 2012 in Emilia Romagna.</br>
 The dataset was created by INGV, in order to make available the information about the damages created by th earthquakes of 2012 in Emilia Romagna.
 
 </br>
-
 *DATASET OPENCOESIONE*
 
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the Open Coesione processes in Italy. Open Coesione is the open government initiative on cohesion policies in Italy. Everyone can thus evaluate how resources are used with respect to the needs of the territories.</br>
 The datasets are updated bimonthly and published approximately three months after the reference date.</br>
 The dataset was created by the Dipartimento per le politiche di Open Coesione.
-</br>
 
+</br>
 *DATASET STARTUP*
 
 </br>
