@@ -254,11 +254,14 @@ Other licenses:
 
 
 *DATASET RILEVAMENTI MACROSISMICI*
-</BR>
+<br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the Macrosismic reports of the earthquakes of May 2012 in Emilia Romagna.</br>
 The dataset was created by INGV, in order to make available the information about the damages created by th earthquakes of 2012 in Emilia Romagna.
+
 </br>
+
 *DATASET OPENCOESIONE*
+
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the Open Coesione processes in Italy. Open Coesione is the open government initiative on cohesion policies in Italy. Everyone can thus evaluate how resources are used with respect to the needs of the territories.</br>
 The datasets are updated bimonthly and published approximately three months after the reference date.</br>
@@ -266,6 +269,7 @@ The dataset was created by the Dipartimento per le politiche di Open Coesione.
 </br>
 
 *DATASET STARTUP*
+
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the entrepneuerial initiatives and startups in Italy, registered in Registro Imprese. THey are developed in trimestral reports divided for region.
 This dataset was created by Info Camere, in order to make available the numbers and the statistics regarding the entrepreneurial initiative and sartups. 
@@ -276,19 +280,22 @@ The purpose of the final datasets is to display the data relating to the earthqu
 
 </br>
 *OPENSISMA EDUCATION DATASET*
+
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the education system in Emilia Romagna, merging in a coerent and useful way the data taken from D2, D3, D4, D5, D6, D11, D12.</br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to confront and compare all the information connteied in the original datasets.
-</br>
+
 </br>
 *OPENSISMA DATASET RECONSTRUCTION* 
+
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the reconstruction initiative taken by the in Emilia Romagna after the erthquakes, comparing them with thae damage caused by the earthquakes themselves. The data are taken from D8 and D7.
 </br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to compare the damage entity with the works made to recontruct.
-</br>
+
 </br>
 *OPENSISMA DATASET ENTREPRENEURIAL PROCESSES*
+
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the entrepreneurial processes taken after the earthquakes, merging in a coerent and useful way the data taken from D1, D9, D10.</br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to see the reaction to the earthquakes also in this field in Emilia Romagna.
