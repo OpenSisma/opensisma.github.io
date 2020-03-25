@@ -252,8 +252,10 @@ Other licenses:
 
 ### Purpose
 
+#### Primary datasets
 
-*DATASET RILEVAMENTI MACROSISMICI*
+
+*DATASET RILIEVI MACROSISMICI*
 
 <br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the Macrosismic reports of the earthquakes of May 2012 in Emilia Romagna.</br>
@@ -279,7 +281,7 @@ The purpose of the final datasets is to display the data relating to the earthqu
 </br>
 
 </br>
-*OPENSISMA EDUCATION DATASET*
+*OPENSISMA DATASET EDUCATION *
 
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the education system in Emilia Romagna, merging in a coerent and useful way the data taken from D2, D3, D4, D5, D6, D11, D12.</br>
