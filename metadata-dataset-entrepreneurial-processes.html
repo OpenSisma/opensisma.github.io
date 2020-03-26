@@ -411,7 +411,7 @@ footer{
             </tr>
             <tr>
               <td>URI</td>
-              <td>https://opensisma.github.io/mashup/entrepreneurial_processes</td>
+              <td>https://opensisma.github.io/mashup/dataset-entrepreneurial-processes</td>
             </tr>
              <tr>
               <td>Encoding</td>
@@ -590,7 +590,7 @@ footer{
 
                         $('#cat').on('click', function () {
                             $.ajax({
-                                url: 'mashup/dataset-education.csv',
+                                url: 'mashup/dataset-entrepreneurial-processes.csv',
                                 method: 'GET',
                                 xhrFields: {
                                     responseType: 'blob'
@@ -599,7 +599,7 @@ footer{
                                     var a = document.createElement('a');
                                     var url = window.URL.createObjectURL(data);
                                     a.href = url;
-                                    a.download = 'dataset-entreprenurial-processes.csv';
+                                    a.download = 'dataset-entrepreneurial-processes.csv';
                                     a.click();
                                     window.URL.revokeObjectURL(url);
                                 }
