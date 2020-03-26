@@ -350,6 +350,10 @@ The purpose of this dataset is to contain data about schools' safety certificate
 
 The purpose of this dataset is to contain data about presence of environmental bounds for schools for the year 2018-2019.
 
+*D7*
+
+The purpose of this dataset is to contain data about up-to-date interventions of public reconstruction in areas affected by the 2012 Emilia-Romagna earthquakes.
+
 
 *D8*
 
