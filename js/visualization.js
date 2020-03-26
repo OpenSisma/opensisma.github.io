@@ -557,27 +557,27 @@ if($.trim($("#Chartprocessi").html())=='') {
 // inserisco nel paragrafo con id "scrivo qua" l'array (così controlliamo)
    // $("#scrivoqua").append(array2010, array2011)
    if (typeof array_pop_2010 !== 'undefined' && array_pop_2010.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2010: '  + array_pop_2010 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2010: '  + array_pop_2010 + ' people'+ '</p>')}
     if (typeof array_pop_2011 !== 'undefined' && array_pop_2011.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2011: '  + array_pop_2011 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2011: '  + array_pop_2011 + ' people'+'</p>')}
     if (typeof array_pop_2012 !== 'undefined' && array_pop_2012.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2012: '  + array_pop_2012 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2012: '  + array_pop_2012 + ' people'+'</p>')}
     if (typeof array_pop_2013 !== 'undefined' && array_pop_2013.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2013: ' + array_pop_2013  + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2013: ' + array_pop_2013  + ' people'+'</p>')}
     if (typeof array_pop_2014 !== 'undefined' && array_pop_2014.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2014: '  + array_pop_2014 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2014: '  + array_pop_2014 +' people'+ '</p>')}
     if (typeof array_pop_2015 !== 'undefined' && array_pop_2015.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2015: '  + array_pop_2015 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2015: '  + array_pop_2015 + ' people'+'</p>')}
     if (typeof array_pop_2016 !== 'undefined' && array_pop_2016.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2016: '  + array_pop_2016 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2016: '  + array_pop_2016 + ' people'+'</p>')}
     if (typeof array_pop_2017 !== 'undefined' && array_pop_2017.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2017: '  + array_pop_2017 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2017: '  + array_pop_2017 + ' people'+'</p>')}
     if (typeof array_pop_2018 !== 'undefined' && array_pop_2018.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2018: ' + array_pop_2018  + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2018: ' + array_pop_2018  +' people'+ '</p>')}
     if (typeof array_pop_2019 !== 'undefined' && array_pop_2019.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2019: '  + array_pop_2019 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2019: '  + array_pop_2019 + ' people'+'</p>')}
     if (typeof array_pop_2020 !== 'undefined' && array_pop_2020.length > 0) {
-   $("#scrivoqua").append('<p>' + 'Popolazione impattata progetti Osservatorio 2020: '  + array_pop_2020 + '</p>')}
+   $("#scrivoqua").append('<p>' + 'Impacted population Osservatorio projects 2020: '  + array_pop_2020 + ' people'+'</p>')}
 
 
 
@@ -650,7 +650,7 @@ window.grafoprocessi = new Chart(ctx2, {
     // Configuration options go here
     options: { title: {
             display: true,
-            text: 'Custom Chart Title'
+            text: 'Entrepreneurial processes'
         }}
 });
 // altrimenti
@@ -731,7 +731,7 @@ window.grafoprocessi = new Chart(ctx2, {
     // Configuration options go here
     options: { title: {
             display: true,
-            text: 'Custom Chart Title'
+            text: 'Entrepreneurial processes'
         }}
 });
 // questo sempre per check 
