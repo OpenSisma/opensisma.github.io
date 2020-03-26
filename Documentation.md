@@ -242,6 +242,7 @@ For the Libraries we used in Javascript, Python and HTML the licenses are:
 | Bootstrap 4 | [MIT License](https://opensource.org/licenses/MIT)                             |
 | Leaflet   | [License FreeBSD ](https://opensource.org/licenses/BSD-2-Clause)   |
 | Chartjs   | [MIT License](https://opensource.org/licenses/MIT)                             |
+| Folium    | [MIT License](https://opensource.org/licenses/MIT)      |
 </br>
 
 Other licenses:
