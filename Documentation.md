@@ -118,7 +118,7 @@ The fields with an asterisk have to be further explained in the nots below.
 | ----------- | --------| ------|--------|-------|---------|---------|---------|---------|-----|
 | **Privacy issues** | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679? |yes*|no*| yes | yes| yes*| yes|yes|yes|
 | | 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorizes the PA to release them? Or any other legal basis? Identify the legal basis. |yes |no, no*|yes  |yes | yes| yes|yes|yes|
-| | 1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorizes the PA to release them? |no, yes*|no, no*|yes  |yes | no, yes*| yes|yes*|yes|
+| | 1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorizes the PA to release them? |yes, no|no, no*|yes  |yes | no, yes*| yes|yes*|yes|
 | | 1.4 Is the dataset free of any information that combined with common data available on the web, could identify the person? If so, is there a law that authorizes the PA to release them?  |yes |yes|yes  |yes | yes| yes|yes|yes|
 | | 1.5 Is the dataset free of any information related to human rights (e.g. refugees, witness protection, etc.)? |yes |no*|yes  |yes | yes| yes|yes|yes|
 | | 1.6 Do you use a tool for calculating the range of the risk of deanonymization? Do you anonymize the dataset? With which technique? Did you check the three mandatory parameters: singling out, linking out, inference out?  |no |no|no|no|no|no|no|no|
@@ -159,10 +159,11 @@ The fields with an asterisk have to be further explained in the nots below.
 
 
 
-NOTE:
-D1: considerando  n4+ Il regime degli open data descritto nell’articolo di apertura del CAD, invece, è esteso a tutti i dati e documenti publicati indipendentemente dal fatto che siano soggetti ad un obbligo di publicazione ai sensi del “decreto trasparenza”. Su tale quadro è intervenuto il decreto n. 102/2015 che ha introdotto la lettera h) quater, nell’articolo 3, del decreto n. 36/2006. Sulla base di tale disposizione, infatti, non sono riutilizzabili “documenti, o parti di documenti, che contengono dati personali che non sono conoscibili da chiunque o la cui conoscibilità è  subordinata al rispetto di determinati limiti o modalità, in base alle leggi, ai regolamenti o alla normativa dell'Unione europea, nonché quelli che contengono dati personali il cui riuso e' incompatibile con gli scopi originari del trattamento ai sensi dell'articolo 11, comma 1, lettera b), del decreto legislativo 30 giugno 2003, n. 196, e delle altre disposizioni rilevanti in materia”. In tal senso risulta utile un’impostazione fornita da una parte della dottrina che fissa l’articolo 7 bis, comma 2, del decreto n. 33/2013 come canone interpretativo ai fini del riutilizzo dei dati personali. Sulla base della formulazione legislativa, la finalità della trasparenza, sottesa alla publicazione obbligatoria, rappresenta una finalità di rilevante interesse publico, compatibile con la disciplina sulla protezione dei dati personali. In questo modo è possibile affermare che i dati personali soggetti a publicazione obbligatoria sono gli unici a poter essere riutilizzati. Questa scelta sicuramente riduce di molto il numero dei dati personali publicati come dati aperti: essendo il regime open data non applicabile in automatico qualora la publicazione riguardi i dati personali. http://www.oggipa.it/index.php/component/k2/item/463-open-data-tra-trasparenza-e-privacy-sviluppi-e-tendenze-fino-al-decreto-attuativo-del-gdpr
-D2, D3, D11, D12 : personal data issue
--	Example of sentences that aren’t good
+NOTES:
+D1: it is free of Personal Data according to article 6th of the reguletion 2016/679, in which processing is described as lowful:</br> 
+(c) processing is necessary for compliance with a legal obligation to which the controller is subject;
+(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;</br>
+D2, D3, D11, D12 : In the dataset you could find indirect personal data that could led to the identification of individuals, in particular the dataset is not free of Personal data as defined by article 9 of GDPR. There is no law, nor legal basis to release this personal data. We found references to ethnichal groups (i.e. Rom ) and data concerning health. For instance we found this sentence: '';
 D4 : privacy of the platform issues
 -	Problems of encryption of the platform that owns the page where you download the datasets
 D7 : the privacy page of that dataset doesn’t have any content. Even though there is a banner, there is no explicit anything. See https://web.archive.org/web/20190621170110/https://openricostruzione.regione.emilia-romagna.it/privacy
