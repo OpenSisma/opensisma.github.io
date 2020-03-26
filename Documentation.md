@@ -162,28 +162,55 @@ The fields with an asterisk have to be further explained in the nots below.
 NOTES:
 
 </br>
-D1: it is free of personal data according to article 6 of the regulation 2016/679, in which processing is described as lawful:</br> 
+
+D1
+
+The dataset is free of personal data according to the Article 6 of the Regulation 2016/679, in which processing is described as lawful when:</br> 
+
 (c) processing is necessary for compliance with a legal obligation to which the controller is subject;</br>
-(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;
+
+(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
 
 
-D2, D3, D11, D12 : In the dataset you could find indirect personal data that could led to the identification of individuals, in particular the dataset is not free of Personal data as defined by article 9 of GDPR. There is no law, nor legal basis to release this personal data. We found references to ethnichal groups (i.e. Rom ) and data concerning health. For instance we found these sentences: 'Le situazioni segnalate come abbandoni e trasferimenti in uscita in corso d'anno hanno riguardato in tutto due studenti e sono state dovute a cambiamenti professionali delle famiglie (trasferimenti per motivi di lavoro o rientro nei paesi d'origine).', and 'Il tasso di dispersione del numero  degli allievi iscritti nella nostra scuola  negli ultimi tre anni scolastici e' quasi nullo:a.s.2014/15: numero complessivo degli alunni in elenco all'inizio dell'anno scolastico: 665 , tot. alunni alla fine dell'anno scolastico: 664, numero di alunni non ammessi alla classe successiva: 1 alunna disabile per fermo pedagogico,a.s. 2013/14: totale alunni all'inizio dell'a.s.: 726, totale alunni alla fine dell'a.s.:726, numero alunni non ammessi alla classe successiva: n. 3 disabili per fermo pedagogico,a.s. 2012/13: tot. alunni all'inizio dell'a.s.:784, tot. alunni alla fine dell'a.s.:784 , N.alunni non ammessi alla classe successiva:1 per fermo pedagogico.'; To avoid this problem we suggest them to change these references with more anonymized ones.</br>
-Furthermore in the platform of this data there is a mechanism to inform about the updating of the data but in case of only D2-D3 (31/08/2017), the last update is not congruent with the periodicity that is reported (Annual).
+D2, D3, D11, D12
+
+In these datasets, it is possible to find indirect personal data that could lead to the identification of individuals, in particular the dataset is not free of personal data as defined by article 9 of GDPR. There is no law nor legal basis to release these personal data. We found references to ethnichal groups (i.e. Rom) and data concerning health. For instance, we found these sentences: '*Le situazioni segnalate come abbandoni e trasferimenti in uscita in corso d'anno hanno riguardato in tutto due studenti e sono state dovute a cambiamenti professionali delle famiglie (trasferimenti per motivi di lavoro o rientro nei paesi d'origine).*', and '*Il tasso di dispersione del numero  degli allievi iscritti nella nostra scuola  negli ultimi tre anni scolastici e' quasi nullo:a.s.2014/15: numero complessivo degli alunni in elenco all'inizio dell'anno scolastico: 665 , tot. alunni alla fine dell'anno scolastico: 664, numero di alunni non ammessi alla classe successiva: 1 alunna disabile per fermo pedagogico,a.s. 2013/14: totale alunni all'inizio dell'a.s.: 726, totale alunni alla fine dell'a.s.:726, numero alunni non ammessi alla classe successiva: n. 3 disabili per fermo pedagogico,a.s. 2012/13: tot. alunni all'inizio dell'a.s.:784, tot. alunni alla fine dell'a.s.:784 , N.alunni non ammessi alla classe successiva:1 per fermo pedagogico.*'.
+
+To avoid this problem, we suggest the authorities to change these references with more anonymized ones.</br>
+
+Furthermore in the platform of the data there is a mechanism to inform about the update of the data but only in the case of D2-D3 (31/08/2017), the last update is not congruent with the periodicity that is reported (Annual).
 
 
-D4 : The platform of this dataset has no direct Legal Terms and Privacy regulation, along with contacts and the information about the dataset, but they are contained in the web-site of [Ufficio Scolastico Regionale dell'Emilia Romagna](http://istruzioneer.gov.it/). We found this information there and assumed they belonged also to our D4. We suggest the interested authorities to create an explicit connection between the two sites or better to create specific web-pages in the dataset's web-site for the information.</br>
-Furthermore there re problems with the platform of [Ufficio Scolastico Regionale](http://istruzioneer.gov.it/): in particular in the [web-sit](http://istruzioneer.gov.it/dati/) that redirets to the data, there is no encryption, so that the connection of thr user to the web-site is not safe. We found this problem particularly compelling on the [contacts](http://istruzioneer.gov.it/contatti-urp/) page, where the form requires to be filled with personal data (First NAme, Family Name, Address). It could led to personal data</br>
-D7 : it is free of personal data according to article 6 of the regulation 2016/679, in which processing is described as lawful:</br> 
+D4 
+
+The platform of this dataset has no direct Legal Terms and Privacy regulation, along with contacts and the information about the dataset, but they are contained in the website of [Ufficio Scolastico Regionale dell'Emilia Romagna](http://istruzioneer.gov.it/). We found these pieces of information there and assumed they belonged also to D4. We suggest the interested authorities to create an explicit connection between the two websites or, better, to create specific webpages in the dataset's website for this information.</br>
+
+
+Furthermore, there are problems with the platform of [Ufficio Scolastico Regionale](http://istruzioneer.gov.it/): in particular, in the [website](http://istruzioneer.gov.it/dati/) that redirects to the data, there is no encryption, so that the connection of the user to the website is not safe. We found this problem particularly compelling on the [contacts](http://istruzioneer.gov.it/contatti-urp/) page, where the form requires to be filled with personal data (First Name, Family Name, Address, etc.). 
+
+
+D7 
+
+The dataset is free of personal data according to the Article 6 of the Regulation 2016/679, in which processing is described as lawful when:</br> 
 (c) processing is necessary for compliance with a legal obligation to which the controller is subject;</br>
+
 (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;</br>
-In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. As this page is empty we could not find any information about privacy regulation and Legal Terms, so we suggested filling it with content, as it is a required element in the regulation 2016/679.
 
 
-D8 : from this dataset platform the links that led to the privacy and legal pages are broken, we were then forced to access them from the external search engine (Google). Unfortunately, even when we found them we noticed that the privacy regulation's page is not complete (it stops at 'Norme Trattamento Dati').</br>
-Moreover on the dataset platform there aren't only technical cookies, because embedded youtube videos can track the users.
+In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. As this page is empty we could not find any information about privacy regulation and Legal Terms, so we suggest to fill it with content, as it is a required element in the Regulation 2016/679.
 
 
-D10 : The dataset has no license and even if there is a reference to Legge 221 of 2012, art.25 comma 11 ("11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet."), this is not enough to justify this absence according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and  to the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
+D8 
+
+From this dataset platform the links that led to the privacy and legal pages are broken, we were then forced to access them from an external search engine (Google). Unfortunately, even when we found them, we noticed that the privacy regulation's page is not complete (it stops at 'Norme Trattamento Dati').</br>
+
+
+Moreover, on the dataset's platform there aren't only technical cookies, because embedded YouTube videos can track the users visiting the page.
+
+
+D10 
+
+The dataset has no license and even if there is a reference to Law 221 of 2012, art.25 comma 11 ("*11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet.*"), this is not enough to justify this absence, that is required by the definition of Open Data according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
 
 
 There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:'
@@ -215,7 +242,7 @@ g) indicazione dell'esistenza di collaborazioni con università e centri di rice
 h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up innovative.
 
 
-14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.' </br>
+*14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.*' </br>
 
 ### Mashed-up Datasets
  We created three mashed-up datasets:
@@ -324,7 +351,7 @@ The purpose of this dataset is to contain data about schools' safety certificate
 The purpose of this dataset is to contain data about presence of environmental bounds for schools for the year 2018-2019.
 
 
-*DATASET RILIEVI MACROSISMICI*
+*D8*
 
 <br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the microseismic reports of the earthquakes of May 2012 in Emilia Romagna.</br>
@@ -332,7 +359,7 @@ The dataset was created by INGV, in order to make available the information abou
 
 </br>
 
-*DATASET OPENCOESIONE*
+*D9*
 
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the Open Coesione processes in Italy. Open Coesione is the open government initiative on cohesion policies in Italy. Everyone can thus evaluate how resources are used with respect to the needs of the territories.</br>
@@ -341,7 +368,7 @@ The dataset was created by the Dipartimento per le politiche di Open Coesione.
 
 </br>
 
-*DATASET STARTUP*
+*D10*
 
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the entrepneuerial initiatives and startups in Italy, registered in Registro Imprese. THey are developed in trimestral reports divided for region.
@@ -381,8 +408,8 @@ This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order 
 
 As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 </br>
-In  the original data instead we have personal data but only in D2-D3 we have cognitive bias: as you could see in D2 we found phrases like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this ethnic group with possible references to cognitive bias and in D3 they are 84.
-This mentions is completely against the normatives of GDPR 2016/769 and, moreover, we think that this information could be used to identify a student in an indirect way.
+In the original data instead in D2-D3 we detected cognitive bias: as you could see in D2, we found sentences like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this ethnic group with possible references to cognitive bias and in D3 they are 84.
+These mentions are completely against the normatives of GDPR 2016/769 and, moreover, we think that this information could be used to identify a student in an indirect way.
 
 ## Technical analysis
 
@@ -618,24 +645,25 @@ The structure of both mashed-up datasets aimed to solve some issues we faced whe
 
 ## Sustainability of the update of the datasets over time
 
-The Open Data's sustainability is defined by the updating regularity  of the data in it, as it is one of the three key factors that define the utility of an Open Data: the *relevance*, the *updating* and the *accessibility*.  The sustanibility has to be supported by:
+The Open Data's sustainability is defined by the updating regularity of the data in it, as it is one of the three key factors that define the utility of an Open Data: the *relevance*, the *updating* and the *accessibility*.  The sustanibility has to be supported by:
 
-- the financing of the updating over time
+- the financing of the updating over time;
 
-- an organisation already established in the Open Data Ecosystem
+- an organisation already established in the Open Data Ecosystem;
 
 - the reusing of the data by  the users interested in.
 
-In an ipothethic organisational system of our project we could base our sustanibility o the sequent elements:
--Provenance and Tempestivity: Our mashed-up Datasets use data taken from different sources. Only if the original sources respect the upating time, the timeliness requirement would be assured.
+In an hypothetic organisational system of our project, we could base our sustanibility on the following elements:
 
-- the financial  support of established entities like the 'Agenzia per la Ricostruzione Emilia Romagna', or the entity 'Regione Emilia Romagna' itself, which could be interested in our analysis. However we considered a structure in which the cost and the maintenance of the datasets would be around 0, even sustaining the quality of the data and the updating.
+-Provenance and Promptness: Our mashed-up Datasets use data taken from different sources. Only if the original sources respect the updating time, the timeliness requirement would be assured.
 
-- we used the international license CC BY-SA 4.0: a copyleft based license that allows the users to share and modify the content with the conditicions of attribution and sharing under the same license.
+- the financial  support of established entities like the 'Agenzia per la Ricostruzione Emilia Romagna', or the entity 'Regione Emilia Romagna' itself, which could be interested in our analysis. However, we considered a structure in which the cost and the maintenance of the datasets would be around 0, even sustaining the quality of the data and the updating.
 
-- we inserted our e-mail addresses in order to give the possiibility to the user of contacting , easily and tempestivly,to ask for clarification, to make requests and so on.
+- we used the international license CC BY-SA 4.0: a copyleft-based license that allows the users to share and modify the content with the conditions of attribution and sharing under the same license.
 
-- our goal would be to expand the project both in terms of geographical area, both in terms of data from other datasets that we could connect with ours and involve in the analysis.
+- we included our e-mail addresses on the website, in order to give the possiibility to the user of contacting, easily and tempestively,to ask for clarification, make requests and so on.
+
+- our goal would be to expand the project both in terms of geographical area and in terms of data from other datasets that we could connect with ours and involve in the analysis.
 
 Until now we were able to implement the sustainability with the subsequent procedures:
 
