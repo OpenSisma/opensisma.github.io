@@ -118,7 +118,7 @@ The fields with an asterisk have to be further explained in the nots below.
 | ----------- | --------| ------|--------|-------|---------|---------|---------|---------|-----|
 | **Privacy issues** | 1.1 Is the dataset free of any personal data as defined in the Regulation (EU) 2016/679? |yes*|no*| yes | yes| yes*| yes|yes|yes|
 | | 1.2 Is the dataset free of any indirect personal data that could be used for identifying the natural person? If so, is there a law that authorizes the PA to release them? Or any other legal basis? Identify the legal basis. |yes |no, no*|yes  |yes | yes| yes|yes|yes|
-| | 1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorizes the PA to release them? |yes, no|no, no*|yes  |yes | no, yes*| yes|yes*|yes|
+| | 1.3 Is the dataset free of any particular personal data (art. 9 GDPR)? If so is there a law that authorizes the PA to release them? |yes, no|no, no*|yes  |yes | yes, no| yes|yes*|yes|
 | | 1.4 Is the dataset free of any information that combined with common data available on the web, could identify the person? If so, is there a law that authorizes the PA to release them?  |yes |yes|yes  |yes | yes| yes|yes|yes|
 | | 1.5 Is the dataset free of any information related to human rights (e.g. refugees, witness protection, etc.)? |yes |no*|yes  |yes | yes| yes|yes|yes|
 | | 1.6 Do you use a tool for calculating the range of the risk of deanonymization? Do you anonymize the dataset? With which technique? Did you check the three mandatory parameters: singling out, linking out, inference out?  |no |no|no|no|no|no|no|no|
@@ -160,19 +160,62 @@ The fields with an asterisk have to be further explained in the nots below.
 
 
 NOTES:
-D1: it is free of personal data according to article 6 of the reguletion 2016/679, in which processing is described as lawful:</br> 
-(c) processing is necessary for compliance with a legal obligation to which the controller is subject;
+
+</br>
+D1: it is free of personal data according to article 6 of the regulation 2016/679, in which processing is described as lawful:</br> 
+(c) processing is necessary for compliance with a legal obligation to which the controller is subject;</br>
+(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;
+
+
+D2, D3, D11, D12 : In the dataset you could find indirect personal data that could led to the identification of individuals, in particular the dataset is not free of Personal data as defined by article 9 of GDPR. There is no law, nor legal basis to release this personal data. We found references to ethnichal groups (i.e. Rom ) and data concerning health. For instance we found these sentences: 'Le situazioni segnalate come abbandoni e trasferimenti in uscita in corso d'anno hanno riguardato in tutto due studenti e sono state dovute a cambiamenti professionali delle famiglie (trasferimenti per motivi di lavoro o rientro nei paesi d'origine).', and 'Il tasso di dispersione del numero  degli allievi iscritti nella nostra scuola  negli ultimi tre anni scolastici e' quasi nullo:a.s.2014/15: numero complessivo degli alunni in elenco all'inizio dell'anno scolastico: 665 , tot. alunni alla fine dell'anno scolastico: 664, numero di alunni non ammessi alla classe successiva: 1 alunna disabile per fermo pedagogico,a.s. 2013/14: totale alunni all'inizio dell'a.s.: 726, totale alunni alla fine dell'a.s.:726, numero alunni non ammessi alla classe successiva: n. 3 disabili per fermo pedagogico,a.s. 2012/13: tot. alunni all'inizio dell'a.s.:784, tot. alunni alla fine dell'a.s.:784 , N.alunni non ammessi alla classe successiva:1 per fermo pedagogico.'; To avoid this problem we suggest them to change these references with more anonymized ones.</br>
+Furthermore in the platform of this data there is a mechanism to inform about the updating of the data but in case of only D2-D3 (31/08/2017), the last update is not congruent with the periodicity that is reported (Annual).
+
+
+D4 : The platform of this dataset has no direct Legal Terms and Privacy regulation, along with contacts and the information about the dataset, but they are contained in the web-site of [Ufficio Scolastico Regionale dell'Emilia Romagna](http://istruzioneer.gov.it/). We found this information there and assumed they belonged also to our D4. We suggest the interested authorities to create an explicit connection between the two sites or better to create specific web-pages in the dataset's web-site for the information.</br>
+Furthermore there re problems with the platform of [Ufficio Scolastico Regionale](http://istruzioneer.gov.it/): in particular in the [web-sit](http://istruzioneer.gov.it/dati/) that redirets to the data, there is no encryption, so that the connection of thr user to the web-site is not safe. We found this problem particularly compelling on the [contacts](http://istruzioneer.gov.it/contatti-urp/) page, where the form requires to be filled with personal data (First NAme, Family Name, Address). It could led to personal data</br>
+D7 : it is free of personal data according to article 6 of the regulation 2016/679, in which processing is described as lawful:</br> 
+(c) processing is necessary for compliance with a legal obligation to which the controller is subject;</br>
 (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;</br>
-D2, D3, D11, D12 : In the dataset you could find indirect personal data that could led to the identification of individuals, in particular the dataset is not free of Personal data as defined by article 9 of GDPR. There is no law, nor legal basis to release this personal data. We found references to ethnichal groups (i.e. Rom ) and data concerning health. For instance we found these sentences: 'Le situazioni segnalate come abbandoni e trasferimenti in uscita in corso d'anno hanno riguardato in tutto due studenti e sono state dovute a cambiamenti professionali delle famiglie (trasferimenti per motivi di lavoro o rientro nei paesi d'origine).', and 'Il tasso di dispersione del numero  degli allievi iscritti nella nostra scuola  negli ultimi tre anni scolastici e' quasi nullo:a.s.2014/15: numero complessivo degli alunni in elenco all'inizio dell'anno scolastico: 665 , tot. alunni alla fine dell'anno scolastico: 664, numero di alunni non ammessi alla classe successiva: 1 alunna disabile per fermo pedagogico,a.s. 2013/14: totale alunni all'inizio dell'a.s.: 726, totale alunni alla fine dell'a.s.:726, numero alunni non ammessi alla classe successiva: n. 3 disabili per fermo pedagogico,a.s. 2012/13: tot. alunni all'inizio dell'a.s.:784, tot. alunni alla fine dell'a.s.:784 , N.alunni non ammessi alla classe successiva:1 per fermo pedagogico.'; To avoid this problem we suggest them to change these references with more anonimaized ones.
-Furthermore in the platform of this data there is a mechanism to inform about the updating of the data but in case of onlyy D2-D3 (31/08/2017), the last update is not congruent with the periodicty that is reported (Annual).
-D4 : The platform of this dataset has no direct Legal Terms and Privagy regulation, along with contacts and the information about the dataset, but they are contained in the web-site of [Ufficio Scolastico Regionale dell'Emilia Romagna](http://istruzioneer.gov.it/). We found this information there and assumed they belonged also to our D4. We suggest the interested authorities to create an explicit connection between the two sites or better to create specific web-pages in the dataset's web-site for the information.
-Furthermore there re problems with the platform of [Ufficio Scolastico Regionale](http://istruzioneer.gov.it/): in particular in the [web-sit](http://istruzioneer.gov.it/dati/) that reidirects to the data there is no encription, so that the connection of thr user to the we-site is not safe. We found this problem particularly compelling on the [contacts](http://istruzioneer.gov.it/contatti-urp/) page, where the form requires to be filled wwith personal data (First NAme, Family Name, Adress).
-D7 : it is free of personal data according to article 6 of the reguletion 2016/679, in which processing is described as lawful:</br> 
-(c) processing is necessary for compliance with a legal obligation to which the controller is subject;
-(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;</br>
-In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. Even though there is a banner, there is no explicit anything. See https://web.archive.org/web/20190621170110/https://openricostruzione.regione.emilia-romagna.it/privacy
-D8 : youtube + broken link
-D10 :  Non vedo banner, no SSL certificate (no encryption) in the contatti page, + Some resources are requested without encryption during the loading of pages. It can lead to the modification of downloaded data and as a result, to the breach of personal data. (HTTPS)
+In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. As this page is empty we could not find any information about privacy regulation and Legal Terms, so we suggested filling it with content, as it is a required element in the regulation 2016/679.
+
+
+D8 : from this dataset platform the links that led to the privacy and legal pages are broken, we were then forced to access them from the external search engine (Google). Unfortunately, even when we found them we noticed that the privacy regulation's page is not complete (it stops at 'Norme Trattamento Dati').</br>
+Moreover on the dataset platform there aren't only technical cookies, because embedded youtube videos can track the users.
+
+
+D10 : The dataset has no license and even if there is a reference to Legge 221 of 2012, art.25 comma 11 ("11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet."), this is not enough to justify this absence according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and  to the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
+
+
+There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:'
+12. La start-up innovativa è automaticamente iscritta alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni:
+ 
+a) data e luogo di costituzione, nome e indirizzo del notaio;
+b) sede principale ed eventuali sedi periferiche;
+c) oggetto sociale;
+d) breve descrizione dell'attività svolta, comprese l'attività e le spese in ricerca e sviluppo;
+e) elenco dei soci, con trasparenza rispetto a fiduciarie, holding, con autocertificazione di veridicità;
+f) elenco delle società partecipate;
+g) indicazione dei titoli di studio e delle esperienze professionali dei soci e del personale che lavora nella start-up innovativa, esclusi eventuali dati sensibili;
+h) indicazione dell'esistenza di relazioni professionali, di collaborazione o commerciali con incubatori certificati, investitori istituzionali e professionali, università e centri di ricerca;
+i) ultimo bilancio depositato, nello standard XBRL;
+l) elenco dei diritti di privativa su proprietà industriale e intellettuale.
+
+
+13. L'incubatore certificato è automaticamente iscritto alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni recanti i valori degli indicatori, di cui ai commi 6 e 7, conseguiti dall'incubatore certificato alla data di iscrizione:
+
+
+
+a) data e luogo di costituzione, nome e indirizzo del notaio;
+b) sede principale ed eventuali sedi periferiche;
+c) oggetto sociale;
+d) breve descrizione dell'attività svolta;
+e) elenco delle strutture e attrezzature disponibili per lo svolgimento della propria attività;
+f) indicazione delle esperienze professionali del personale che amministra e dirige l'incubatore certificato, esclusi eventuali dati sensibili;
+g) indicazione dell'esistenza di collaborazioni con università e centri di ricerca, istituzioni pubbliche e partner finanziari;
+h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up innovative.
+
+
+14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.' </br>
 
 ### Mashed-up Datasets
  We created three mashed-up datasets:
@@ -590,7 +633,7 @@ In an ipothethic organisational system of our project we could base our sustanib
 
 - we used the international license CC BY-SA 4.0: a copyleft based license that allows the users to share and modify the content with the conditicions of attribution and sharing under the same license.
 
-- we inserted our e-mail adresses in order to give the possiibility to the user of contacting , easily and tempestivly,to ask for clarification, to make requests and so on.
+- we inserted our e-mail addresses in order to give the possiibility to the user of contacting , easily and tempestivly,to ask for clarification, to make requests and so on.
 
 - our goal would be to expand the project both in terms of geographical area, both in terms of data from other datasets that we could connect with ours and involve in the analysis.
 
