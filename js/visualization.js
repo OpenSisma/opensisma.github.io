@@ -775,11 +775,11 @@ $("#scrivoqua").append(array_pop_2010, array_pop_2011, array_pop_2012, array_pop
                                                         var datiedu2 = {
 
 
-                                                            "labels": ['Total number of schools', 'Missing certificates agibility habitability', 'Missing risk evaluation documents', 'Missing emergency plan', 'Landscape constraints', 'Old building', 'Missing antiseismic plan', 'Hydrogeologic constraints'],
+                                                            "labels": ['Total number of schools', 'Missing certificates agibility habitability', 'Missing risk evaluation documents', 'Missing emergency plan', 'Landscape constraints', 'Old building', 'Missing antiseismic plan', 'Hydrogeologic constraints', 'Missing static test'],
                                                             "datasets": [{
                                                             label: 'Total',
-                                                            data: [arrayItem['SCUOLE_TOTALI'], arrayItem['CERTIFICATOAGIBILITAABITABILITA_ASSENTE'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO_ASSENTE'], arrayItem['PIANOEMERGENZA_ASSENTE'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA_ASSENTE'], arrayItem['VINCOLIIDROGEOLOGICI']],
-                                                            backgroundColor: ['#D9534F', '#B83536', '#97111F', '#770007', '#590000', '#FFB9AD', '#D45B14', '#BC827C'],
+                                                            data: [arrayItem['SCUOLE_TOTALI'], arrayItem['CERTIFICATOAGIBILITAABITABILITA_ASSENTE'], arrayItem['DOCUMENTOVALUTAZIONERISCHIO_ASSENTE'], arrayItem['PIANOEMERGENZA_ASSENTE'], arrayItem['VINCOLIPAESAGGIO'],  arrayItem['EDIFICIOVETUSTO'], arrayItem['PROGETTAZIONEANTISISMICA_ASSENTE'], arrayItem['VINCOLIIDROGEOLOGICI'], arrayItem['CERTIFICATOCOLLAUDOSTATICO_ASSENTE']],
+                                                            backgroundColor: ['#D9534F', '#B83536', '#97111F', '#770007', '#590000', '#FFB9AD', '#D45B14', '#BC827C', '#915b56'],
                                                              borderWidth: 1}]
                                                         };
 
