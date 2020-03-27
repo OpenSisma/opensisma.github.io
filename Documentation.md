@@ -393,37 +393,36 @@ This dataset was created by Info Camere, in order to make available the numbers 
 
 #### Mashed-up Datasets
 The purpose of the final datasets is to display the data relating to the earthquakes  themselves connecting them with data that are subsequent or indirectly influenced by them:
-</br>
 
-</br>
 
 *OPENSISMA DATASET EDUCATION *
 
-</br>
+
+
 The purpose of this dataset is to propose in Open Data format all the data and information about the education system in Emilia Romagna, merging in a coerent and useful way the data taken from D2, D3, D4, D5, D6, D11, D12.</br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to confront and compare all the information connteied in the original datasets.
 
-</br>
+
 
 *OPENSISMA DATASET RECONSTRUCTION* 
 
-</br>
+
 The purpose of this dataset is to propose in Open Data format all the data and information about the reconstruction initiative taken by the in Emilia Romagna after the erthquakes, comparing them with thae damage caused by the earthquakes themselves. The data are taken from D8 and D7.
 </br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to compare the damage entity with the works made to recontruct.
 
-</br>
+
 
 *OPENSISMA DATASET ENTREPRENEURIAL PROCESSES*
 
-</br>
+
 The purpose of this dataset is to propose in Open Data format all the data and information about the entrepreneurial processes taken after the earthquakes, merging in a coerent and useful way the data taken from D1, D9, D10.</br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to see the reaction to the earthquakes also in this field in Emilia Romagna.
 </br>
 
 ### Ethical analysis
 
-As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data in a way in which no discrimination, prejudice, cognitive bias could be suspected.
+As we described in the previous points, our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 </br>
 In the original data instead in D2-D3 we detected cognitive bias: as you could see in D2, we found sentences like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this ethnic group with possible references to cognitive bias and in D3 they are 84.
 These mentions are completely against the normatives of GDPR 2016/769 and, moreover, we think that this information could be used to identify a student in an indirect way.
@@ -438,8 +437,8 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D1** </br>
 
-*Format:*  XML, XML Schema, JSON, CSV, Excel CSV </br>
-*Metadata:* Availability of human-readable metadata </br>
+*Format:*  XML, XML Schema, JSON, CSV, Excel CSV. </br>
+*Metadata:* Availability of human-readable metadata. </br>
 
 
 **D2, D3, D5, D6, D11, D12 (MIUR)**</br>
@@ -489,7 +488,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 The analysis of the URIs has to be carried out separately. Their formulation, in fact, clashes with the fact URIs have to uniquely and permanently represent an object while remaining human-readable as stated in the [W3C best practices for URI design](https://www.w3.org/2011/gld/wiki/223_Best_Practices_URI_Construction#Design_principles). In particular:
 - URI space should be limited as much as possible;
-- It is highly recommended not to have the file extension specification (e.i. ".csv");
+- It is highly recommended not to have the file extension specification (i.e. ".csv");
 - It is highly recommended not to use uppercase, as it can cause some issues;
 - It is highly recommended not to use the underscore, as text viewer applications can underline URIs to provide a cue that they are clickable, so that the character can result hidden by this underlining. 
 
@@ -506,8 +505,8 @@ This analysis has been carried out for all the original datasets but D10, that h
 | D2      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv                                      	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-sta-2015-2016            	|
 | D3      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv                                	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/valutazione-esiti-sta-2016-2017            	|
 | D4      	| https://sed.istruzioneer.it/scumgnt/scu-istituzione                                                                                         	| https://sed.istruzioneer.it/scumgnt/scu-istituzione/anagrafe_scuole_bologna                         	|
-| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv                                   	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/sicurezza-2017-2018                      	|
-| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv                                        	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/vincoli-2017-2018                        	|
+| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDICONSICUREZZASTA20181920190530.csv                                   	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/sicurezza-2018-2019                      	|
+| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDIVINCOLISTA20181920180901.csv                                        	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/vincoli-2018-2019                        	|
 | D7      	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepublica.csv                                     	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi-ricostruzionepublica 	|
 | D8      	| http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx                                                         	| http://www.ingv.it/quest/dataset/rilievimacrosismici/ingv-quest-rilievi-emilia-romafgna-2012-05-29  	|
 | D9      	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip                                                                     	| https://opencoesione.gov.it/it/opendata/regioni/progetti-esteso-EMR                                 	|
@@ -541,7 +540,7 @@ Works mashed-up dataset
 
 
 Education mashed-up dataset
-- MIUR datasets: [D2](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv), [D3](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv), [D5](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv), [D6](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv), [D11](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv), [D12](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv)
+- MIUR datasets: [D2](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv), [D3](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv), [D5](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDICONSICUREZZASTA20181920190530.csv), [D6](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDIVINCOLISTA20181920180901.csv), [D11](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv), [D12](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv)
 - Ufficio scolastico regionale per l'Emilia-Romagna dataset: [D4](https://sed.istruzioneer.it/scumgnt/scu-istituzione#)
 
 Entrepreneurship mashed-up dataset
@@ -552,7 +551,7 @@ Entrepreneurship mashed-up dataset
 
 ##### Metadata
 
-The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. In this way, we were able to produce [5-stars Linked Open Data](https://www.w3.org/community/webize/2014/01/17/what-is-5-star-linked-data/), as our metadata point to other open datasets on the web.
+The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. In this way, we were able to produce [5-stars Linked Open Data](https://www.w3.org/community/webize/2014/01/17/what-is-5-star-linked-data/), as our metadata points to other open datasets on the web.
 
 ##### URI
 
