@@ -38,7 +38,7 @@ In order to carry out our analysis, we chose to use datasets that differed in pr
 | D5   | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA     | Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE), 2018-2019    |
 | D6     | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA       | Presenza di vincoli (idrogeologici, sismici)   , 2018-2019   |
 | D7 | https://openricostruzione.regione.emilia-romagna.it/open-data | Open Ricostruzione - Interventi di ricostruzione pubblica |
-| D8       |    http://quest.ingv.it/  |          Rilievi macrosismici 2012-05-29 |
+| D8       |    http://quest.ingv.it/  |          Arcoraci L., Berardi M., Bernardini F., Brizuela B., Caracciolo C.H., Castellano C., Castelli V., Cavaliere A., Del Mese S., Ercolani E., Graziani L., Maramai A., Massucci A., Rossi A., Sbarra M., Tertulliani A., Vecchi M. and Vecchi S., 2012. *Rapporto macrosismico sui terremoti del 20 (ML 5.9) e del 29 maggio 2012 (ML 5.8 e 5.3) nella pianura padano-emiliana*. Rapporto tecnico QUEST, Istituto Nazionale di Geofisica e Vulcanologia (INGV), Roma, 15pp. https://doi.org/10.13127/QUEST/20120525 |
 | D9  | https://opencoesione.gov.it/it/opendata/#!progetti_regione_section     | Progetti di OpenCoesione con tracciato esteso (Emilia-Romagna)    |
 | D10    | http://startup.registroimprese.it/        | Elenco di startup and PMI innovative      |
 | D11  | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR     | Autovalutazione della scuola sezione Esiti. Scuola paritaria (anno scolastico 2015-2016)    |
@@ -220,10 +220,15 @@ Moreover, on the dataset's platform there aren't only technical cookies, because
 The dataset has no license and even if there is a reference to Law 221 of 2012, art.25 comma 11 ("*11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet.*"), this is not enough to justify this absence, since an open license is required by the definition of Open Data according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
 
 
-There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:'
-12. La start-up innovativa è automaticamente iscritta alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni:
+There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:
+
+*'14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.*' </br>
+
+Comma 12 and 13 state that: 
+
+'*12. La start-up innovativa è automaticamente iscritta alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni:*
  
-a) data e luogo di costituzione, nome e indirizzo del notaio;
+*a) data e luogo di costituzione, nome e indirizzo del notaio;
 b) sede principale ed eventuali sedi periferiche;
 c) oggetto sociale;
 d) breve descrizione dell'attività svolta, comprese l'attività e le spese in ricerca e sviluppo;
@@ -232,35 +237,34 @@ f) elenco delle società partecipate;
 g) indicazione dei titoli di studio e delle esperienze professionali dei soci e del personale che lavora nella start-up innovativa, esclusi eventuali dati sensibili;
 h) indicazione dell'esistenza di relazioni professionali, di collaborazione o commerciali con incubatori certificati, investitori istituzionali e professionali, università e centri di ricerca;
 i) ultimo bilancio depositato, nello standard XBRL;
-l) elenco dei diritti di privativa su proprietà industriale e intellettuale.
+l) elenco dei diritti di privativa su proprietà industriale e intellettuale.* '
 
 
-13. L'incubatore certificato è automaticamente iscritto alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni recanti i valori degli indicatori, di cui ai commi 6 e 7, conseguiti dall'incubatore certificato alla data di iscrizione:
+' *13. L'incubatore certificato è automaticamente iscritto alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni recanti i valori degli indicatori, di cui ai commi 6 e 7, conseguiti dall'incubatore certificato alla data di iscrizione:*
 
 
 
-a) data e luogo di costituzione, nome e indirizzo del notaio;
+*a) data e luogo di costituzione, nome e indirizzo del notaio;
 b) sede principale ed eventuali sedi periferiche;
 c) oggetto sociale;
 d) breve descrizione dell'attività svolta;
 e) elenco delle strutture e attrezzature disponibili per lo svolgimento della propria attività;
 f) indicazione delle esperienze professionali del personale che amministra e dirige l'incubatore certificato, esclusi eventuali dati sensibili;
 g) indicazione dell'esistenza di collaborazioni con università e centri di ricerca, istituzioni pubbliche e partner finanziari;
-h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up innovative.
+h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up innovative.* '
 
 
-*14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.*' </br>
 
 ### Mashed-up Datasets
 
  We created three mashed-up datasets:
- - OpenSisma dataset Educaation </br>
+ - OpenSisma dataset Education </br>
   Link:
  License: CC BY-SA 4.0
  - OpenSisma dataset Reconstruction</br>
   Link:
  License: CC BY-SA 4.0
- - OpenSisma dataset Entrepneuerial processes </br>
+ - OpenSisma dataset Entrepreneurial processes </br>
  Link:
  License: CC BY-SA 4.0
 
@@ -270,12 +274,25 @@ We structured them following all the normatives and the EU directives, and we fo
 ### Licenses
 The licenses are an essential metadata in the description of a dataset. It must be always specified in -*human* readble form and in *-machine* readable form, specifing *name*, *version*, *link to description of the resource*.
 </br>All the original datasets but D10, that has no license at all, respect these parameters. 
-All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses. D8 also requires to quote the authors of the dataset.
-</br>
+All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses as follows:
+
+| Dataset                  	| License                                                                                                                                                                                                                                                                                                                                                                                   	|
+|--------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| D1                       	| [CC BY 2.0 IT](https://creativecommons.org/licenses/by/2.0/it/)                                                                                                                                                                                                                                                                                                                           	|
+| D2, D3, D5, D6, D11, D12 	| [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20)                                                                                                                                                                                                                                                                                                                 	|
+| D4                       	| [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)                                                                                                                                                                                                                                                                                                                           	|
+| D7                       	| [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/it/)<br>Although this is the license specified in the page where it is possible to download<br>the data, in the [license](https://openricostruzione.regione.emilia-romagna.it/licenze) page of the platform<br>there is CC BY-NC-SA 2.5, which is not an Open Data license compliant to the Codice dell'Amministrazione Digitale. 	|
+| D8                       	| [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)                                                                                                                                                                                                                                                                                                                           	|
+| D9                       	| [CC BY_SA 3.0](https://www.creativecommons.org/licenses/by-sa/3.0/it/deed.it)                                                                                                                                                                                                                                                                                                             	|
+| D10                      	| Unknown 
+
+
 
 The Creative Commons licenses are:
 
-- Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)): </br>
+- 
+
+- Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/) - [CC BY 2.0 IT](https://creativecommons.org/licenses/by/2.0/it/)) : </br>
 *"You are free to:</br>
 Share — copy and redistribute the material in any medium or format </br>
 Adapt — remix, transform, and build upon the material 
@@ -337,7 +354,7 @@ Other licenses:
 
 - The license of data distributed by OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/);
 - The license for the cartography in OpenStreetMaps is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
-- The license of the DataNinja Github Repository is derived from that of ISTAT, CC BY 3.0.
+- The license of the DataNinja Github Repository is derived from that of ISTAT, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/it/).
 
 ### Purpose
 
