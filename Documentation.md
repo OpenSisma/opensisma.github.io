@@ -160,7 +160,7 @@ The fields with an asterisk have to be further explained in the notes below.
 
 
 
-####Notes
+#### Notes
 
 </br>
 
@@ -269,8 +269,8 @@ We structured them following all the normatives and the EU directives, and we fo
 
 ### Licenses
 The licenses are an essential metadata in the description of a dataset. It must be always specified in -*human* readble form and in *-machine* readable form, specifing *name*, *version*, *link to description of the resource*.
-</br>All the original datasets respect these parameters, but D10 that has no license at all. 
-All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses.
+</br>All the original datasets but D10, that has no license at all, respect these parameters. 
+All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses. D8 also requires to quote the authors of the dataset.
 </br>
 
 The Creative Commons licenses are:
