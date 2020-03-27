@@ -174,6 +174,7 @@ The dataset is free of personal data according to the Article 6 of the Regulatio
 
 The presence of names and surnames in the column "Utente creazione" is therefore legit, even though not necessary, as the "principio di pertinenza e non eccedenza" is explained in [Linee guida in materia di trattamento di dati personali, contenuti anche in atti e documenti amministrativi, effettuato per finalità di pubblicità e trasparenza sul web da soggetti pubblici e da altri enti obbligati](https://www.garanteprivacy.it/documents/10160/0/La+trasparenza+sui+siti+web+della+PA+-+Linee+guida+del+Garante.pdf/0d55f7e1-4af4-4db0-b482-10d8791482c8?version=1.0). Such information exceeds the transparency purpose of the PA.
 
+Finally, the fact that this kind of personal data exists doesn't mean that it can be freely reused by anyone. This is why the website redirects to a website containing information about transparent administration, where it wasn't possible to find the clause related to the reuse of the data "*solo alle condizioni previste dalla normativa vigente sul riuso dei dati pubblici (direttiva comunitaria 2003/98/CE e d. lgs. 36/2006 di rece pimento della stessa), in termini compatibili con gli scopi per i quali sono stati raccolti e registrati, e nel rispetto della normativa in materia di protezione dei dati personali*" even though it is required by d. lgs. n. 33/2013.
 
 *D2, D3, D11, D12*
 
@@ -200,7 +201,7 @@ The dataset is free of personal data according to the Article 6 of the Regulatio
 
 (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.</br>
 
-Therefore, the presence of names and surnames in columns "Progettista" and "Esecutore" of the dataset is legit.
+Therefore, the presence of names and surnames in columns "Progettista" and "Esecutore" of the dataset is legit. However, the fact that this kind of personal data exists doesn't mean that it can be freely reused by anyone. There is no clause about limits of the reuse of the data, even though it is required by d. lgs. n. 33/2013.
 
 
 In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. As this page is empty we could not find any information about Privacy Regulation and Legal Terms, so we suggest to fill it with content, as it is a required element in the EU Regulation 2016/679.
