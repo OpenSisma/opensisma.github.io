@@ -290,7 +290,6 @@ All the other datasets's licenses are Creative Commons Licenses or Italian Open 
 
 The Creative Commons licenses are:
 
-- 
 
 - Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/) - [CC BY 2.0 IT](https://creativecommons.org/licenses/by/2.0/it/)) : </br>
 *"You are free to:</br>
