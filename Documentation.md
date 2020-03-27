@@ -19,10 +19,11 @@ The analysis is based on a collection of open datasets, which were studied from 
 
 ## Scenario
 
-We selected the 19 most damaged areas among those affected by the earthquakes of May 2012. Many of them are still in state of emergency. In this struggling scenario, our study can be useful to have a deeper look at the effects of eartquakes on the population, not only in terms of damage and reconstruction, but also in terms of the impact on some aspects of day to day life. More specifically, we found it meaningful to analyze how the educational and entrepreneurial fields have been affected over the years.
+We selected the 19 most damaged areas among those affected by the earthquakes of May 2012 (Bondeno, Camposanto, Cavezzo, Cento, Concordia sulla Secchia, Crevalcore, Finale Emilia, Mirandola, Novi di Modena, Pieve di Cento, Poggio Renatico, Reggiolo, San Felice sul Panaro, San Prospero, Medolla, Mirabello, San Possidonio,  Sant'Agostino,  Vigarano Mainarda). Many of them are still in state of emergency. In this struggling scenario, our study can be useful to have a deeper look at the effects of eartquakes on the population, not only in terms of damage and reconstruction, but also in terms of the impact on some aspects of day to day life. More specifically, we found it meaningful to analyze how the educational and entrepreneurial fields have been affected over the years.
 </br>
 
-OpenSisma's purpose is to involve citizens of sensitive areas to be aware of the changes and the effects determined by government measures and the way in which those affected the life of citizens themselves. Our research would not only be useful for this portion of population, but also for the researchers and the scholars that are interested in this topic. 
+OpenSisma's purpose is to involve citizens of sensitive areas to be aware of the changes and the effects determined by government measures and the way in which those affected the life of citizens themselves. Our research would not only be useful for this portion of population, but also for the researchers and the scholars that are interested in this topic. It is possible to conclude that the proliferation of projects like OpenSisma would improve the reuse of Italian open data and the overall quality of the available datasets through their adaptation to interoperability standards and a correct metadatation. The knowledge circulation that would derive from this process would bring an increase in the overall innovation of the country.
+
 
 ## Original datasets and mashed-up datasets
 In order to carry out our analysis, we chose to use datasets that differed in provenance, size and content.  
@@ -37,7 +38,7 @@ In order to carry out our analysis, we chose to use datasets that differed in pr
 | D5   | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA     | Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE), 2018-2019    |
 | D6     | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA       | Presenza di vincoli (idrogeologici, sismici)   , 2018-2019   |
 | D7 | https://openricostruzione.regione.emilia-romagna.it/open-data | Open Ricostruzione - Interventi di ricostruzione pubblica |
-| D8       |    http://quest.ingv.it/  |          Rilievi macrosismici 2012-05-29 |
+| D8       |    http://quest.ingv.it/  |          Arcoraci L., Berardi M., Bernardini F., Brizuela B., Caracciolo C.H., Castellano C., Castelli V., Cavaliere A., Del Mese S., Ercolani E., Graziani L., Maramai A., Massucci A., Rossi A., Sbarra M., Tertulliani A., Vecchi M. and Vecchi S., 2012. *Rapporto macrosismico sui terremoti del 20 (ML 5.9) e del 29 maggio 2012 (ML 5.8 e 5.3) nella pianura padano-emiliana*. Rapporto tecnico QUEST, Istituto Nazionale di Geofisica e Vulcanologia (INGV), Roma, 15pp. https://doi.org/10.13127/QUEST/20120525 |
 | D9  | https://opencoesione.gov.it/it/opendata/#!progetti_regione_section     | Progetti di OpenCoesione con tracciato esteso (Emilia-Romagna)    |
 | D10    | http://startup.registroimprese.it/        | Elenco di startup and PMI innovative      |
 | D11  | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Scuole&datasetId=DS0410SCUANAGRAFEPAR     | Autovalutazione della scuola sezione Esiti. Scuola paritaria (anno scolastico 2015-2016)    |
@@ -159,7 +160,7 @@ The fields with an asterisk have to be further explained in the notes below.
 
 
 
-####Notes
+#### Notes
 
 </br>
 
@@ -171,10 +172,13 @@ The dataset is free of personal data according to the Article 6 of the Regulatio
 
 (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
 
+The presence of names and surnames in the column "Utente creazione" is therefore legit, even though not necessary, as the "principio di pertinenza e non eccedenza" is explained in [Linee guida in materia di trattamento di dati personali, contenuti anche in atti e documenti amministrativi, effettuato per finalità di pubblicità e trasparenza sul web da soggetti pubblici e da altri enti obbligati](https://www.garanteprivacy.it/documents/10160/0/La+trasparenza+sui+siti+web+della+PA+-+Linee+guida+del+Garante.pdf/0d55f7e1-4af4-4db0-b482-10d8791482c8?version=1.0). Such information exceeds the transparency purpose of the PA.
+
+Finally, the fact that this kind of personal data exists doesn't mean that it can be freely reused by anyone. This is why the website redirects to a website containing information about transparent administration, where it wasn't possible to find the clause related to the reuse of the data "*solo alle condizioni previste dalla normativa vigente sul riuso dei dati pubblici (direttiva comunitaria 2003/98/CE e d. lgs. 36/2006 di rece pimento della stessa), in termini compatibili con gli scopi per i quali sono stati raccolti e registrati, e nel rispetto della normativa in materia di protezione dei dati personali*" even though it is required by d. lgs. n. 33/2013.
 
 *D2, D3, D11, D12*
 
-In these datasets, it is possible to find indirect personal data that could lead to the identification of individuals, in particular the dataset is not free of personal data as defined by article 9 of GDPR. There is no law nor legal basis to release these personal data. We found references to ethnichal groups (i.e. Rom) and data concerning health. For instance, we found these sentences: '*Le situazioni segnalate come abbandoni e trasferimenti in uscita in corso d'anno hanno riguardato in tutto due studenti e sono state dovute a cambiamenti professionali delle famiglie (trasferimenti per motivi di lavoro o rientro nei paesi d'origine).*', and '*Il tasso di dispersione del numero  degli allievi iscritti nella nostra scuola  negli ultimi tre anni scolastici e' quasi nullo:a.s.2014/15: numero complessivo degli alunni in elenco all'inizio dell'anno scolastico: 665 , tot. alunni alla fine dell'anno scolastico: 664, numero di alunni non ammessi alla classe successiva: 1 alunna disabile per fermo pedagogico,a.s. 2013/14: totale alunni all'inizio dell'a.s.: 726, totale alunni alla fine dell'a.s.:726, numero alunni non ammessi alla classe successiva: n. 3 disabili per fermo pedagogico,a.s. 2012/13: tot. alunni all'inizio dell'a.s.:784, tot. alunni alla fine dell'a.s.:784 , N.alunni non ammessi alla classe successiva:1 per fermo pedagogico.*'.
+In these datasets, it is possible to find indirect personal data that could lead to the identification of individuals, in particular the dataset is not free of personal data as defined by article 9 of GDPR. There is no law nor legal basis to release these sensitive data, that can be released only if it is necessary. We found references to ethnichal groups (i.e. Rom) and data concerning health. For instance, we found these sentences: '*Le situazioni segnalate come abbandoni e trasferimenti in uscita in corso d'anno hanno riguardato in tutto due studenti e sono state dovute a cambiamenti professionali delle famiglie (trasferimenti per motivi di lavoro o rientro nei paesi d'origine).*', and '*Il tasso di dispersione del numero  degli allievi iscritti nella nostra scuola  negli ultimi tre anni scolastici e' quasi nullo:a.s.2014/15: numero complessivo degli alunni in elenco all'inizio dell'anno scolastico: 665 , tot. alunni alla fine dell'anno scolastico: 664, numero di alunni non ammessi alla classe successiva: 1 alunna disabile per fermo pedagogico,a.s. 2013/14: totale alunni all'inizio dell'a.s.: 726, totale alunni alla fine dell'a.s.:726, numero alunni non ammessi alla classe successiva: n. 3 disabili per fermo pedagogico,a.s. 2012/13: tot. alunni all'inizio dell'a.s.:784, tot. alunni alla fine dell'a.s.:784 , N.alunni non ammessi alla classe successiva:1 per fermo pedagogico.*'.
 
 To avoid this problem, we suggest the authorities to change these references with more anonymized ones.</br>
 
@@ -197,6 +201,8 @@ The dataset is free of personal data according to the Article 6 of the Regulatio
 
 (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.</br>
 
+Therefore, the presence of names and surnames in columns "Progettista" and "Esecutore" of the dataset is legit. However, the fact that this kind of personal data exists doesn't mean that it can be freely reused by anyone. There is no clause about limits of the reuse of the data, even though it is required by d. lgs. n. 33/2013.
+
 
 In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. As this page is empty we could not find any information about Privacy Regulation and Legal Terms, so we suggest to fill it with content, as it is a required element in the EU Regulation 2016/679.
 
@@ -214,10 +220,15 @@ Moreover, on the dataset's platform there aren't only technical cookies, because
 The dataset has no license and even if there is a reference to Law 221 of 2012, art.25 comma 11 ("*11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet.*"), this is not enough to justify this absence, since an open license is required by the definition of Open Data according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
 
 
-There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:'
-12. La start-up innovativa è automaticamente iscritta alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni:
+There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:
+
+*'14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.*' </br>
+
+Comma 12 and 13 state that: 
+
+'*12. La start-up innovativa è automaticamente iscritta alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni:*
  
-a) data e luogo di costituzione, nome e indirizzo del notaio;
+*a) data e luogo di costituzione, nome e indirizzo del notaio;
 b) sede principale ed eventuali sedi periferiche;
 c) oggetto sociale;
 d) breve descrizione dell'attività svolta, comprese l'attività e le spese in ricerca e sviluppo;
@@ -226,35 +237,34 @@ f) elenco delle società partecipate;
 g) indicazione dei titoli di studio e delle esperienze professionali dei soci e del personale che lavora nella start-up innovativa, esclusi eventuali dati sensibili;
 h) indicazione dell'esistenza di relazioni professionali, di collaborazione o commerciali con incubatori certificati, investitori istituzionali e professionali, università e centri di ricerca;
 i) ultimo bilancio depositato, nello standard XBRL;
-l) elenco dei diritti di privativa su proprietà industriale e intellettuale.
+l) elenco dei diritti di privativa su proprietà industriale e intellettuale.* '
 
 
-13. L'incubatore certificato è automaticamente iscritto alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni recanti i valori degli indicatori, di cui ai commi 6 e 7, conseguiti dall'incubatore certificato alla data di iscrizione:
+' *13. L'incubatore certificato è automaticamente iscritto alla sezione speciale del registro delle imprese di cui al comma 8, a seguito della compilazione e presentazione della domanda in formato elettronico, contenente le seguenti informazioni recanti i valori degli indicatori, di cui ai commi 6 e 7, conseguiti dall'incubatore certificato alla data di iscrizione:*
 
 
 
-a) data e luogo di costituzione, nome e indirizzo del notaio;
+*a) data e luogo di costituzione, nome e indirizzo del notaio;
 b) sede principale ed eventuali sedi periferiche;
 c) oggetto sociale;
 d) breve descrizione dell'attività svolta;
 e) elenco delle strutture e attrezzature disponibili per lo svolgimento della propria attività;
 f) indicazione delle esperienze professionali del personale che amministra e dirige l'incubatore certificato, esclusi eventuali dati sensibili;
 g) indicazione dell'esistenza di collaborazioni con università e centri di ricerca, istituzioni pubbliche e partner finanziari;
-h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up innovative.
+h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up innovative.* '
 
 
-*14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.*' </br>
 
 ### Mashed-up Datasets
 
  We created three mashed-up datasets:
- - OpenSisma dataset Educaation </br>
+ - OpenSisma dataset Education </br>
   Link:
  License: CC BY-SA 4.0
  - OpenSisma dataset Reconstruction</br>
   Link:
  License: CC BY-SA 4.0
- - OpenSisma dataset Entrepneuerial processes </br>
+ - OpenSisma dataset Entrepreneurial processes </br>
  Link:
  License: CC BY-SA 4.0
 
@@ -263,13 +273,25 @@ We structured them following all the normatives and the EU directives, and we fo
 
 ### Licenses
 The licenses are an essential metadata in the description of a dataset. It must be always specified in -*human* readble form and in *-machine* readable form, specifing *name*, *version*, *link to description of the resource*.
-</br>All the original datasets respect these parameters, but D10 that has no license at all. 
-All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses.
-</br>
+</br>All the original datasets but D10, that has no license at all, respect these parameters. 
+All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses as follows:
+
+| Dataset                  	| License                                                                                                                                                                                                                                                                                                                                                                                   	|
+|--------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| D1                       	| [CC BY 2.0 IT](https://creativecommons.org/licenses/by/2.0/it/)                                                                                                                                                                                                                                                                                                                           	|
+| D2, D3, D5, D6, D11, D12 	| [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20)                                                                                                                                                                                                                                                                                                                 	|
+| D4                       	| [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)                                                                                                                                                                                                                                                                                                                           	|
+| D7                       	| [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/it/)<br>Although this is the license specified in the page where it is possible to download<br>the data, in the [license](https://openricostruzione.regione.emilia-romagna.it/licenze) page of the platform<br>there is CC BY-NC-SA 2.5, which is not an Open Data license compliant to the Codice dell'Amministrazione Digitale. 	|
+| D8                       	| [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)                                                                                                                                                                                                                                                                                                                           	|
+| D9                       	| [CC BY_SA 3.0](https://www.creativecommons.org/licenses/by-sa/3.0/it/deed.it)                                                                                                                                                                                                                                                                                                             	|
+| D10                      	| Unknown 
+
+
 
 The Creative Commons licenses are:
 
-- Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)): </br>
+
+- Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/) - [CC BY 2.0 IT](https://creativecommons.org/licenses/by/2.0/it/)) : </br>
 *"You are free to:</br>
 Share — copy and redistribute the material in any medium or format </br>
 Adapt — remix, transform, and build upon the material 
@@ -331,7 +353,7 @@ Other licenses:
 
 - The license of data distributed by OpenStreetMaps is [ODbL](https://opendatacommons.org/licenses/odbl/);
 - The license for the cartography in OpenStreetMaps is [CC-BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
-- The license of the DataNinja Github Repository is derived from that of ISTAT, CC BY 3.0.
+- The license of the DataNinja Github Repository is derived from that of ISTAT, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/it/).
 
 ### Purpose
 
@@ -387,37 +409,36 @@ This dataset was created by Info Camere, in order to make available the numbers 
 
 #### Mashed-up Datasets
 The purpose of the final datasets is to display the data relating to the earthquakes  themselves connecting them with data that are subsequent or indirectly influenced by them:
-</br>
 
-</br>
 
 *OPENSISMA DATASET EDUCATION *
 
-</br>
+
+
 The purpose of this dataset is to propose in Open Data format all the data and information about the education system in Emilia Romagna, merging in a coerent and useful way the data taken from D2, D3, D4, D5, D6, D11, D12.</br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to confront and compare all the information connteied in the original datasets.
 
-</br>
+
 
 *OPENSISMA DATASET RECONSTRUCTION* 
 
-</br>
+
 The purpose of this dataset is to propose in Open Data format all the data and information about the reconstruction initiative taken by the in Emilia Romagna after the erthquakes, comparing them with thae damage caused by the earthquakes themselves. The data are taken from D8 and D7.
 </br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to compare the damage entity with the works made to recontruct.
 
-</br>
+
 
 *OPENSISMA DATASET ENTREPRENEURIAL PROCESSES*
 
-</br>
+
 The purpose of this dataset is to propose in Open Data format all the data and information about the entrepreneurial processes taken after the earthquakes, merging in a coerent and useful way the data taken from D1, D9, D10.</br>
 This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to see the reaction to the earthquakes also in this field in Emilia Romagna.
 </br>
 
 ### Ethical analysis
 
-As we described in the previous points our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data in a way in which no discrimination, prejudice, cognitive bias could be suspected.
+As we described in the previous points, our mashed-up datasets are completely free of data that could be considered unethical: we used only non personal data in a way in which no discrimination, prejudice, cognitive bias could be suspected.
 </br>
 In the original data instead in D2-D3 we detected cognitive bias: as you could see in D2, we found sentences like *"La scuola non perde studenti nel passaggio da un anno all'altro, tranne singoli casi giustificati ( alunni di etnia Rom che non sono ammessi alla classe successiva per numero di assenze superiore a quelle consentite o mancata frequenza) La distribuzione degli studenti per fasce di voto evidenzia una situazione di equilibrio"*, in which we could find a non positive reference to an ethnic group. In D2 we could reach 72 mentions of this ethnic group with possible references to cognitive bias and in D3 they are 84.
 These mentions are completely against the normatives of GDPR 2016/769 and, moreover, we think that this information could be used to identify a student in an indirect way.
@@ -432,8 +453,8 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D1** </br>
 
-*Format:*  XML, XML Schema, JSON, CSV, Excel CSV </br>
-*Metadata:* Availability of human-readable metadata </br>
+*Format:*  XML, XML Schema, JSON, CSV, Excel CSV. </br>
+*Metadata:* Availability of human-readable metadata. </br>
 
 
 **D2, D3, D5, D6, D11, D12 (MIUR)**</br>
@@ -483,7 +504,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 The analysis of the URIs has to be carried out separately. Their formulation, in fact, clashes with the fact URIs have to uniquely and permanently represent an object while remaining human-readable as stated in the [W3C best practices for URI design](https://www.w3.org/2011/gld/wiki/223_Best_Practices_URI_Construction#Design_principles). In particular:
 - URI space should be limited as much as possible;
-- It is highly recommended not to have the file extension specification (e.i. ".csv");
+- It is highly recommended not to have the file extension specification (i.e. ".csv");
 - It is highly recommended not to use uppercase, as it can cause some issues;
 - It is highly recommended not to use the underscore, as text viewer applications can underline URIs to provide a cue that they are clickable, so that the character can result hidden by this underlining. 
 
@@ -500,8 +521,8 @@ This analysis has been carried out for all the original datasets but D10, that h
 | D2      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv                                      	| https://dati.istruzione.it/opendata/catalogo-scuola/scuole/valutazione-esiti-sta-2015-2016            	|
 | D3      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv                                	| https://dati.istruzione.it/opendata/catalogo_scuola/scuole/valutazione-esiti-sta-2016-2017            	|
 | D4      	| https://sed.istruzioneer.it/scumgnt/scu-istituzione                                                                                         	| https://sed.istruzioneer.it/scumgnt/scu-istituzione/anagrafe_scuole_bologna                         	|
-| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv                                   	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/sicurezza-2017-2018                      	|
-| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv                                        	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/vincoli-2017-2018                        	|
+| D5      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDICONSICUREZZASTA20181920190530.csv                                   	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/sicurezza-2018-2019                      	|
+| D6      	| https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDIVINCOLISTA20181920180901.csv                                        	| https://dati.istruzione.it/opendata/catalogo-scuola/edilizia/vincoli-2018-2019                        	|
 | D7      	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi_ricostruzionepublica.csv                                     	| https://openricostruzione.regione.emilia-romagna.it/media/opendata/interventi-ricostruzionepublica 	|
 | D8      	| http://www.ingv.it/quest/images/rilievimacrosismici/xlsx/INGV_QUEST_2012-05-29.xlsx                                                         	| http://www.ingv.it/quest/dataset/rilievimacrosismici/ingv-quest-rilievi-emilia-romafgna-2012-05-29  	|
 | D9      	| https://opencoesione.gov.it/it/opendata/regioni/progetti_esteso_EMR.zip                                                                     	| https://opencoesione.gov.it/it/opendata/regioni/progetti-esteso-EMR                                 	|
@@ -535,7 +556,7 @@ Works mashed-up dataset
 
 
 Education mashed-up dataset
-- MIUR datasets: [D2](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv), [D3](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv), [D5](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDICONSICUREZZASTA20171820180925.csv), [D6](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/EDIVINCOLISTA20171820180925.csv), [D11](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv), [D12](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv)
+- MIUR datasets: [D2](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20160831.csv), [D3](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/VALUTAZIONE_ESITI_STA20161720170831.csv), [D5](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDICONSICUREZZASTA20181920190530.csv), [D6](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/EDIVINCOLISTA20181920180901.csv), [D11](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20151620160831.csv), [D12](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/SCUANAGRAFEPAR20161720170831.csv)
 - Ufficio scolastico regionale per l'Emilia-Romagna dataset: [D4](https://sed.istruzioneer.it/scumgnt/scu-istituzione#)
 
 Entrepreneurship mashed-up dataset
@@ -546,7 +567,7 @@ Entrepreneurship mashed-up dataset
 
 ##### Metadata
 
-The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. In this way, we were able to produce [5-stars Linked Open Data](https://www.w3.org/community/webize/2014/01/17/what-is-5-star-linked-data/), as our metadata point to other open datasets on the web.
+The metadata of our mashed-up datasets has been compiled accordingly to the FAIR principles. In this way, we were able to produce [5-stars Linked Open Data](https://www.w3.org/community/webize/2014/01/17/what-is-5-star-linked-data/), as our metadata points to other open datasets on the web.
 
 ##### URI
 
