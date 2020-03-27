@@ -19,7 +19,7 @@ The analysis is based on a collection of open datasets, which were studied from 
 
 ## Scenario
 
-We selected the 19 most damaged areas among those affected by the earthquakes of May 2012. Many of them are still in state of emergency. In this struggling scenario, our study can be useful to have a deeper look at the effects of eartquakes on the population, not only in terms of damage and reconstruction, but also in terms of the impact on some aspects of day to day life. More specifically, we found it meaningful to analyze how the educational and entrepreneurial fields have been affected over the years.
+We selected the 19 most damaged areas among those affected by the earthquakes of May 2012 (Bondeno, Camposanto, Cavezzo, Cento, Concordia sulla Secchia, Crevalcore, Finale Emilia, Mirandola, Novi di Modena, Pieve di Cento, Poggio Renatico, Reggiolo, San Felice sul Panaro, San Prospero, Medolla, Mirabello, San Possidonio,  Sant'Agostino,  Vigarano Mainarda). Many of them are still in state of emergency. In this struggling scenario, our study can be useful to have a deeper look at the effects of eartquakes on the population, not only in terms of damage and reconstruction, but also in terms of the impact on some aspects of day to day life. More specifically, we found it meaningful to analyze how the educational and entrepreneurial fields have been affected over the years.
 </br>
 
 OpenSisma's purpose is to involve citizens of sensitive areas to be aware of the changes and the effects determined by government measures and the way in which those affected the life of citizens themselves. Our research would not only be useful for this portion of population, but also for the researchers and the scholars that are interested in this topic. 
