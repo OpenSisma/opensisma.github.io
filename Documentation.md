@@ -6,12 +6,12 @@ OpenSisma has been carried out for the exam Open Access and Digital Ethics as a 
 - Milena Corbellini;
 - Anna Sofia Lippolis.
 
-In the context of the eartquakes that happened in May, 2012, in Emilia-Romagna, OpenSisma aims to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both public and paritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive. Although the aim was to make a comparison between 2012 and 2020 information, creating an "Emilia Romagna earthquakes: 8 years later" study project, the unavailability of data related to education brought us to include less up-to-date data sources for that aspect, while the other thematic areas' data are updated in real time. 
+In the context of the eartquakes that happened in May, 2012, in Emilia-Romagna, OpenSisma aims to study and show the effects of such natural disasters in terms of reconstruction works' progress, quality of education for primary, secondary and high schools, both public and paritary; availability of safety certificates and/or environmental constraints and entrepreneurship drive. Although the aim was to make a comparison between 2012 and 2020 information, creating an "Emilia Romagna earthquakes: 8 years later" study project, the unavailability of data related to education brought us to include less up-to-date data sources for that aspect, while the other thematic areas' data are up-to-date. 
 
-With this perspective in mind, we hypotesized, for each municipality analysed, a correlation between:
+With this perspective in mind, we hypothesized, for each municipality analysed, a correlation between:
 - total number of reconstruction works and damage entity (detected by the Mercalli-Cancani-Sieberg, hereon MCS, microseismic scale);
 - amount of reconstruction works that still have to be done and low schools score; in this context we also analyzed the score of both public and paritary schools, in order to study the differences between them;
-- disaster effects and rise in an entrepreneurial processes.
+- disaster effects and rise in the number of entrepreneurial processes.
 
 We then wondered whether schools had the safety certificates they needed in the case such tragic event happened again, a necessity that could grow in relevance if environmental constraints were also registered.
 
@@ -34,9 +34,9 @@ In order to carry out our analysis, we chose to use datasets that differed in pr
 | D2     | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA       | Autovalutazione della scuola sezione Esiti. Scuola statale (anno scolastico 2015-2016)      |
 | D3 |https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA | Autovalutazione della scuola sezione Esiti. Scuola statale (anno scolastico 2016-2017) |
 | D4        |     https://sed.istruzioneer.it/scumgnt/scu-istituzione      |         Anagrafe scuole dell'Emilia Romagna |
-| D5   | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA     | Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE)    |
-| D6     | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA       | Presenza di vincoli (idrogeologici, sismici)      |
-| D7 | https://openricostruzione.regione.emilia-romagna.it/open-data | Open Ricostruzione - Interventi di ricostruzione publica |
+| D5   | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0280EDICONSICUREZZASTA     | Certificazioni e documenti relativi alla sicurezza (SICUREZZASCUOLE), 2018-2019    |
+| D6     | https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Edilizia%20Scolastica&datasetId=DS0250EDIVINCOLISTA       | Presenza di vincoli (idrogeologici, sismici)   , 2018-2019   |
+| D7 | https://openricostruzione.regione.emilia-romagna.it/open-data | Open Ricostruzione - Interventi di ricostruzione pubblica |
 | D8       |    http://quest.ingv.it/  |          Rilievi macrosismici 2012-05-29 |
 | D9  | https://opencoesione.gov.it/it/opendata/#!progetti_regione_section     | Progetti di OpenCoesione con tracciato esteso (Emilia-Romagna)    |
 | D10    | http://startup.registroimprese.it/        | Elenco di startup and PMI innovative      |
@@ -49,9 +49,9 @@ The datasets were then grouped and processed into three mashed-up datasets:
 
 | Primary datasets | Mashed-up dataset | URI | 
 | :---         |     :---:      |          ---: |
-| D2, D3, D4, D5, D6, D11, D12   | OpenSisma dataset Education     | https://opensisma.github.io/metadata-opnsisma-dataset-education.html    |
-| D7, D8   | OpenSisma dataset Reconstruction      | https://opensisma.github.io/metadata-opensisa-dataset-reconstruction.html      |
-| D1, D9, D10   | OpenSisma dataset Entrepreneurial Processes       | https://opensisma.github.io/metadata-opensisma-dataset-entrepreneurial-processes.html      |
+| D2, D3, D4, D5, D6, D11, D12   | OpenSisma dataset Education     | https://opensisma.github.io/metadata-dataset-education.html    |
+| D7, D8   | OpenSisma dataset Reconstruction      | https://opensisma.github.io/metadata-dataset-reconstruction.html      |
+| D1, D9, D10   | OpenSisma dataset Entrepreneurial Processes       | https://opensisma.github.io/metadata-dataset-entrepreneurial-processes.html      |
 
 Our mashed-up datasets are grouped in this page: [Catalogue](https://opensisma.github.io/catalogue.html).
 
@@ -63,7 +63,7 @@ Our informative quality analysis follows the guidelines reported in ["Linee guid
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
 | D1               	| Not satisfied: <br> - values of column “obiettivi” and “modalità di inclusione” contain different degrees of specificity, if any;<br> - 61,19% empty fields, as detected by the completeness algorithm.                                                                      	| Not satisfied: <br>-semantic ambiguity (columns “Si registra la presenza femminile”<br>  and “Riscontro per la prevalenza di genere tra i partecipanti”);<br>-some columns have the same name (“Utente creazione”, “comune”, “regioni”, “utente modifica”, “certificati”);<br>-values of column “obiettivi” and “modalità di inclusione” have different degrees of specificity, if any. 	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of the accent (e.i. sì vs si);<br>-values “osservatorio partecipazione” and “redazione osservatorio partecipazione” in column “segnalato da persona” have no clear distinguishable meaning;<br>-column “utente creazione” contains sometimes a nickname, others a number as values;<br>-arbitrary representation of thousands (“k”, dot and nothing are used at the same time);<br>-column “comitato di pilotaggio” contains arbitrary values for the representation of absence: null, no or “non è previsto”. 	| Satisfied: updated in real time.                                                                	|
-| D2, D3, D11, D12 	| Not satisfied:<br>-features fields filled with sporadic full stops, whose meaning remains unclear, in place of explanations of self-evaluation results.                                                                                 	| Not satisfied:<br>-lists school self-evaluation marks, but does not provide any information about the<br>meaning of such marks.                                                                                                                                                                                                                                                         	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of an indicator for the absence of information: dot, “motivazione non dichiarata” and “mancanza dati comparativi” are being used simultaneously.<br>-arbitrary use of substitutes of accents.                                                                                                                                                                                                                                                                                                                  	| Not satisfied for D2 and D3: reported as annual, but it hasn't been updated since 13/02/2018 [see oage](http://web.archive.org/web/20200323082933/https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA); satisfied for D11 and D12.                                                                     	|
+| D2, D3, D11, D12 	| Not satisfied:<br>-features fields filled with sporadic full stops, whose meaning remains unclear, in place of explanations of self-evaluation results.                                                                                 	| Not satisfied:<br>-lists school self-evaluation marks, but does not provide any information about the<br>meaning of such marks.                                                                                                                                                                                                                                                         	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of an indicator for the absence of information: dot, “motivazione non dichiarata” and “mancanza dati comparativi” are being used simultaneously.<br>-arbitrary use of substitutes of accents.                                                                                                                                                                                                                                                                                                                  	| Not satisfied for D2 and D3: reported as annual, but it hasn't been updated since 13/02/2018 [see webpage](http://web.archive.org/web/20200323082933/https://dati.istruzione.it/opendata/opendata/catalogo/elements1/leaf/?area=Sistema%20Nazionale%20di%20Valutazione&datasetId=DS0500VALUTAZIONE_ESITI_STA); satisfied for D11 and D12.                                                                     	|
 | D4               	| Not satisfied:<br>-many fundamental columns contain empty fields (“codice fiscale”, “ente gestore”,<br>“numero di telefono”, “CAP”, “Località”, “DS cognome”, “DS Nome”, “DS Tipo”);<br>-occasional use of the dash to replace "null" values. 	| Not satisfied:<br>-occasional use of the dash to replace "null" values;<br>-presence of syntactic inaccuracy;<br>-nomenclature of the column “codice” is too general.                                                                                                                                                                                                                   	| Not satisfied:<br>-arbitrary use of uppercase and lowercase;<br>-arbitrary use of quotes when defining the names of the schools;<br>-arbitrary naming of addresses;<br>-arbitrary presence of telephone number prefix;<br>-update of the data is not coherent with the scholastic year of concern.                                                                                                                                                                                                                                                                                            	| Not<br>satisfied: some schools data is reported as not up to date.                              	|
 | D5, D6           	| Not satisfied: some fields are lacking values; "null" values are replaced by a dash.                                                                                                                                                          	| Not satisfied:<br>- semantic inaccuracy due to "null" values replaced by a dash.                                                                                                                                                                                                                                                                                                        	| Not satisfied:<br>- there is no standard of defining "null" values, empty fields remain empty or are<br>filled by a dash;<br>- arbitrary use of uppercase and lowercase.                                                                                                                                                                                                                                                                                                                                                                                                                      	| Satisfied.                                                                                      	|
 | D7               	| Not satisfied: there are many empty fields, especially in columns “latitudine”, “longitudine”, “stato cantiere”, “numero civico”.                                                                                                             	| Not satisfied, as at times column “Indirizzo” contains city names instead of addresses.                                                                                                                                                                                                                                                                                                 	| Not satisfied: <br>- there seems not to be any guideline about the filling of the fields, e.i. there<br>is no civic number in the “Numero civico” column, but we could find civic numbers in the “Indirizzo” column;<br>- arbitrary use of uppercase and lowercase.                                                                                                                                                                                                                                                                                                                           	| Not satisfied: There is no specification of date, and the last update dates back to 31/12/2019. 	|
@@ -112,7 +112,7 @@ The original datasets used to cover the different themes of this project, as we 
 
 ### Legal checklist
 
-The fields with an asterisk have to be further explained in the nots below.
+The fields with an asterisk have to be further explained in the notes below.
 
 | | To check | D1|  D2, D3, D11, D12 | D4 | D5, D6| D7 | D8 | D9 | D10 | 
 | ----------- | --------| ------|--------|-------|---------|---------|---------|---------|-----|
@@ -159,11 +159,11 @@ The fields with an asterisk have to be further explained in the nots below.
 
 
 
-NOTES:
+####Notes
 
 </br>
 
-D1
+*D1*
 
 The dataset is free of personal data according to the Article 6 of the Regulation 2016/679, in which processing is described as lawful when:</br> 
 
@@ -172,45 +172,46 @@ The dataset is free of personal data according to the Article 6 of the Regulatio
 (e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
 
 
-D2, D3, D11, D12
+*D2, D3, D11, D12*
 
 In these datasets, it is possible to find indirect personal data that could lead to the identification of individuals, in particular the dataset is not free of personal data as defined by article 9 of GDPR. There is no law nor legal basis to release these personal data. We found references to ethnichal groups (i.e. Rom) and data concerning health. For instance, we found these sentences: '*Le situazioni segnalate come abbandoni e trasferimenti in uscita in corso d'anno hanno riguardato in tutto due studenti e sono state dovute a cambiamenti professionali delle famiglie (trasferimenti per motivi di lavoro o rientro nei paesi d'origine).*', and '*Il tasso di dispersione del numero  degli allievi iscritti nella nostra scuola  negli ultimi tre anni scolastici e' quasi nullo:a.s.2014/15: numero complessivo degli alunni in elenco all'inizio dell'anno scolastico: 665 , tot. alunni alla fine dell'anno scolastico: 664, numero di alunni non ammessi alla classe successiva: 1 alunna disabile per fermo pedagogico,a.s. 2013/14: totale alunni all'inizio dell'a.s.: 726, totale alunni alla fine dell'a.s.:726, numero alunni non ammessi alla classe successiva: n. 3 disabili per fermo pedagogico,a.s. 2012/13: tot. alunni all'inizio dell'a.s.:784, tot. alunni alla fine dell'a.s.:784 , N.alunni non ammessi alla classe successiva:1 per fermo pedagogico.*'.
 
 To avoid this problem, we suggest the authorities to change these references with more anonymized ones.</br>
 
-Furthermore in the platform of the data there is a mechanism to inform about the update of the data but only in the case of D2-D3 (31/08/2017), the last update is not congruent with the periodicity that is reported (Annual).
+Furthermore, although in the platform of the data there is a mechanism to inform about the update of the data, only in the case of D2 and D3 the last update (dated back to 31/08/2017) is not congruent with the periodicity that is reported (Annual).
 
 
-D4 
+*D4* 
 
-The platform of this dataset has no direct Legal Terms and Privacy regulation, along with contacts and the information about the dataset, but they are contained in the website of [Ufficio Scolastico Regionale dell'Emilia Romagna](http://istruzioneer.gov.it/). We found these pieces of information there and assumed they belonged also to D4. We suggest the interested authorities to create an explicit connection between the two websites or, better, to create specific webpages in the dataset's website for this information.</br>
-
-
-Furthermore, there are problems with the platform of [Ufficio Scolastico Regionale](http://istruzioneer.gov.it/): in particular, in the [website](http://istruzioneer.gov.it/dati/) that redirects to the data, there is no encryption, so that the connection of the user to the website is not safe. We found this problem particularly compelling on the [contacts](http://istruzioneer.gov.it/contatti-urp/) page, where the form requires to be filled with personal data (First Name, Family Name, Address, etc.). 
+The platform where this dataset is contained has no direct link to Legal Terms and Privacy regulation pages, along with contacts and information about the dataset, but they are included in the website of [Ufficio Scolastico Regionale per l'Emilia Romagna](http://istruzioneer.gov.it/) that is linked from the platform. We found those pieces of information there and assumed they belonged to D4 too. We suggest the interested authorities to create an explicit connection between the two websites or, better, to create specific webpages in the dataset's website for this kind of information.</br>
 
 
-D7 
+Furthermore, there are problems with the platform of [Ufficio Scolastico Regionale per l'Emilia Romagna](http://istruzioneer.gov.it/): in particular, there is no encryption on the website (therefore, there is no SSL certificate), so that the connection of the user to the website is not safe. We found this problem particularly compelling on the [contacts](http://istruzioneer.gov.it/contatti-urp/) page, where the form requires to be filled with personal data (First Name, Family Name, Address, etc.). This situation can lead to the modification of downloaded data and as a result, to the breach of personal data.
+
+
+*D7* 
 
 The dataset is free of personal data according to the Article 6 of the Regulation 2016/679, in which processing is described as lawful when:</br> 
+
 (c) processing is necessary for compliance with a legal obligation to which the controller is subject;</br>
 
-(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;</br>
+(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.</br>
 
 
-In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. As this page is empty we could not find any information about privacy regulation and Legal Terms, so we suggest to fill it with content, as it is a required element in the Regulation 2016/679.
+In addition, the [privacy page](https://web.archive.org/web/20190621170110/https:/openricostruzione.regione.emilia-romagna.it/privacy) of that dataset doesn’t have any content. As this page is empty we could not find any information about Privacy Regulation and Legal Terms, so we suggest to fill it with content, as it is a required element in the EU Regulation 2016/679.
 
 
-D8 
+*D8* 
 
-From this dataset platform the links that led to the privacy and legal pages are broken, we were then forced to access them from an external search engine (Google). Unfortunately, even when we found them, we noticed that the privacy regulation's page is not complete (it stops at 'Norme Trattamento Dati').</br>
+From this dataset platform the links that lead to the privacy and legal pages are broken: we were then forced to access them from an external search engine (Google). Unfortunately, even when we found them, we noticed that the privacy regulation's page is not complete (it stops at 'Norme Trattamento Dati').</br>
 
 
 Moreover, on the dataset's platform there aren't only technical cookies, because embedded YouTube videos can track the users visiting the page.
 
 
-D10 
+*D10* 
 
-The dataset has no license and even if there is a reference to Law 221 of 2012, art.25 comma 11 ("*11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet.*"), this is not enough to justify this absence, that is required by the definition of Open Data according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
+The dataset has no license and even if there is a reference to Law 221 of 2012, art.25 comma 11 ("*11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet.*"), this is not enough to justify this absence, since an open license is required by the definition of Open Data according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
 
 
 There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:'
@@ -245,6 +246,7 @@ h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up i
 *14. Le informazioni di cui ai commi 12 e 13 debbono essere aggiornate con cadenza non superiore a sei mesi e sono sottoposte al regime di pubblicità di cui al comma 10.*' </br>
 
 ### Mashed-up Datasets
+
  We created three mashed-up datasets:
  - OpenSisma dataset Educaation </br>
   Link:
@@ -256,15 +258,16 @@ h) indicazione dell'esperienza acquisita nell'attività di sostegno a start-up i
  Link:
  License: CC BY-SA 4.0
 
-We structured them following all the normatives and the EU directives, and we found it to be completly congruent to the contents of the legal check list, so we decided to not rewrite it.
+We structured them following all the normatives and the EU directives, and we found them to be completly congruent to the contents of the legal check list, so we decided to not rewrite it.
 
 
 ### Licenses
 The licenses are an essential metadata in the description of a dataset. It must be always specified in -*human* readble form and in *-machine* readable form, specifing *name*, *version*, *link to description of the resource*.
-</br>All the original datasets respect these parameters, but D10 that has no license at all. This is a huge legal error.
+</br>All the original datasets respect these parameters, but D10 that has no license at all. 
 All the other datasets's licenses are Creative Commons Licenses or Italian Open Data Licenses.
 </br>
-The Creative Commons' versions are:
+
+The Creative Commons licenses are:
 
 - Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - [CC BY 3.0 IT](https://creativecommons.org/licenses/by/3.0/it/)): </br>
 *"You are free to:</br>
@@ -290,25 +293,28 @@ ShareAlike — If you remix, transform, or build upon the material, you must dis
 No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits."*
 
 The Italian Open Data Licenses are all versions of [IODL 2.0](https://www.dati.gov.it/content/italian-open-data-license-v20):</br>
-*
-"You are free to:</br>
+*"You are free to:</br>
 Reproduce, distribute to the public, lease, present and demonstrate in public, communicate to the public, including making available to the public, transmit and retransmit in any way, perform, act, represent, include in collective and / or published compositions, extract and reuse Information;</br>
-Create a Derivative Work and exercise the rights referred to in the previous point on the Derivative Work, for example by combining it with other information (mashup).</br>
+Create a Derivative Work and exercise the rights referred to in the previous point on the Derivative Work, for example by combining it with other information (mashup).*
 
-Provided of:</br>
+*Provided of:</br>
 Indicate the source of the Information and the name of the Licensor, including, if possible, a copy of this license or a link (link) to it.
 </br>
 Not to reuse the Information in a way that suggests that it is official or that the Licensor approves the use you make of the Information;</br>
 Take all reasonable measures so that the uses previously permitted do not mislead other subjects and the Information itself is not misrepresented."*
 </br>
+
 In this sense the original Datasets are of public domain through the waiver of some rights, in the terms we have desribed. In this scenario we have the efinition of *'copyleft'*.
 
 </br>
-For the mashed-up Datasets, the metadata, the Documentation and the website we decided to use the same license: the Creative Commons Attribution-ShareAlike, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+For the mashed-up datasets, the metadata, the documentation and the website we decided to use the same license: the Creative Commons Attribution-ShareAlike, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 </br>
-While the License for the Code is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
+
+The license for the code is [GNU-GPL](https://www.gnu.org/licenses/gpl-3.0.html).
 </br>
-For the Libraries we used in Javascript, Python and HTML the licenses are:
+
+For the Libraries we used in Javascript, Python and HTML, the licenses are:
 
 | Library   | License                                                                        |
 |-----------|--------------------------------------------------------------------------------|
@@ -319,6 +325,7 @@ For the Libraries we used in Javascript, Python and HTML the licenses are:
 | Chartjs   | [MIT License](https://opensource.org/licenses/MIT)                             |
 | Folium    | [MIT License](https://opensource.org/licenses/MIT)      |
 </br>
+
 
 Other licenses:
 
@@ -437,7 +444,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D4**</br>
 
-*Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+. The last three aren't open formats and thus clash with the guidelines provided by Codice dell'amministrazione digitale, that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet).</br>
+*Format:* HMTL, CSV, Txt, PDF; Excel 95+, Excel 2007+. The last two aren't open formats and thus clash with the guidelines provided by Codice dell'amministrazione digitale, that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet).</br>
 
 *Metadata:* No metadata. </br>
 
@@ -465,7 +472,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D10**</br>
 
-*Format:* CSV, PDF, Excel. The last two distributions clash with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet). </br>
+*Format:* CSV, PDF, Excel. The last distribution clashes with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet). </br>
 
 *Metadata:* No metadata. </br>
 
@@ -742,7 +749,7 @@ As we stated in our introduction, the aims of our analysis were: to study and sh
 
 Those have been reached in their completeness, so that from what emerged from the research we can conclude that:
 - there is a direct proportionality relationship between total works and damage entity;
-- there is a direct proportionality between amount of reconstruction works that still have to be done and low schools score, even though we don't have enough data to further study the model;
+- there is a direct proportionality between amount of reconstruction works that still have to be done and low schools score, even though we don't have enough data to further study the model, for the year 2015-2016. In the following year, the trend seems to start changing;
 - in the very few data we had for paritary schools (only for the area of Cento), we could detect an average higher school score with respect to the public ones of that area;
 - about the correlation between disaster effects and rise in an entrepreneurial processes, we could witness a positive attempt in that direction, but often it hasn't been continued over the years;
 - about the safety certificates, we detected no correlation between damage entity and consequences in safety certificates and initiatives (e.i. antiseismic plan). This is a worrying phenomenon, because areas that have been more affected by the earthquakes should be more attentive to safety measures, in the case this kind of situation would be repeated in the future.
