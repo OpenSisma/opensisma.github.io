@@ -48,7 +48,7 @@ In order to carry out our analysis, we chose to use datasets that differed in pr
 
 The datasets were then grouped and processed into three mashed-up datasets:
 
-| Primary datasets | Mashed-up dataset | URI | 
+| Primary datasets | Mashed-up dataset | URL | 
 | :---         |     :---:      |          ---: |
 | D2, D3, D4, D5, D6, D11, D12   | OpenSisma dataset Education     | https://opensisma.github.io/metadata-dataset-education.html    |
 | D7, D8   | OpenSisma dataset Reconstruction      | https://opensisma.github.io/metadata-dataset-reconstruction.html      |
