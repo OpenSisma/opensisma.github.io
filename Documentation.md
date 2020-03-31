@@ -59,7 +59,7 @@ Our mashed-up datasets are grouped in this page: [Catalogue](https://opensisma.g
 
 ## Informative quality analysis
 
-Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo publico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-publico/it/stabile/aspettiorg.html#qualita-dei-dati), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm ([see the "code" section](https://github.com/OpenSisma/opensisma.github.io/blob/master/code/completezza.py)). The results are reported below.
+Our informative quality analysis follows the guidelines reported in ["Linee guida per la valorizzazione del patrimonio informativo publico" by AGID](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/index.html), which takes into account standards ISO/IEC 25012 and ISO/IEC 25024.  As for what concerns completeness, our comments about empty values in the "Completeness" column refer, as does the aforementioned document, only to those fields that are necessary to be written in the dataset. Because we noticed empty fields were at times filled with dashes or dots instead of "null" values, we then decided to calculate the percentage of overall completeness with an algorithm ([see the "code" section](https://github.com/OpenSisma/opensisma.github.io/blob/master/code/completezza.py)). The results are reported below.
 
 | Dataset          	| Completeness                                                                                                                                                                                                                                  	| Accuracy                                                                                                                                                                                                                                                                                                                                                                                	| Coherence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	| Promptness                                                                                      	|
 |------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------	|
@@ -217,7 +217,9 @@ Moreover, on the dataset's platform there aren't only technical cookies, because
 
 *D10* 
 
-The dataset has no license and even if there is a reference to Law 221 of 2012, art.25 comma 11 ("*11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet.*"), this is not enough to justify this absence, since an open license is required by the definition of Open Data according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html).
+The dataset has no license and even if there is a reference to Law 221 of 2012, art.25 comma 11 ("*11. Le informazioni di cui al comma 12, per la start-up innovativa, e 13, per l'incubatore certificato, sono rese disponibili, assicurando la massima trasparenza e accessibilità, per via telematica o su supporto informatico in formato tabellare gestibile da motori di ricerca, con possibilità di elaborazione e ripubblicazione gratuita da parte di soggetti terzi. Le imprese start-up innovative e gli incubatori certificati assicurano l'accesso informatico alle suddette informazioni dalla home page del proprio sito Internet.*"), this is not enough to justify this absence, since an open license is required by the definition of Open Data according to the [Open Knowledge Foundation](https://okfn.org/opendata/) and the [Codice dell’Amministrazione digitale in articolo 1, comma , lettera l-ter](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html). 
+
+Although we found the dataset as considered "open data" by the [Ministero dello sviluppo economico website](https://www.mise.gov.it/index.php/it/impresa/competitivita-e-nuove-imprese/start-up-innovative/relazione-annuale-e-rapporti-periodici#opendata), looking at the platform's [privacy page](https://informative.infocamere.it/startup-e-pmi-innovative) it is stated that "*È inoltre vietato svolgere attività di distribuzione e/o vendita dei dati, nonché tentare di accedervi con modalità diverse da quelle consentite ed, in particolare, estrarre i dati per via automatica e massiva allo scopo di velocizzare le attività o creare autonome banche dati.*". This clashes with the definition of open data in general and in particular with the definition of open data of the Codice dell'Amministrazione Digitale.
 
 
 There is no explicit reference to an updating periodicy, nor a system to inform the users about the update. Even if the comma 14 of article 25 of Legge 221/2012, referring to comma 12 and 13, explicits:
@@ -326,7 +328,6 @@ Not to reuse the Information in a way that suggests that it is official or that 
 Take all reasonable measures so that the uses previously permitted do not mislead other subjects and the Information itself is not misrepresented."*
 </br>
 
-In this sense the original Datasets are of public domain through the waiver of some rights, in the terms we have desribed. In this scenario we have the efinition of *'copyleft'*.
 
 </br>
 
@@ -405,7 +406,7 @@ The dataset was created by the Dipartimento per le politiche di Open Coesione.
 
 </br>
 The purpose of this dataset is to propose in Open Data format all the data and information about the entrepneuerial initiatives and startups in Italy, registered in Registro Imprese. THey are developed in trimestral reports divided for region.
-This dataset was created by Info Camere, in order to make available the numbers and the statistics regarding the entrepreneurial initiative and sartups. 
+This dataset was created by Info Camere, in order to make available the numbers and the statistics regarding the entrepreneurial initiative and startups. 
 
 #### Mashed-up Datasets
 The purpose of the final datasets is to display the data relating to the earthquakes  themselves connecting them with data that are subsequent or indirectly influenced by them:
@@ -416,7 +417,7 @@ The purpose of the final datasets is to display the data relating to the earthqu
 
 
 The purpose of this dataset is to propose in Open Data format all the data and information about the education system in Emilia Romagna, merging in a coerent and useful way the data taken from D2, D3, D4, D5, D6, D11, D12.</br>
-This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to confront and compare all the information connteied in the original datasets.
+This dataset was created by Milena Corbellini and Anna Sofia Lippolis, in order to confront and compare all the information contained in the original datasets.
 
 
 
@@ -449,12 +450,12 @@ These mentions are completely against the normatives of GDPR 2016/769 and, moreo
 
 #### Original datasets
 
-Formats, metadata, provenance and URI of our original datasets can be resumed as follows:
+Formats, metadata, provenance and URI of our original datasets can be resumed as follows. As for what concerns metadata, some datasets lack metadata or have only human-readable metadata. However, it is highly recommended by Art. 9 comma 1 of law [EU 2019/1024](https://eur-lex.europa.eu/eli/dir/2019/1024/oj) to use machine-readable metadata.
 
 **D1** </br>
 
 *Format:*  XML, XML Schema, JSON, CSV, Excel CSV. </br>
-*Metadata:* Availability of human-readable metadata. </br>
+*Metadata:* Availability of human-readable metadata.  </br>
 
 
 **D2, D3, D5, D6, D11, D12 (MIUR)**</br>
@@ -479,7 +480,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D8**</br>
 
-*Format:* PDF and Excel, which clash with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet)..</br>
+*Format:* PDF and Excel, which clash with the guidelines provided by Codice dell'amministrazione digitale, that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet)..</br>
 
 *Metadata:* No metadata. </br>
 
@@ -493,7 +494,7 @@ Formats, metadata, provenance and URI of our original datasets can be resumed as
 
 **D10**</br>
 
-*Format:* CSV, PDF, Excel. The last distribution clashes with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet). </br>
+*Format:* CSV, Excel, PDF. The last two distributions clash with the guidelines provided by Codice dell'amministrazione digitale , that contains in [Art.1](https://docs.italia.it/italia/piano-triennale-ict/codice-amministrazione-digitale-docs/it/v2018-09-28/_rst/capo1_sezione1_art1.html) the definition of an open format. Even if PDF has been standardized by ISO (ISO/IEC 32000-1:2008), with different formats according to scope, it is not suited for datatasets and it is highly recommended not to use it since it prevents the interoperability of the data. For what concerns Excel, it is a proprietary format whose non-proprietary counterpart is ODS (Open Document Spreadsheet). </br>
 
 *Metadata:* No metadata. </br>
 
@@ -586,7 +587,7 @@ However, they still have the .html file extension, as deleting it would require 
 
 The mashing-up of our datasets required some necessary preprocessing steps. Some of the issues we encountered were connected to what we discussed in the chapter about the Quality Analysis of our datasets. Initially, we had to choose which areas to include in our research. We therefore selected the 19 most affected areas of Emilia-Romagna. The first main issue connected to this choice consisted in the absence of a shared vocabulary for the geographical places, which can be problematic in the case their names contain apostrophes. This is why we needed to create our own vocabulary, containing all the possibilities for the names. As an example, for the town of Sant’Agostino, we included both SANTAGOSTINO and SANT’AGOSTINO.
 
-None of the platforms containing the open datasets specified their encoding, even though in ["Linee guida per la valorizzazione del patrimonio informativo publico" published by AGID"](https://docs.italia.it/italia/daf/lg-patrimonio-publico/it/stabile/riepilogoazioni.html) it is specified they ought to, preferably UTF-8. The lack of encoding statements led us to guess which formatting engine was use. For this reason, in the case of D1, it was necessary to skip some badly-encoded lines in order to process the dataset.
+None of the platforms containing the open datasets specified their encoding, even though in ["Linee guida per la valorizzazione del patrimonio informativo publico" published by AGID"](https://docs.italia.it/italia/daf/lg-patrimonio-pubblico/it/stabile/index.html) it is specified they ought to, preferably UTF-8. The lack of encoding statements led us to guess which formatting engine was use. For this reason, in the case of D1, it was necessary to skip some badly-encoded lines in order to process the dataset.
 
 All the mash-up datasets have been joined through the `pandas.merge` method.
 
@@ -633,8 +634,8 @@ The final issue with the datasets is that D2, D3, D11, D12 contain whitespace in
 
 Some columns of the original datasets have been dropped or modified according to our research purpose. More specifically:
 - We dropped the columns "ANNOSCOLASTICO", SEZIONE", "CODICECRITERIO", "MOTIVAZIONEPUNTEGGIOSCUOLA" in D2, D3, D11, D12; for D4 we just kept the school code.
-- We added the number of schools that have emerged from our data, using a pandas pivot table function;
-- We modified the school score ("PUNTEGGIOSCUOLA" column) of D2, D3, D11, D12 according to the number of schools, so our final school score is an average;
+- We added the number of schools for each municipality that have emerged from our data, using a pandas pivot table function;
+- We modified the school score ("PUNTEGGIOSCUOLA" column) of D2, D3, D11, D12, so our final school score is an average;
 - We kept the count of missing safety certificates only.
 
 #### Entrepreneurship mashed-up dataset
@@ -683,15 +684,15 @@ The Open Data's sustainability is defined by the updating regularity of the data
 
 - an organisation already established in the Open Data Ecosystem;
 
-- the reusing of the data by  the users interested in.
+- the reusing of the data by the users interested in.
 
 In an hypothetic organisational system of our project, we could base our sustanibility on the following elements:
 
--Provenance and Promptness: Our mashed-up Datasets use data taken from different sources. Only if the original sources respect the updating time, the timeliness requirement would be assured.
+- Provenance and Promptness: Our mashed-up Datasets use data taken from different sources. Only if the original sources respect the updating time, the timeliness requirement would be assured.
 
 - the financial  support of established entities like the 'Agenzia per la Ricostruzione Emilia Romagna', or the entity 'Regione Emilia Romagna' itself, which could be interested in our analysis. However, we considered a structure in which the cost and the maintenance of the datasets would be around 0, even sustaining the quality of the data and the updating.
 
-- we used the international license CC BY-SA 4.0: a copyleft-based license that allows the users to share and modify the content with the conditions of attribution and sharing under the same license.
+- we used the international license CC BY-SA 4.0: a license that allows the users to share and modify the content with the conditions of attribution and sharing under the same license.
 
 - we included our e-mail addresses on the website, in order to give the possiibility to the user of contacting, easily and tempestively,to ask for clarification, make requests and so on.
 
